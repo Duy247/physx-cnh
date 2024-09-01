@@ -1,0 +1,1496 @@
+Uri: https://cdn.olimpicos.net/css/bootstrap.min.css
+File Name: D:\nbpho.olimpicos.net\css\bootstrap.min.css
+Content Type: text/css
+
+Uri: https://cdn.olimpicos.net/css/style.css
+File Name: D:\nbpho.olimpicos.net\css\style.css
+Content Type: text/css
+
+Uri: https://cdn.olimpicos.net/fonts/all.min.css
+File Name: D:\nbpho.olimpicos.net\fonts\all.min.css
+Content Type: text/css
+
+Uri: https://cdn.olimpicos.net/fonts/fa-brands-400.eot
+File Name: D:\nbpho.olimpicos.net\fonts\fa-brands-400.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://cdn.olimpicos.net/fonts/fa-brands-400.eot?
+File Name: D:\nbpho.olimpicos.net\fonts\fa-brands-400-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://cdn.olimpicos.net/fonts/fa-brands-400.svg
+File Name: D:\nbpho.olimpicos.net\fonts\fa-brands-400.svg
+Content Type: image/svg+xml
+
+Uri: https://cdn.olimpicos.net/fonts/fa-brands-400.ttf
+File Name: D:\nbpho.olimpicos.net\fonts\fa-brands-400.ttf
+Content Type: font/ttf
+
+Uri: https://cdn.olimpicos.net/fonts/fa-brands-400.woff
+File Name: D:\nbpho.olimpicos.net\fonts\fa-brands-400.woff
+Content Type: font/woff
+
+Uri: https://cdn.olimpicos.net/fonts/fa-brands-400.woff2
+File Name: D:\nbpho.olimpicos.net\fonts\fa-brands-400.woff2
+Content Type: font/woff2
+
+Uri: https://cdn.olimpicos.net/fonts/fa-regular-400.eot
+File Name: D:\nbpho.olimpicos.net\fonts\fa-regular-400.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://cdn.olimpicos.net/fonts/fa-regular-400.eot?
+File Name: D:\nbpho.olimpicos.net\fonts\fa-regular-400-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://cdn.olimpicos.net/fonts/fa-regular-400.svg
+File Name: D:\nbpho.olimpicos.net\fonts\fa-regular-400.svg
+Content Type: image/svg+xml
+
+Uri: https://cdn.olimpicos.net/fonts/fa-regular-400.ttf
+File Name: D:\nbpho.olimpicos.net\fonts\fa-regular-400.ttf
+Content Type: font/ttf
+
+Uri: https://cdn.olimpicos.net/fonts/fa-regular-400.woff
+File Name: D:\nbpho.olimpicos.net\fonts\fa-regular-400.woff
+Content Type: font/woff
+
+Uri: https://cdn.olimpicos.net/fonts/fa-regular-400.woff2
+File Name: D:\nbpho.olimpicos.net\fonts\fa-regular-400.woff2
+Content Type: font/woff2
+
+Uri: https://cdn.olimpicos.net/fonts/fa-solid-900.eot
+File Name: D:\nbpho.olimpicos.net\fonts\fa-solid-900.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://cdn.olimpicos.net/fonts/fa-solid-900.eot?
+File Name: D:\nbpho.olimpicos.net\fonts\fa-solid-900-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://cdn.olimpicos.net/fonts/fa-solid-900.svg
+File Name: D:\nbpho.olimpicos.net\fonts\fa-solid-900.svg
+Content Type: image/svg+xml
+
+Uri: https://cdn.olimpicos.net/fonts/fa-solid-900.ttf
+File Name: D:\nbpho.olimpicos.net\fonts\fa-solid-900.ttf
+Content Type: font/ttf
+
+Uri: https://cdn.olimpicos.net/fonts/fa-solid-900.woff
+File Name: D:\nbpho.olimpicos.net\fonts\fa-solid-900.woff
+Content Type: font/woff
+
+Uri: https://cdn.olimpicos.net/fonts/fa-solid-900.woff2
+File Name: D:\nbpho.olimpicos.net\fonts\fa-solid-900.woff2
+Content Type: font/woff2
+
+Uri: https://cdn.olimpicos.net/icon/favicon-180x180.png
+File Name: D:\nbpho.olimpicos.net\icon\favicon-180x180.png
+Content Type: image/png
+
+Uri: https://cdn.olimpicos.net/icon/favicon-192x192.png
+File Name: D:\nbpho.olimpicos.net\icon\favicon-192x192.png
+Content Type: image/png
+
+Uri: https://cdn.olimpicos.net/icon/favicon-32x32.png
+File Name: D:\nbpho.olimpicos.net\icon\favicon-32x32.png
+Content Type: image/png
+
+Uri: https://nbpho.olimpicos.net/
+File Name: D:\nbpho.olimpicos.net\index.htm
+Content Type: text/html
+
+Uri: https://nbpho.olimpicos.net/cdn-cgi/images/browser-bar.png?1376755637
+File Name: D:\nbpho.olimpicos.net\cdn-cgi\images\browser-bar.png
+Content Type: image/png
+
+Uri: https://nbpho.olimpicos.net/cdn-cgi/images/cf-icon-browser.png
+File Name: D:\nbpho.olimpicos.net\cdn-cgi\images\cf-icon-browser.png
+Content Type: image/png
+
+Uri: https://nbpho.olimpicos.net/cdn-cgi/images/cf-icon-cloud.png
+File Name: D:\nbpho.olimpicos.net\cdn-cgi\images\cf-icon-cloud.png
+Content Type: image/png
+
+Uri: https://nbpho.olimpicos.net/cdn-cgi/images/cf-icon-error.png
+File Name: D:\nbpho.olimpicos.net\cdn-cgi\images\cf-icon-error.png
+Content Type: image/png
+
+Uri: https://nbpho.olimpicos.net/cdn-cgi/images/cf-icon-horizontal-arrow.png
+File Name: D:\nbpho.olimpicos.net\cdn-cgi\images\cf-icon-horizontal-arrow.png
+Content Type: image/png
+
+Uri: https://nbpho.olimpicos.net/cdn-cgi/images/cf-icon-ok.png
+File Name: D:\nbpho.olimpicos.net\cdn-cgi\images\cf-icon-ok.png
+Content Type: image/png
+
+Uri: https://nbpho.olimpicos.net/cdn-cgi/images/cf-icon-server.png
+File Name: D:\nbpho.olimpicos.net\cdn-cgi\images\cf-icon-server.png
+Content Type: image/png
+
+Uri: https://nbpho.olimpicos.net/cdn-cgi/images/cf-no-screenshot-error.png
+File Name: D:\nbpho.olimpicos.net\cdn-cgi\images\cf-no-screenshot-error.png
+Content Type: image/png
+
+Uri: https://nbpho.olimpicos.net/cdn-cgi/images/cf-no-screenshot-warn.png
+File Name: D:\nbpho.olimpicos.net\cdn-cgi\images\cf-no-screenshot-warn.png
+Content Type: image/png
+
+Uri: https://nbpho.olimpicos.net/cdn-cgi/images/icon-exclamation.png?1376755637
+File Name: D:\nbpho.olimpicos.net\cdn-cgi\images\icon-exclamation.png
+Content Type: image/png
+
+Uri: https://nbpho.olimpicos.net/cdn-cgi/l/email-protection
+File Name: D:\nbpho.olimpicos.net\cdn-cgi\l\email-protection.html
+Content Type: text/html
+
+Uri: https://nbpho.olimpicos.net/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js
+File Name: D:\nbpho.olimpicos.net\cdn-cgi\scripts\5c5dd728\cloudflare-static\email-decode.min.js
+Content Type: application/javascript
+
+Uri: https://nbpho.olimpicos.net/cdn-cgi/styles/cf.errors.css
+File Name: D:\nbpho.olimpicos.net\cdn-cgi\styles\cf.errors.css
+Content Type: text/css
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2003_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2003_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2003_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2003_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2003_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2003_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2003_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2003_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2003_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2003_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2003_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2003_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2003_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2003_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2003_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2003_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2003_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2003_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2003_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2003_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2003_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2003_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2003_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2003_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2003_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2003_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2003_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2003_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2003_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2003_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2003_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2003_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_Q9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_Q9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2004_S9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2004_S9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_Q9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_Q9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2005_S9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2005_S9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2006_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2006_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2006_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2006_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2006_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2006_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2006_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2006_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2006_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2006_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2006_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2006_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2006_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2006_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2006_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2006_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2006_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2006_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2006_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2006_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2006_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2006_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2006_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2006_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2006_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2006_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2006_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2006_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2006_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2006_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2006_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2006_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2007_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2007_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2007_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2007_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2007_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2007_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2007_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2007_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2007_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2007_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2007_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2007_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2007_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2007_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2007_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2007_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2007_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2007_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2007_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2007_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2007_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2007_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2007_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2007_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2007_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2007_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2007_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2007_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2007_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2007_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2007_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2007_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_Q10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_Q10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_Q9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_Q9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_S10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_S10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2008_S9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2008_S9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_Q10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_Q10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_Q9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_Q9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_S10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_S10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2009_S9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2009_S9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_Q10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_Q10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_Q11.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_Q11.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_Q9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_Q9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_S10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_S10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_S11.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_S11.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2010_S9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2010_S9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_Q9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_Q9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2011_S9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2011_S9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_Q10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_Q10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_Q9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_Q9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_S10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_S10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2012_S9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2012_S9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_Q10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_Q10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_Q9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_Q9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_S10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_S10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2013_S9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2013_S9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_Q10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_Q10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_Q9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_Q9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_S10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_S10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2014_S9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2014_S9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_Q10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_Q10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_Q9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_Q9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_S10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_S10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2015_S9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2015_S9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_Q10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_Q10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_Q9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_Q9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_S10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_S10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2016_S9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2016_S9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_Q10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_Q10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_Q9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_Q9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_S10.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_S10.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2017_S9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2017_S9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_Q9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_Q9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2018_S9.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2018_S9.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2019_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2019_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2019_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2019_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2019_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2019_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2019_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2019_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2019_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2019_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2019_Q6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2019_Q6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2019_Q7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2019_Q7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2019_Q8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2019_Q8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2019_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2019_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2019_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2019_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2019_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2019_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2019_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2019_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2019_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2019_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2019_S6.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2019_S6.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2019_S7.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2019_S7.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2019_S8.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2019_S8.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2020_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2020_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2020_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2020_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2020_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2020_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2020_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2020_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2020_Q5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2020_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2020_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2020_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2020_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2020_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2020_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2020_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2020_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2020_S4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2020_S5.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2020_S5.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2021_Q1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2021_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2021_Q2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2021_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2021_Q3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2021_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2021_Q4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2021_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2021_S1.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2021_S1.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2021_S2.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2021_S2.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2021_S3.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2021_S3.pdf
+Content Type: application/pdf
+
+Uri: https://nbpho.olimpicos.net/pdf/NBPhO_2021_S4.pdf
+File Name: D:\nbpho.olimpicos.net\pdf\NBPhO_2021_S4.pdf
+Content Type: application/pdf
+
