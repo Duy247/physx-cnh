@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
+    <title>Physics Stack Exchange Mockup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+			flex-direction: column;
+            justify-content: center;
+            align-items: center; /* Add this line */
+            background-color:#393939;
+            color:white;
+        }
+        .content-wrapper {
+            max-width: 800px;
+            width: 90%;
+            padding: 20px;
+            box-sizing: border-box;
+			border: 1px solid #d6d9dc;
+			border-radius: 8px;
+            margin: 0 auto; /* Add this line */
+            display:block;
+            background-color:white;
+            color:black;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .details {
+            font-size: 14px;
+            color: #666;
+        }
+        .question-panel {
+            display: flex;
+            margin-top: 20px;
+        }
+		.answer-panel {
+            display: flex;
+            margin-top: 20px;
+        }
+        .left-panel {
+			margin-top:1rem;
+            width: 50px;
+            text-align: center;
+            color: #2f6f2f;
+            max-height:300px;
+        }
+        .right-panel {
+            flex: 1;
+            margin-left: 20px;
+            text-align: justify;
+            align-items: center;
+        }
+        .user-info {
+            background-color: #e8f6fa;
+            padding: 10px;
+            text-align: right;
+            font-size: 14px;
+        }
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px solid #d6d9dc;
+        }
+        .comment {
+            margin-bottom: 10px;
+            font-size: 14px;
+            display:flex;
+            flex-direction: row;
+        }
+        .left-panel-comment {
+			margin-top:1rem;
+            width: 50px;
+            text-align: center;
+            color: #2f6f2f;
+            margin-right:20px;
+            margin-left:0;
+        }
+		.link-boxes {
+            display: flex;
+            justify-content: center; /* Change this line */
+            margin-top: 0rem;           
+            align-items: center; /* Change this line */
+            margin-top: 2rem; /* Add some top margin */
+        }
+        .link-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            margin: 0 0.5rem;
+            border: 1px solid rgb(188, 241, 161);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(23, 249, 15, 0.4);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            width: 250px;
+            height: 30%;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: inherit; 
+            text-decoration: inherit; 
+            color:white;     
+
+        }
+
+        .link-box:hover {
+            transform: scale(1.1);
+            border: 1px solid rgb(245, 160, 75);
+            box-shadow: 0 0 10px rgba(249, 132, 15, 0.4);
+        }
+
+        .link-box a {
+            font-size: 1rem;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content-wrap{
+            display:block;
+            padding-left:20px;
+            padding-right:20px;
+            padding-bottom:20px;
+            background-color:#3a3a3a;
+            border: 1px solid #32e313;
+            border-radius:8px;
+        }
+        .footers {
+            width: 100%; /* Add this line */
+            padding: 1rem;
+            box-sizing: border-box; /* Add this line */
+        }
+        img{
+            max-width: 80%;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="link-boxes">
+        <a href="../blog" class="link-box">Quay lại</a>
+    </div>
+	<h1>Câu hỏi Physics Stack Exchange</h1>
+    <div class="content-wrapper">
+        <h1>Làm mát tách cà phê bằng cách sử dụng thìa</h1>
+        <p class="details">Hỏi vào 13 năm 6 tháng trước &bull; Sửa đổi 7 tháng trước &bull; Được xem 262k lượt</p>
+        <hr>
+        <div class="question-panel">
+            <div class="left-panel">
+                <span>15</span>
+                <i class="fas fa-thumbs-up"></i>
+            </div>
+            <div class="right-panel" markdown="1">
+                <p>                    
+                    <md-block>
+                        
+                        Trong bữa sáng với các đồng nghiệp, một câu hỏi chợt xuất hiện trong đầu tôi:
+
+                        ***Phương pháp nào là nhanh nhất để làm mát một tách cà phê, nếu công cụ duy nhất bạn có là một chiếc thìa?***
+
+                        Một câu trả lời định tính sẽ rất tốt, nhưng nếu chúng ta có thể tìm ra một mô hình toán học hoặc thậm chí thực hiện thí nghiệm (chúng tôi không có phương tiện ở đây) cho vấn đề này thì sẽ tuyệt vời! 😄
+
+                        Cho đến nay, các lựa chọn mà chúng tôi đã xem xét là (bất kỳ phương pháp sáng tạo nào khác cũng được hoan nghênh):
+
+                        # Khuấy cà phê bằng thìa:
+                    
+                        ***Ưu điểm:***
+                        * Xoáy nước có diện tích bề mặt lớn hơn bề mặt phẳng của cà phê, nên tốt hơn cho quá trình trao đổi nhiệt với không khí.
+                        * Do chênh lệch tốc độ giữa chất lỏng và không khí xung quanh, hiệu ứng Bernoulli sẽ làm giảm áp suất và điều đó cũng sẽ làm mát nó để giữ áp suất khí quyển không đổi.
+                        
+                        ***Nhược điểm:***
+                        
+                        * Hiệu ứng Joule nên làm nóng cà phê.
+
+                        # Để thìa bên trong tách:
+
+                        Vì kim loại là chất dẫn nhiệt tốt (và chúng ta không nói về thìa gỗ!), và có một phần bên trong chất lỏng và phần khác bên ngoài, nó nên giúp ích cho quá trình truyền nhiệt, đúng không?
+
+                        Một câu hỏi phụ về điều này là tốt hơn là nên đặt thìa như bình thường hay đảo ngược, với tay cầm bên trong tách? (Tôi nghĩ ngược lại tốt hơn, vì có nhiều bề mặt tiếp xúc với không khí hơn, giống như trong các bộ tản nhiệt CPU).
+                        
+                        # Lặp lại việc nhúng và rút thìa:
+
+                        Lý do cho điều này là thìa nguội nhanh hơn khi ở bên ngoài.
+
+                        (Cá nhân tôi nghĩ nó không đáng so với sự khác biệt giữa việc luôn giữ nó bên trong, vì khi nó nguội đi, gradient nhiệt độ càng ít và càng kém cho quá trình truyền nhiệt).
+
+
+                    </md-block>
+                </p>
+                <div class="user-info">fortran hỏi vào ngày 16 tháng 2 2011 lúc 12:09</div>
+                <hr>
+                <div class="comment">
+                    <div class="left-panel-comment">
+                        <span>19</span>                 
+                    </div>    
+                    <p>Một câu hỏi tương tự về cà phê trên cooking.SE. –
+                        Qmechanic
+                        ♦
+                        Bình luận vào ngày 17 tháng 6 năm 2013 lúc 8:41</p>
+                </div>
+                <hr>
+
+            </div>
+        </div>
+		<hr>
+		<div class="answer-panel">
+            <div class="left-panel">
+                <span>863</span>
+                <i class="fas fa-thumbs-up"></i>
+            </div>
+            <div class="right-panel" markdown="1">
+                <p>                    
+                    <md-block>
+                        Chúng tôi đã thực hiện thí nghiệm. (Kết quả ban đầu cho thấy rằng nhúng thìa có thể thắng, mặc dù kết luận cuối cùng vẫn chưa chắc chắn.)
+                 
+                        * bể nước đá
+
+                        * lọ thủy tinh
+
+                        * nhiệt kế
+
+                        * nồi nước sôi
+
+                        * đồng hồ bấm giờ
+
+                        Có bốn lần thử, mỗi lần kéo dài 10 phút. Nước sôi được đổ vào lọ thủy tinh và thìa được lấy ra từ bể nước đá và đặt vào trong lọ. Nhiệt độ được đo mỗi phút một lần. Sau mỗi lần thử, nước được đổ trở lại nồi nước sôi và thìa được đặt trở lại bể nước đá.
+                        
+                        <img src="https://i.sstatic.net/zPIDz.jpg*">              
+                        <p>$$
+                            \begin{array}{ll}
+                            \text { Method: } & \text { Final Temp. } \\
+                            \text { 1. No Spoon } & 151 \mathrm{~F} \\
+                            \text { 2. Spoon in, no motion } & 149 \mathrm{~F} \\
+                            \text { 3. Spoon stirring } & 147 \mathrm{~F} \\
+                            \text { 4. Spoon dipping } & 143 \mathrm{~F}
+                            \end{array}
+                            $$
+                        </p>
+                        <p>Các kết quả đo nhiệt độ có độ không chắc chắn là $\pm 1^{\circ} \mathrm{F}$</p>
+                        <img src="https://i.sstatic.net/65MiU.png*">
+                        <p>Đường đỏ: không thìa <br> Xanh lá : Có thìa, không khuấy <br> Xanh dương : Khuấy <br> Xanh đậm : Cắm thìa nhấc lên hạ xuống</p>
+                        <hr>
+                        <p>$$
+                            \begin{array}{|c|cl|cl|cl|cl|} 
+                            \hline
+                            \text{Min} & \text{No Spoon} & & \text{Spoon} & & \text{Stirring} & & \text{Dipping} \\ \hline
+                            & \text{°F} & \text{°C} & \text{°F} & \text{°C} & \text{°F} & \text{°C} & \text{°F} & \text{°C} \\ \hline
+                            1' & 180 & 82.22 & 175 & 79.44 & 175 & 79.44 & 177 & 80.56 \\
+                            2' & 174 & 78.89 & 172 & 77.78 & 171 & 77.22 & 173 & 78.33 \\
+                            3' & 171 & 77.22 & 168 & 75.56 & 167 & 75 & 168 & 75.56 \\
+                            4' & 168 & 75.56 & 165 & 73.89 & 164 & 73.33 & 164 & 73.33 \\
+                            5' & 164 & 73.33 & 162 & 72.22 & 161 & 71.67 & 160 & 71.11 \\
+                            6' & 161 & 71.67 & 160 & 71.11 & 158 & 70 & 156 & 68.89 \\
+                            7' & 158 & 70 & 156 & 68.89 & 155 & 68.33 & 152 & 66.67 \\
+                            8' & 155 & 68.33 & 153 & 67.22 & 152 & 66.67 & 149 & 65 \\
+                            9' & 153 & 67.22 & 151 & 66.11 & 150 & 65.56 & 146 & 63.33 \\
+                            10' & 151 & 66.11 & 149 & 65 & 147 & 63.89 & 143 & 61.67 \\ \hline
+                            \end{array}
+                            $$
+                        </p>
+                    </md-block>
+                    
+                    
+                </p>
+                <div class="user-info">drhodes trả lời vào ngày 20 tháng 2 2011 lúc 2:02 </div>
+                <hr>
+                <div class="comment">
+                    <div class="left-panel-comment">
+                        <span>1</span>                 
+                    </div>    
+                    <p> Bạn có thể chia sẻ thêm chi tiết về phương pháp nhúng thìa của bạn không? Ví dụ, bạn có nhúng thìa, đợi cho nó nguội khô cách xa nước nóng và nhúng lại không? –
+                        Mikko Rantalainen
+                        Bình luận vào ngày 3 tháng 7 năm 2021 lúc 20:15 </p>
+                </div>
+                <div class="comment">
+                    <div class="left-panel-comment">
+                        <span>7</span>                 
+                    </div>    
+                    <p> Này @Mikko, đã 10 năm trôi qua rồi :) trí nhớ của tôi đang mờ dần! Để xem nào... với lần thử nhúng thìa... tôi không nhớ là có đợi thìa khô giữa các lần nhúng hay không, thay vào đó tôi nghĩ các lần nhúng diễn ra thường xuyên hơn, khoảng 1 lần nhúng mỗi giây, nhưng tôi có thể nhầm về điều đó. –
+                        drhodes
+                        Bình luận vào ngày 4 tháng 7 năm 2021 lúc 17:26 </p>
+                </div>
+                <div class="comment">
+                    <div class="left-panel-comment">
+                        <span>2</span>                 
+                    </div>    
+                    <p> Cảm ơn vì thông tin. Tôi chỉ tự hỏi liệu có thể đi theo đường cong thấp nhất có thể trong biểu đồ trong suốt thời gian hay không; có vẻ như nếu bạn khuấy trong vài phút và sau đó chuyển sang phương pháp nhúng, nước sẽ nguội nhanh nhất. –
+                        Mikko Rantalainen
+                        Bình luận vào ngày 5 tháng 7 năm 2021 lúc 15:45 </p>
+                </div>
+                <div class="comment">
+                    <div class="left-panel-comment">
+                        <span>5</span>                 
+                    </div>    
+                    <p> Nghe có vẻ là một ý tưởng hay! Nhưng trước khi thử - có lẽ tốt hơn hết là nên lặp lại từng phương pháp cho đến khi xác định được phương pháp tốt hơn rõ ràng về mặt thống kê. Sau khi thử nghiệm thêm, có thể thấy rằng các quỹ đạo nhiệt độ không giao nhau. –
+                        drhodes
+                        Bình luận vào ngày 6 tháng 7 năm 2021 lúc 12:05 </p>
+                </div>
+                <hr>   
+            </div>       
+         </div>
+        <div class="answer-panel">
+            <div class="left-panel">
+                <span>107</span>
+                <i class="fas fa-thumbs-up"></i>
+            </div>
+            <div class="right-panel" markdown="1">
+                <p>                    
+                    <md-block>
+                        Cách nhanh nhất và ngầu nhất để làm nguội cà phê, chỉ với một cốc và một 
+                        thìa, mà về mặt lý thuyết cũng có thể thực hiện được, là ném tất cả cà phê 
+                        lên không trung, và với động tác phối hợp khá tốt bắt hết cà phê vào cốc khi
+                        nó rơi xuống. Điều này tối đa hóa tổng diện tích bề mặt tiếp xúc của cà phê
+                        với không khí trên mỗi đơn vị thời gian, và do đó cũng tối đa hóa tổng
+                        lượng truyền nhiệt.
+                    </md-block>
+                </p>
+                <div class="user-info">TROLLHUNTER trả lời vào ngày 17 tháng 2 năm 2011 lúc 14:31 </div>
+                <hr>
+                <div class="comment">
+                    <div class="left-panel-comment">
+                        <span></span>                 
+                    </div>    
+                    <p> Đây là điều tương tự được thực hiện ở những nơi như Maroc, nơi họ rót trà từ ấm với khoảng 
+                        cách xa đến tách. Ngoài ra, bà tôi cũng rót từ ấm vào một tách rồi từ tách đó sang tách khác
+                        qua lại cho đến khi nhiệt độ vừa phải. – Michael Levy Bình luận vào ngày 28 tháng 11 năm 2023 
+                        lúc 21:37 </p>
+                </div>
+                <hr>
+
+            </div>
+        </div>
+        <div class="answer-panel">
+            <div class="left-panel">
+                <span>92</span>
+                <i class="fas fa-thumbs-up"></i>
+            </div>
+            <div class="right-panel" markdown="1">
+                <p> 
+                    Nếu bạn chỉ được phép dùng thìa, cách nhanh nhất để làm nguội cà phê để uống là lấy một thìa, thổi cho nguội, rồi uống từ thìa. Sau đó, lặp lại với thìa tiếp theo. Đối lưu thực sự hiệu quả! <br>
+                    Nếu bạn được phép dùng đĩa thay vì thìa, hãy đổ một chút cà phê vào đĩa, thổi cho nguội rồi uống.                   
+
+                </p>
+                <div class="user-info">anna v trả lời vào ngày 16 tháng 2 năm 2011 lúc 12:26 <br>anna v tự nhận là một nhà vật lý hạt thực nghiệm người Hy Lạp đã nghỉ hưu.</div>
+                <hr>             
+            </div>
+        </div>
+        <div class="answer-panel">
+            <div class="left-panel">
+                <span>69</span>
+                <i class="fas fa-thumbs-up"></i>
+            </div>
+            <div class="right-panel" markdown="1">
+                <p> 
+                    Với sự tôn trọng cho cái thứ trong cốc, mọi sự khuấy động của bạn bằng thìa đều không liên quan. Việc làm mát
+                    cà phê nóng được thực hiện thông qua sự bay hơi của nước. 
+                    Ở nhiệt độ giữa 100 và khoảng 50 °C, áp suất hơi lớn đến mức nhiệt lượng mang đi bởi sự đối 
+                    lưu của hơi nóng (và ít đặc hơn không khí rất nhiều!) chiếm ưu thế so với tất cả các cơ chế 
+                    truyền nhiệt khác. (khoảng 540 cal/g nhiệt lượng bay hơi!) <br>
+                    Vì vậy, vì bạn không "cho phép/chấp nhận" việc thổi trên bề mặt cà phê, 
+                    phương pháp tốt thứ hai là vẫy thìa trên bề mặt. Việc thổi/vẫy sẽ tăng cường 
+                    sự bay hơi do thay thế nhanh chóng hơi nước trên bề mặt bằng không khí mới, mát 
+                    và khô.
+                </p>
+                <div class="user-info">Georg trả lời vào ngày 16 tháng 2 năm 2011 lúc 13:11 </div>
+                <hr>
+                
+
+            </div>
+        </div>
+	<div class="footers">
+        <div class="link-boxes">
+            <a href="../blog" class="link-box">Quay lại</a>
+        </div>
+    </div>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    
+	<script>
+		window.MathJax = {
+          tex: {
+            inlineMath: [["$", "$"], ["\\(", "\\)"]],
+            packages: ["base", "newcommand", "configMacros"]
+          },
+          svg: {
+            fontCache: "global"
+          }
+        };
+	</script>
+</body>
+</html>

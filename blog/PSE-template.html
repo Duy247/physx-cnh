@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
+    <title>Physics Stack Exchange Mockup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/dracula.min.css">
+    <style>
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+			flex-direction: column;
+            justify-content: center;
+            align-items: center; /* Add this line */
+            background-color:#393939;
+            color:white;
+        }
+        .content-wrapper {
+            max-width: 800px;
+            width: 90%;
+            padding: 20px;
+            box-sizing: border-box;
+			border: 1px solid #d6d9dc;
+			border-radius: 8px;
+            margin: 0 auto; /* Add this line */
+            display:block;
+            background-color:white;
+            color:black;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .details {
+            font-size: 14px;
+            color: #666;
+        }
+        .question-panel {
+            display: flex;
+            margin-top: 20px;
+        }
+		.answer-panel {
+            display: flex;
+            margin-top: 20px;
+        }
+        .left-panel {
+			margin-top:1rem;
+            width: 50px;
+            text-align: center;
+            color: #2f6f2f;
+            max-height:300px;
+        }
+        .right-panel {
+            flex: 1;
+            margin-left: 20px;
+            text-align: justify;
+            align-items: center;
+        }
+        .user-info {
+            background-color: #e8f6fa;
+            padding: 10px;
+            text-align: right;
+            font-size: 14px;
+        }
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px solid #d6d9dc;
+        }
+        .comment {
+            margin-bottom: 10px;
+            font-size: 14px;
+            display:flex;
+            flex-direction: row;
+        }
+        .left-panel-comment {
+			margin-top:1rem;
+            width: 50px;
+            text-align: center;
+            color: #2f6f2f;
+            margin-right:20px;
+            margin-left:0;
+        }
+		.link-boxes {
+            display: flex;
+            justify-content: center; /* Change this line */
+            margin-top: 0rem;           
+            align-items: center; /* Change this line */
+            margin-top: 2rem; /* Add some top margin */
+        }
+        .link-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            margin: 0 0.5rem;
+            border: 1px solid rgb(188, 241, 161);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(23, 249, 15, 0.4);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            width: 250px;
+            height: 30%;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: inherit; 
+            text-decoration: inherit; 
+            color:white;     
+
+        }
+
+        .link-box:hover {
+            transform: scale(1.1);
+            border: 1px solid rgb(245, 160, 75);
+            box-shadow: 0 0 10px rgba(249, 132, 15, 0.4);
+        }
+
+        .link-box a {
+            font-size: 1rem;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content-wrap{
+            display:block;
+            padding-left:20px;
+            padding-right:20px;
+            padding-bottom:20px;
+            background-color:#3a3a3a;
+            border: 1px solid #32e313;
+            border-radius:8px;
+        }
+        .footers {
+            width: 100%; /* Add this line */
+            padding: 1rem;
+            box-sizing: border-box; /* Add this line */
+        }
+        img{
+            max-width: 80%;
+            align-self: center;
+        }
+        .codeblock {
+            background-color: #1e1e1e;
+            color: #dcdcdc;
+            border: none;
+            padding: 10px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', Courier, monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            tab-size: 4;
+            white-space: pre-wrap;
+            resize: vertical;
+            outline: none;
+            caret-color: #dcdcdc;
+            overflow: auto;
+            height: auto;
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+	<h1>Câu hỏi Physics Stack Exchange</h1>
+    <div class="content-wrapper">
+        <h1>Question</h1>
+        <p class="details">Hỏi vào 13 năm 6 tháng trước &bull; Sửa đổi 7 tháng trước &bull; Được xem 262k lượt</p>
+        <hr>
+        <div class="question-panel">
+            <div class="left-panel">
+                <span>Upvote</span>
+                <i class="fas fa-thumbs-up"></i>
+            </div>
+            <div class="right-panel" markdown="1">
+                <p>                    
+                    <md-block>
+                        Question content
+                    </md-block>
+                </p>
+                <div class="user-info">X hỏi vào ngày 16 tháng 2 2011 lúc 12:09</div>
+                <hr>
+                <div class="comment">
+                    <div class="left-panel-comment">
+                        <span>19</span>                 
+                    </div>    
+                    <p>Comment 1</p>
+                </div>
+                <hr>
+
+            </div>
+        </div>
+		<hr>
+		<div class="answer-panel">
+            <div class="left-panel">
+                <span>upvote2</span>
+                <i class="fas fa-thumbs-up"></i>
+            </div>
+            <div class="right-panel" markdown="1">
+                <p>                    
+                    <md-block>
+                       Answer content
+                    </md-block>
+                    <img src="https://i.sstatic.net/zPIDz.jpg*">              
+                    <p>$$
+                        \begin{array}{ll}
+                        \text { Method: } & \text { Final Temp. } \\
+                        \text { 1. No Spoon } & 151 \mathrm{~F} \\
+                        \text { 2. Spoon in, no motion } & 149 \mathrm{~F} \\
+                        \text { 3. Spoon stirring } & 147 \mathrm{~F} \\
+                        \text { 4. Spoon dipping } & 143 \mathrm{~F}
+                        \end{array}
+                        $$
+                    </p>
+                    
+                </p>
+                <div class="user-info">drhodes trả lời vào ngày 20 tháng 2 2011 lúc 2:02 </div>
+                <hr>
+                <div class="comment">
+                    <div class="left-panel-comment">
+                        <span>1</span>                 
+                    </div>    
+                    <p> Bạn có thể chia sẻ thêm chi tiết về phương pháp nhúng thìa của bạn không? Ví dụ, bạn có nhúng thìa, đợi cho nó nguội khô cách xa nước nóng và nhúng lại không? –
+                        Mikko Rantalainen
+                        Bình luận vào ngày 3 tháng 7 năm 2021 lúc 20:15 </p>
+                </div>
+                
+                <hr>   
+            </div>       
+        </div>
+        <div class="answer-panel">
+            <div class="left-panel">
+                <span>107</span>
+                <i class="fas fa-thumbs-up"></i>
+            </div>
+            <div class="right-panel" markdown="1">
+                <p>                    
+                    <md-block>
+                        Answer content 2
+                    </md-block>
+                    <textarea class="codeblock" id="codeblock">        
+Method:                  Final Temp.
+1. No Spoon              151 F 
+2. Spoon in, no motion   149 F
+3. Spoon stirring        147 F
+4. Spoon dipping         143 F                          
+                    </textarea>
+                </p>
+                <div class="user-info">X trả lời vào lúc </div>
+                <hr>
+                <div class="comment">
+                    <div class="left-panel-comment">
+                        <span>19</span>                 
+                    </div>    
+                    <p> comment of answer 2</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+	<div class="footers">
+        <div class="link-boxes">
+            <a href="../blog" class="link-box">Quay lại</a>
+        </div>
+    </div>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById('codeblock'), {
+            mode: 'htmlmixed',
+            theme: 'dracula',
+            autoCloseTags: true,
+            readOnly: true,
+        });
+
+
+        
+	  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tản mạn: Chuyện ghi chép bài khi đi học</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            background-color: #424141;           
+        }
+        .img-wrapper{
+            display:flex;
+            flex-direction: row;
+            border: 1px solid #ffba0c;
+
+        }
+        .post-img {
+            max-height:300px;
+            overflow: hidden;
+            opacity:0.6;
+        }
+        
+        .post-img img {
+            width: 100%;
+        }
+        
+        .blog-post-content {
+            background-color: rgb(35, 35, 35);
+            padding-left:50px;
+            padding-right:50px;
+            padding-top:5px;
+            padding-bottom:5px;
+            font-family: Roboto,sans-serif;
+            text-align: justify;
+            color:white;
+        }
+        .blog-post-content img{
+            display:flex;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 300px;
+        }
+        
+        .blog-post-content h1 {
+            text-align: center;
+        }
+        
+        .blog-post-content p {
+            font-size: 18px;
+            line-height: 1.5;
+            word-spacing: 0.5px;
+            text-indent: 25px;
+        }
+        
+        .row {
+            display: flex;
+        }
+        
+        .more-post {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .blogpost-meta {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .author-info {
+            margin: 5px 0;
+            color:#00f7ff;
+        }
+        
+        .author-info div {
+            padding: 4px 0px;
+            font-family: var(--font1);
+        }
+        
+        .navigation {
+            margin-top: 5px;
+            font-family: var(--font1);
+            overflow:visible;
+        }
+        
+        .nav-left {
+            display: flex;
+            flex-direction: row;
+            height: 4rem;
+            background-color:#636363;
+        }
+        
+        .nav-left span {
+            font-size: 35px;
+            padding-top: 10px;
+        }
+        
+        .nav-left ul {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            padding-left:0;
+        }
+        
+        .nav-left ul li {
+            list-style: none;
+            margin: 0 10px;
+            font-family: Roboto, sans-serif;
+            transition: all 0.3s ease-in-out;
+            border: 1px solid rgb(213, 213, 213);
+            border-radius:8px;
+            padding: 10px;
+        }
+        .nav-left ul li:hover{
+            border: 1px solid #41c404;;
+        }
+        
+        .nav-left ul li a {
+            text-decoration: none;
+            color: rgb(245, 245, 245);
+        }
+        
+        .nav-left ul li a:hover {
+            color: #6af728;
+            
+        }
+        
+        .content {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 16px;
+            padding: 9px;
+            position: relative;
+        }
+        
+        .content::after {
+            content: "";
+            background-image: url("../img/11.svg");
+            position: absolute;
+            width: 100%;
+            height: inherit;
+            opacity: 0.3;
+            border-radius: 12px;
+        }
+        
+        .content-left {
+            font-family: var(--font1);
+            width:70%;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 25px;
+            z-index: 1;
+            text-align: justify;
+            color:white;
+        }
+        
+        .content-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top:10px;
+        }
+        
+        .content-right img {
+            height: 355px;
+            border: 2px solid #91c6ff;
+            border-radius: 200px;
+            z-index:9999;
+        }
+        
+        .home-articles {
+            padding: 18px;
+            background-color: rgb(248, 239, 239, 0.5);
+            margin-top: 23px;
+            position: relative;
+        }
+        
+        .home-article {
+            display: flex;
+            margin: 25px;
+            font-family: Roboto, sans-serif;
+        }
+        
+        .home-article img {
+            width: 300px;
+        }
+        
+        .home-article-content {
+            align-self: center;
+            padding: 25px;
+        }
+        
+        .home-article-content a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .footer {
+            height: 50px;
+            background-color: var(--main-bg-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-direction: column;
+            font-weight: bold;
+            font-family: Roboto, sans-serif;
+        }
+        
+        .footer a {
+            color: white;
+        }
+        :root { 
+            --main-bg-color: #bd6418;
+            --font1: "Roboto", sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navigation max-width-1 m-auto">
+        <div class="nav-left">
+            <a href="/">
+                <span><img src="../img/logo.png" width="60px" alt=""></span>
+            </a>
+            <ul>
+                <li><a href="../blog">Trang chính</a></li>
+                <li><a href="/welcome">Tài liệu</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="max-width-1 m-auto">
+        <hr>
+    </div>
+    <div class="img-wrapper">
+        <div class="post-img">
+            <img src="../img/3.png" alt="">
+        </div>
+        <div class="post-img">
+            <img src="../img/2.png" alt="">
+        </div>
+    </div>
+    
+    <div class="m-auto blog-post-content max-width-2 m-auto my-2">
+        <h1 class="font1">Chuyện ghi chép bài khi đi học</h1>
+        <div class="blogpost-meta">
+            <div class="author-info">
+                <div>
+                    <b>Tản mạn - Văn Thành Duy</b>
+                </div>
+                <div>27 Tháng 8, 2024. 10 phút đọc</div>
+            </div>
+        </div>
+        <p>Nhắc đến ghi chép bài thì chắc ai cũng biết mình đang nói đến cái gì. Từ khi đi học tiểu học viết từng biểu thức, tóm tắt những gì thầy cô giảng, lên cấp bậc THCS cũng lặp lại y như vậy nhưng với khối lượng kiến thức lớn hơn
+            rồi khi lên THPT cũng thế. Đương nhiên, việc ghi chép là để các em học sinh có tư liệu để nhìn vào về sau, để giáo viên truyền đạt lại cho các em rằng những cái gì quan trọng cần phải nhớ, cần phải tập trung. Nhưng có một 
+            vấn đề mà bản thân mình nhận thấy, ở bản thân, cũng như là ở nhiều bạn học, đấy là khi lên Đại học, hay Cao đẳng, chuyện ghi chép thay đổi $180$ độ (vâng, ở đây mình dùng LaTeX cho ngầu ạ). Thì, vấn đề xảy ra khi các bạn bước lên Đại học là gì?
+        </p>
+        <p>
+            Bắt đầu với câu chuyện ghi chép ở tiểu học, đây là giai đoạn các học sinh sẽ được tập viết và sẽ được dạy là phải ghi chép bằng bút mực, vào một quyển vở.
+        </p>
+        <img src="https://img.giaoduc.net.vn/w1000/Uploaded/2024/edxwpcqdh/2018_08_15/vo_o_ly_2.jpg" alt="th">
+        <p>
+            Cơ bản ở mức tiểu học là để, thứ nhất, tập viết, thứ hai, ghi lại các kiến thức cơ bản nhất mà giáo viên muốn các em học sinh phải nhớ. Sau này khi lên cấp THCS, vì khối lượng kiến thức tăng lên, dùng bút mực chữ đẹp không còn khả dĩ
+            thì các em học sinh chuyển sang viết bút bi.
+        </p>
+        <img src="https://kenh14cdn.com/2019/1/19/photo-1-1547905464892192677712.jpg" alt="thcs">
+        <p>
+            Mục tiêu của việc viết lách này là gì, đầu tiên, không còn câu chuyện chữ phải đẹp, mà thay vào đó là tập trung hơn vào lưu trữ thông tin, những cái mà các thầy cô muốn học sinh nắm bắt. Bắt đầu xuất hiện các hình thái đầu tiên của format văn bản, các gạch đầu dòng hay là các $\text{bullet point}$ $\bullet$
+            . Điều này giúp cho việc đọc sau này dễ dàng hơn, không cần phải đọc từ đầu đến cuối, mà chỉ cần nhìn vào những điểm chính, những điểm mà giáo viên muốn nhấn mạnh. Nghe quen không ạ? Đúng, khác gì các bạn đọc một văn bản đánh máy đâu, ghi nhớ điều này. Tiếp theo, lên cấp THPT
+            thì cơ bản mọi thứ vẫn vậy, nhưng lần này lượng kiến thức còn nhiều hơn nữa, nhiều hộc máu mồm.
+        </p>
+        <img src="https://cdn-i.vtcnews.vn/resize/th/upload/2021/04/15/khong-nhin-duoc-cuoi-voi-canh-hoc-mau-trong-phim-truyen-hinh-20181010-050024-09055592.jpg" alt="chet-vi-viet">
+        <p>
+            Nhiều bạn học sinh mình biết bắt đầu thay vì chép những gì thầy cô giảng vào vở, thì bắt đầu phải nghe và viết lại theo cách mình hiểu, thứ nhất là để rút gọn câu chữ, thứ hai là áp dụng các phương pháp viết tắt. Đặc biệt, cực đoan hơn, các bạn ghi chú
+            lại nội dung nằm ở đâu, về nhà in từ sách ra và dán vào.
+        </p>
+        <img src="https://scontent-hkg1-2.xx.fbcdn.net/v/t1.6435-9/159873065_516594616402436_7711912566845591621_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEP6FZJMNWxqAVMQYIFWYE4FW9yIrK2uqkVb3Iisra6qTXXhsXzdAwKlCLJkXQlO9QFrHAcz3KpEQfVpdhFwdQA&_nc_ohc=LE4xxkiZuXUQ7kNvgHAvFKK&_nc_ht=scontent-hkg1-2.xx&_nc_gid=AeKXVDKZQ5pFu6GAxz9nci8&oh=00_AYCMnxKSSEPHdI3tQ4MPppgu68sPkoAN1ieLYLXX6X7uBQ&oe=66F4BB54" alt="">
+        <p>
+            Tóm lại, các bạn có thể thấy, có thể tự nhìn vào bản thân đánh giá, việc ghi chép khi lên dần các bậc học sẽ mất dần bản chất ban đầu của nó, mất tính thẩm mĩ mà quay về hướng tối ưu hoá để lưu trữ thông tin. 
+            Đương nhiên, khi giải bài tập như toán, vật lý, hoá học thì các bạn vẫn phải ghi ra vở để phục vụ việc luyện trình bày khi đi thi, nhưng nếu bạn để ý, phương pháp trình bày các bài tự luận không khác mấy việc đánh máy (???)
+        </p>
+        <img src="https://cdn3.olm.vn/upload/img_teacher/0312/img_teacher_2024-03-12_65f068478d602.jpg" alt="">
+        <p>
+            Cũng có các phương pháp căn lề, chia đoạn, đánh dấu, gạch chân, gạch ngang, gạch đầu dòng, gạch đầu câu, dấu má, vẽ hình vào giữa vở. Tất cả đều rất giống đánh máy, vì sao? Chính vì các thầy cô <b>đã soạn giáo án, bài giải bằng máy tính</b>. Đúng ! Chân ái
+            chính là gõ máy tính. Và điều này càng đúng khi lên đại học.
+        </p>
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHhkOTdiZHptbHltNHc4YmhjOTRjcXBlNTQ3MjV1OGNxNTRoNGplOCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/13GIgrGdslD9oQ/200.webp">
+        <p>
+            Đầu tiên, chúng ta cần phải nhận ra rằng, việc ghi chép bài không còn đơn thuần là việc viết ra những gì giáo viên giảng, mà nó còn là việc tự mình tìm hiểu, tự mình nắm bắt kiến thức. Nói một cách khác, làm gì thì làm, miễn là nắm bắt kiến thức
+            , model dành cho việc viết lách của các bạn không còn quan trọng. Khi các thầy cô trên ĐH yêu cầu các bạn chép bài, lưu ý không ai dùng từ "viết" mà là "chép", tức là phương pháp ghi chép không còn giới hạn ở dạng viết. Again, gõ máy là chân ái !
+        </p>
+        <p>
+            Một cái cơ bản nhất mà các sinh viên sẽ gặp thi lên ĐH ở một vài buổi đầu chính là các bài giảng đột nhiên dài vãi cả chưởng. <img src="https://kenh14cdn.com/2019/9/9/photo-1-1567989596920418437398.jpg">
+            Rồi các bạn sẽ cố ghi chép, ghi cho đẫy vào, rồi phải viết ẩu, viết tắt, về nhà cố mà đọc lại thì còn mất thời gian hơn là đọc từ sách giáo án ra. Vậy, ý tưởng ở đây chính là chuyển sang tập đánh máy càng sớm càng tốt. Các bạn sẽ thấy, càng ngày cành nhiều những chiếc laptop
+            nằm trên bàn học. Điều này đặc biệt đến rất sớm đối với mình khi học bên Nga, vì ở đây, giáo viên thường xuyên chiếu slide cũng như với giáo viên Việt Nam và nhóm sinh viên nước ngoài gặp rào cản ngôn ngữ rất lớn nên việc ghi chép bằng máy tính là điều cần thiết để đảm bảo tiến độ ghi chép.
+        </p>
+        <p>
+            Một số bạn sẽ hỏi " Ơ, thế còn các phương trình có ký hiệu phức tạp như toán, vật lý thì ghi thế nào? Hay là hình vẽ? ", câu trả lời chính là LaTeX và giáo án PDF. Các bạn sẽ gõ bài giảng vào một phần mềm chuyên dụng hỗ trợ LaTeX và tìm hình vẽ trên giáo án tương ứng mà giáo viên đang sử dụng rồi copy paste vào. Nếu giáo viên đang giải bài tập, đợi giải xong rồi chụp lại bằng điện thoại.
+            Phương pháp này được mình áp dụng từ năm thứ hai đại học <img src="https://i.ibb.co/7k1SpwQ/sm5iS80.png"> Mình bắt đầu với việc sử dụng phần mềm Microsoft Word, phần mềm này có những ưu nhược điểm rõ ràng:
+        </p>
+        <p>
+            <li><span style="color: green;">+</span> Đầu tiên, nó rất dễ format văn bản, tức là căn lề, gạch đầu dòng, đặt bullet points</li>
+            <li> <span style="color: green;">+</span> Rất dễ dàng tô màu, bôi màu cho văn bản</li>
+            <li><span style="color: green;">+</span> Có hai lựa chọn viết phương trình toán, hoặc sử dụng tính năng nhập gõ máy rồi chuyển thành ảnh chèn vào văn bản, hoặc gõ LaTeX và chèn thẳng vào văn bản</li>
+            <li><span style="color: red;">-</span> File Word càng dài, load càng lâu và chạy càng chậm, dễ gây ức chế</li>
+            <li><span style="color: red;">-</span> Tính năng lưu trữ trên máy thì mạo hiểm, dễ bay màu vì virus, lỗi ổ cứng, lỗi win, lưu trữ đám mây của Microsoft thì cùi bắp và toàn bug vì thông qua OneDrive</li>
+            <li><span style="color: red;">-</span> Rất bất tiện khi dùng để học lập trình</li>
+        </p>
+        <p>Có một vài lựa chọn ghi chép điện tử khác như <a href="https://obsidian.md/">Obsidian</a> (mình đang dùng) và <a href="https://www.notion.so/">Notion</a>(na ná nhưng tính năng cloud cùi bắp hơn Obsidian) đều sử dụng ngôn ngữ markdown để ghi chép,
+        rất thuận tiện, thuần hỗ trợ LaTeX và có giao diện để viết code, hợp cho việc học lập trình <img src="https://i.ibb.co/qpQj1hJ/image.png"></p>
+        <p>Đương nhiên, việc ghi chép bằng soạn thảo LaTeX trên các ứng dụng Obsidian và Notion là tuân theo ngôn ngữ markdown, vì thế nếu bạn muốn sử dụng LaTex để viết các bài báo khoa học hoặc các tài liệu chuẩn TeX thì cần học riêng biệt.</p>
+        <p>Kết quả là từ năm ba đại học, mình đã bắt đầu dùng Obsidian để viết bài trên lớp <img src="https://i.ibb.co/fdQGcBN/image.png"> Tốc độ viết bài thật sự nhanh, nhất là khi sử dụng chung với tài liệu tự sưu tầm hoặc của giáo viên gợi ý, công thức toán thì gõ LaTeX, hình thì chụp màn hình dán vào. Hiệu quả hay không? Đương nhiên là hiệu quả hơn viết tay, bạn thử so sánh giữa hình ảnh trên và ảnh dưới (ảnh chụp vở cùng môn học của bạn học người Nga)</p>
+        <img src="https://sun9-65.userapi.com/impg/FqyrfdT8G-HnCZzEuBKiNfWzUKwxHdMG7JcVig/fA5QtAo0zdg.jpg?size=2560x1920&quality=95&sign=08aca3fdb5b4c03015a9e718f114fb5a&type=album">
+        <p>Khác biệt là rất rõ, về cả mặt thẩm mĩ lẫn giá trị sử dụng, giá trị lưu trữ. Mình có thể tự tin truyền bản ghi lại cho các em khoá dưới, còn bạn kia thì chắc hết năm sẽ tự tin đốt vở.</p>
+        <p>Hôm nay tới đây thôi.</p>
+    </div>
+    <div class="footer">
+        <p>Copyright &copy; duy247.github.io </p>
+    </div>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script>
+        window.MathJax = {
+          tex: {
+            inlineMath: [["$", "$"], ["\\(", "\\)"]],
+            packages: ["base", "newcommand", "configMacros"]
+          },
+          svg: {
+            fontCache: "global"
+          }
+        };
+    
+      </script>
+</body>
+</html>
