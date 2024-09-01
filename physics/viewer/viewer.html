@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <style>
+        body {
+            background-color: #535759;
+            font-family: Arial, sans-serif;
+        }
+        #pdf-container {
+            text-align: center;
+        }
+        #pdf-canvas {
+            width:100%;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .navigation {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: #404040;
+            color: white;
+            border: 1px solid green;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .navigation button:hover {
+            background-color: #45a049;
+        }
+        .navigation input {
+            padding: 10px;
+            font-size: 16px;
+            width: 30px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: 0 5px;
+        }
+        #pageInfo {
+            font-size: 18px;
+            color: white;
+        }
+        #notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            z-index: 9999;
+        }
+        .download-button {
+            display: block;
+            width: 100px;
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 4px;
+            margin: 0 auto;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .download-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="notification">Đang tải ...</div>
+    <div class="navigation">
+        <button id="prevPage"><</button>
+        <input type="number" id="pageInput" min="1">
+        <button id="jumpPage">Nhảy</button>
+        <button id="nextPage">></button>
+        
+        <br><span id="pageInfo"></span>
+    </div>
+    <div id="pdf-container">
+        <canvas id="pdf-canvas"></canvas>
+    </div>
+    <button class="download-button"><a href="" id="downloadButton" download>Tải xuống</a></button>
+    
+    <a href="/welcome"><img src="/image/logo.png" alt="logo" style="width: 40%; display: block; margin: 0 auto;"></a>
+    <script>
+        function getParameterByName(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        var url = getParameterByName('url');
+        if (!url) {
+            url = '';
+        }
+
+        var pdfjsLib = window['pdfjs-dist/build/pdf'];
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.worker.min.js';
+        var pdfDoc = null;
+        var currentPage = 1;
+        var totalPages = 0;
+        var scale = 1.5;
+
+        function renderPage(num) {
+            pdfDoc.getPage(num).then(function(page) {
+                var viewport = page.getViewport({scale: scale});
+                var canvas = document.getElementById('pdf-canvas');
+                var ctx = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                var renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport
+                };
+                page.render(renderContext);
+            });
+        }
+
+        function showPage(pageNum) {
+            if (pageNum < 1 || pageNum > totalPages) {
+                return;
+            }
+            currentPage = pageNum;
+            renderPage(pageNum);
+            updatePageInfo();
+        }
+
+        function updatePageInfo() {
+            document.getElementById('pageInfo').textContent = 'Page ' + currentPage + ' of ' + totalPages;
+            document.getElementById('pageInput').value = currentPage;
+        }
+
+        pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+            pdfDoc = pdfDoc_;
+            totalPages = pdfDoc.numPages;
+
+            showPage(currentPage);
+
+            document.getElementById('prevPage').addEventListener('click', function() {
+                if (currentPage > 1) {
+                    showPage(currentPage - 1);
+                }
+            });
+
+            document.getElementById('nextPage').addEventListener('click', function() {
+                if (currentPage < totalPages) {
+                    showPage(currentPage + 1);
+                }
+            });
+
+            document.getElementById('jumpPage').addEventListener('click', function() {
+                var pageNum = parseInt(document.getElementById('pageInput').value);
+                if (!isNaN(pageNum) && pageNum >= 1 && pageNum <= totalPages) {
+                    showPage(pageNum);
+                }
+            });
+
+            updatePageInfo();
+
+            // Remove the notification when the book is ready
+            var notification = document.getElementById('notification');
+            notification.parentNode.removeChild(notification);
+
+            // Set the href attribute of the download button to the PDF URL
+            var downloadButton = document.getElementById('downloadButton');
+            downloadButton.href = url;
+        });
+    </script>
+</body>
+</html>
