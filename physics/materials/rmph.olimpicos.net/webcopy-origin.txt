@@ -1,0 +1,384 @@
+Uri: https://cdn.olimpicos.net/css/bootstrap.min.css
+File Name: D:\rmph.olimpicos.net\css\bootstrap.min.css
+Content Type: text/css
+
+Uri: https://cdn.olimpicos.net/css/style.css
+File Name: D:\rmph.olimpicos.net\css\style.css
+Content Type: text/css
+
+Uri: https://cdn.olimpicos.net/fonts/all.min.css
+File Name: D:\rmph.olimpicos.net\fonts\all.min.css
+Content Type: text/css
+
+Uri: https://cdn.olimpicos.net/fonts/fa-brands-400.eot
+File Name: D:\rmph.olimpicos.net\fonts\fa-brands-400.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://cdn.olimpicos.net/fonts/fa-brands-400.eot?
+File Name: D:\rmph.olimpicos.net\fonts\fa-brands-400-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://cdn.olimpicos.net/fonts/fa-brands-400.svg
+File Name: D:\rmph.olimpicos.net\fonts\fa-brands-400.svg
+Content Type: image/svg+xml
+
+Uri: https://cdn.olimpicos.net/fonts/fa-brands-400.ttf
+File Name: D:\rmph.olimpicos.net\fonts\fa-brands-400.ttf
+Content Type: font/ttf
+
+Uri: https://cdn.olimpicos.net/fonts/fa-brands-400.woff
+File Name: D:\rmph.olimpicos.net\fonts\fa-brands-400.woff
+Content Type: font/woff
+
+Uri: https://cdn.olimpicos.net/fonts/fa-brands-400.woff2
+File Name: D:\rmph.olimpicos.net\fonts\fa-brands-400.woff2
+Content Type: font/woff2
+
+Uri: https://cdn.olimpicos.net/fonts/fa-regular-400.eot
+File Name: D:\rmph.olimpicos.net\fonts\fa-regular-400.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://cdn.olimpicos.net/fonts/fa-regular-400.eot?
+File Name: D:\rmph.olimpicos.net\fonts\fa-regular-400-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://cdn.olimpicos.net/fonts/fa-regular-400.svg
+File Name: D:\rmph.olimpicos.net\fonts\fa-regular-400.svg
+Content Type: image/svg+xml
+
+Uri: https://cdn.olimpicos.net/fonts/fa-regular-400.ttf
+File Name: D:\rmph.olimpicos.net\fonts\fa-regular-400.ttf
+Content Type: font/ttf
+
+Uri: https://cdn.olimpicos.net/fonts/fa-regular-400.woff
+File Name: D:\rmph.olimpicos.net\fonts\fa-regular-400.woff
+Content Type: font/woff
+
+Uri: https://cdn.olimpicos.net/fonts/fa-regular-400.woff2
+File Name: D:\rmph.olimpicos.net\fonts\fa-regular-400.woff2
+Content Type: font/woff2
+
+Uri: https://cdn.olimpicos.net/fonts/fa-solid-900.eot
+File Name: D:\rmph.olimpicos.net\fonts\fa-solid-900.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://cdn.olimpicos.net/fonts/fa-solid-900.eot?
+File Name: D:\rmph.olimpicos.net\fonts\fa-solid-900-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://cdn.olimpicos.net/fonts/fa-solid-900.svg
+File Name: D:\rmph.olimpicos.net\fonts\fa-solid-900.svg
+Content Type: image/svg+xml
+
+Uri: https://cdn.olimpicos.net/fonts/fa-solid-900.ttf
+File Name: D:\rmph.olimpicos.net\fonts\fa-solid-900.ttf
+Content Type: font/ttf
+
+Uri: https://cdn.olimpicos.net/fonts/fa-solid-900.woff
+File Name: D:\rmph.olimpicos.net\fonts\fa-solid-900.woff
+Content Type: font/woff
+
+Uri: https://cdn.olimpicos.net/fonts/fa-solid-900.woff2
+File Name: D:\rmph.olimpicos.net\fonts\fa-solid-900.woff2
+Content Type: font/woff2
+
+Uri: https://cdn.olimpicos.net/icon/favicon-180x180.png
+File Name: D:\rmph.olimpicos.net\icon\favicon-180x180.png
+Content Type: image/png
+
+Uri: https://cdn.olimpicos.net/icon/favicon-192x192.png
+File Name: D:\rmph.olimpicos.net\icon\favicon-192x192.png
+Content Type: image/png
+
+Uri: https://cdn.olimpicos.net/icon/favicon-32x32.png
+File Name: D:\rmph.olimpicos.net\icon\favicon-32x32.png
+Content Type: image/png
+
+Uri: https://rmph.olimpicos.net/
+File Name: D:\rmph.olimpicos.net\index.htm
+Content Type: text/html
+
+Uri: https://rmph.olimpicos.net/cdn-cgi/images/browser-bar.png?1376755637
+File Name: D:\rmph.olimpicos.net\cdn-cgi\images\browser-bar.png
+Content Type: image/png
+
+Uri: https://rmph.olimpicos.net/cdn-cgi/images/cf-icon-browser.png
+File Name: D:\rmph.olimpicos.net\cdn-cgi\images\cf-icon-browser.png
+Content Type: image/png
+
+Uri: https://rmph.olimpicos.net/cdn-cgi/images/cf-icon-cloud.png
+File Name: D:\rmph.olimpicos.net\cdn-cgi\images\cf-icon-cloud.png
+Content Type: image/png
+
+Uri: https://rmph.olimpicos.net/cdn-cgi/images/cf-icon-error.png
+File Name: D:\rmph.olimpicos.net\cdn-cgi\images\cf-icon-error.png
+Content Type: image/png
+
+Uri: https://rmph.olimpicos.net/cdn-cgi/images/cf-icon-horizontal-arrow.png
+File Name: D:\rmph.olimpicos.net\cdn-cgi\images\cf-icon-horizontal-arrow.png
+Content Type: image/png
+
+Uri: https://rmph.olimpicos.net/cdn-cgi/images/cf-icon-ok.png
+File Name: D:\rmph.olimpicos.net\cdn-cgi\images\cf-icon-ok.png
+Content Type: image/png
+
+Uri: https://rmph.olimpicos.net/cdn-cgi/images/cf-icon-server.png
+File Name: D:\rmph.olimpicos.net\cdn-cgi\images\cf-icon-server.png
+Content Type: image/png
+
+Uri: https://rmph.olimpicos.net/cdn-cgi/images/cf-no-screenshot-error.png
+File Name: D:\rmph.olimpicos.net\cdn-cgi\images\cf-no-screenshot-error.png
+Content Type: image/png
+
+Uri: https://rmph.olimpicos.net/cdn-cgi/images/cf-no-screenshot-warn.png
+File Name: D:\rmph.olimpicos.net\cdn-cgi\images\cf-no-screenshot-warn.png
+Content Type: image/png
+
+Uri: https://rmph.olimpicos.net/cdn-cgi/images/icon-exclamation.png?1376755637
+File Name: D:\rmph.olimpicos.net\cdn-cgi\images\icon-exclamation.png
+Content Type: image/png
+
+Uri: https://rmph.olimpicos.net/cdn-cgi/l/email-protection
+File Name: D:\rmph.olimpicos.net\cdn-cgi\l\email-protection.html
+Content Type: text/html
+
+Uri: https://rmph.olimpicos.net/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js
+File Name: D:\rmph.olimpicos.net\cdn-cgi\scripts\5c5dd728\cloudflare-static\email-decode.min.js
+Content Type: application/javascript
+
+Uri: https://rmph.olimpicos.net/cdn-cgi/styles/cf.errors.css
+File Name: D:\rmph.olimpicos.net\cdn-cgi\styles\cf.errors.css
+Content Type: text/css
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2012_Q1.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2012_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2012_Q2.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2012_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2012_Q3.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2012_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2012_Q4.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2012_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2012_Q5.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2012_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2012_S1.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2012_S1.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2012_S2.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2012_S2.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2012_S3.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2012_S3.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2012_S4.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2012_S4.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2012_S5.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2012_S5.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2013_Q1.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2013_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2013_Q2.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2013_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2013_Q3.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2013_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2013_Q4.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2013_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2013_Q5.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2013_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2013_S1.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2013_S1.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2013_S2.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2013_S2.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2013_S3.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2013_S3.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2013_S4.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2013_S4.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2013_S5.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2013_S5.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2014_Q1.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2014_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2014_Q2.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2014_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2014_Q3.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2014_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2014_Q4.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2014_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2014_Q5.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2014_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2014_S1.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2014_S1.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2014_S2.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2014_S2.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2014_S3.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2014_S3.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2014_S4.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2014_S4.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2014_S5.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2014_S5.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2016_Q1.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2016_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2016_Q2.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2016_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2016_Q3.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2016_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2017_Q1.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2017_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2017_Q2.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2017_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2017_Q3.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2017_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2017_Q4.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2017_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2017_Q5.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2017_Q5.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2017_S1.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2017_S1.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2017_S2.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2017_S2.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2017_S3.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2017_S3.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2017_S4.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2017_S4.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2017_S5.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2017_S5.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2018_Q1.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2018_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2018_Q2.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2018_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2018_Q3.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2018_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2018_Q4.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2018_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2018_S1.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2018_S1.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2018_S2.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2018_S2.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2018_S3.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2018_S3.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2021_Q1.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2021_Q1.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2021_Q2.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2021_Q2.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2021_Q3.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2021_Q3.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2021_Q4.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2021_Q4.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2021_S1.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2021_S1.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2021_S2.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2021_S2.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2021_S3.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2021_S3.pdf
+Content Type: application/pdf
+
+Uri: https://rmph.olimpicos.net/pdf/RMPh_2021_S4.pdf
+File Name: D:\rmph.olimpicos.net\pdf\RMPh_2021_S4.pdf
+Content Type: application/pdf
+
