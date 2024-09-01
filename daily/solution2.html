@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài giải 28/08</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #202020;
+        }
+        h1, h2 {
+            margin-bottom: 10px;
+            color: #e4e4e4;
+        }
+        .equation {
+            margin-bottom: 10px;
+        }
+        .task {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 4px;
+            text-align: justify;
+        }
+        .task img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+        .note {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #d6d6d6;
+            border-radius: 4px;
+            text-align: justify;
+        }
+        .hint-toggle {
+            margin-bottom: 0;
+            padding: 10px;
+            background-color: #e8ec6a;
+            border: solid 1px #333;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .hint-toggle i {
+            transition: transform 0.3s ease;
+        }
+        .hint-toggle.active i {
+            transform: rotate(180deg);
+        }
+        .hint-content {
+            display: none;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #e8ec6a;
+            border: solid 1px #333;
+            border-top: none;
+            border-radius: 0 0 4px 4px;
+            text-align: justify;
+            align-items: center;
+        }
+        .link-boxes {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0rem;           
+            align-items: flex-end;
+            margin-top: 0rem;
+            
+        }
+        .link-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            margin: 0 0.5rem;
+            border: 1px solid rgb(188, 241, 161);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(23, 249, 15, 0.4);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            width: 250px;
+            height: 30%;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: inherit; 
+            text-decoration: inherit; 
+            color:white;     
+
+        }
+
+        .link-box:hover {
+            transform: scale(1.1);
+            border: 1px solid rgb(245, 160, 75);
+            box-shadow: 0 0 10px rgba(249, 132, 15, 0.4);
+        }
+
+        .link-box a {
+            font-size: 1rem;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content-wrap{
+            display:block;
+            padding-left:20px;
+            padding-right:20px;
+            padding-bottom:20px;
+            background-color:#3a3a3a;
+            border: 1px solid #32e313;
+            border-radius:8px;
+        }
+        .footers {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrap">
+        <a href="../welcome"><img src="/image/logo.png" alt="logo" style="width: 40%; display: block; margin: auto;"></a>
+        <h1>Bài tập hàng ngày</h1>
+        
+        <div class="note">
+            Nhiệm vụ của các em là làm các bài tập sau đây. Bài tập sẽ được ra hàng ngày cùng với lời giải của ngày hôm trước.
+            Mỗi ngày sẽ là một bài ở các hạng mục cơ, nhiệt, điện, quang học,... xoay vòng. 
+            Scan và gửi bài giải cho anh qua email: <b><i>duy5a247@gmail.com</i></b>.
+        </div>
+
+        <h2>28 tháng 8 2024</h2>
+    
+        <h2>Đáp án  bài tập nhiệt học 28/08/24</h2>
+        <div class="task">
+            Giả sử một căn phòng có nhiệt độ vào mùa đông là $1^{\circ} \mathrm{C}$, vào mùa hè là $35^{\circ} \mathrm{C}$. Hãy tính tỉ số giữa khối lượng không khí trong căn phòng vào 2 mùa đó. (Giả sử áp suất không khí trong phòng là như nhau trong cả 2 mùa.)
+
+<br>【Gợi ý】Sử dụng phương trình trạng thái của khí lí tưởng và khái niệm áp suất riêng phần của hỗn hợp khí. 
+
+<br>【Lời giải】(1) Giả sử thể tích của căn phòng là $V_0$, nhiệt độ vào mùa đông và mùa hè lần lượt là $T_1$ và $T_2$, số mol không khí trong phòng lần lượt là $\nu_1$ và $\nu_2$, khi đó
+
+$$
+p_0 V_0=\nu_1 R T_1, \quad p_0 V_0=\nu_2 R T_2
+$$
+
+Vì thế $\frac{\nu_1}{\nu_2}=\frac{T_2}{T_1}$. Giả sử khối lượng mol trung bình của không khí là $M$, thì tỉ số khối lượng không khí trong phòng vào mùa đông và mùa hè là
+
+$$
+\frac{m_1 g}{m_2 g}=\frac{\nu_1 M g}{\nu_2 M g}=\frac{T_2}{T_1}=\frac{273.16+35}{273.16+1}=1.12 / 1
+$$
+
+Từ đó có thể thấy rằng ở cùng một áp suất, khối lượng (hoặc khối lượng) của không khí trong phòng vào mùa đông gấp 1,12 lần so với mùa hè.
+(2) Do áp suất vào mùa đông và mùa hè bằng nhau (đều là $p_0$), các nhiệt độ lần lượt là $T_1$ và $T_2$, giả sử mật độ số phân tử của không khí trong phòng lần lượt là $n_1$ và $n_2$, khi đó
+
+$$
+p_0=n_1 K T_1, \quad p_0=n_2 K T_2
+$$
+
+Ta có thể nhận được $n_1 / n_2=T_2 / T_1$. Với thể tích phòng là $V_0$, khối lượng không khí trong phòng vào mùa đông và mùa hè là $W_1$ và $W_2$ lần lượt là
+
+$$
+W_1=m_1 g=V_0 n_1 g, \quad W_2=m_2 g=V_0 n_2 g
+$$
+
+Vì thế
+
+$$
+\frac{W_1}{W_2}=\frac{m_1 g}{m_2 g}=\frac{n_1}{n_2}=\frac{T_2}{T_1}=\frac{273.16+35}{273.16+1}=\frac{1.12}{1}
+$$
+
+(3) Vào mùa đông, phòng có thể tích là $V_0$, nhiệt độ khí là $T_1$, áp suất là $p_0$; khi nhiệt độ không khí này tăng lên bằng nhiệt độ mùa hè, thể tích của nó là $V_2=V_0+\Delta V$, trong đó $\Delta V$ là thể tích tăng thêm do không khí giãn nở, tức là thể tích không khí có nhiệt độ $T_2$, áp suất $p_0$ bị đẩy ra ngoài. Do đó
+
+$$
+p_0 V_0=\nu R T_1, \quad p_0\left(V_0+\Delta V\right)=\nu R T_2
+$$
+
+Từ đó ta nhận được tỉ số giữa khối lượng không khí trong phòng vào mùa đông $W_1$ với khối lượng không khí trong phòng vào mùa hè $W_2$ bằng tỉ số giữa khối lượng không khí trong thể tích $V_0+\Delta V$ vào mùa hè $W_1$ với một phần (tức thể tích $V_0$ ) của khối lượng không khí đó, tức là
+
+$$
+\frac{W_1}{W_2}=\frac{V_0+\Delta V}{V_0}=\frac{T_2}{T_1}=1.12
+$$
+
+        </div>
+        <h3 class="hint-toggle" onclick="toggleHint(event)">Ghi chú <i class="fas fa-caret-down"></i></h3>
+        <div class="hint-content">
+            <p>Xem xét cùng một bài toán từ các góc độ khác nhau, có thể thu được các phương pháp giải khác nhau.</p>
+        </div>
+
+    </div>
+    <div class="footers">
+        <div class="link-boxes">
+            <a href="../welcome" class="link-box">Trang chính</a>
+            <a href="/daily/solution_1" class="link-box">Đáp án 27/08</a>
+        </div>
+
+    </div>
+    
+    <script>
+        function toggleHint(event) {
+            event.target.classList.toggle('active');
+            var hintContent = event.target.nextElementSibling;
+            hintContent.style.display = hintContent.style.display === 'block' ? 'none' : 'block';
+        }
+        const MathJaxScript = () => {
+        const script = document.createElement('script');
+        script.type = "text/javascript";
+        script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+        script.async = true;
+        document.head.appendChild(script);
+        };
+
+        window.MathJax = {
+        tex: {
+            tags: 'ams',
+            inlineMath: [["$", "$"], ["\\(", "\\)"]],
+            
+        }
+        };
+        MathJaxScript();
+    </script>
+</body>
+</html>
