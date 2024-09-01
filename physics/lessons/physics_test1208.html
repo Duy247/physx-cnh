@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập thử</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .equation {
+            margin-bottom: 10px;
+        }
+        .task {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 4px;
+            text-align: justify;
+        }
+        .task img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+        .note {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #d6d6d6;
+            border-radius: 4px;
+            text-align: justify;
+        }
+        .hint-toggle {
+            margin-bottom: 0;
+            padding: 10px;
+            background-color: #e8ec6a;
+            border: solid 1px #333;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .hint-toggle i {
+            transition: transform 0.3s ease;
+        }
+        .hint-toggle.active i {
+            transform: rotate(180deg);
+        }
+        .hint-content {
+            display: none;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #e8ec6a;
+            border: solid 1px #333;
+            border-top: none;
+            border-radius: 0 0 4px 4px;
+            text-align: justify;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bài tập thử</h1>
+    <h2>Gửi bởi anh Duy</h2>
+    <div class="note">
+        Nhiệm vụ của các em là làm các bài tập sau đây. Ưu tiên các bài tập mà các em thấy bản thân mình tự tin và nắm chắc nhất, sau đấy là các bài còn lại. <br>
+        Các em nên giải quyết bài tập theo cá nhân mà không thảo luận hay cố gắng tìm lời giải trên mạng của các bài tập tương tự, để làm căn cứ giúp anh xác định điểm yếu của từng bạn, từ đấy có hướng hỗ trợ.<br>
+        Cố gắng lướt nhanh qua các bài tập, các bài tập đều ngắn, trình bày ở mức tối thiểu nhưng phải đi đến kết quả cuối cùng. <br>
+        Scan và gửi bài giải cho anh qua email: <b><i>duy5a247@gmail.com</i></b>.
+    </div>
+
+    <h2>Bài tập cơ học số 1</h2>
+    <div class="task">
+        Quỹ đạo chuyển động của một hạt chuyển động dưới tác dụng của một lực xuyên tâm là \(r \theta\) là hằng số. Xác định phương trình thế năng theo \(r\).
+    </div>
+    <h3 class="hint-toggle" onclick="toggleHint(event)">Gợi ý <i class="fas fa-caret-down"></i></h3>
+    <div class="hint-content">
+        <p>Sử dụng phương trình tính lực trong hệ toạ độ cực.</p>
+    </div>
+
+    <h2>Bài tập cơ học số 2</h2>
+    <div class="task">
+        Một quả cầu đồng chất có khối lượng \(m\) và bán kính \(r\) lăn không trượt trên bề mặt bên ngoài của một quả cầu lớn hơn đứng yên có bán kính \(R\) như ở hình dưới. Gọi \(\theta\) là góc cực của quả cầu con đối với hệ trục tọa độ với gốc được đặt ở tâm của quả cầu lớn, với trục \(z\) là trục thẳng đứng. Quả cầu nhỏ bắt đầu lăn từ vị trí đỉnh của quả cầu lớn \(\theta=0\). <br>
+        (a) Tính vận tốc ở tâm của quả cầu nhỏ như là hàm của \(\theta\). <br>
+        (b) Tính góc mà tại đó quả cầu nhỏ rời khỏi quả cầu lớn <br>
+        (c) Nếu bây giờ cho phép trượt với một hệ số ma sát là \(\mu\), thì ở điểm nào quả cầu nhỏ sẽ̃ bắt đầu trượt? <br>
+        <img src="illu1.png" alt="Illustration 1">
+    </div>
+    <h3 class="hint-toggle" onclick="toggleHint(event)">Gợi ý <i class="fas fa-caret-down"></i></h3>
+    <div class="hint-content">
+        <p>a - Khi quả cầu nhỏ lăn không trượt, tổng động năng và thế năng là một hằng số của chuyển động. Bảo toàn năng lượng.</p>
+        <p>b - Khi cầu nhỏ rời khỏi cầu lớn, lực đỡ lên quả cầu nhỏ sẽ bằng 0, sử dụng phương trình cân bằng lực với lực đỡ bằng 0</p>
+        <p>c - Xét thời điểm khi quả cầu lăn không trượt, tìm lực ma sát. Sử dụng giá trị lực ma sát tìm vị trí khi thoả mãn phương trình lực ma sát.</p>
+        <div class="equation">
+            \[f=\mu N\]
+        </div>
+    </div>
+
+    <h2>Bài tập nhiệt học số 1</h2>
+    <div class="task">
+        Xét một mô hình đơn giản của khí quyển trái đất. Bỏ qua gió, sự đối lưu v.v. và bỏ qua sự biến thiên của lực hấp dấn. <br>
+        (a) Giả thiết rằng khí quyển là đẳng nhiệt \( 0^{\circ} \mathrm{C} \) . Hãy thiết lập một biểu thức về sự phân bố các phân tử khí theo độ cao. Đánh giá sơ bộ độ cao mà ở đó chỉ còn phân nửa số phân tử khí. <br>
+        (b) Giả thiết khí quyển là đoạn nhiệt lý tường. Chứng minh rằng nhiệt độ giảm tuyến tính theo độ cao. Ước tính tốc độ giảm nhiệt độ đó (cũng thường gọi là tốc độ giảm đoạn nhiệt) đối với trái đất.
+    </div>
+    <h3 class="hint-toggle" onclick="toggleHint(event)">Gợi ý <i class="fas fa-caret-down"></i></h3>
+    <div class="hint-content">
+        a - Dựa vào điều kiện cân bằng áp suất cơ bản và phương trình trạng thái khí. <br>
+        b - Hệ thức từ cân bằng áp suất cơ bản và phương trình trạng thái khí vẫn đúng và áp dụng thêm phương trình mô tả quá trình đoạn nhiệt.
+    </div>
+
+    <h2>Bài tập nhiệt học số 2</h2>
+    <div class="task">
+        Pit-tông khối lượng \(M\) được giữ trong một xilanh hình trụ đặt thẳng đứng có tiết diện ngang hình tròn với bán kính trong \(R_0\), đáy dưới kín (Hình dưới). <br>
+        Dưới pit-tông là một khối khí lí tưởng có áp suất \(p_0\) bằng áp suất khí quyển, nhiệt độ \(T_0\), khối lượng mol \(\mu\), chỉ số đoạn nhiệt (tỉ số giữa nhiệt dung đẳng áp và nhiệt dung đẳng tích) \(\gamma\), chiều cao cột khí trong xilanh là \(h_0\). <br>
+        Giả thiết bỏ qua ma sát giữa pit-tông và xilanh, khí trong xilanh không thoát được ra bên ngoài, xilanh và pit-tông hoàn toàn cách nhiệt với bên ngoài, nhiệt độ và áp suất khí trong xilanh phân bố đều. Gia tốc trọng trường là \(\vec{g}\). <br>
+        Pit-tông được thá ra sao cho khí trong xilanh thực hiện một quá trinh đoạn nhiệt thuận nghịch đến khi pit-tông nằm cân bằng. <br>
+        (a) Tìm áp suất, nhiệt độ, độ cao của cột khí trong xilanh khi pit-tông cân bằng. <br>
+        (b) Tìm công mà khí trong xilanh đã nhận được, công do khí quyển và công do trọng lực của pittông đã thực hiện từ khi thả pit-tông đến khi pit-tông cân bằng. Giả thiết pit-tông nằm cân bằng ngay khi đến vị trí này lần đầu.
+        <img src="illu2.png" alt="Illustration 2">
+    </div>
+    <h3 class="hint-toggle" onclick="toggleHint(event)">Gợi ý <i class="fas fa-caret-down"></i></h3>
+    <div class="hint-content">
+        <p>Cân bằng áp suất từ cân bằng lực</p>
+    </div>
+
+    <h2>Bài tập điện học số 1</h2>
+    <div class="task">
+        Một quả cầu dẫn điện lý tưởng được đặt trong điện trường đều hướng theo trục \(z\). <br>
+        Mật độ điện tích mặt trên mặt cầu là bao nhiêu ?
+        
+    </div>
+    <h3 class="hint-toggle" onclick="toggleHint(event)">Gợi ý <i class="fas fa-caret-down"></i></h3>
+    <div class="hint-content">
+        <p>Phương pháp ảnh điện<p>
+    </div>
+
+    <h2>Bài tập điện học số 2</h2>
+    <div class="task">
+        Tám đoạn dây dẫn có cùng điện trở \(R\) được hàn lai thành hình tháp có đáy \(ABCD\) và đỉnh \(O\) (Hình dưới). Tính điện trở tương đương giữa các điểm :
+        (a) A và C ;
+        (b) A và B;
+        <img src="illu3.png" alt="Illustration 3">
+    </div>
+    <h3 class="hint-toggle" onclick="toggleHint(event)">Gợi ý <i class="fas fa-caret-down"></i></h3>
+    <div class="hint-content">
+        <p>Ép phẳng mạch điện,xét tính đối xứng</p>
+    </div>
+
+    <h2>Bài tập quang học số 1</h2>
+    <div class="task">
+        Chiết suất của không khí tại một sân bay phụ thuộc vào độ cao y theo công thức \(n=n_0(1+a y)\) trong đó hằng số \(a=1,5 \cdot 10^{-6} m^{-1} \), \(n_0\) là chiết suất không khí tại mặt đất. <br>
+        Một người đứng trên đường băng, độ cao mặt của anh ta so với mặt đất là \(1,7 \mathrm{~m}\). Tính độ dài d mà anh ta nhìn rõ trên đường băng?       
+        <img src="illu4.png" alt="Illustration 4">
+    </div>
+    <h3 class="hint-toggle" onclick="toggleHint(event)">Gợi ý <i class="fas fa-caret-down"></i></h3>
+    <div class="hint-content">
+        <p>Với môi trường chiết suất thay đổi, ánh sáng sẽ khúc xạ liên tục khi truyền qua từng lớp môi trường phân bố theo quy luật thay đổi cho trước. </p>
+        <p>Chia không khí thành các lớp nhỏ, tìm quy luật biến đổi, sử dụng tích phân để tính toán </p>
+    </div>
+
+    <h2>Bài tập quang học số 2</h2>
+    <div class="task">
+        Xét mặt cầu khúc xạ SPM ngăn cách hai môi trường có chiết suất \(n_1, n_2\). Điểm C là tâm mặt cầu SPM. <br>
+        Xét hai điểm O và Q sao cho các điểm \(\mathrm{O}, \mathrm{C}\) và Q thẳng hàng. Tính quang trình OSQ theo các khoảng cách \(x, y, r\) và góc \(\theta\) (xem hình vẽ). Sử dụng nguyên lí Fermat để tìm tia sáng nối hai điểm O và Q . 
+        Ngoài ra, giả thiết \(\theta\) rất nhỏ, xác định ảnh gần trục của điểm O.
+        <img src="illu5.png" alt="Illustration 5"> 
+    </div>
+    <h3 class="hint-toggle" onclick="toggleHint(event)">Gợi ý <i class="fas fa-caret-down"></i></h3>
+    <div class="hint-content">
+        <p>Áp dụng nguyên lý Fermat</p>
+        1. Quang trình <br>
+        -Ánh sáng truyền từ A đến B qua nhiều môi trường \(1,2,3, \ldots\) Chiết suất của các môi trường ấy lần lượt là \(n_1, n_2, n_3, \ldots\) và độ dài quang học của các quãng đường đi tương ứng là \(s_1, s_2, s_3, \ldots\) thì quang trình của ánh sáng là: <br>
+        \(
+        L=n_1 s_1+n_2 s_2+n_3 s_3+\ldots=\sum n_i s_i
+        \)<br>
+        -Nếu ánh sáng truyền từ A đến B trong môi trường có chiết suất thay đổi liên tục từ điểm này đến điểm khác thì ta chia quãng đường truyền thành các đoạn vô cùng nhỏ ds sao cho chiết suất của môi trường trong mỗi đoạn được coi là không đổi và quang trình lúc đó là: \(L=\int_A^B n d s\) <br>
+        2. Nguyên lí Fermat <br>
+        Quang trình của đường truyền một tia sáng từ một điểm A đến một điểm B , sau một số lần phản xạ và khúc xạ liên tiếp bất kì, có giá trị cực tiểu, cực đại hoặc dừng, so với quang trình của các tia sáng vô cùng gần tia AB
+    </div>
+
+    <script>
+        function toggleHint(event) {
+            event.target.classList.toggle('active');
+            var hintContent = event.target.nextElementSibling;
+            hintContent.style.display = hintContent.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
