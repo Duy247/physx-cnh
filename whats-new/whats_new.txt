@@ -1,0 +1,4 @@
+* 30-08-24: Cập nhật layout và cơ chế xem PDF cho thiết bị di động
+* 31-08-24: Cập nhật một số đầu sách tiếng anh
+* 31-08-24: Thay đổi mục VL&TT thành tạp chí nói chung<br>Bổ sung 66 số báo Quantum 1990-2001
+* 31-08-24: Bổ sung handouts của Jaan Kalda
