@@ -356,15 +356,15 @@
     </div>
     <div id="main-content" style="display: none;">
         <div class="background">
-            <img src="physics/image1.png" alt="Background Image 1">
-            <img src="physics/image2.jpg" alt="Background Image 2">
-            <img src="physics/image3.jpg" alt="Background Image 3">
-            <img src="physics/image4.jpg" alt="Background Image 4">
-            <img src="physics/image5.jpg" alt="Background Image 5">
-            <img src="physics/image6.jpg" alt="Background Image 6">
-            <img src="physics/image7.jpg" alt="Background Image 7">
-            <img src="physics/image8.jpg" alt="Background Image 8">
-            <img src="physics/image9.jpg" alt="Background Image 9">
+            <img src="physics/img/image1.png" alt="Background Image 1">
+            <img src="physics/img/image2.jpg" alt="Background Image 2">
+            <img src="physics/img/image3.jpg" alt="Background Image 3">
+            <img src="physics/img/image4.jpg" alt="Background Image 4">
+            <img src="physics/img/image5.jpg" alt="Background Image 5">
+            <img src="physics/img/image6.jpg" alt="Background Image 6">
+            <img src="physics/img/image7.jpg" alt="Background Image 7">
+            <img src="physics/img/image8.jpg" alt="Background Image 8">
+            <img src="physics/img/image9.jpg" alt="Background Image 9">
         </div>
         <div class="container">
             <h1>Tổng hợp tài liệu chuyên lí Nguyễn Huệ</h1>
@@ -402,7 +402,7 @@
             </div>
             
             <div class="link-boxes" id="books">
-                <a href="/physics_books_pre_vpho" class="link-box" id="booksPreVpho">
+                <a href="./nav/physics_books_pre_vpho" class="link-box" id="booksPreVpho">
                     Sách HSG cấp thành phố
                 </a>  
                 <a href="/physics_books_vn" class="link-box" id="booksVn">
