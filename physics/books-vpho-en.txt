@@ -1,0 +1,36 @@
+1000 Solved Problems in Modern Physics|Ahmad A. Kamal|/books/1000-solved.pdf| 
+300 Creative Physics Problems with Solutions|László Holics|/books/300-creative.pdf| 
+Mathematical methods for<br>Physics and Engineering|K.F.Riley, M.P.Hobson, S.J.Bence|/books/riley_hobson_bence.pdf| 
+200 Puzzling Physics Problems| |/books/200-puzzling-physics-problems.pdf|Tiếng anh<br>P.Gnadig - Cambridge
+200 More Puzzling Physics Problems| |/books/200-more-puzzling-physics-problems.pdf|Tiếng anh<br>P.Gnadig - Cambridge
+Problems in General Physics|I.E.Irodov|/books/irodov_problem.pdf|Tiếng anh
+Solution to I.E.Irodov's<br>Problems in General Physics<br>Part 1 - Tiếng anh|Abhay Kumar Singh|/books/irodov_solution_1.pdf| 
+Solution to I.E.Irodov's<br>Problems in General Physics<br>Part 2 - Tiếng anh|Abhay Kumar Singh|/books/irodov_solution_2.pdf| 
+Problems in Physics|Krotov - Mir MOSCOW|/books/krotov-physics.pdf|Tiếng anh
+Physics A General Course<br>Mechanics & Molecular Physics|I.V.Savelyev - Mir MOSCOW|/books/savelyev_1_en.pdf|Tiếng anh
+Physics A General Course<br>Electricity & Magnetism<br>Waves & Optics|I.V.Savelyev - Mir MOSCOW|/books/savelyev_2_en.pdf|Tiếng anh
+Physics A General Course<br>Quantum optics, atomic physics<br>Solid state physics|I.V.Savelyev - Mir MOSCOW|/books/savelyev_3_en.pdf|Tiếng anh
+Introduction to Mechanics|Kleppner & Kolenkow|/books/introduction-to-mechanics-2014.pdf| 
+Introduction to classical mechanics|David Morin|/books/mechanic_morin_vn.pdf|Dịch: ĐHKHTN Hà Nội
+Solution Introduction to classical mechanics|David Morin|/books/solution_morin.pdf| 
+Vibrations and Waves|A.P.French|/books/vib_waves_french.pdf|Tiếng anh
+An Introduction to Thermal Physics|Daniel V Schroeder|/books/An_Introduction_to_Thermal_Physics.pdf|Tiếng anh
+Solution An Introduction to Thermal Physics|Daniel V Schroeder|/books/solution_schroeder.pdf|Tiếng anh
+Electricity and Magnetism|Edward M. Purcell & David Morin|/books/electricity_magnetism_purcell.pdf|Tiếng anh
+Introduction to Electrodynamics|David J Griffiths|/books/Electrodynamic_Griffith.pdf|Tiếng anh
+Solution Introduction to Electrodynamics|David J Griffiths|/books/solution_griffiths.pdf|Tiếng anh
+Problems in Classical Electromagnetism|A. Macchi,G. Moruzzi,F. Pegoraro|/books/problem_in_classical_electromagn.pdf| 
+Optics|Eugene Hecht|/books/optics_eugene_hecht.pdf|Tiếng anh
+Modern Physics|Kenneth S Krane|/books/modern_krane.pdf|Tiếng anh
+Solution Modern Physics|Kenneth S Krane|/books/sol_modern_krane.pdf|Tiếng anh
+Fundamental Astronomy|H.Karttunen, P.Kroger, H.Oja|/books/fundamental_astronomy.pdf|Tiếng anh
+Fundamental of Astrodynamics|R.Bate, D.Mueller, E.White|/books/astrodynamics.pdf|Tiếng anh
+Concepts in Thermal Physics|Stephen J.Blundell, Katherine M.Blundell|/books/concepts_in_thermal_physics.pdf|Tiếng anh
+Solution Concepts in Thermal Physics|Stephen J.Blundell, Katherine M.Blundell|/books/solution_concepts_in_thermal_physics.pdf|Tiếng anh
+Competitive Physics: Mechanics and Waves|Jinhui Wang & Bernard Ricardo|/books/competitive_physics-1.pdf| 
+Competitive Physics: Thermodynamics, Electromagnetism<br>and Relativity|Jinhui Wang & Bernard Ricardo|/books/competitive_physics-2.pdf| 
+Physics Olympiads: Basic to Advanced Exercises|The Committee of JPhO|/books/japan_physics_olympiad.pdf| 
+Physics to a Degree|Thomas & Raine|/books/physics-to-a-degree.pdf| 
+Thinking Like a Physicist|N Thompson|/books/thinking-like-physicist.pdf| 
+A Guide to Physics Problems<br>Part 1: Mechanics, Relativity, and Electrodynamics|Sidney B. Cahn, Boris E. Nadgorny|/books/a_guide_to_physics_problems_1.pdf| 
+A Guide to Physics Problems<br>Part 2: Thermodynamics, Statistical Physics, and Quantum Mechanics|Sidney B. Cahn, Boris E. Nadgorny|/books/a_guide_to_physics_problems_2.pdf| 

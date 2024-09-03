@@ -1,0 +1,54 @@
+Ý tưởng giải toán chuyển động|Nguyễn Ngọc Tuấn - ĐHBKHN<br> aka tuanphysics|/materials/handouts/y-tuong-giai-toan-chuyen-dong.pdf|
+Khối tâm và momen quán tính vật rắn bằng tích phân|Source: Tạp chí và Tư liệu vật lý<br>Định dạng LaTeX: Physiad|/materials/handouts/xG.pdf|
+Giải BT Cơ học thiên thể|Thành viên Zinc<br>CLB Vật lí xPhO|/materials/handouts/Orbital_Mech._Probs.pdf|
+Chứng minh công thức dao động tắt dần|Ngô Minh Ngọc - Tạp chí và Tư Liệu Vật lý<br>Định dạng LaTeX: Physiad|/materials/handouts/dao_dong.pdf|
+Chuyển động của hạt trong<br>trường xuyên tâm|Thành viên Zinc<br>CLB Vật lí xPhO|/materials/handouts/Motion_in_central_field.pdf|
+Chuyển động trong trường hấp dẫn|Tạp chí và Tư liệu Vật lý<br>Định dạng LaTeX: Physiad|/materials/handouts/motion_g.pdf|
+Orbital Mechanics|Thành viên Kien T.Pham<br>CLB Vật lí xPhO|/materials/handouts/Ly_thuyet_Kepler.pdf|
+Đĩa Euler|Thành viên Zinc<br>CLB Vật lí xPhO|/materials/handouts/Euler_s_disk.pdf|
+Vật lí Billiard|Thành viên Zinc<br>CLB Vật lí xPhO|/materials/handouts/Billiard_Physics.pdf|
+Bài tập Cơ học tương đối tính|Lê Đại Nam|/materials/handouts/tuong_doi.pdf|
+Chuyên đề luyện thi HSG - Cơ học|Tạp chí và Tư liệu Vật Lý|/materials/chuyen-de-co-hoc.pdf|
+Nhiệt động lực học|Thành viên Zinc<br>CLB Vật lí xPhO|/materials/handouts/thermodynamic_notes.pdf|
+Thuyết động học chất khí|Thành viên Zinc<br>CLB Vật lí xPhO|/materials/handouts/Kinetic_theory_of_gases.pdf|
+Chu trình - Động cơ nhiệt|Phạm Vũ Kim Hoàng|/materials/handouts/dong-co.pdf|
+Lý thuyết Mạch|Sưu tầm: CLB Vật lí xPhO|/materials/handouts/ly-thuyet-mach.pdf|
+Mẹo bài toán mạch điện phức tạp|Thành viên Zinc<br>CLB Vật lí xPhO|/materials/handouts/AC_by_complex_numbers.pdf|
+Chuyên đề cảm ứng điện từ<br>chuyển động của điện tích|Nguyễn Chí Trung - THPT Chuyên Bắc Ninh|/materials/handouts/cam-ung-dien-tu-2020.pdf|
+Phương pháp ảnh điện| |/materials/handouts/anhdien.pdf|
+Vận dụng phương pháp ảnh điện<br>để giải một số bài tập tĩnh điện|Lê Quốc Anh - THPT Chuyên Quốc học|/materials/handouts/van_dung_anh_dien.pdf|
+Chuyên đề phương pháp ảnh điện|Sưu tầm: Phạm Quang Chính Lí 2 K75|/materials/handouts/chuyen_de_anh_dien.pdf|
+Phương pháp giải bài tập<br>điện động lực học|Phạm Thị Minh Giang|/materials/handouts/phuong-phap-dien-dong-hoc.pdf|
+Lưỡng cực điện và từ|Thành viên Zinc<br>CLB Vật lí xPhO|/materials/handouts/Dipole_1.pdf|
+Khúc xạ ánh sáng|Physiads|/materials/handouts/khucxa.pdf|
+Quang trình|Thành viên log<br>CLB Vật lí xPhO|/materials/handouts/Quang_trinh.pdf|
+Nguyên lý Fermat|Sưu tầm: CLB Vật lí xPhO|/materials/handouts/nguyen-li-fermat.pdf|
+Chiết suất biến đổi|Thành viên log<br>CLB Vật lí xPhO|/materials/handouts/chiet_suat_bien_doi.pdf|
+Hệ quang học đồng trục|Sưu tầm: CLB Vật lí xPhO|/materials/handouts/he-quang-hoc-dong-truc.pdf|
+Nhiều xạ ánh sáng|Thành viên ZincMutation<br>CLB Vật lí xPhO|/materials/handouts/Nhieu-xa.pdf|
+Giải Gặp gỡ Toán học Vật lý|Tạo chí và Tư liệu Vật lý|/materials/handouts/ggthvl.pdf|
+Công thức trong hệ toạ độ cong|Sưu tầm: CLB Vật lí xPhO|/materials/handouts/curvelinear.pdf|
+Bảng tích phân|Sưu tầm: CLB Vật lí xPhO|/materials/handouts/integral-table.pdf|
+Ứng dụng Đạo hàm, Tích phân|Murray Bourne<br>Dịch : ĐHQG TP.HCM|/materials/handouts/ung_dung_dao_ham_tich_phan.pdf|
+Phương trình vi phân tuyến tính bậc hai|Sưu tầm: Phạm Quang Chính Lí 2 K75|/materials/handouts/PTVP_tuyen_tinh_bac_2.pdf|
+Kỹ thuật giải toán tích phân|Tạp chí và tư liệu toán học|/materials/handouts/ky-thuat-giai-toan-tich-phan.pdf|
+Tuyển chọn các bài toán vật lý nâng cao|Nguyễn Anh Văn|/materials/handouts/bai_toan_vat_ly.pdf|
+Formulas for IPhO|Jaan Kalda<br>Sưu tầm: Phạm Quang Chính Lí 2 K75|/materials/handouts/formulas.pdf|
+Chương trình IPhO|Jaan Kalda<br>Sưu tầm: CLB Vật lí xPhO|/materials/handouts/IPhO_syllabus.pdf|
+Mechanics handouts|Kevin Zhou|/materials/handouts/mechanics-kevinzhou.pdf|
+Thermodynamics handouts|Kevin Zhou|/materials/handouts/thermodynamics-kevinzhou.pdf|
+Electromagnetism handouts|Kevin Zhou|/materials/handouts/electromagnetism-kevinzhou.pdf|
+Waves handouts|Kevin Zhou|/materials/handouts/waves-kevinzhou.pdf|
+Modern Physics handouts|Kevin Zhou|/materials/handouts/modern-kevinzhou.pdf|
+Relativity Physics handouts|Kevin Zhou|/materials/handouts/relativity-kevinzhou.pdf|
+Problem Solving handouts|Kevin Zhou|/materials/handouts/problems-kevinzhou.pdf|
+Problem Sets handouts|Kevin Zhou|/materials/handouts/problems-2-kevinzhou.pdf|
+Problems on Mechanics|Jaan Kalda|/materials/handouts/meh_ENG.pdf|
+Problems on Mechanics 2|Jaan Kalda|/materials/handouts/meh_ENG2.pdf|
+Problems on Kinematics|Jaan Kalda|/materials/handouts/kin_ENG.pdf|
+Thermodynamics|Jaan Kalda|/materials/handouts/thermodyn.pdf|
+Electric Circuits|Jaan Kalda|/materials/handouts/electricity-circuits.pdf|
+Wave Optics|Jaan Kalda|/materials/handouts/waveopt.pdf|
+Quantum Mechanics|Jaan Kalda|/materials/handouts/quant_ENG.pdf|
+Relativity|Ainsaar|/materials/handouts/ainsaar_relativity.pdf|
+Harvard 90 Weekly Problems<br>2002-2004|David Morin|/materials/Havard_weekly_david_morin.pdf|

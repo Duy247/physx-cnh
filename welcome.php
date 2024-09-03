@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhysX-CNH</title>
+    <title>Tài liệu chuyên lí Nguyễn Huệ</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./image/favicon.ico">
@@ -402,29 +402,29 @@
             </div>
             
             <div class="link-boxes" id="books">
-                <a href="./nav/physics_books_pre_vpho" class="link-box" id="booksPreVpho">
+                <a href="./nav/physics.php?type=book&level=pre-vpho" class="link-box" id="booksPreVpho">
                     Sách HSG cấp thành phố
                 </a>  
-                <a href="/physics_books_vn" class="link-box" id="booksVn">
+                <a href="./nav/physics.php?type=book&level=vpho-vn" class="link-box" id="booksVn">
                     Sách tiếng việt vòng 2 thành phố / HSGQG
                 </a>
-                <a href="/physics_books_en" class="link-box" id="booksEn">
+                <a href="./nav/physics.php?type=book&level=vpho-en" class="link-box" id="booksEn">
                     Sách tiếng anh vòng 2 thành phố / HSGQG
                 </a>         
             </div>
             <div class="link-boxes" id="materials">
-                <a href="/physics_materials_pre_vpho" class="link-box" id="materialsPreVpho">
+                <a href="./nav/physics.php?type=material&level=pho" class="link-box" id="materialsPreVpho">
                     Tài liệu & Handouts
                 </a>
-                <a href="/physics_materials_olympiad" class="link-box" id="materialsOlympiad">
+                <a href="./nav/physics.php?type=paper-sol&level=pho" class="link-box" id="materialsOlympiad">
                     Đề & Đáp án Olympics khu vực và quốc tế
                 </a>
-                <a href="/physics_materials_vltt" class="link-box" id="materialsVltt">
+                <a href="./nav/physics.php?type=magazines&level=all" class="link-box" id="materialsVltt">
                     Tạp chí
                 </a>
             </div>
             <div class="link-boxes" id="lessons-all">
-                <a href="/physics_lessons" class="link-box" id="lessons">
+                <a href="./nav/physics.php?type=lessons&level=all" class="link-box" id="lessons">
                     Nội dung các ngày học
                 </a>
                 <a href="/daily/current" class="link-box" id="dailyCurrent">

@@ -1,0 +1,11 @@
+Bài tập mở đầu <br> 12/08/24| |/lessons/physics_test1208.html|
+Giải bài tập mở đầu <br> 12/08/24| |/lessons/solution1208.pdf|
+Phương pháp năng lượng & Euler-Lagrange - VTDuy <br> 15/08/24| |/lessons/energy_lagrange.pdf|
+Phương pháp công ảo - VTDuy <br> 16/08/24| |/lessons/virtualwork_160824.pdf|
+Phương án thực hành - VTDuy <br> 17/08/24| |/lessons/experiment_170824.pdf|
+Luyện tập tính toán <br> 22/08/24| |/lessons/train_calculation.pdf|
+Luyện tập<br>23/08/24| |/lessons/train_230824.pdf|
+Luyện tập<br>29/08/24| |/lessons/train_290824.pdf|
+Luyện tập<br>30/08/24| |/lessons/train_300824.pdf|
+Giải bài hạt mưa| |/lessons/exercise_raindrop.pdf|
+Giải bài căng dây - vòng 2 TP| |/lessons/exercise_tensionstring.pdf|
