@@ -349,7 +349,7 @@
     <div id="loading-screen">
         <div class="welcome-message">
             <h1>Trang web tài liệu chuyên lí PhysX-CNH</h1>
-            <p>Đang tải trang chủ...</p>
+            <p>Đang tải trang chủ....</p>
             <div class="loader"></div> 
         </div>
         <div class="flying-equations-container"></div>
