@@ -46,13 +46,13 @@
         var lessons = document.getElementById('lessons');
         
         if (isMobileDevice()) {         
-            booksPreVpho.href = "/physics_books_pre_vpho_phone";
-            booksVn.href = "/physics_books_vn_phone";
-            booksEn.href = "/physics_books_en_phone";
-            materialsPreVpho.href = "/physics_materials_pre_vpho_phone";
-            materialsOlympiad.href = "/physics_materials_olympiad_phone";
-            materialsVltt.href = "/physics_materials_vltt_phone";
-            lessons.href = "/physics_lessons_phone";
+            booksPreVpho.href = "./nav/physics_mobile?type=book&level=pre-vpho";
+            booksVn.href = "./nav/physics_mobile?type=book&level=vpho-vn";
+            booksEn.href = "./nav/physics_mobile?type=book&level=vpho-en";
+            materialsPreVpho.href = "./nav/physics_mobile?type=material&level=pho";
+            materialsOlympiad.href = "./nav/physics_mobile?type=paper-sol&level=pho";
+            materialsVltt.href = "./nav/physics_mobile?type=magazines&level=all";
+            lessons.href = "./nav/physics_mobile?type=lessons&level=all";
         }
         function swapImages() {
             const images = document.querySelectorAll('.background img');
