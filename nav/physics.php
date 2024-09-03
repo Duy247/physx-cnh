@@ -106,11 +106,33 @@
     <button class="menu-toggle" aria-label="Toggle Menu">&lt;</button>
   </div>
   <div class="iframe-container">
-    <iframe id="content-iframe" src="./welcome/welcome_physics.html" frameborder="0"></iframe>
+    <iframe id="content-iframe" src="" frameborder="0"></iframe>
   </div>
   <script src="./script.js"></script> 
   <script>
-    
+    (function() {
+    var iframe = document.getElementById('content-iframe');
+    var type = '<?php echo $type; ?>';
+    var level = '<?php echo $level; ?>';
+
+    if (type === 'book' && level === 'pre-vpho') {
+      iframe.src = './welcome/books-pre-vpho.html';
+    } else if (type === 'book' && level === 'vpho-vn') {
+      iframe.src = './welcome/books-vpho-vn.html';
+    } else if (type === 'book' && level === 'vpho-en') {
+      iframe.src = './welcome/books-vpho-en.html';
+    } else if (type === 'material' && level === 'pho') {
+      iframe.src = './welcome/materials-pho.html';
+    } else if (type === 'paper-sol' && level === 'pho') {
+      iframe.src = './welcome/paper-sol-pho.html';
+    } else if (type === 'magazines' && level === 'all') {
+      iframe.src = './welcome/magazines.html';
+    } else if (type === 'lessons' && level === 'all') {
+      iframe.src = './welcome/lessons.html';
+    } else {
+      iframe.src = './welcome/books-other.html';
+    }
+  })();
   </script>
 </body>
 </html>

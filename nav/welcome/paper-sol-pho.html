@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhysX-CNH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            overflow: hidden;
+            background-color: rgb(45, 43, 43);
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50vw;
+            height: 50vh;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 0;
+            opacity: 0.5;
+        }
+
+        .background img {
+            width: calc(100vw / 3);
+            height: calc(100vh / 3);
+            object-fit: cover;
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+            opacity: 0.8;
+            position: relative;
+        }
+
+        .background img.swap {
+            transform: scale(1.1);
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 85vh;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .container.fade-out {
+            opacity: 0;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .text-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            max-width: 600px;
+            border: 1px solid white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            text-align: justify;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    
+    <div class="background">
+        <img src="../../physics/img/image1.png" alt="Background Image 1">
+        <img src="../../physics/img/image2_1.jpg" alt="Background Image 2">
+        <img src="../../physics/img/image3.jpg" alt="Background Image 3">
+        <img src="../../physics/img/image4_1.jpg" alt="Background Image 4">
+        <img src="../../physics/img/image5_1.jpg" alt="Background Image 5">
+        <img src="../../physics/img/image6.jpg" alt="Background Image 6">
+        <img src="../../physics/img/image7_1.jpg" alt="Background Image 7">
+        <img src="../../physics/img/image8.jpg" alt="Background Image 8">
+        <img src="../../physics/img/image9.jpg" alt="Background Image 9">
+    </div>
+    <div class="container">
+        <h1>Tổng hợp tài liệu chuyên lí Nguyễn Huệ</h1>
+        <div class="text-box">
+            <p>Đây là trang web tổng hợp tài liệu hỗ trợ học tập cho các học sinh thuộc đội tuyển vật lí.<br>Tài liệu hướng đến trình độ học và ôn thi Olympic Vật lí khu vực và quốc tế.</p>
+            <p>Web được duy trì trên nền tảng Github bởi Văn Thành Duy, chuyên lí Nguyễn Huệ K69.</p>
+            <p>Để truy cập vào các tài liệu, vui lòng chọn mục từ menu bên trái. </p>
+            <p>Để yêu cầu bổ sung tài liệu, liên hệ <i><b>duy5a247@gmail.com</b></i></p>
+        </div>
+    </div>
+    <script>
+        function swapImages() {
+            const images = document.querySelectorAll('.background img');
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const adjacentIndices = getAdjacentIndices(randomIndex);
+            const swapIndex = adjacentIndices[Math.floor(Math.random() * adjacentIndices.length)];
+
+            if (swapIndex !== undefined) {
+                const randomImage = images[randomIndex];
+                const swapImage = images[swapIndex];
+
+                const randomImageRect = randomImage.getBoundingClientRect();
+                const swapImageRect = swapImage.getBoundingClientRect();
+
+                const dx = swapImageRect.left - randomImageRect.left;
+                const dy = swapImageRect.top - randomImageRect.top;
+
+                randomImage.style.transform = `translate(${dx}px, ${dy}px) `;
+                swapImage.style.transform = `translate(${-dx}px, ${-dy}px) `;
+
+                setTimeout(() => {
+                    const temp = randomImage.src;
+                    randomImage.src = swapImage.src;
+                    swapImage.src = temp;
+
+                    randomImage.style.transition = 'none';
+                    swapImage.style.transition = 'none';
+
+                    requestAnimationFrame(() => {
+                        randomImage.style.transform = 'none';
+                        swapImage.style.transform = 'none';
+
+                        requestAnimationFrame(() => {
+                            randomImage.style.transition = 'transform 1s ease-in-out, opacity 1s ease-in-out';
+                            swapImage.style.transition = 'transform 1s ease-in-out, opacity 1s ease-in-out';
+                        });
+                    });
+                }, 1000);
+            }
+        }
+
+        function getAdjacentIndices(index) {
+            const adjacentIndices = [];
+            const numColumns = 3;
+
+            if (index % numColumns !== 0) {
+                adjacentIndices.push(index - 1);
+            }
+            if ((index + 1) % numColumns !== 0) {
+                adjacentIndices.push(index + 1);
+            }
+            if (index >= numColumns) {
+                adjacentIndices.push(index - numColumns);
+            }
+            if (index < (numColumns * (numColumns - 1))) {
+                adjacentIndices.push(index + numColumns);
+            }
+
+            return adjacentIndices;
+        }
+        setInterval(swapImages, 3000);  
+    </script>
+</body>
+</html>
