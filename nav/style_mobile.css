@@ -2,7 +2,7 @@ body {
     display: flex;
     max-height: 100vh;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Open Sans', sans-serif;
     background-color: #555;
   }
   .menu {
@@ -41,6 +41,24 @@ body {
   .menu li:hover {
     margin-bottom: 10px;
     background-color: #5d5b5b;
+  }
+  .sort-options {
+    margin-bottom: 10px;
+  }
+
+  .sort-options label {
+    color: #d2d2d2;
+    font-size: 14px;
+    margin-right: 5px;
+  }
+
+  .sort-options select {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #b95edd;
+    border-radius: 4px;
+    background-color: #363636;
+    color: #d2d2d2;
   }
   /* Custom scroll bar styles */
   ::-webkit-scrollbar {
