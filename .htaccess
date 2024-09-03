@@ -1,3 +1,4 @@
+DirectoryIndex welcome.php index.php index.html
 ErrorDocument 404 /404.html
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME}.php -f
