@@ -19,7 +19,7 @@ Solution An Introduction to Thermal Physics|Daniel V Schroeder|/books/solution_s
 Electricity and Magnetism|Edward M. Purcell & David Morin|/books/electricity_magnetism_purcell.pdf|Tiếng anh
 Introduction to Electrodynamics|David J Griffiths|/books/Electrodynamic_Griffith.pdf|Tiếng anh
 Solution Introduction to Electrodynamics|David J Griffiths|/books/solution_griffiths.pdf|Tiếng anh
-Problems in Classical Electromagnetism|A. Macchi,G. Moruzzi,F. Pegoraro|/books/problem_in_classical_electromagn.pdf| 
+Problems in Classical Electromagnetism|A. Macchi,G. Moruzzi,F. Pegoraro|/books/problems_in_classical_electromagn.pdf| 
 Optics|Eugene Hecht|/books/optics_eugene_hecht.pdf|Tiếng anh
 Modern Physics|Kenneth S Krane|/books/modern_krane.pdf|Tiếng anh
 Solution Modern Physics|Kenneth S Krane|/books/sol_modern_krane.pdf|Tiếng anh
