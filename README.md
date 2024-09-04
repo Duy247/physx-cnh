@@ -1,6 +1,8 @@
 # PhysX-CNH - Hub tài liệu chuyên lí 
 Đây là repository của trang web [PhysX-CNH](https://physx-cnh.com)
 
+Xem wiki tại [đây](https://github.com/Duy247/physx-cnh/wiki)
+
 Trang web được duy trì và vận hành thông qua Github, được deploy trên hosting của Hostinger.
 
 ## Mục tiêu
