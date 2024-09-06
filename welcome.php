@@ -216,11 +216,12 @@
         .text-box {
             flex: 1;
             margin: 0 10px;
-            padding: 5px 15px 5px 10px;
+            padding: 0.5em 1.5em 0.5em 1em;
             background: rgba(29, 29, 82, 0.3);
             backdrop-filter: blur(10px);
             border-radius: 10px;
             color: white;
+            font-size: 0.8vw;
         }
         #introduce {
             flex: 2;     
@@ -334,18 +335,19 @@
             background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
             text-align: justify;
+            
         }
 
         .news-content h3 {
             padding-left:10px;
             margin: 0;
-            font-size: 24px;
+            font-size: 1.2vw;
             font-weight: bold;
         }
 
         .news-content p {
             margin: 10px 0 0;
-            font-size: 16px;
+            font-size: 0.8vw;
             opacity: 1;
             transition: opacity 0.3s ease-in-out;
             padding: 0px 40px 0px 10px;
