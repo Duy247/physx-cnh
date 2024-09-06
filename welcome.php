@@ -410,13 +410,11 @@
                 display: none;
             }
             .menu-list {
-                width: 100%;
+                width: 95%;
                 padding: 0;
                 margin: 0;
             }
-            .menu-list li {
-                width: 100%;
-            }
+
             .menu-list li a {
                 display: block;
                 width: 100%;
