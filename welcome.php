@@ -19,8 +19,8 @@
             overflow: hidden;
         }
         .logo{
-            width: 100%;
-            height: 100%;
+            width: 120%;
+            height: 120%;
             object-fit: contain;
         }
         #menu {
@@ -38,7 +38,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(to bottom, #dddddd 78%, #1d1d52 78%);
+            background: linear-gradient(to bottom, #dce0e8 50%, #1d1d52 50%);
         }
 
         #m-bottom-part {
@@ -71,24 +71,6 @@
             font-size: 1.1rem;
             position: relative;
             overflow: hidden;
-        }
-        .menu-list li.daily a {
-            font-weight: bold;
-            color: white;
-            background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
-            background-size: 500% 500%;
-            animation: dailyGradient 5s ease infinite;
-        }
-        @keyframes dailyGradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
         }
 
         .menu-list li a::before {
@@ -170,13 +152,20 @@
             width: 80%;
             float: left; /* Position the content next to the menu */
         }
+        #content {
+            transition: filter 0.3s ease; /* Add a smooth transition for opacity */
+        }
+
+        #menu:hover ~ #content {
+            filter: brightness(0.2); 
+        }
         #top-part {
             height: 50%;
-            padding: 1rem 5rem 1rem 5rem;
+            padding-top:1rem;
             box-sizing: border-box;
             font-size: 1.0rem;     
             text-align: justify;
-            background-color: hsla(200, 40%, 30%, .6);
+            background-color: hsla(200, 40%, 30%, .4);
             background-image:
                 url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'),
                 url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
@@ -216,12 +205,12 @@
         .text-box {
             flex: 1;
             margin: 0 10px;
-            padding: 0.5em 1.5em 0.5em 1em;
-            background: rgba(29, 29, 82, 0.3);
+            padding: 0.5em 1.0em 0.5em 1em;
+            background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(10px);
             border-radius: 10px;
-            color: white;
-            font-size: 0.8vw;
+            color: black;
+            font-size: 1.6vh;
         }
         #introduce {
             flex: 2;     
@@ -231,11 +220,15 @@
         }
         .text-box a{
             text-decoration: none;
-            color:#29ff00;
+            color:#1d1d52;
         }
         #top-part h1 {
             text-align: center;
-            color:#38389e;
+            color: #1c1c51; /* Fallback color if filters aren't supported */
+            padding: 0;
+            font-size: 5vh;
+            filter: contrast(1%); /* Increase contrast for better visibility */
+            mix-blend-mode: difference; /* Blend text with background for adaptability */
         }
 
         #top-part h2 {
@@ -453,7 +446,7 @@
                 </li>
                 <li><a href="./nav/physics?type=paper-sol&level=pho" id="materialsOlympiad">Đề Thi & Đáp Án</a></li>
                 <li><a href="./nav/physics?type=lessons&level=all" id="lessons">Nội Dung Ngày Học</a></li>
-                <li class="daily"><a href="/daily/current" id="dailyCurrent">Bài Tập Hàng Ngày</a></li>
+                <li><a href="/daily/current" id="dailyCurrent">Bài Tập Hàng Ngày</a></li>
             </ul>
             <div class="bottom-links">
                 <ul class="menu-list-bottom">
