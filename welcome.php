@@ -389,7 +389,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                background: linear-gradient(to bottom, #dce0e8 78%, #1d1d52 78%);
+                background: linear-gradient(to bottom, #dce0e8 50%, #1d1d52 50%);
             }
             #m-bottom-part {
                 width: 100%;
