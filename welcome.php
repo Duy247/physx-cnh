@@ -414,7 +414,6 @@
                 padding: 0;
                 margin: 0;
             }
-
             .menu-list li a {
                 display: block;
                 width: 100%;
