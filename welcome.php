@@ -3,265 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tài liệu chuyên lí Nguyễn Huệ</title>
+    <title>Tài liệu chuyên lý Nguyễn Huệ</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./image/favicon.ico">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
+        
         body {
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            font-family: 'Montserrat', sans-serif;
-            color: white;
+            background-color: #f1f1f1;
+            height: 100vh;
             overflow: hidden;
-            background-color: rgb(45, 43, 43);
         }
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
+        .logo{
             width: 100%;
             height: 100%;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            gap: 0;
-            opacity: 0.5;
+            object-fit: contain;
         }
-
-        .background img {
-            width: calc(100vw / 3);
-            height: calc(100vh / 3);
-            object-fit: cover;
-            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-            opacity: 0.8;
-            position: relative;
+        #menu {
+            width: 20%;
+            height: 100%; /* 100% of body height */
+            background-color: #dce0e8;
+            float: left; /* Position the menu to the left */
+            box-sizing: border-box;  
         }
-
-        .background img.swap {
-            transform: scale(1.1);
-            opacity: 1;
-            z-index: 1;
-        }
-
-        .container {
-            position: relative;
-            z-index: 1;
+        #m-top-part {
+            height: 20%;
+            padding: 1rem;
+            box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            height: 85vh;
-            transition: opacity 0.2s ease-in-out;
+            align-items: center;
+            background: linear-gradient(to bottom, #dddddd 78%, #1d1d52 78%);
         }
 
-        .container.fade-out {
-            opacity: 0;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 2rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .text-box {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding-left: 1rem;
-            padding-right:0.5rem;
-            max-width: 600px;
-            border: 1px solid white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-            text-align: justify;
-            margin-bottom:1rem;
-        }
-        .text-box a{
-            text-decoration: none;
-            color: #2ea043;
-        }
-
-        p {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        .link-boxes {
+        #m-bottom-part {
+            height: 80%;
+            box-sizing: border-box;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-between;
-            margin-top: 0rem;
-            width: 50%;
-        }
-        .link-boxes-vertical {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-top: 0rem;
-        }
-        
-        .link-boxes-footer {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 0rem;           
-            align-items: flex-end;
-            z-index:9999;
-        }
-        footer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 1rem;
             
         }
 
-        .link-box {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 1rem;
-            margin: 0 0.5rem;
-            border: 1px solid rgb(188, 241, 161);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(23, 249, 15, 0.4);
-            text-align: center;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-            width: 250px;
-            height: 30%;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: inherit; 
-            text-decoration: inherit;       
+        .menu-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
 
-
-        .link-box-footer{
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 1rem;
-            margin: 0 0.5rem;
-            border: 1px solid #777777;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(117, 117, 117, 0.4);
-            text-align: center;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-            width: 250px;
-            height: 30%;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: inherit; 
-            text-decoration: inherit;
+        .menu-list li {
+            width: 100%;
         }
 
-        .link-box:hover {
-            transform: scale(1.1);
-            border: 1px solid rgb(245, 160, 75);
-            box-shadow: 0 0 10px rgba(249, 132, 15, 0.4);
+        .menu-list li a {
+            display: block;
+            padding: 10px 15px 10px 10px;
+            background-color: #dce0e8;
+            color: black;
+            text-decoration: none;
+            text-align: right;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .menu-list li.daily a {
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+            background-size: 500% 500%;
+            animation: dailyGradient 5s ease infinite;
+        }
+        @keyframes dailyGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
-        .link-box a {
-            font-size: 1rem;
+        .menu-list li a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
             width: 100%;
             height: 100%;
+            background-color: #26245f;
+            transition: left 0.2s ease;
+            z-index: -1;
+        }
+
+        .menu-list li a:hover {
+            transform: scale(1.00);
+            font-weight: bold;
+            color: white;
+        }
+
+        .menu-list li a:hover::before {
+            left: 0;
+        }
+
+        .dropdown-content {
+            display: none;
+            padding: 5px 15px 10px 5px;
+            background-color: #dce0e8;
+            color: black;
+            text-decoration: none;
+            text-align: right;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .dropdown > a::after {
+            content: "";
+            margin-left: 5px;
+        }
+
+        .dropdown-toggle:hover > a::after {
+            content: " (Click để mở rộng)";
+        }
+        .dropdown-toggle.active > a::after {
+            content: "";
+        }
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+        .menu-list-bottom {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu-list-bottom li a {
+            display: block;
+            padding: 0px 15px 5px 0px;
+            background-color: #dce0e8;
+            color: black;
+            text-decoration: none;
+            text-align: right;
+            font-size: 14px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bottom-links {
+            margin-top: auto;
+        }
+
+        .bottom-links .menu-list li {
+            margin-bottom: 5px;
+        }
+
+        #content {
+            height: 100%; /* 100% of body height */
+            width: 80%;
+            float: left; /* Position the content next to the menu */
+        }
+        #top-part {
+            height: 50%;
+            padding: 1rem 5rem 1rem 5rem;
+            box-sizing: border-box;
+            font-size: 1.0rem;     
+            text-align: justify;
+            background-color: hsla(200, 40%, 30%, .6);
+            background-image:
+                url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'),
+                url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
+                url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+                url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
+                url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
+            background-repeat: repeat-x;
+            background-position:
+                0 20%,
+                0 100%,
+                0 50%,
+                0 100%,
+                0 0;
+            background-size:
+                2500px,
+                800px,
+                500px 200px,
+                1000px,
+                400px 260px;
+            animation: 500s para infinite linear;
+        }
+
+        @keyframes para {
+            100% {
+                background-position: 
+                    -5000px 20%,
+                    -800px 95%,
+                    500px 50%,
+                    1000px 100%,
+                    400px 0;
+                }
+        }
+        .text-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .text-box {
+            flex: 1;
+            margin: 0 10px;
+            padding: 5px 15px 5px 10px;
+            background: rgba(29, 29, 82, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            color: white;
+        }
+        #introduce {
+            flex: 2;     
+        }
+        #whats-new {
+            flex: 1;
+        }
+        .text-box a{
+            text-decoration: none;
+            color:#29ff00;
+        }
+        #top-part h1 {
+            text-align: center;
+            color:#38389e;
+        }
+
+        #top-part h2 {
+            text-align: center;
+        }
+        #bottom-part {
+            display: flex;
+            clear: both;
+            height: 50%;
+        }
+
+        #l-bottom-part {
+            flex: 0 0 60%;           
+            box-sizing: border-box;
+        }     
+
+        #r-bottom-part {
+            flex: 0 0 40%;
+            padding: 5px;
+            box-sizing: border-box;
+            background-color: black;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .content-wrapper {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 50%;
-        }
-        .whats-new {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding-left: 1rem;
-            padding-right: 0.5rem;
-            max-width: 400px;
-            border: 1px solid rgb(222, 98, 31);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(254, 7, 7, 0.9);
-            text-align: left;
-            margin-bottom:1rem;
-            margin-left:0.75rem;
-            color:#eaa612;
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
         }
 
-        .whats-new h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            text-align: center;
+        .mySlides {
+            display: none;
         }
 
-        .whats-new ul {
-            padding-left: 0.5rem;
-            text-align:justify;
+        .mySlides img {
+            width: 100%;
+            height: auto;
         }
 
-        .whats-new li {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        .whats-new a{
-            color: #1dea12;
-        }
-        .rainbow-text {
-            animation: rainbow 1.5s linear infinite;
-        }
-        .welcome-message {
-            text-align: center;
-            padding: 20px;
-            z-index: 1;
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 2.5s;
+            animation-name: fade;
+            animation-duration: 2.5s;
         }
 
-        .welcome-message h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
+        @-webkit-keyframes fade {
+            from {opacity: .2}
+            to {opacity: 1}
         }
 
-        .welcome-message p {
-            font-size: 18px;
+        @keyframes fade {
+            from {opacity: .2}
+            to {opacity: 1}
         }
-        .loader {
-            display: inline-grid;
-            width: 80px;
-            aspect-ratio: 1;
+        .rainbow-text {         
+            animation: rainbow 7.5s linear infinite;
         }
-        .loader:before,
-        .loader:after {
-            content:"";
-            grid-area: 1/1;
-            border-radius: 50%;
-            animation: l3-0 2s alternate infinite ease-in-out;
-        }
-        .loader:before {
-            margin: 25%;
-            background: repeating-conic-gradient(#C02942 0 60deg,#0B486B 0 120deg);
-            translate: 0 50%;
-            rotate: -150deg;
-        }
-        .loader:after {
-            padding: 10%;
-            margin: -10%;
-            background: repeating-conic-gradient(#0B486B 0 30deg,#C02942 0 60deg);
-            mask:linear-gradient(#0000 50%,#000 0) content-box exclude,linear-gradient(#0000 50%,#000 0);
-            rotate: -75deg;
-            animation-name: l3-1;
-        }
-        @keyframes l3-0 {to{rotate: 150deg}}
-        @keyframes l3-1 {to{rotate:  75deg}}
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
         @keyframes rainbow {
         0% { color: red; }
         14% { color: orange; }
@@ -272,120 +304,157 @@
         85% { color: violet; }
         100% { color: red; }
         }
-        .logo{
-            opacity:0.9;
-        }
-        /* Phone layout */
-
-        @media screen and (max-width: 600px) {
-        body{
-            overflow:auto;
-        }
-        h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        }
-
-        .container {
-        height: auto;
-        padding: 2rem 0;
-        }
-
-        .text-box {
-        max-width: 90%;
-        align-self: center;
-        }
-
-        .link-boxes, .link-boxes-vertical, .content-wrapper {
-        flex-direction: column;
-        width: 90%;
-        align-self: center;
-        }
-
-        .link-box, .link-box-footer {
-        width: 90%;
-        height: auto;
-        margin: 0.5rem 0;
-        }
-
-        .whats-new {
-        max-width: 100%;
-        margin-left: 0;
-        margin-top: 1rem;
-        }
-        footer {
+        .news-slideshow-container {
             position: relative;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            align-items: center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;            
         }
-        .link-boxes-footer {
-            display: flex;
-            flex-direction: column;
-            margin-top: 0rem;  
-            margin-left:0;         
-            align-items: flex-end;
-            z-index:9999;
-            padding:0;
-        }
-        .background {
+
+        .news-slide {
+            display: none;
             position: absolute;
             top: 0;
             left: 0;
-            width: auto;
-            height: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            gap: 0;
-            opacity: 0.5;
+            width: 100%;
+            height: 100%;          
         }
-        .logo{
-            align-self: center;
-            order: -1;
+
+        .news-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
+
+        .news-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 50px 20px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: justify;
+        }
+
+        .news-content h3 {
+            padding-left:10px;
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .news-content p {
+            margin: 10px 0 0;
+            font-size: 16px;
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+            padding: 0px 40px 0px 10px;
+        }
+
+        .news-dots {
+            position: relative;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(0%);
+            opacity: 0.3;
+            align-self: auto;
+        }
+        .news-dots:hover {
+            opacity: 1;
+        }
+        .news-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #bbb;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .news-dot.active {
+            background-color: #fff;
+        }
+        @media screen and (max-width: 600px) {
+            body{
+                overflow:auto;
+            }
+            #menu {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #content{
+                display:none;
+            }
+            .menu-list li a {
+                display: block;
+                padding: 10px 15px 10px 10px;
+                background-color: #dce0e8;
+                color: black;
+                text-decoration: none;
+                text-align: center;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+                font-size: 1.1rem;
+                position: relative;
+                overflow: hidden;
+            }
         }
     </style>
         
 </head>
 <body>
-    <div id="loading-screen">
-        <div class="welcome-message">
-            <h1>Trang web tài liệu chuyên lí PhysX-CNH</h1>
-            <p>Đang tải trang chủ....</p>
-            <div class="loader"></div> 
+    <div id="menu">  
+        <div id="m-top-part">
+            <img src="/image/logo.png" class="logo">
         </div>
-        <div class="flying-equations-container"></div>
+        <div id="m-bottom-part">
+            <ul class="menu-list">
+                <li><a href="./welcome">Trang chủ</a></li>
+                <li><a href="./nav/physics?type=magazines&level=all" id="materialsVltt">Tạp Chí</a></li>
+                <li><a href="./nav/physics?type=material&level=pho" id="materialsPreVpho">Tài Liệu</a></li>
+                <li class="dropdown">
+                    <div class="dropdown-toggle">
+                        <a>Sách</a>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="./nav/physics?type=book&level=pre-vpho" id="booksPreVpho">Sách Bồi Dưỡng<br>HSG Cấp Thành Phố</a>
+                        <a href="./nav/physics?type=book&level=vpho-vn" id="booksVn">Sách Tiếng Việt<br>Vòng 2 Thành Phố / HSGQG</a>
+                        <a href="./nav/physics?type=book&level=vpho-en" id="booksEn">Sách Tiếng Anh<br>Vòng 2 Thành Phố / HSGQG</a>
+                    </div>
+                </li>
+                <li><a href="./nav/physics?type=paper-sol&level=pho" id="materialsOlympiad">Đề Thi & Đáp Án</a></li>
+                <li><a href="./nav/physics?type=lessons&level=all" id="lessons">Nội Dung Ngày Học</a></li>
+                <li class="daily"><a href="/daily/current" id="dailyCurrent">Bài Tập Hàng Ngày</a></li>
+            </ul>
+            <div class="bottom-links">
+                <ul class="menu-list-bottom">
+                    <li><a href="./disclaimer">Miễn Trừ Trách Nhiệm Pháp Lý</a></li>
+                    <li><a href="welcome_new.php">Lượt Truy Cập: <span id="hitCount"> 0 </span></a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div id="main-content" style="display: none;">
-        <div class="background">
-            <img src="physics/img/image1.png" alt="Background Image 1">
-            <img src="physics/img/image2.jpg" alt="Background Image 2">
-            <img src="physics/img/image3.jpg" alt="Background Image 3">
-            <img src="physics/img/image4.jpg" alt="Background Image 4">
-            <img src="physics/img/image5.jpg" alt="Background Image 5">
-            <img src="physics/img/image6.jpg" alt="Background Image 6">
-            <img src="physics/img/image7.jpg" alt="Background Image 7">
-            <img src="physics/img/image8.jpg" alt="Background Image 8">
-            <img src="physics/img/image9.jpg" alt="Background Image 9">
-        </div>
-        <div class="container">
-            <h1>Tổng hợp tài liệu chuyên lí Nguyễn Huệ</h1>
-            <div class="content-wrapper">
-                <div class="text-box">
+
+    <div id="content">
+        <div id="top-part">
+            <h1>Tổng hợp tài liệu chuyên lý Nguyễn Huệ</h1>
+            <div class="text-container">
+                <div class="text-box" id="introduce">
                     <p>Đây là trang web tổng hợp tài liệu hỗ trợ học tập cho các học sinh thuộc đội tuyển vật lí. Web được vận hành và duy trì trên nền tảng Github bởi Văn Thành Duy, chuyên lí Nguyễn Huệ K69.</p>
                     <p>Trang web vận hành tốt nhất trên trình duyệt máy tính (PC / Chromebook / Samsung Dex). Để truy cập vào các tài liệu, vui lòng chọn mục từ menu bên trái. </p>
                     <p>Để yêu cầu tìm và bổ sung tài liệu, liên hệ <b><a href="mailto:duy5a247@gmail.com">duy5a247@gmail.com</a></b> hoặc tới <a href="https://github.com/Duy247/physx-cnh">repository github</a> và đọc thêm hướng dẫn</p>
                     <p>Nếu quá trình load và tải tài liệu bị chậm, hãy sử dụng DNS Cloudfare 1.1.1.1</p>
                     <p>Cảm ơn tới các cá nhân đã đóng góp tài liệu</p>
                     <ul>
-                        <li>Văn Thành Duy Lí 1 K69 CNH</li>
-                        <li>Phạm Quang Chính Lí 2 K75 CNH</li>
-                        
+                        <li>Văn Thành Duy Lý 1 K69 CNH</li>
+                        <li>Phạm Quang Chính Lý 2 K75 CNH</li>
                     </ul>
                 </div>
-                <div class="whats-new">
+                <div class="text-box" id="whats-new">
                     <h2><span class="rainbow-text">Cập nhật mới</span></h2>
                     <ul>                 
                         <?php
@@ -404,57 +473,173 @@
                     </ul>
                 </div>
             </div>
-            
-            <div class="link-boxes" id="books">
-                <a href="./nav/physics?type=book&level=pre-vpho" class="link-box" id="booksPreVpho">
-                    Sách HSG cấp thành phố
-                </a>  
-                <a href="./nav/physics?type=book&level=vpho-vn" class="link-box" id="booksVn">
-                    Sách tiếng việt vòng 2 thành phố / HSGQG
-                </a>
-                <a href="./nav/physics?type=book&level=vpho-en" class="link-box" id="booksEn">
-                    Sách tiếng anh vòng 2 thành phố / HSGQG
-                </a>         
+        </div> 
+        <div id="bottom-part">
+            <div id="l-bottom-part">
+                <div class="news-slideshow-container">
+                    <?php
+                    $jsonFile = './whats-new/news.json';
+                    $jsonData = file_get_contents($jsonFile);
+                    $newsItems = json_decode($jsonData, true);
+
+                    foreach ($newsItems as $index => $newsItem) {
+                        $backgroundImage = $newsItem['background_image'];
+                        $headline = $newsItem['headline'];
+                        $detail = $newsItem['detail'];
+
+                        echo '<div class="news-slide">';
+                        echo '<img src="' . $backgroundImage . '" alt="News Image">';
+                        echo '<div class="news-content">';
+                        echo '<h3>' . $headline . '</h3>';
+                        echo '<p>' . $detail . '</p>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
+                    ?>
+                </div>
+                <div class="news-dots">
+                    <?php
+                    $totalSlides = count($newsItems);
+                    for ($i = 0; $i < $totalSlides; $i++) {
+                        echo '<span class="news-dot" onclick="currentNewsSlide(' . ($i + 1) . ')"></span>';
+                    }
+                    ?>
+                </div>
             </div>
-            <div class="link-boxes" id="materials">
-                <a href="./nav/physics?type=material&level=pho" class="link-box" id="materialsPreVpho">
-                    Tài liệu & Handouts
-                </a>
-                <a href="./nav/physics?type=paper-sol&level=pho" class="link-box" id="materialsOlympiad">
-                    Đề & Đáp án Olympics khu vực và quốc tế
-                </a>
-                <a href="./nav/physics?type=magazines&level=all" class="link-box" id="materialsVltt">
-                    Tạp chí
-                </a>
+            <div id="r-bottom-part">
+                <div class="slideshow-container">
+                    <?php
+                    $imageDirectory = './physics/img/';
+                    $imageExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+
+                    $images = glob($imageDirectory . '*.*');
+                    foreach ($images as $image) {
+                        $extension = pathinfo($image, PATHINFO_EXTENSION);
+                        if (in_array(strtolower($extension), $imageExtensions)) {
+                            echo '<div class="mySlides fade">';
+                            echo '<img src="' . $image . '" style="width:100%">';
+                            echo '</div>';
+                        }
+                    }
+                    ?>
+                </div>
             </div>
-            <div class="link-boxes" id="lessons-all">
-                <a href="./nav/physics?type=lessons&level=all" class="link-box" id="lessons">
-                    Nội dung các ngày học
-                </a>
-                <a href="/daily/current" class="link-box" id="dailyCurrent">
-                    <span class="rainbow-text">Bài tập hàng ngày</span>
-                </a>
-                
-            </div>   
         </div>
-        <footer>
-            <div class="link-boxes-footer" id="fotter">
-                <div class="link-boxes-vertical" id="disclaimer">
-                    <a href="/disclaimer" class="link-box-footer">
-                        Miễn trừ trách nhiệm pháp lý
-                    </a>
-                </div>
-                <img src="/image/logo.png" class="logo">
-                <div class="link-boxes-vertical" id="count">
-                    <a href="#" class="link-box-footer"> 
-                        Lượt truy cập : <span id="hitCount"> 0 </span>
-                    </a>
-                </div>
-            </div>
-        </footer>
     </div>
 
-    
-    <script src="js/script_welcome.js"></script> 
+    <script>
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+        var booksPreVpho = document.getElementById('booksPreVpho');
+        var booksVn = document.getElementById('booksVn');
+        var booksEn = document.getElementById('booksEn');
+        var materialsPreVpho = document.getElementById('materialsPreVpho');
+        var materialsOlympiad = document.getElementById('materialsOlympiad');
+        var materialsVltt = document.getElementById('materialsVltt');
+        var lessons = document.getElementById('lessons');
+        
+        if (isMobileDevice()) {         
+            booksPreVpho.href = "./nav/physics_mobile?type=book&level=pre-vpho";
+            booksVn.href = "./nav/physics_mobile?type=book&level=vpho-vn";
+            booksEn.href = "./nav/physics_mobile?type=book&level=vpho-en";
+            materialsPreVpho.href = "./nav/physics_mobile?type=material&level=pho";
+            materialsOlympiad.href = "./nav/physics_mobile?type=paper-sol&level=pho";
+            materialsVltt.href = "./nav/physics_mobile?type=magazines&level=all";
+            lessons.href = "./nav/physics_mobile?type=lessons&level=all";
+        }
+        function updateHitCount() {
+            fetch('./visit_count/hit_counter.php') 
+                .then(response => response.json())
+                .then(data => {
+                    const hitCount = data.count;
+                    document.getElementById('hitCount').textContent = hitCount;
+                })
+                .catch(error => {
+                    console.error('Error fetching hit count:', error);
+                });
+        }
+
+        window.addEventListener('load', updateHitCount);
+        document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
+            toggle.addEventListener('click', function(event) {
+                event.preventDefault();
+                var dropdown = toggle.parentElement;
+                dropdown.classList.toggle('active');
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            var dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(function(dropdown) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+        });
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            if (slides[slideIndex - 1]) {
+                slides[slideIndex - 1].style.display = "block";
+            }
+            setTimeout(showSlides, 10000); // Change image every 3 seconds
+        }
+        var newsSlideIndex = 1;
+        showNewsSlides(newsSlideIndex);
+
+        function plusNewsSlides(n) {
+            showNewsSlides(newsSlideIndex += n);
+        }
+
+        function currentNewsSlide(n) {
+            showNewsSlides(newsSlideIndex = n);
+        }
+
+        function showNewsSlides(n) {
+            var i;
+            var newsSlides = document.getElementsByClassName("news-slide");
+            var newsDots = document.getElementsByClassName("news-dot");
+            if (n > newsSlides.length) {
+                newsSlideIndex = 1;
+            }
+            if (n < 1) {
+                newsSlideIndex = newsSlides.length;
+            }
+            for (i = 0; i < newsSlides.length; i++) {
+                newsSlides[i].style.display = "none";
+            }
+            for (i = 0; i < newsDots.length; i++) {
+                newsDots[i].className = newsDots[i].className.replace(" active", "");
+            }
+            newsSlides[newsSlideIndex - 1].style.display = "block";
+            newsDots[newsSlideIndex - 1].className += " active";
+        }
+
+        var newsSlideInterval = setInterval(function() {
+            plusNewsSlides(1);
+        }, 30000);
+
+        var newsSlideshow = document.querySelector(".news-slideshow-container");
+        newsSlideshow.addEventListener("mouseover", function() {
+            clearInterval(newsSlideInterval);
+        });
+        newsSlideshow.addEventListener("mouseout", function() {
+            newsSlideInterval = setInterval(function() {
+                plusNewsSlides(1);
+            }, 5000);
+        });
+    </script> 
 </body>
 </html>
+
