@@ -27,16 +27,19 @@
   ?>
   
   <title><?php echo $title; ?></title>
-  <link rel="stylesheet" href="style.css"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css"> 
   <link rel="shortcut icon" type="image/x-icon" href="../image/favicon.ico">
   <meta charset="UTF-8">
-  
+  <style>
+    
+  </style>
 </head>
 <body>
   <div class="menu">  
     <ul>
-    <a href="/welcome"><img src="/image/logo.png" alt="logo" style="width:100%;"></a>
+    <div class="fixed-header">
+    <a href="/welcome"><img src="/image/logo.png" alt="logo" style="width:100%; background: linear-gradient(to bottom, #dce0e8 50%, #1d1d52 50%);"></a>
 	  
     <?php
     $type = isset($_GET['type']) ? $_GET['type'] : 'none';
@@ -86,6 +89,8 @@
         <option value="author">Tác giả</option>
       </select>
     </div>
+    </div>
+    
     <div class="book-container">
     <?php          
       $lines = file($filePath);           

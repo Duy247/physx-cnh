@@ -1,14 +1,14 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
     body {
       display: flex;
       max-height: 100vh;
       margin: 0;
-      font-family:'Open Sans', sans-serif;
-      background-color: #555;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #dce0e8;
     }
     .menu {
-      width: 15%;
-      background-color: #262626;
+      width: 20%;
+      background-color: #dce0e8;
       padding: 10px;
       height: 98vh;
       text-align: center;
@@ -22,14 +22,14 @@
       text-decoration: none;
     }
     .menu h2,h3 {
-      color: #b95edd;
+      color: black;
       margin-bottom: 0px;
       margin-top: 0px;
       white-space: nowrap;
     }
 	  .menu h3 {
       margin-bottom: 10px;
-      color:#eac912;
+      color:black;
       font-size:14px;
     }
     .menu ul {
@@ -47,18 +47,32 @@
     .menu li {
       width:95%;
       margin-bottom: 10px;
-      background-color: #363636;
-      border: solid 1px #b95edd;
+      background-color: #dce0e8;
       border-radius: 4px;
-      color: #d2d2d2;
+      color: black;
       font-size: 14px;
       font-weight: bold;
       padding-top:5px;
       padding-bottom:5px;
     }
+    .menu li::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #26245f;
+      transition: left 0.2s ease;
+      z-index: -1;
+    }
     .menu li:hover {
-      margin-bottom: 10px;
-      background-color: #5d5b5b;
+      transform: scale(1.00);
+      font-weight: bold;
+      color: white;
+    }
+    .menu li:hover::before {
+      left: 0;
     }
     .iframe-container {
       flex: 1;
@@ -76,7 +90,7 @@
       transform: translateY(-50%);
       width: 20px;
       height: 40%;
-      background-color: #262626;
+      background-color: #38389e;
       border: none;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -84,12 +98,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #b95edd;
+      color: white;
       font-size: 20px;
       transition: background-color 0.3s ease;
     }
 	.menu-toggle:hover {
-	  background-color: #73c977; /* Subtle background change on hover */
+	  background-color: #1d1d52; /* Subtle background change on hover */
     font-size: 30px; 
 	}
   .search-container {
@@ -100,8 +114,9 @@
     width: 80%;
     padding: 5px;
     font-size: 14px;
-    border: 1px solid #b95edd;
+    border: 1px solid #1d1d52;
     border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .sort-options {
@@ -109,7 +124,7 @@
   }
 
   .sort-options label {
-    color: #d2d2d2;
+    color: black;
     font-size: 14px;
     margin-right: 5px;
   }
@@ -117,14 +132,22 @@
   .sort-options select {
     padding: 5px;
     font-size: 14px;
-    border: 1px solid #b95edd;
+    border: 1px solid #1d1d52;
     border-radius: 4px;
-    background-color: #363636;
-    color: #d2d2d2;
+    background-color: #dce0e8;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .menu .fixed-header {
+    position: sticky;
+    top: 0; /* Stick to the top */
+    background-color: #dce0e8; /* Match menu background */
+    z-index: 1; /* Ensure it's on top of the scrollable content */
+    padding-bottom: 10px; /* Add some spacing below */
   }
     /* Custom scroll bar styles */
     ::-webkit-scrollbar {
-      width: 1px;
+      width: 0px;
     }
     ::-webkit-scrollbar-track {
       background-color: #262626;
