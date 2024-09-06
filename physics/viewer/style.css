@@ -1,6 +1,6 @@
 body {
-    background-color: #535759;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #dce0e8;
 }
 #pdf-container {
     text-align: center;
@@ -18,23 +18,29 @@ body {
 button {
     padding: 5px 10px;
     font-size: 16px;
-    background-color: #404040;
+    background-color: #26245f;
     color: white;
-    border: 1px solid green;
+    border: 1px solid #26245f;
     border-radius: 4px;
     cursor: pointer;
     margin: 0 5px;
 }
 .navigation button:hover {
-    background-color: #45a049;
+    background-color: #26245f;
 }
 .navigation input {
-    padding: 10px;
+    padding: 5px;
     font-size: 16px;
     width: 30px;
-    border: 1px solid #ccc;
+    border: 1px solid #26245f;
     border-radius: 4px;
     margin: 0 5px;
+}
+#prevPage{
+    width:25%;
+}
+#nextPage{
+    width:25%;
 }
 #pageInfo {
     font-size: 18px;
@@ -44,9 +50,10 @@ button {
     position: fixed;
     top: 20px;
     left: 50%;
-    transform: translateX(-50%);
+    top:20%;
+    transform: translateX(-50%) translateY(-50%);
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #26245f;
     color: white;
     font-size: 16px;
     border-radius: 4px;
