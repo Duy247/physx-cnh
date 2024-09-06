@@ -253,7 +253,6 @@
 
         #r-bottom-part {
             flex: 0 0 40%;
-            padding: 5px;
             box-sizing: border-box;
             background-color: black;
             display: flex;
