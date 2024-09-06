@@ -377,22 +377,49 @@
             background-color: #fff;
         }
         @media screen and (max-width: 600px) {
-            body{
-                overflow:auto;
+            body {
+                overflow: auto;
             }
             #menu {
                 width: 100%;
-                height: 100%;
+                height: 100vh;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
             }
-            #content{
-                display:none;
+            #m-top-part {
+                width: 100%;
+                height: 20%;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(to bottom, #dce0e8 78%, #1d1d52 78%);
+            }
+            #m-bottom-part {
+                width: 100%;
+                height: 80%;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            #content {
+                display: none;
+            }
+            .menu-list {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+            .menu-list li {
+                width: 100%;
             }
             .menu-list li a {
                 display: block;
-                padding: 10px 15px 10px 10px;
+                width: 100%;
+                padding: 10px;
                 background-color: #dce0e8;
                 color: black;
                 text-decoration: none;
