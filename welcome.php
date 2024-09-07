@@ -159,30 +159,37 @@
             filter: brightness(0.2); 
         }
         #top-part {
-            height: 50%;
+            height: 60%;
             padding-top:1rem;
             box-sizing: border-box;
             font-size: 1.0rem;     
             text-align: justify;
-            background-color: hsla(200, 40%, 30%, .4);
+            background-color: hsl(240, 18%, 12%, .9);
             background-image:
                 url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'),
                 url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                 url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+                
                 url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                 url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
             background-repeat: repeat-x;
             background-position:
                 0 20%,
                 0 100%,
                 0 50%,
+                0 50%,
                 0 100%,
+                0 0,
                 0 0;
             background-size:
                 2500px,
                 800px,
                 500px 200px,
+                500px 200px,
                 1000px,
+                400px 260px,
                 400px 260px;
             animation: 500s para infinite linear;
         }
@@ -193,7 +200,9 @@
                     -5000px 20%,
                     -800px 95%,
                     500px 50%,
+                    500px 50%,
                     1000px 100%,
+                    400px 0,
                     400px 0;
                 }
         }
@@ -212,10 +221,10 @@
             font-size: 1.6vh;
         }
         #introduce {
-            flex: 2;     
+            flex: 3;     
         }
         #whats-new {
-            flex: 1;
+            flex: 2;
         }
         .text-box a{
             text-decoration: none;
@@ -223,11 +232,10 @@
         }
         #top-part h1 {
             text-align: center;
-            color: #1c1c51; /* Fallback color if filters aren't supported */
+            color: #d8d85d;
             padding: 0;
             font-size: 5vh;
-            filter: contrast(1%); /* Increase contrast for better visibility */
-            mix-blend-mode: difference; /* Blend text with background for adaptability */
+            mix-blend-mode: color-dodge;
         }
 
         #top-part h2 {
@@ -236,7 +244,7 @@
         #bottom-part {
             display: flex;
             clear: both;
-            height: 50%;
+            height: 40%;
         }
 
         #l-bottom-part {
@@ -461,8 +469,8 @@
             <h1>Tổng hợp tài liệu chuyên lý Nguyễn Huệ</h1>
             <div class="text-container">
                 <div class="text-box" id="introduce">
-                    <p>Đây là trang web tổng hợp tài liệu hỗ trợ học tập cho các học sinh thuộc đội tuyển vật lí. Web được vận hành và duy trì trên nền tảng Github bởi Văn Thành Duy, chuyên lí Nguyễn Huệ K69.</p>
-                    <p>Trang web vận hành tốt nhất trên trình duyệt máy tính (PC / Chromebook / Samsung Dex). Để truy cập vào các tài liệu, vui lòng chọn mục từ menu bên trái. </p>
+                    <p>Đây là trang web tổng hợp tài liệu hỗ trợ học tập cho các học sinh thuộc đội tuyển vật lí. <br>Web được vận hành và duy trì trên nền tảng Github bởi Văn Thành Duy, chuyên lí Nguyễn Huệ K69.</p>
+                    <p>Trang web vận hành tốt nhất trên trình duyệt máy tính (PC / Chromebook / Samsung Dex). <br>Để truy cập vào các tài liệu, vui lòng chọn mục từ menu bên trái. </p>
                     <p>Để yêu cầu tìm và bổ sung tài liệu, liên hệ <b><a href="mailto:duy5a247@gmail.com">duy5a247@gmail.com</a></b> hoặc tới <a href="https://github.com/Duy247/physx-cnh">repository github</a> và đọc thêm hướng dẫn</p>
                     <p>Nếu quá trình load và tải tài liệu bị chậm, hãy sử dụng DNS Cloudfare 1.1.1.1</p>
                     <p>Cảm ơn tới các cá nhân đã đóng góp tài liệu</p>
