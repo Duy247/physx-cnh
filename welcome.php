@@ -164,47 +164,30 @@
             box-sizing: border-box;
             font-size: 1.0rem;     
             text-align: justify;
-            background-color: hsl(240, 18%, 12%, .9);
-            background-image:
-                url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'),
-                url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
-                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
-                
-                url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
-                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
-            background-repeat: repeat-x;
-            background-position:
-                0 20%,
-                0 100%,
-                0 50%,
-                0 50%,
-                0 100%,
-                0 0,
-                0 0;
-            background-size:
-                2500px,
-                800px,
-                500px 200px,
-                500px 200px,
-                1000px,
-                400px 260px,
-                400px 260px;
-            animation: 500s para infinite linear;
+            background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+            background-size:cover;
+                    -webkit-animation: slidein 100s;
+                    animation: slidein 100s;
+
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+
+                    -webkit-animation-iteration-count: infinite;
+                    animation-iteration-count: infinite;
+
+                    -webkit-animation-direction: alternate;
+                    animation-direction: alternate;
         }
 
-        @keyframes para {
-            100% {
-                background-position: 
-                    -5000px 20%,
-                    -800px 95%,
-                    500px 50%,
-                    500px 50%,
-                    1000px 100%,
-                    400px 0,
-                    400px 0;
-                }
+        @-webkit-keyframes slidein {
+        from {background-position: top; background-size:2000px; }
+        to {background-position: -100px 0px;background-size:2250px;}
+        }
+
+        @keyframes slidein {
+        from {background-position: top;background-size:2000px; }
+        to {background-position: -100px 0px;background-size:2250px;}
+
         }
         .text-container {
             display: flex;
@@ -232,10 +215,9 @@
         }
         #top-part h1 {
             text-align: center;
-            color: #d8d85d;
+            color: hsl(0, 0%, 15%,0.7);
             padding: 0;
             font-size: 5vh;
-            mix-blend-mode: color-dodge;
             margin-bottom:0.5rem;
         }
 
