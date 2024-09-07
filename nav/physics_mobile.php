@@ -40,7 +40,7 @@
     
     <ul>
     <div class="fixed-header">
-    <a href="/welcome"><img src="/image/logo.png" alt="logo" style="width:100%; background: linear-gradient(to bottom, #dce0e8 50%, #1d1d52 50%);width: 120%; height: 120%; object-fit: contain;"></a>
+    <a href="/welcome"><img src="/image/logo.png" alt="logo" style="width:100%; background: linear-gradient(to bottom, #dce0e8 50%, #1d1d52 50%);"></a>
     <?php
     $type = isset($_GET['type']) ? $_GET['type'] : 'none';
     $level = isset($_GET['level']) ? $_GET['level'] : 'none';
