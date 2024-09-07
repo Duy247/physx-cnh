@@ -14,6 +14,7 @@
       transition: width 0.3s ease;
       position: relative;
     }
+
     #logo-container{
       background: linear-gradient(to bottom, #dce0e8 50%, #1d1d52 50%);
     }
@@ -86,6 +87,10 @@
     .iframe-container {
       flex: 1;
       padding: 20px;
+      transition: filter 0.3s ease;
+    }
+    .menu:hover ~ .iframe-container {
+        filter: brightness(0.2); 
     }
     iframe {
       width: 100%;
