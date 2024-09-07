@@ -218,7 +218,7 @@
             backdrop-filter: blur(10px);
             border-radius: 10px;
             color: black;
-            font-size: 1.6vh;
+            font-size: 1.8vh;
         }
         #introduce {
             flex: 3;     
@@ -236,6 +236,7 @@
             padding: 0;
             font-size: 5vh;
             mix-blend-mode: color-dodge;
+            margin-bottom:0.5rem;
         }
 
         #top-part h2 {
