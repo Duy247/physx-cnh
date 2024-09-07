@@ -19,8 +19,8 @@
             overflow: hidden;
         }
         .logo{
-            width: 120%;
-            height: 120%;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
         }
         #menu {
@@ -32,7 +32,6 @@
         }
         #m-top-part {
             height: 20%;
-            padding: 1rem;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;

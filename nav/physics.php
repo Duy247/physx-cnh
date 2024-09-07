@@ -39,7 +39,11 @@
   <div class="menu">  
     <ul>
     <div class="fixed-header">
-    <a href="/welcome"><img src="/image/logo.png" alt="logo" style="width: 100%; height: 100%; object-fit: contain; background: linear-gradient(to bottom, #dce0e8 50%, #1d1d52 50%);"></a>
+    <a href="/welcome">
+      <div id="logo-container">
+      <img src="/image/logo.png" alt="logo" class="logo">
+      </div>
+    </a>
 	  
     <?php
     $type = isset($_GET['type']) ? $_GET['type'] : 'none';
@@ -101,7 +105,7 @@
               $author = trim($bookData[1]);
               $file = trim($bookData[2]);
               $description = trim($bookData[3]);
-              echo '<a class="book-item" data-file="' . $file . '" data-title="' . htmlspecialchars($title) . '" data-author="' . htmlspecialchars($author) . '"><li>' . $title . '<br>' . $author . '<br>' . $description . '</li></a>';
+              echo '<a class="book-item" data-file="' . $file . '" data-title="' . htmlspecialchars($title) . '" data-author="' . htmlspecialchars($author) . '"><li>' . $title . '<br>' . $author . '<br>' . $description . '</li></a> <hr>';
           }
       }
     ?>
