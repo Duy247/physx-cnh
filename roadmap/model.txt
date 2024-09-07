@@ -1,0 +1,66 @@
+{ "class": "go.GraphLinksModel",
+    "nodeKeyProperty": "id",
+    "nodeDataArray": [
+    {"id":-1, "loc":"155 -150", "type":"Start", "text":"Vào 10" },
+    {"id":0, "loc":"190 15", "text":"HSG Cấp Thành Phố"},
+    {"id":1, "loc":"480 100", "text":"HSG Thành Phố Vòng 2"},
+    {"id":3, "loc":"0 -50", "text":"Động học"},
+    {"id":4, "loc":"-20 20", "text":"Tĩnh học vật rắn"},
+    {"id":5, "loc":"-120 90", "text":"Động lực học cơ hệ và vật rắn.\n Các định luật bảo toàn"},
+    {"id":6, "loc":"0 170", "text":"Cơ học chất lưu"},
+    
+    {"id":8, "loc":"0 240", "text":"Điện trường"},
+    {"id":9, "loc":"40 320", "text":"Mạch điện"},
+    {"id":10, "loc":"120 380", "text":"Dao động"},
+    
+    {"id":12, "loc":"240 400", "text":"Trường điện từ"},
+    {"id":13, "loc":"380 400", "text":"Quang hình học \n Thiết bị quang"},
+    {"id":14, "loc":"520 400", "text":"Nhiệt động lực học \n Cổ điển"},
+    {"id":15, "loc":"560 320", "text":"Truyền nhiệt và chuyển pha"},
+
+    {"id":16, "loc":"350 -100", "text":"Động lực học cơ hệ và vật rắn.\n Các định luật bảo toàn\nLvl 2"},
+    {"id":7, "loc":"600 -180", "text":"Trường hấp dẫn. \n Cơ học thiên thể"},
+    {"id":11, "loc":"750 -220", "text":"Sóng mở rộng"},
+    {"id":17, "loc":"900 -250", "text":"Cơ học chất lưu\nLvl 2"},
+    {"id":18, "loc":"1050 -200", "text":"Điện trường\nLvl 2"},
+    {"id":19, "loc":"1180 -150", "text":"Mạch điện\n Quá độ"},
+    {"id":20, "loc":"1250 -80", "text":"Trường điện từ\n Lvl 2"},
+    {"id":21, "loc":"1200 20", "text":"Quang hình học \n Thiết bị quang\n Lvl 2"},
+    {"id":22, "loc":"1100 120", "text":"Nhiệt động lực học \n Cổ điển\n Lvl 2"},
+    
+    {"id":-2, "loc":"830 200", "type":"End", "text":"Đội tuyển VPhO" },
+    {"id":23, "loc":"1200 240", "text":"Hạt nhân nguyên tử"},
+    {"id":24, "loc":"1100 320", "text":"Vật lý lượng tử"},
+    {"id":25, "loc":"1000 400", "text":"Thực hành thí nghiệm"}
+    ],
+    "linkDataArray": [
+        { "from": -1, "to": 0, "progress": true, "text": "Học", "curviness": -10 },
+        { "from": 0, "to": 1, "progress": true, "text": "Học mệt" },
+        { "from": 1, "to": -2, "progress": true, "text": "Học còn mệt hơn nữa" },
+        { "from": 0, "to": 3, "progress": false, "text": "","curviness": -10  },
+        { "from": 0, "to": 4, "progress": false, "text": "","curviness": -10  },
+        { "from": 0, "to": 5, "progress": false, "text": "","curviness": -5  },
+        { "from": 0, "to": 6, "progress": false, "text": "","curviness": 10  },
+        { "from": 0, "to": 8, "progress": false, "text": "","curviness": 40  },
+        { "from": 0, "to": 9, "progress": false, "text": "","curviness": 50  },
+        { "from": 0, "to": 10, "progress": false, "text": "","curviness": 50  },
+        { "from": 0, "to": 12, "progress": false, "text": "","curviness": -10  },
+        { "from": 0, "to": 13, "progress": false, "text": "","curviness": -10  },
+        { "from": 0, "to": 14, "progress": false, "text": "","curviness": -20  },
+        { "from": 0, "to": 15, "progress": false, "text": "","curviness": -20  },
+
+        { "from": 1, "to": 16, "progress": false, "text": "","curviness": -20  },
+        { "from": 1, "to": 7, "progress": false, "text": "","curviness": 0  },
+        { "from": 1, "to": 11, "progress": false, "text": "","curviness": 10  },
+        { "from": 1, "to": 17, "progress": false, "text": "","curviness": 10  },
+        { "from": 1, "to": 18, "progress": false, "text": "","curviness": 10  },
+        { "from": 1, "to": 19, "progress": false, "text": "","curviness": 10  },
+        { "from": 1, "to": 20, "progress": false, "text": "","curviness": 10  },
+        { "from": 1, "to": 21, "progress": false, "text": "","curviness": 10  },
+        { "from": 1, "to": 22, "progress": false, "text": "","curviness": 10  },
+
+        { "from": -2, "to": 23, "progress": false, "text": "","curviness": 10  },
+        { "from": -2, "to": 24, "progress": false, "text": "","curviness": 10  },
+        { "from": -2, "to": 25, "progress": false, "text": "","curviness": 10  }
+    ]
+    }

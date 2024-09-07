@@ -1,0 +1,380 @@
+{
+    "Vào 10": {
+      content: "<br><br>Đây là nơi bắt đầu của bạn."
+    },
+    "Đội tuyển VPhO": {
+      content: "<br><br>Ôn tập từ khoảng giữa tháng 10 tới đầu tháng 1 năm sau. <br>Đây là nơi kết thúc của bạn? Tuỳ thực lực"
+    },
+    "Động học": {
+      content: `<br><br><b>Phân tích được các vấn đề thực tiễn có liên quan :
+      </b><br><ul><li>Hệ quy chiếu. Cộng vận tốc. Vận tốc và gia tốc của chất điểm chuyển động tròn không đều.</li>
+      <li>Vận tốc góc và gia tốc góc trong chuyển động quay của vật rắn. </li>
+      <li>Khảo sát chuyển động phẳng (song phẳng) về mặt động học </li></ul>
+      <b>Dạng bài tập :</b>
+      <ul>
+          <li>Bài tập chất điểm</li>
+      </ul>
+      `
+    },
+    "Tĩnh học vật rắn":{
+      content:`
+        <ul>
+          <li>Vận dụng được điều kiện tổng quát của cân bằng vào các bài toán cân bằng.</li>
+          <li>Xác định được trục quay để tính momen lực sao cho hệ phương trình cần giải được đơn giản.</li>
+          <li>Xác định khối tâm của một hệ bằng phương pháp tổng hợp lực hoặc tích phân.</li>
+          <li>Điều kiện cân bằng lực cân bằng mômen (sử dụng phép tính vectơ hoặc phép tính theo hình chiếu vectơ; áp dụng cho trường hợp một chiều và hai chiều).</li>
+          <li>Lực đàn hồi, lực ma sát trượt, lực ma sát nghỉ.</li>
+          <li>Định luật Hooke, ứng suất,   biến dạng và môđun Young.</li>
+          <li>Vận dụng kiến thức để khảo sát các dạng cân bằng của vật rắn.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài toán xác định khối tâm của vật rắn.</li>
+            <li>Bài toán cân bằng vật rắn. (Áp dụng điều kiện cân bằng tổng quát)</li>
+        </ul>
+      `
+    },
+    "Động lực học cơ hệ và vật rắn.\n Các định luật bảo toàn":{
+      content:`
+        <br><br><b>Khảo sát được chuyển động phẳng của vật rắn về mặt động lực học:</b>  
+        <ul>
+          <li>Vận dụng được các phương trình động lực học để xác định gia tốc của khối tâm và gia tốc của các vật chuyển động phẳng tổng quát.</li>
+          <li>Vận dụng được định lí về trục song song để tính momen quán tính của vật rắn (vòng, đĩa, quả cầu, quả cầu rỗng, thanh)</li>
+          <li>Thiết lập được công thức tính momen động lượng của một vật rắn đối với một trục bất kì.</li>
+          <li>Phát biểu được: định luật bảo toàn động lượng, định luật bảo toàn momen động lượng, định luật bảo toàn cơ năng.</li>
+          <li>Thiết lập được công thức tính động năng của vật rắn chuyển động tịnh tiến và chuyển động quay; Hiểu được định lí biến thiên động năng; Định lí biến thiên thế năng;</li>
+          <li>Vận dụng được định luật bảo toàn cơ năng và định lí biến thiên động năng để giải các bài toán về một vật chuyển động phẳng tổng quát hoặc chuyển động lăn không trượt.</li>
+          <li>Vận dụng được các định luật bảo toàn động lượng và momen động lượng để giải các bài tập về va chạm giữa một chất điểm với một vật rắn và về va chạm giữa hai vật rắn.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài toán cơ hệ vật rắn.</li>
+            <li>Bài toán áp dụng các định luật bảo toàn.</li>
+            <li>Chuyển động ném xiên-ngang.</li>
+            <li>Chuyển động song phẳng của hệ, vật rắn.</li>
+        </ul>
+      `
+    },
+    "Cơ học chất lưu":{
+      content:`
+        <br>
+        <ul>
+          <li>Trình bày được các khái niệm cơ bản của chất lưu lí tưởng (Chuyển động dừng, không nén, không xoáy).</li>
+          <li>Vận dụng được các phương trình, các định luật của tĩnh học chất lưu (định luật Acsimet, định luật Pascan) các định luật của động học chất lưu (định luật Becnulli, định luật Poadơi, …) giải thích các hiện tượng tự nhiên, các ứng dụng trong thực tiễn và giải quyết các vấn đề có liên quan.</li>
+          <li>Vận dụng được Phương trình liên tục.</li>
+          <li>Phát biểu và nêu ứng dụng của định luật được định luật Xtốc (Stokes) về lực cản của môi trường nhớt.</li>
+          <li>Các hiện tượng bề mặt chất lỏng: Nêu và vận dụng được công thức tính áp suất phụ, công thức tính năng lượng bề mặt. Viết được các công thức về hiện tượng mao dẫn.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập động học chất lưu đơn giản.</li>
+            <li>Bài tập về mao dẫn, chất lỏng, độ ẩm</li>
+        </ul>
+      `
+    },
+    "Điện trường":{
+      content:`
+        <br><br><b>Nắm được các nội dung: </b>
+        <ul>
+          <li>Thuyết điện tử.</li>
+          <li>Điện trường của một số vật đối xứng.</li>
+          <li>Định lí Ostrogradski- Gauss.</li>
+          <li>Điện thế và hiệu điện thế. </li>
+          <li>Vật dẫn và điện môi trong điện trường.</li>
+          <li>Điện dung của vật dẫn- Tụ điện</li>
+          <li>Năng lượng của trường tĩnh điện.</li>
+        </ul>
+        <b>Vận dụng kiến thức: </b>
+        <ul>
+          <li>Xác định cường độ điện trường của hệ điện tích.</li>
+          <li>Xác định cường độ điện trường của một số vật nhiễm điện có tính chất đối xứng. </li>
+          <li>Xác định điện thế của điện tích, hệ điện tích. </li>
+          <li>Xác định điện dung của vật dẫn và hệ các vật dẫn.</li>
+          <li>Thành lập các công thức xác định năng lượng điện trường. </li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập vận dụng kiến thức.</li>
+            <li>Bài tập chuyển động của hạt mang điện trong điện trường.</li>
+        </ul>
+      `
+    },
+    "Mạch điện":{
+      content:`<br><br>
+        <b>Thảo luận để: </b>
+        <ul>
+          <li>Nêu được các phương pháp cơ bản giải bài toán mạch điện một chiều (phương pháp áp dụng định luật Ôm tổng quát).</li>
+          <li>Phương pháp điện thế nút.</li>
+          <li>Phương pháp Kiếc xốp.</li>
+          <li>Phương pháp nguồn tương đương.</li>
+          <li>Phương pháp chồng chập.</li>
+          <li>Vận dụng được các phương pháp cơ bản giải bài toán mạch điện một chiều để giải các bài toán mạch điện một chiều</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập mạch điện.</li>
+        </ul>
+      `
+    },
+    "Dao động":{
+      content:`<br><br>
+        <b>Dao động cơ điều hòa nâng cao gồm có:  </b>
+        <ul>
+          <li>Dao động của vật rắn.</li>
+          <li>Con lắc vật lí có chiều dài biến đổi.</li>
+          <li>Dao động của cơ hệ.</li>
+          <li>Dao động cơ cưỡng bức, cộng hưởng cơ.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Dao động cơ bản.</li>
+            <li>Sóng cơ bản.</li>
+        </ul>
+      `
+    },
+    "Trường điện từ":{
+      content:`<br><br>
+        <b>Nắm được các nội dung: </b>
+        <ul>
+          <li>Hiện tượng tự cảm và độ tự cảm.</li>
+          <li>Năng lượng của cuộn cảm.</li>
+          <li>Định luật Faraday.</li>
+          <li>Nguyên lí chồng chất điện trường và từ trường.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập cơ bản.</li>
+            <li>BT chuyển động của hạt mang điện trong điện trường/ từ trường.</li>
+        </ul>
+      `
+    },
+    "Quang hình học \n Thiết bị quang":{
+      content:`<br><br>
+        <b>Nắm được các nội dung: </b>
+        <ul>
+          <li>Thấu kính mỏng; dựng ảnh tạo bởi thấu kính mỏng lí tưởng; phương trình thấu kính mỏng.</li>
+          <li>Kính hiển vi và kính thiên văn.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập thấu kính + quang hệ + dụng cụ quang + lưỡng chất phẳng</li>
+            <li>Bài tập kính hiển vi; kính thiên văn; kính lúp</li>
+        </ul>
+      `
+    },
+    "Nhiệt động lực học \n Cổ điển":{
+      content:`<br><br>
+        <b>Nắm được các nội dung: </b>
+        <ul>
+          <li>Các khái niệm về cân bằng nhiệt và các quá trình thuận nghịch; nội năng, công và nhiệt.</li>
+          <li>Nguyên lí thứ nhất và thứ hai của nhiệt động lực học.</li>
+          <li>Bậc tự do bậc tự do tịnh tiến của khí đơn nguyên tử và lưỡng nguyên tử</li>
+          <li>Hiệu suất của động cơ nhiệt không lí tưởng.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập về chất khí lí tưởng + chu trình + nguyên lí 1 + nguyên lí 2</li>
+        </ul>
+      `
+    },
+    "Truyền nhiệt và chuyển pha":{
+      content:`<br><br>
+        <b>Nắm được các nội dung: </b>
+        <ul>
+          <li>Áp suất hơi bão hòa, độ ẩm tuyệt đối, độ ẩm cực đại; độ ẩm tương đối.</li>
+          <li>Khái niệm về sự dẫn nhiệt; Phương trình truyền nhiệt.</li>
+          <li>Khái niệm pha (sôi, bay hơi, nóng chảy, thăng hoa) ẩn nhiệt; </li>
+          <li>Khái niệm về ngưng tụ, ngưng kết, đông đặc.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập cơ bản</li>
+        </ul>
+      `
+    },
+    "Động lực học cơ hệ và vật rắn.\n Các định luật bảo toàn\nLvl 2":{
+      content:`<br><br>
+        <b>Nắm được các nội dung: </b>
+        <ul>
+          <li>Phương pháp năng lượng. Phương pháp Euler-Lagrange.</li>
+          <li>Định lí công ảo</li>
+          <li>Dao động vật rắn.</li>
+          <li>Va chạm vật rắn.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập nâng cao</li>
+        </ul>
+      `
+    },
+    "Trường hấp dẫn. \n Cơ học thiên thể":{
+      content:`<br><br>
+        <b>Nắm được các nội dung: </b>
+        <ul>
+          <li>Định luật vạn vật hấp dẫn. Trường lực hấp dẫn. Thế năng hấp dẫn.   </li>
+          <li>Chuyển động trong trường hấp dẫn.</li>
+          <li>Các định luật Kepler</li>
+          <li>Chứng minh các phương trình của quỹ đạo cơ học thiên thể.</li>
+          <li>Thiết lập được công thức xác định các vận tốc vũ trụ.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập về tương tác hấp dẫn. (Nâng cao) </li>
+            <li>Bài toán chuyển động của vật trong trường lực xuyên tâm.</li>
+            <li>Bài tập nâng cao về 3 định luật Kepler </li>
+        </ul>
+      `
+    },
+    "Sóng mở rộng":{
+      content:`<br><br>
+        <b>Nắm được các nội dung: </b>
+        <ul>
+          <li>Sự lan truyền của sóng điều hòa: pha là một hàm tuyến tính của không gian và thời gian.</li>
+          <li>Sự chồng chất của sóng: tổng hợp sóng, giao thoa, sóng dừng.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập (Nâng cao) </li>
+        </ul>
+      `
+    },
+    "Cơ học chất lưu\nLvl 2":{
+      content:`<br><br>
+        
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập chất lưu (Nâng cao) </li>
+        </ul>
+      `
+    },
+    "Điện trường\nLvl 2":{
+      content:`<br><br>
+        <b>Nắm được các nội dung: </b>
+        <ul>
+          <li>Lưỡng cực điện.</li>
+          <li>Phương pháp ảnh điện.</li>
+          <li>Điều kiện biên điện môi.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập tương tác điện trường (Nâng cao) </li>
+            <li>Bài tập lưỡng cực (Nâng cao) </li>
+        </ul>
+      `
+    },
+    "Mạch điện\n Quá độ":{
+      content:`<br><br>
+        <b>Nắm được các nội dung: </b>
+        <ul>
+          <li>Vận dụng được phương pháp tổng quát giải các bài toán về mạch điện phi tuyến (chứa phần tử phi tuyến, chứa điốt) và mạch RC. </li>
+          <li>Phương pháp số phức.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập mạch dao động điện, quá độ. </li>
+            <li>Bài tập mạch xoay chiều có chứa phần tử phi tuyến. </li>
+        </ul>
+      `
+    },
+    "Trường điện từ\n Lvl 2":{
+      content:`<br><br>
+        <b>Nắm được các nội dung: </b>
+        <ul>
+          <li>Điện môi, độ từ thẩm tuyệt đối, độ từ thẩm tương đối của vật liệu điện và từ. </li>
+          <li>Hiện tượng hỗ cảm. - Mạch RL.</li>
+          <li>Lưỡng cực từ.</li>
+          <li>Định luật Biot-Savart và trường từ B trên trục của vòng dòng điện tròn và đối với các hệ đối xứng đơn giản như dây thẳng, vòng tròn và ống dây solenoid.</li>
+          <li>Công lực điện tác dụng lên điện tích chuyển động trong điện trường.</li>
+          <li>Định luật Ampère.</li>
+          <li>Các điều kiện biên đối với điện trường (hoặc thế tĩnh điện) tại bề mặt của vật dẫn và ở xa vô cùng.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập nâng cao liên quan. </li>
+        </ul>
+      `
+    },
+    "Quang hình học \n Thiết bị quang\n Lvl 2":{
+      content:`<br><br>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập nâng cao liên quan. </li>
+            <li>Bài tập lưỡng chất cầu</li>
+        </ul>
+      `
+    },
+    "Nhiệt động lực học \n Cổ điển\n Lvl 2":{
+      content:`<br><br>
+        <b>Nắm được các nội dung: </b>
+        <ul>
+          <li>Khái niệm Entropy.</li>
+          <li>Khí thực; Phương trình Van der waals.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập nâng cao liên quan. </li>
+            <li>Bài tập về Entropy. </li>
+        </ul>
+      `
+    },
+    "Hạt nhân nguyên tử":{
+      content:`<br><br>
+        <b>Nắm được các nội dung: </b>
+        <ul>
+          <li>Hiệu ứng quang điện.</li>
+          <li>Quang phổ phát xạ và hấp thụ của nguyên tử hydro và các Ion tương tự.</li>
+          <li>Sự tán xạ Compton.</li>
+          <li>Phóng xạ. Chu kỳ bán rã và phân rã theo cấp số nhân.</li>
+          <li>Sự hụt khối lượng.</li>
+          <li>Phản ứng phân hạch, nhiệt hạch.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập nâng cao liên quan. </li>
+           
+        </ul>
+      `
+    },
+    "Vật lý lượng tử":{
+      content:`<br><br>
+        <b>Nắm được các nội dung: </b>
+        <ul>
+          <li>Vận dụng được phương trình Einstein để giải thích các định luật quang điện. Ước lượng được năng lượng của các bức xạ điện từ cơ bản trong thang sóng điện từ.  </li>
+          <li>Các mô hình thực nghiệm</li>
+          <li>Lưỡng tính sóng hạt: Mô tả (hoặc giải thích) được tính chất sóng của electron bằng hiện tượng nhiễu xạ electron. </li>
+          <li>Vùng năng lượng.</li>
+          <li>Nêu được các vùng năng lượng trong chất rắn theo mô hình vùng năng lượng đơn giản</li>
+          <li>Sử dụng được lí thuyết vùng năng lượng đơn giản để giải thích được: Sự phụ thuộc vào nhiệt độ của điện trở kim loại và bán dẫn không pha tạp.</li>
+          <li>Sử dụng được lí thuyết vùng năng lượng đơn giản để giải thích được: Sự phụ thuộc của điện trở của các điện trở quang (LDR) vào cường độ sáng.</li>
+        </ul>
+        <b>Dạng bài tập :</b>
+        <ul>
+            <li>Bài tập nâng cao liên quan. </li>
+            
+        </ul>
+      `
+    },
+    "Thực hành thí nghiệm":{
+      content:`<br><br>
+        <b>Nắm được các nội dung: </b>
+        <ul>
+          <li>Xác định điện trở của linh kiện điện </li>
+          <li>Khảo sát sự phụ thuộc điện trở theo nhiệt độ </li>
+          <li>Khảo sát hiệu ứng Hall </li>
+          <li>Xác định điện dung của tụ điện </li>
+          <li>Xác định tốc độ truyền âm</li>
+          <li>Xác định gia tốc trọng trường bằng con lắc thuận nghịch</li>
+          <li>Đo hằng số thời gian trong quá trình phóng điện và tích điện của tụ điện.</li>
+          <li>Đo tiêu cự thấu kính. </li>
+          <li>Xác định hệ số ẩn nhiệt trong các quá trình chuyển pha</li>
+          <li>Xác định nhiệt dung riêng của hệ nhiệt. </li>
+          <li>Xác định độ lớn cảm ứng từ. </li>
+          <li>Xác định bước sóng ánh sáng của tia laze. </li>
+          <li>Xác định độ tự cảm của cuộn dây.</li>
+          <li>Xác định chiết suất lăng kính bằng phổ giác kế. </li>
+        </ul>
+
+      `
+    }
+    // Add more node-specific content as needed
+}

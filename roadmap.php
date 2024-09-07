@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tài liệu chuyên lý Nguyễn Huệ</title>
+    <title>Lộ trình ôn tập</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./image/favicon.ico">
+    <script src="https://unpkg.com/gojs@3.0.11/release/go.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
         
@@ -360,45 +361,70 @@
         .news-dot.active {
             background-color: #fff;
         }
+        #nodeInfo{
+            padding:1rem;
+            height:29vh;
+            overflow: auto;
+        }
+        #myDiagramDiv {
+            width: 100%;
+            position: relative; /* Necessary for absolute positioning of the pseudo-element */
+            overflow: hidden;
+        }
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+        #myDiagramDiv::before {
+            content: '';
+            background-image: url('https://unitedwaynca.org/wp-content/uploads/2023/05/books-g05cfba8f3_1920.jpg');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            opacity: 0.2; 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1; /* Place the pseudo-element behind the main content */
+        }
         @media screen and (max-width: 600px) {
             body {
                 overflow: auto;
             }
             #menu {
-                width: 100%;
+                display:none;
                 height: 100vh;
-                display: flex;
                 flex-direction: column;
                 align-items: center;
             }
             #m-top-part {
-                width: 100%;
+                display:none;
                 height: 20%;
                 box-sizing: border-box;
-                display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 background: linear-gradient(to bottom, #dce0e8 50%, #1d1d52 50%);
             }
             #m-bottom-part {
-                width: 100%;
+                display:none;
                 height: 80%;
                 box-sizing: border-box;
-                display: flex;
                 flex-direction: column;
                 justify-content: space-between;
             }
             #content {
-                display: none;
+                width: 100%;
+                
             }
             .menu-list {
+                display:none;
                 width: 95%;
                 padding: 0;
                 margin: 0;
             }
             .menu-list li a {
-                display: block;
+                display: none;
                 width: 100%;
                 padding: 10px;
                 background-color: #dce0e8;
@@ -449,94 +475,25 @@
     </div>
 
     <div id="content">
-        <div id="top-part">
-            <h1>Tổng hợp tài liệu chuyên lý Nguyễn Huệ</h1>
-            <div class="text-container">
-                <div class="text-box" id="introduce">
-                    <p>Đây là trang web tổng hợp tài liệu hỗ trợ học tập cho các học sinh thuộc đội tuyển vật lí. <br>Web được vận hành và duy trì trên nền tảng Github bởi Văn Thành Duy, chuyên lí Nguyễn Huệ K69.</p>
-                    <p>Trang web vận hành tốt nhất trên trình duyệt máy tính (PC / Chromebook / Samsung Dex). <br>Để truy cập vào các tài liệu, vui lòng chọn mục từ menu bên trái. </p>
-                    <p>Để yêu cầu tìm và bổ sung tài liệu, liên hệ <b><a href="mailto:duy5a247@gmail.com">duy5a247@gmail.com</a></b> hoặc tới <a href="https://github.com/Duy247/physx-cnh">repository github</a> và đọc thêm hướng dẫn</p>
-                    <p>Nếu quá trình load và tải tài liệu bị chậm, hãy sử dụng DNS Cloudfare 1.1.1.1</p>
-                    <p>Cảm ơn tới các cá nhân đã đóng góp tài liệu</p>
-                    <ul>
-                        <li>Văn Thành Duy Lý 1 K69 CNH</li>
-                        <li>Phạm Quang Chính Lý 2 K75 CNH</li>
-                    </ul>
-                </div>
-                <div class="text-box" id="whats-new">
-                    <h2><span class="rainbow-text">Cập nhật mới</span></h2>
-                    <ul>                 
-                        <?php
-                        $whatsNewFile = './whats-new/whats_new.txt'; // Path to your text file
-                        if (file_exists($whatsNewFile)) {
-                            $lines = file($whatsNewFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-                            foreach ($lines as $line) {
-                                if (strpos($line, '* ') === 0) { // Check if the line starts with '* '
-                                    echo '<li>' . substr($line, 2) . '</li>'; // Remove '* ' and add to the list
-                                }
-                            }
-                        } else {
-                            echo '<li>No updates yet.</li>';
-                        }
-                        ?>
-                    </ul>
-                </div>
-            </div>
-        </div> 
-        <div id="bottom-part">
-            <div id="l-bottom-part">
-                <div class="news-slideshow-container">
-                    <?php
-                    $jsonFile = './whats-new/news.json';
-                    $jsonData = file_get_contents($jsonFile);
-                    $newsItems = json_decode($jsonData, true);
-
-                    foreach ($newsItems as $index => $newsItem) {
-                        $backgroundImage = $newsItem['background_image'];
-                        $headline = $newsItem['headline'];
-                        $detail = $newsItem['detail'];
-
-                        echo '<div class="news-slide">';
-                        echo '<img src="' . $backgroundImage . '" alt="News Image">';
-                        echo '<div class="news-content">';
-                        echo '<h3>' . $headline . '</h3>';
-                        echo '<p>' . $detail . '</p>';
-                        echo '</div>';
-                        echo '</div>';
-                    }
-                    ?>
-                </div>
-                <div class="news-dots">
-                    <?php
-                    $totalSlides = count($newsItems);
-                    for ($i = 0; $i < $totalSlides; $i++) {
-                        echo '<span class="news-dot" onclick="currentNewsSlide(' . ($i + 1) . ')"></span>';
-                    }
-                    ?>
-                </div>
-            </div>
-            <div id="r-bottom-part">
-                <div class="slideshow-container">
-                    <?php
-                    $imageDirectory = './physics/img/';
-                    $imageExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-
-                    $images = glob($imageDirectory . '*.*');
-                    foreach ($images as $image) {
-                        $extension = pathinfo($image, PATHINFO_EXTENSION);
-                        if (in_array(strtolower($extension), $imageExtensions)) {
-                            echo '<div class="mySlides fade">';
-                            echo '<img src="' . $image . '" style="width:100%">';
-                            echo '</div>';
-                        }
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
+    <div id="sample">
+  <div id="myDiagramDiv" style="width: 100%; height: 70vh; background-color: #bababa"></div>  
+    <textarea id="mySavedModel" style="width: 100%; display:none">
+    <?php
+            $Model = './roadmap/model.txt'; // Path to your text file
+            echo "". file_get_contents($Model) . "";
+    ?> 
+    </textarea> 
+    <div id="nodeInfo"></div>
+  </div>
+</div>
     </div>
 
     <script>
+        <?php
+            $nodeDataList = './roadmap/node_data.txt'; // Path to your text file
+            echo "const nodeDataList = " . file_get_contents($nodeDataList) . ";";
+        ?>
+        
         function isMobileDevice() {
             return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         }
@@ -586,69 +543,148 @@
                 }
             });
         });
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            if (slides[slideIndex - 1]) {
-                slides[slideIndex - 1].style.display = "block";
-            }
-            setTimeout(showSlides, 10000); // Change image every 3 seconds
-        }
-        var newsSlideIndex = 1;
-        showNewsSlides(newsSlideIndex);
-
-        function plusNewsSlides(n) {
-            showNewsSlides(newsSlideIndex += n);
-        }
-
-        function currentNewsSlide(n) {
-            showNewsSlides(newsSlideIndex = n);
-        }
-
-        function showNewsSlides(n) {
-            var i;
-            var newsSlides = document.getElementsByClassName("news-slide");
-            var newsDots = document.getElementsByClassName("news-dot");
-            if (n > newsSlides.length) {
-                newsSlideIndex = 1;
-            }
-            if (n < 1) {
-                newsSlideIndex = newsSlides.length;
-            }
-            for (i = 0; i < newsSlides.length; i++) {
-                newsSlides[i].style.display = "none";
-            }
-            for (i = 0; i < newsDots.length; i++) {
-                newsDots[i].className = newsDots[i].className.replace(" active", "");
-            }
-            newsSlides[newsSlideIndex - 1].style.display = "block";
-            newsDots[newsSlideIndex - 1].className += " active";
-        }
-
-        var newsSlideInterval = setInterval(function() {
-            plusNewsSlides(1);
-        }, 30000);
-
-        var newsSlideshow = document.querySelector(".news-slideshow-container");
-        newsSlideshow.addEventListener("mouseover", function() {
-            clearInterval(newsSlideInterval);
-        });
-        newsSlideshow.addEventListener("mouseout", function() {
-            newsSlideInterval = setInterval(function() {
-                plusNewsSlides(1);
-            }, 5000);
-        });
+        
     </script> 
+    <script id="code">
+  function init() {
+    myDiagram = new go.Diagram('myDiagramDiv', {
+      'animationManager.initialAnimationStyle': go.AnimationStyle.None,
+      InitialAnimationStarting: (e) => {
+        var animation = e.subject.defaultAnimation;
+        animation.easing = go.Animation.EaseOutExpo;
+        animation.duration = 800;
+        animation.add(e.diagram, 'scale', 0.3, 1);
+        animation.add(e.diagram, 'opacity', 0, 1);
+      },
+
+      // have mouse wheel events zoom in and out instead of scroll up and down
+      'toolManager.mouseWheelBehavior': go.WheelMode.Zoom,
+      // support double-click in background creating a new node
+      'clickCreatingTool.archetypeNodeData': { text: 'new node' },
+      // enable undo & redo
+      'undoManager.isEnabled': true
+    });
+
+    myDiagram.addDiagramListener("ObjectSingleClicked", function(e) {
+        if (e.subject && e.subject.part && !(e.subject.part instanceof go.Link)) {
+            var nodeData = e.subject.part.data;
+            var additionalContent = nodeDataList[nodeData.text]?.content || ""; 
+            document.getElementById("nodeInfo").innerHTML = "Nội dung: " + nodeData.text + additionalContent;
+        }
+    });
+
+
+    const colors = {
+      pink: '#facbcb',
+      blue: '#b7d8f7',
+      green: '#b9e1c8',
+      yellow: '#faeb98',
+      background: 'white'
+    };
+    const colorsDark = {
+      green: '#3fab76',
+      yellow: '#f4d90a',
+      blue: '#0091ff',
+      pink: '#e65257',
+      background: '#929292'
+    };
+    myDiagram.div.style.backgroundColor = colors.background;
+
+    myDiagram.nodeTemplate = new go.Node('Auto', {
+      isShadowed: true,
+      shadowBlur: 0,
+      shadowOffset: new go.Point(5, 5),
+      shadowColor: 'black'
+    })
+      .bindTwoWay('location', 'loc', go.Point.parse, go.Point.stringify)
+      .add(
+        new go.Shape('RoundedRectangle', {
+          strokeWidth: 1.5,
+          fill: colors.blue,
+          portId: '',
+          fromLinkable: true, fromLinkableSelfNode: false, fromLinkableDuplicates: true,
+          toLinkable: true, toLinkableSelfNode: false, toLinkableDuplicates: true,
+          cursor: 'pointer'
+        })
+          .bind('fill', 'type', (type) => {
+            if (type === 'Start') return colors.green;
+            if (type === 'End') return colors.pink;
+            return colors.blue;
+          })
+          .bind('figure', 'type', (type) => {
+            if (type === 'Start' || type === 'End') return 'Circle';
+            return 'RoundedRectangle';
+          }),
+        new go.TextBlock({
+          font: 'bold small-caps 11pt helvetica, bold arial, sans-serif',
+          shadowVisible: false,
+          margin: 8,
+          font: 'bold 14px sans-serif',
+          stroke: '#333'
+        }).bind('text')
+      );
+
+   
+
+    // clicking the button inserts a new node to the right of the selected node,
+    // and adds a link to that new node
+    
+
+    // replace the default Link template in the linkTemplateMap
+    myDiagram.linkTemplate = new go.Link({
+      // shadow options are for the label, not the link itself
+      isShadowed: true,
+      shadowBlur: 0,
+      shadowColor: 'black',
+      shadowOffset: new go.Point(2.5, 2.5),
+
+      curve: go.Curve.Bezier,
+      curviness: 40,
+      adjusting: go.LinkAdjusting.Stretch,
+      reshapable: true,
+      relinkableFrom: true,
+      relinkableTo: true,
+      fromShortLength: 8,
+      toShortLength: 10
+    })
+      .bindTwoWay('points')
+      .bind('curviness')
+      .add(
+        // Main shape geometry
+        new go.Shape({ strokeWidth: 2, shadowVisible: false, stroke: 'black' })
+          .bind('strokeDashArray', 'progress', (progress) => (progress ? [] : [5, 6]))
+          .bind('opacity', 'progress', (progress) => (progress ? 1 : 0.5)),
+        // Arrowheads
+        new go.Shape({ fromArrow: 'circle', strokeWidth: 1.5, fill: 'white' }).bind('opacity', 'progress', (progress) => (progress ? 1 : 0.5)),
+        new go.Shape({ toArrow: 'standard', stroke: null, scale: 1.5, fill: 'black' }).bind('opacity', 'progress', (progress) => (progress ? 1 : 0.5)),
+        // The link label
+        new go.Panel('Auto')
+          .add(
+            new go.Shape('RoundedRectangle', {
+              shadowVisible: true,
+              fill: colors.yellow,
+              strokeWidth: 0.5
+            }),
+            new go.TextBlock({
+              font: '9pt helvetica, arial, sans-serif',
+              margin: 1,
+              editable: true, // enable in-place editing
+              text: 'Action' // default text
+            }).bind('text')
+            // editing the text automatically updates the model data
+          )
+      );
+
+    // read in the JSON data from the "mySavedModel" element
+    load();
+  }
+
+  function load() {
+    myDiagram.model = go.Model.fromJson(document.getElementById('mySavedModel').value);
+  }
+
+  window.addEventListener('DOMContentLoaded', init);
+</script>
 </body>
 </html>
 
