@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="website" property="og:type">
+    <meta content="Tài liệu chuyên lý Nguyễn Huệ" property="og:title">
+    <meta name="twitter:title" content="Tài liệu chuyên lý Nguyễn Huệ">
+    <meta property="og:description" content="Tổng hợp tài liệu chuyên lí ôn tập thi HSG các cấp và Olympics Vật lý.">
+    <meta property="og:site_name" content="PhysX-CNH">
+    <meta name="twitter:description" content="Tổng hợp tài liệu chuyên lí ôn tập thi HSG các cấp và Olympics Vật lý.">
     <meta content="https://physx-cnh.com/image/logo_meta.png" property="og:image">
     <meta content="https://physx-cnh.com/image/logo_meta.png" name="twitter:image">
     <title>Tài liệu chuyên lý Nguyễn Huệ</title>
