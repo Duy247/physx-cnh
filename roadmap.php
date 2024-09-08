@@ -476,17 +476,17 @@
     </div>
 
     <div id="content">
-    <div id="sample">
-    <div id="myDiagramDiv" style="width: 100%; height: 70vh; background-color: #bababa"></div>  
-        <textarea id="mySavedModel" style="width: 100%; display:none">
-        <?php
-                $Model = './roadmap/model.txt'; // Path to your text file
-                echo "". file_get_contents($Model) . "";
-        ?> 
-        </textarea> 
-        <div id="nodeInfo">Click vào từng hạng mục để xem chi tiết</div>
-    </div>
-</div>
+        <div id="sample">
+            <div id="myDiagramDiv" style="width: 100%; height: 70vh; background-color: #bababa"></div>  
+                <textarea id="mySavedModel" style="width: 100%; display:none">
+                <?php
+                        $Model = './roadmap/model.txt'; // Path to your text file
+                        echo "". file_get_contents($Model) . "";
+                ?> 
+                </textarea> 
+                <div id="nodeInfo">Click vào từng hạng mục để xem chi tiết</div>
+            </div>
+        </div>
     </div>
 
     <script>

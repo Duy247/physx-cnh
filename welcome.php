@@ -161,20 +161,6 @@
             height: 100%; /* 100% of body height */
             width: 80%;
             float: left; /* Position the content next to the menu */
-        }
-        #content {
-            transition: filter 0.3s ease; /* Add a smooth transition for opacity */
-        }
-
-        #menu:hover ~ #content {
-            filter: brightness(0.2); 
-        }
-        #top-part {
-            height: 60%;
-            padding-top:1rem;
-            box-sizing: border-box;
-            font-size: 1.0rem;     
-            text-align: justify;
             background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
             background-size:cover;
                     -webkit-animation: slidein 100s;
@@ -188,6 +174,21 @@
 
                     -webkit-animation-direction: alternate;
                     animation-direction: alternate;
+        }
+        #content {
+            transition: filter 0.3s ease; /* Add a smooth transition for opacity */
+        }
+
+        #menu:hover ~ #content {
+            filter: brightness(0.2); 
+        }
+        #top-part {
+            height: 60%;
+            padding:1rem 2rem 0rem 2rem;
+            box-sizing: border-box;
+            font-size: 1.0rem;     
+            text-align: justify;
+            
         }
 
         @-webkit-keyframes slidein {
@@ -209,7 +210,7 @@
             margin: 0 10px;
             padding: 0.5em 1.0em 0.5em 1em;
             background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(5px);
             border-radius: 10px;
             color: black;
             font-size: 1.8vh;
@@ -238,26 +239,42 @@
         #bottom-part {
             display: flex;
             clear: both;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(2px);
             height: 40%;
+            gap: 2%;
+            margin: 0rem 2rem 0rem 2rem;
+            border-radius:6px;
         }
 
         #l-bottom-part {
-            flex: 0 0 60%;           
+            flex: 0 0 57%;          
             box-sizing: border-box;
+            padding-top:0.5rem; 
+            padding-bottom: 0.5rem;
+            border-radius: 10px 10px 0 0;
+            margin-left:0.5rem;
         }     
-
+        #l-bottom-part img { /* Targets all images directly inside #r-bottom-part */
+            border-radius: 10px; /* Adjust the value as needed for the desired roundness */      
+        }
         #r-bottom-part {
             flex: 0 0 40%;
             box-sizing: border-box;
-            background-color: black;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: center;           
+            border-radius: 10px 10px 0 0;
+            padding:0.5rem 0.5rem 0.5rem 0; 
+        }
+        #r-bottom-part img { /* Targets all images directly inside #r-bottom-part */
+            border-radius: 10px; /* Adjust the value as needed for the desired roundness */      
         }
         .slideshow-container {
-            max-width: 1000px;
             position: relative;
-            margin: auto;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;  
         }
 
         .mySlides {
@@ -302,7 +319,7 @@
             position: relative;
             width: 100%;
             height: 100%;
-            overflow: hidden;            
+            overflow: hidden;           
         }
 
         .news-slide {
