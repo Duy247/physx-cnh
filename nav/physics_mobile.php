@@ -93,22 +93,30 @@
     
     <div class="book-container">
       <?php
-      // Construct the base URL for the viewer
-      $viewerBaseUrl = '../physics/viewer/viewer.php?url=https://www.physx-cnh.com/physics';
-      // Read the appropriate text file based on URL parameters    
-      $lines = file($filePath);
-      foreach ($lines as $line) {
-          $bookData = explode('|', $line);
-          if (count($bookData) == 4) {
-              $title = trim($bookData[0]);
-              $author = trim($bookData[1]);
-              $file = trim($bookData[2]);
-              $description = trim($bookData[3]);             
-              $viewerUrl = $viewerBaseUrl . $file;
-              echo '<a class="book-item" href="' . $viewerUrl . '" data-title="' . htmlspecialchars($title) . '" data-author="' . htmlspecialchars($author) . '"><li>' . $title . '<br>' . $author . '<br>' . $description . '</li></a>';
-          }
-      }
-      ?>
+        // Construct the base URL for the viewer
+        $viewerBaseUrl = '../physics/viewer/viewer.php?url=https://www.physx-cnh.com/physics';
+        $HTMBaseUrl = '../physics/';
+        // Read the appropriate text file based on URL parameters    
+        $lines = file($filePath);
+        foreach ($lines as $line) {
+            $bookData = explode('|', $line);
+            if (count($bookData) == 4) {
+                $title = trim($bookData[0]);
+                $author = trim($bookData[1]);
+                $file = trim($bookData[2]);
+                $extension = pathinfo($file, PATHINFO_EXTENSION);
+
+                $description = trim($bookData[3]);    
+                if ($extension === 'pdf') {
+                  $viewerUrl = $viewerBaseUrl . $file;;
+                } else {
+                  $viewerUrl = $HTMBaseUrl . $file;;
+                }         
+                
+                echo '<a class="book-item" href="' . $viewerUrl . '" data-title="' . htmlspecialchars($title) . '" data-author="' . htmlspecialchars($author) . '"><li>' . $title . '<br>' . $author . '<br>' . $description . '</li></a> <hr>';
+            }
+        }
+        ?>
     </div>
     </ul>
   </div>
