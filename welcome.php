@@ -555,6 +555,7 @@
         var materialsOlympiad = document.getElementById('materialsOlympiad');
         var materialsVltt = document.getElementById('materialsVltt');
         var lessons = document.getElementById('lessons');
+        var daily = document.getElementById('dailyCurrent');
         
         if (isMobileDevice()) {         
             booksPreVpho.href = "./nav/physics_mobile?type=book&level=pre-vpho";
@@ -564,6 +565,7 @@
             materialsOlympiad.href = "./nav/physics_mobile?type=paper-sol&level=pho";
             materialsVltt.href = "./nav/physics_mobile?type=magazines&level=all";
             lessons.href = "./nav/physics_mobile?type=lessons&level=all";
+            daily.href = "./daily/current";
         }
         function updateHitCount() {
             fetch('./visit_count/hit_counter.php') 
