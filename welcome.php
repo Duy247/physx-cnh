@@ -10,6 +10,8 @@
     <meta property="og:site_name" content="PhysX-CNH">
     <meta name="twitter:description" content="Tổng hợp tài liệu chuyên lí ôn tập thi HSG các cấp và Olympics Vật lý.">
     <meta content="https://physx-cnh.com/image/logo_meta.png" property="og:image">
+    <meta property="og:image:width" content="1200" /> 
+    <meta property="og:image:height" content="630" /> 
     <meta content="https://physx-cnh.com/image/logo_meta.png" name="twitter:image">
     <title>Tài liệu chuyên lý Nguyễn Huệ</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
