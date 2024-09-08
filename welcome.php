@@ -329,7 +329,6 @@
             background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
             text-align: justify;
-            
         }
 
         .news-content h3 {
@@ -340,13 +339,18 @@
         }
 
         .news-content p {
+            display:none;
             margin: 10px 0 0;
             font-size: 0.8vw;
-            opacity: 1;
             transition: opacity 0.3s ease-in-out;
             padding: 0px 40px 0px 10px;
         }
-
+        .news-content h3 ~ p {
+            display:none;
+        }
+        .news-content h3.show-paragraph ~ p {
+            display: block; /* Show the paragraph when the h3 has the class */
+        }
         .news-dots {
             position: relative;
             bottom: 20px;
@@ -659,7 +663,27 @@
         newsSlideshow.addEventListener("mouseout", function() {
             newsSlideInterval = setInterval(function() {
                 plusNewsSlides(1);
-            }, 5000);
+            }, 10000);
+        });
+
+        const headings = document.querySelectorAll('.news-content h3');
+
+        headings.forEach(heading => {
+        let timeoutId; // To store the timeout ID
+
+        heading.addEventListener('mouseenter', () => {
+            heading.classList.add('show-paragraph');
+
+            // Clear any existing timeout
+            clearTimeout(timeoutId); 
+        });
+
+        heading.addEventListener('mouseleave', () => {
+            // Set a timeout to remove the class after a delay
+            timeoutId = setTimeout(() => {
+            heading.classList.remove('show-paragraph');
+            }, 15000); // Adjust the delay (in milliseconds) as needed
+        });
         });
     </script> 
 </body>
