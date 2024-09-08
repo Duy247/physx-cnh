@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="./image/logo.png">
+    <meta content="https://physx-cnh.com/image/logo.png" property="og:image">
+    <meta content="https://physx-cnh.com/image/logo.png" name="twitter:image">
     <title>Tài liệu chuyên lý Nguyễn Huệ</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
