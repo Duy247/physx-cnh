@@ -32,7 +32,7 @@
     </style>
 </head>
 <body>
-    <img src="./image/logo.png" alt="404">
+    <img src="https://physx-cnh.com/image/logo.png" alt="404">
     <h1>404 - Page Not Found</h1>
     <p>Trang hoặc tệp tin bạn đang tìm kiếm không tồn tại</p>
     <a href="./welcome.php">Quay lại trang chủ</a>
