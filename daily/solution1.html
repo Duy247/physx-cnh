@@ -7,224 +7,106 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css"> 
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #202020;
-        }
-        h1, h2 {
-            margin-bottom: 10px;
-            color: #e4e4e4;
-        }
-        .equation {
-            margin-bottom: 10px;
-        }
-        .task {
-            margin-bottom: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
-            border-radius: 4px;
-            text-align: justify;
-        }
-        .task img {
-            display: block;
-            margin: 20px auto;
-            max-width: 100%;
-            height: auto;
-        }
-        .note {
-            margin-bottom: 20px;
-            padding: 20px;
-            background-color: #d6d6d6;
-            border-radius: 4px;
-            text-align: justify;
-        }
-        .hint-toggle {
-            margin-bottom: 0;
-            padding: 10px;
-            background-color: #e8ec6a;
-            border: solid 1px #333;
-            border-radius: 4px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .hint-toggle i {
-            transition: transform 0.3s ease;
-        }
-        .hint-toggle.active i {
-            transform: rotate(180deg);
-        }
-        .hint-content {
-            display: none;
-            margin-bottom: 20px;
-            padding: 20px;
-            background-color: #e8ec6a;
-            border: solid 1px #333;
-            border-top: none;
-            border-radius: 0 0 4px 4px;
-            text-align: justify;
-            align-items: center;
-        }
-        .link-boxes {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 0rem;           
-            align-items: flex-end;
-            margin-top: 0rem;
-            
-        }
-        .link-box {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 1rem;
-            margin: 0 0.5rem;
-            border: 1px solid rgb(188, 241, 161);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(23, 249, 15, 0.4);
-            text-align: center;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-            width: 250px;
-            height: 30%;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: inherit; 
-            text-decoration: inherit; 
-            color:white;     
 
-        }
-
-        .link-box:hover {
-            transform: scale(1.1);
-            border: 1px solid rgb(245, 160, 75);
-            box-shadow: 0 0 10px rgba(249, 132, 15, 0.4);
-        }
-
-        .link-box a {
-            font-size: 1rem;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .content-wrap{
-            display:block;
-            padding-left:20px;
-            padding-right:20px;
-            padding-bottom:20px;
-            background-color:#3a3a3a;
-            border: 1px solid #32e313;
-            border-radius:8px;
-        }
-        .footers {
-            position: relative;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 1rem;
-            
-        }
     </style>
 </head>
 <body>
     <div class="content-wrap">
-        <a href="../welcome"><img src="/image/logo.png" alt="logo" style="width: 40%; display: block; margin: auto;"></a>
-        <h1>Bài tập hàng ngày</h1>
+        <div class="logo">
+            <a href="../welcome"><img src="/image/logo.png"></a>
+        </div>
+        <div class="content">
+            <h1>Bài tập hàng ngày</h1>
         
-        <div class="note">
-            Nhiệm vụ của các em là làm các bài tập sau đây. Bài tập sẽ được ra hàng ngày cùng với lời giải của ngày hôm trước.
-            Mỗi ngày sẽ là một bài ở các hạng mục cơ, nhiệt, điện, quang học,... xoay vòng. 
-            Scan và gửi bài giải cho anh qua email: <b><i>duy5a247@gmail.com</i></b>.
-        </div>
-
-        <h2>27 tháng 8 2024</h2>
+            <div class="note">
+                Nhiệm vụ của các em là làm các bài tập sau đây. Bài tập sẽ được ra hàng ngày cùng với lời giải của ngày hôm trước.
+                Mỗi ngày sẽ là một bài ở các hạng mục cơ, nhiệt, điện, quang học,... xoay vòng. 
+                Scan và gửi bài giải cho anh qua email: <b><i>duy5a247@gmail.com</i></b>.
+            </div>
     
-        <h2>Đáp án  bài tập cơ học 27/08/24</h2>
-        <div class="task">
-Một quả bóng nhỏ được ném từ mặt đất vượt qua một bức tường cao $h$, ở khoảng cách $d$ từ bức tường. Hãy tìm vận tốc ban đầu tối thiểu cần thiết $v_{0 \text { min }}$ và góc ném $\theta$ tương ứng.
-<hr>
-
-【Lời giải】Cách giải 1: Chọn điểm ném làm gốc tọa độ, chọn phương ngang và phương thẳng đứng lần lượt là phương của trục $x$ và trục $y$. Quỹ đạo tương ứng với vận tốc ban đầu tối thiểu để ném quả bóng vượt qua bức tường phải là parabol tiếp tuyến với đỉnh của bức tường. Khi quả bóng đến đỉnh của bức tường, ta có:
-
-$$
-\begin{alignat}{2}
-&d=v_0 \cos \theta t \tag{1}\\ 
-&h=v_0 \sin \theta t-\frac{1}{2} g t^2 \tag{2}\\ 
-\end{alignat}
-$$
-
-Từ phương trình (1) và (2), loại bỏ $t$, ta có thể thu được:
-
-$$
-h=d \tan \theta-\frac{g d^2}{2 v_0^2 \cos ^2 \theta} \tag{3}
-$$
-
-Phương trình (3) có thể biểu diễn thành:
-
-$$
-v_0^2=\frac{g d^2}{2 \cos \theta(d \sin \theta-h \cos \theta)} \tag{4}
-$$
-
-Từ phương trình (4), để tìm giá trị nhỏ nhất của $v_0$, ta chỉ cần tìm giá trị lớn nhất của mẫu số trong phương trình trên. Mẫu số trên có thể chuyển đổi thành:
-
-$$
-2 \cos \theta(d \sin \theta-h \cos \theta)=2 \cos \theta \sqrt{d^2+h^2} \sin (\theta-\alpha)=\sqrt{d^2+h^2}[\sin (2 \theta-\alpha)-\sin \alpha]
-$$
-
-<img src="https://i.ibb.co/q0hCCwL/image.png">
-
-Trong phương trình trên, $\alpha$ là góc giữa đường thẳng nối điểm ném và điểm đỉnh của bức tường với đường ngang, như hình vẽ. Từ phương trình trên, ta có thể thấy rằng khi $\theta$ thỏa mãn $2 \theta-\alpha=\frac{\pi}{2}$, tức là $\theta=\frac{\pi}{4}+\frac{\alpha}{2}$, thì mẫu số của phương trình (4) đạt giá trị lớn nhất, nghĩa là $v_0^2$ đạt giá trị nhỏ nhất. Giá trị nhỏ nhất của $v_0^2$ là:
-
-$$
-v_{\text {0min }}^2=\frac{g d^2}{\sqrt{d^2+h^2}(1-\sin \alpha)}=\frac{g d^2}{\sqrt{d^2+h^2}-h}=g\left(\sqrt{d^2+h^2}+h\right)
-$$
-
-Nghĩa là khi góc ném $\theta=\frac{\pi}{4}+\frac{1}{2} \arctan \frac{h}{d}$, thì vận tốc ban đầu để ném quả bóng vượt qua bức tường là nhỏ nhất, với giá trị nhỏ nhất là $v_{\text {0min }}=\sqrt{g\left(\sqrt{d^2+h^2}+h\right)}$.
-
-Cách giải 2: Khi quả bóng được ném đến đỉnh của bức tường, mối quan hệ giữa vận tốc $v$ của quả bóng và vận tốc ban đầu $v_0$ là $v=v_0+g t$. Ta có thể vẽ một tam giác vectơ thỏa mãn phương trình này, như hình vẽ. Diện tích của tam giác này là:
-
-$$
-S=\frac{1}{2} g t v_0 \cos \theta=\frac{1}{2} g d \tag{5}
-$$
-
-Phương trình (5) cho thấy rằng: Bất kể quả bóng được ném với vận tốc ban đầu $v_0$ và góc ném $\theta$ là bao nhiêu, miễn là quả bóng đi qua đỉnh của bức tường, thì diện tích của tam giác vectơ vận tốc quả bóng tại điểm tiếp xúc là không đổi. Vì $v=\sqrt{v_0^2-2 g h}$, có thể thấy rằng $v_0$ nhỏ nhất tương ứng với $v$ nhỏ nhất. Từ kiến thức hình học, ta biết rằng: Chỉ khi $\boldsymbol{v}$ và $\boldsymbol{v}_0$ vuông góc với nhau thì $v_0$ và $v$ cần thiết mới là nhỏ nhất. Khi đó, ta có:
-
-$$
-S=\frac{1}{2} v_0 v=\frac{1}{2} v_0 \sqrt{v_0^2-2 g h} \tag{6}
-$$
-Từ phương trình (5) và (6), ta có thể thu được $v_0 \sqrt{v_0^2-2 g h}=g d$, tức là $\left(v_0^2\right)^2-2 g h\left(v_0^2\right)-g^2 d^2=0$. Giải ra, ta được $v_{0 \min }^2=g\left(\sqrt{d^2+h^2}+h\right)$.
-
-Từ tam giác vectơ vận tốc, ta có:
-
-$$
-v_0 \cos \theta=v \sin \theta=\sqrt{v_0^2-2 g h} \sin \theta
-$$
-
-Thay thế $v_0^2=g\left(\sqrt{d^2+h^2}+h\right)$ vào phương trình trên, ta thu được:
-
-$$
-\tan \theta=\frac{h+\sqrt{d^2+h^2}}{d}, \quad \theta=\frac{\pi}{4}+\frac{\alpha}{2}=\frac{\pi}{4}+\frac{1}{2} \arctan \frac{h}{d}
-$$
+            <h2>27 tháng 8 2024</h2>
+        
+            <h2>Đáp án  bài tập cơ học 27/08/24</h2>
+            <div class="task">
+    Một quả bóng nhỏ được ném từ mặt đất vượt qua một bức tường cao $h$, ở khoảng cách $d$ từ bức tường. Hãy tìm vận tốc ban đầu tối thiểu cần thiết $v_{0 \text { min }}$ và góc ném $\theta$ tương ứng.
+    <hr>
+    
+    【Lời giải】Cách giải 1: Chọn điểm ném làm gốc tọa độ, chọn phương ngang và phương thẳng đứng lần lượt là phương của trục $x$ và trục $y$. Quỹ đạo tương ứng với vận tốc ban đầu tối thiểu để ném quả bóng vượt qua bức tường phải là parabol tiếp tuyến với đỉnh của bức tường. Khi quả bóng đến đỉnh của bức tường, ta có:
+    
+    $$
+    \begin{alignat}{2}
+    &d=v_0 \cos \theta t \tag{1}\\ 
+    &h=v_0 \sin \theta t-\frac{1}{2} g t^2 \tag{2}\\ 
+    \end{alignat}
+    $$
+    
+    Từ phương trình (1) và (2), loại bỏ $t$, ta có thể thu được:
+    
+    $$
+    h=d \tan \theta-\frac{g d^2}{2 v_0^2 \cos ^2 \theta} \tag{3}
+    $$
+    
+    Phương trình (3) có thể biểu diễn thành:
+    
+    $$
+    v_0^2=\frac{g d^2}{2 \cos \theta(d \sin \theta-h \cos \theta)} \tag{4}
+    $$
+    
+    Từ phương trình (4), để tìm giá trị nhỏ nhất của $v_0$, ta chỉ cần tìm giá trị lớn nhất của mẫu số trong phương trình trên. Mẫu số trên có thể chuyển đổi thành:
+    
+    $$
+    2 \cos \theta(d \sin \theta-h \cos \theta)=2 \cos \theta \sqrt{d^2+h^2} \sin (\theta-\alpha)=\sqrt{d^2+h^2}[\sin (2 \theta-\alpha)-\sin \alpha]
+    $$
+    
+    <img src="https://i.ibb.co/q0hCCwL/image.png">
+    
+    Trong phương trình trên, $\alpha$ là góc giữa đường thẳng nối điểm ném và điểm đỉnh của bức tường với đường ngang, như hình vẽ. Từ phương trình trên, ta có thể thấy rằng khi $\theta$ thỏa mãn $2 \theta-\alpha=\frac{\pi}{2}$, tức là $\theta=\frac{\pi}{4}+\frac{\alpha}{2}$, thì mẫu số của phương trình (4) đạt giá trị lớn nhất, nghĩa là $v_0^2$ đạt giá trị nhỏ nhất. Giá trị nhỏ nhất của $v_0^2$ là:
+    
+    $$
+    v_{\text {0min }}^2=\frac{g d^2}{\sqrt{d^2+h^2}(1-\sin \alpha)}=\frac{g d^2}{\sqrt{d^2+h^2}-h}=g\left(\sqrt{d^2+h^2}+h\right)
+    $$
+    
+    Nghĩa là khi góc ném $\theta=\frac{\pi}{4}+\frac{1}{2} \arctan \frac{h}{d}$, thì vận tốc ban đầu để ném quả bóng vượt qua bức tường là nhỏ nhất, với giá trị nhỏ nhất là $v_{\text {0min }}=\sqrt{g\left(\sqrt{d^2+h^2}+h\right)}$.
+    
+    Cách giải 2: Khi quả bóng được ném đến đỉnh của bức tường, mối quan hệ giữa vận tốc $v$ của quả bóng và vận tốc ban đầu $v_0$ là $v=v_0+g t$. Ta có thể vẽ một tam giác vectơ thỏa mãn phương trình này, như hình vẽ. Diện tích của tam giác này là:
+    
+    $$
+    S=\frac{1}{2} g t v_0 \cos \theta=\frac{1}{2} g d \tag{5}
+    $$
+    
+    Phương trình (5) cho thấy rằng: Bất kể quả bóng được ném với vận tốc ban đầu $v_0$ và góc ném $\theta$ là bao nhiêu, miễn là quả bóng đi qua đỉnh của bức tường, thì diện tích của tam giác vectơ vận tốc quả bóng tại điểm tiếp xúc là không đổi. Vì $v=\sqrt{v_0^2-2 g h}$, có thể thấy rằng $v_0$ nhỏ nhất tương ứng với $v$ nhỏ nhất. Từ kiến thức hình học, ta biết rằng: Chỉ khi $\boldsymbol{v}$ và $\boldsymbol{v}_0$ vuông góc với nhau thì $v_0$ và $v$ cần thiết mới là nhỏ nhất. Khi đó, ta có:
+    
+    $$
+    S=\frac{1}{2} v_0 v=\frac{1}{2} v_0 \sqrt{v_0^2-2 g h} \tag{6}
+    $$
+    Từ phương trình (5) và (6), ta có thể thu được $v_0 \sqrt{v_0^2-2 g h}=g d$, tức là $\left(v_0^2\right)^2-2 g h\left(v_0^2\right)-g^2 d^2=0$. Giải ra, ta được $v_{0 \min }^2=g\left(\sqrt{d^2+h^2}+h\right)$.
+    
+    Từ tam giác vectơ vận tốc, ta có:
+    
+    $$
+    v_0 \cos \theta=v \sin \theta=\sqrt{v_0^2-2 g h} \sin \theta
+    $$
+    
+    Thay thế $v_0^2=g\left(\sqrt{d^2+h^2}+h\right)$ vào phương trình trên, ta thu được:
+    
+    $$
+    \tan \theta=\frac{h+\sqrt{d^2+h^2}}{d}, \quad \theta=\frac{\pi}{4}+\frac{\alpha}{2}=\frac{\pi}{4}+\frac{1}{2} \arctan \frac{h}{d}
+    $$
+            </div>
+            <h3 class="hint-toggle" onclick="toggleHint(event)">Ghi chú <i class="fas fa-caret-down"></i></h3>
+            <div class="hint-content">
+                <p>Parabol tương ứng với vận tốc ban đầu nhỏ nhất để ném quả bóng vượt qua bức tường có hình dạng như thế nào? Điểm cao nhất của nó có nằm ở đỉnh của bức tường, hay ở phía trước hoặc phía sau bức tường? Từ cách giải thứ 2 của bài toán này, ta biết rằng tại đỉnh bức tường, $v$ của quả bóng phải vuông góc với $v_0$, do đó điểm cao nhất chắc chắn phải nằm ở phía trước bức tường, chứ không phải hai trường hợp còn lại.
+    
+                    Cách giải thứ 2 là kết hợp vấn đề vật lý với vấn đề hình học, phân tích vấn đề từ một góc nhìn khác, từ đó giúp cho việc giải quyết vấn đề trở nên đơn giản hơn.</p>
+            </div>
         </div>
-        <h3 class="hint-toggle" onclick="toggleHint(event)">Ghi chú <i class="fas fa-caret-down"></i></h3>
-        <div class="hint-content">
-            <p>Parabol tương ứng với vận tốc ban đầu nhỏ nhất để ném quả bóng vượt qua bức tường có hình dạng như thế nào? Điểm cao nhất của nó có nằm ở đỉnh của bức tường, hay ở phía trước hoặc phía sau bức tường? Từ cách giải thứ 2 của bài toán này, ta biết rằng tại đỉnh bức tường, $v$ của quả bóng phải vuông góc với $v_0$, do đó điểm cao nhất chắc chắn phải nằm ở phía trước bức tường, chứ không phải hai trường hợp còn lại.
-
-                Cách giải thứ 2 là kết hợp vấn đề vật lý với vấn đề hình học, phân tích vấn đề từ một góc nhìn khác, từ đó giúp cho việc giải quyết vấn đề trở nên đơn giản hơn.</p>
-        </div>
+        
 
     </div>
     <div class="footers">
         <div class="link-boxes">
-            <a href="../welcome" class="link-box">Trang chính</a>
             <a href="#" class="link-box">Hết</a>
         </div>
 

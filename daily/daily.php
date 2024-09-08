@@ -3,15 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="website" property="og:type">
-    <meta content="Tài liệu chuyên lý Nguyễn Huệ" property="og:title">
-    <meta name="twitter:title" content="Tài liệu chuyên lý Nguyễn Huệ">
-    <meta property="og:description" content="Tổng hợp tài liệu chuyên lí ôn tập thi HSG các cấp và Olympics Vật lý.">
-    <meta property="og:site_name" content="PhysX-CNH">
-    <meta name="twitter:description" content="Tổng hợp tài liệu chuyên lí ôn tập thi HSG các cấp và Olympics Vật lý.">
-    <meta content="https://physx-cnh.com/image/logo_meta.png" property="og:image">
-    <meta content="https://physx-cnh.com/image/logo_meta.png" name="twitter:image">
-    <title>Tài liệu chuyên lý Nguyễn Huệ</title>
+
+    <title>Bài tập hàng ngày</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./image/favicon.ico">
@@ -165,6 +158,16 @@
 
         #menu:hover ~ #content {
             filter: brightness(0.2); 
+        }
+        .iframe-container {
+        flex: 1;
+        padding: 20px;
+        transition: filter 0.3s ease;
+        }
+        iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
         }
         #top-part {
             height: 60%;
@@ -425,31 +428,31 @@
 <body>
     <div id="menu">  
         <div id="m-top-part">
-            <img src="/image/logo.png" class="logo">
+            <img src="../image/logo.png" class="logo">
         </div>
         <div id="m-bottom-part">
             <ul class="menu-list">
-                <li><a href="./welcome">Trang chủ</a></li>
-                <li><a href="./nav/physics?type=magazines&level=all" id="materialsVltt">Tạp Chí</a></li>
-                <li><a href="./nav/physics?type=material&level=pho" id="materialsPreVpho">Tài Liệu</a></li>
+                <li><a href="../welcome">Trang chủ</a></li>
+                <li><a href="../nav/physics?type=magazines&level=all" id="materialsVltt">Tạp Chí</a></li>
+                <li><a href="../nav/physics?type=material&level=pho" id="materialsPreVpho">Tài Liệu</a></li>
                 <li class="dropdown">
                     <div class="dropdown-toggle">
                         <a>Sách</a>
                     </div>
                     <div class="dropdown-content">
-                        <a href="./nav/physics?type=book&level=pre-vpho" id="booksPreVpho">Sách Bồi Dưỡng<br>HSG Cấp Thành Phố</a>
-                        <a href="./nav/physics?type=book&level=vpho-vn" id="booksVn">Sách Tiếng Việt<br>Vòng 2 Thành Phố / HSGQG</a>
-                        <a href="./nav/physics?type=book&level=vpho-en" id="booksEn">Sách Tiếng Anh<br>Vòng 2 Thành Phố / HSGQG</a>
+                        <a href="../nav/physics?type=book&level=pre-vpho" id="booksPreVpho">Sách Bồi Dưỡng<br>HSG Cấp Thành Phố</a>
+                        <a href="../nav/physics?type=book&level=vpho-vn" id="booksVn">Sách Tiếng Việt<br>Vòng 2 Thành Phố / HSGQG</a>
+                        <a href="../nav/physics?type=book&level=vpho-en" id="booksEn">Sách Tiếng Anh<br>Vòng 2 Thành Phố / HSGQG</a>
                     </div>
                 </li>
-                <li><a href="./nav/physics?type=paper-sol&level=pho" id="materialsOlympiad">Đề Thi & Đáp Án</a></li>
-                <li><a href="./nav/physics?type=lessons&level=all" id="lessons">Nội Dung Ngày Học</a></li>
-                <li><a href="/daily/daily" id="dailyCurrent">Bài Tập Hàng Ngày</a></li>
-                <li><a href="./roadmap">Lộ trình ôn tập</a></li>
+                <li><a href="../nav/physics?type=paper-sol&level=pho" id="materialsOlympiad">Đề Thi & Đáp Án</a></li>
+                <li><a href="../nav/physics?type=lessons&level=all" id="lessons">Nội Dung Ngày Học</a></li>
+                <li><a href="../daily/daily" id="dailyCurrent">Bài Tập Hàng Ngày</a></li>
+                <li><a href="../roadmap">Lộ trình ôn tập</a></li>
             </ul>
             <div class="bottom-links">
                 <ul class="menu-list-bottom">
-                    <li><a href="./disclaimer">Miễn Trừ Trách Nhiệm Pháp Lý</a></li>
+                    <li><a href="../disclaimer">Miễn Trừ Trách Nhiệm Pháp Lý</a></li>
                     <li><a href="welcome.php">Lượt Truy Cập: <span id="hitCount"> 0 </span></a></li>
                 </ul>
             </div>
@@ -457,91 +460,7 @@
     </div>
 
     <div id="content">
-        <div id="top-part">
-            <h1>Tổng hợp tài liệu chuyên lý Nguyễn Huệ</h1>
-            <div class="text-container">
-                <div class="text-box" id="introduce">
-                    <p>Đây là trang web tổng hợp tài liệu hỗ trợ học tập cho các học sinh thuộc đội tuyển vật lí. <br>Web được vận hành và duy trì trên nền tảng Github bởi Văn Thành Duy, chuyên lí Nguyễn Huệ K69.</p>
-                    <p>Trang web vận hành tốt nhất trên trình duyệt máy tính (PC / Chromebook / Samsung Dex). <br>Để truy cập vào các tài liệu, vui lòng chọn mục từ menu bên trái. </p>
-                    <p>Để yêu cầu tìm và bổ sung tài liệu, liên hệ <b><a href="mailto:duy5a247@gmail.com">duy5a247@gmail.com</a></b> hoặc tới <a href="https://github.com/Duy247/physx-cnh">repository github</a> và đọc thêm hướng dẫn</p>
-                    <p>Nếu quá trình load và tải tài liệu bị chậm, hãy sử dụng DNS Cloudfare 1.1.1.1</p>
-                    <p>Cảm ơn tới các cá nhân đã đóng góp tài liệu</p>
-                    <ul>
-                        <li>Văn Thành Duy Lý 1 K69 CNH</li>
-                        <li>Phạm Quang Chính Lý 2 K75 CNH</li>
-                    </ul>
-                </div>
-                <div class="text-box" id="whats-new">
-                    <h2><span class="rainbow-text">Cập nhật mới</span></h2>
-                    <ul>                 
-                        <?php
-                        $whatsNewFile = './whats-new/whats_new.txt'; // Path to your text file
-                        if (file_exists($whatsNewFile)) {
-                            $lines = file($whatsNewFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-                            foreach ($lines as $line) {
-                                if (strpos($line, '* ') === 0) { // Check if the line starts with '* '
-                                    echo '<li>' . substr($line, 2) . '</li>'; // Remove '* ' and add to the list
-                                }
-                            }
-                        } else {
-                            echo '<li>No updates yet.</li>';
-                        }
-                        ?>
-                    </ul>
-                </div>
-            </div>
-        </div> 
-        <div id="bottom-part">
-            <div id="l-bottom-part">
-                <div class="news-slideshow-container">
-                    <?php
-                    $jsonFile = './whats-new/news.json';
-                    $jsonData = file_get_contents($jsonFile);
-                    $newsItems = json_decode($jsonData, true);
-
-                    foreach ($newsItems as $index => $newsItem) {
-                        $backgroundImage = $newsItem['background_image'];
-                        $headline = $newsItem['headline'];
-                        $detail = $newsItem['detail'];
-
-                        echo '<div class="news-slide">';
-                        echo '<img src="' . $backgroundImage . '" alt="News Image">';
-                        echo '<div class="news-content">';
-                        echo '<h3>' . $headline . '</h3>';
-                        echo '<p>' . $detail . '</p>';
-                        echo '</div>';
-                        echo '</div>';
-                    }
-                    ?>
-                </div>
-                <div class="news-dots">
-                    <?php
-                    $totalSlides = count($newsItems);
-                    for ($i = 0; $i < $totalSlides; $i++) {
-                        echo '<span class="news-dot" onclick="currentNewsSlide(' . ($i + 1) . ')"></span>';
-                    }
-                    ?>
-                </div>
-            </div>
-            <div id="r-bottom-part">
-                <div class="slideshow-container">
-                    <?php
-                    $imageDirectory = './physics/img/';
-                    $imageExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-
-                    $images = glob($imageDirectory . '*.*');
-                    foreach ($images as $image) {
-                        $extension = pathinfo($image, PATHINFO_EXTENSION);
-                        if (in_array(strtolower($extension), $imageExtensions)) {
-                            echo '<div class="mySlides fade">';
-                            echo '<img src="' . $image . '" style="width:100%">';
-                            echo '</div>';
-                        }
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
+        <iframe id="content-iframe" src="./current.html" frameborder="0"></iframe>
     </div>
 
     <script>
@@ -557,16 +476,16 @@
         var lessons = document.getElementById('lessons');
         
         if (isMobileDevice()) {         
-            booksPreVpho.href = "./nav/physics_mobile?type=book&level=pre-vpho";
-            booksVn.href = "./nav/physics_mobile?type=book&level=vpho-vn";
-            booksEn.href = "./nav/physics_mobile?type=book&level=vpho-en";
-            materialsPreVpho.href = "./nav/physics_mobile?type=material&level=pho";
-            materialsOlympiad.href = "./nav/physics_mobile?type=paper-sol&level=pho";
-            materialsVltt.href = "./nav/physics_mobile?type=magazines&level=all";
-            lessons.href = "./nav/physics_mobile?type=lessons&level=all";
+            booksPreVpho.href = "../nav/physics_mobile?type=book&level=pre-vpho";
+            booksVn.href = "../nav/physics_mobile?type=book&level=vpho-vn";
+            booksEn.href = "../nav/physics_mobile?type=book&level=vpho-en";
+            materialsPreVpho.href = "../nav/physics_mobile?type=material&level=pho";
+            materialsOlympiad.href = "../nav/physics_mobile?type=paper-sol&level=pho";
+            materialsVltt.href = "../nav/physics_mobile?type=magazines&level=all";
+            lessons.href = "../nav/physics_mobile?type=lessons&level=all";
         }
         function updateHitCount() {
-            fetch('./visit_count/hit_counter.php') 
+            fetch('../visit_count/hit_counter.php') 
                 .then(response => response.json())
                 .then(data => {
                     const hitCount = data.count;
