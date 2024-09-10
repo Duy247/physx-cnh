@@ -25,14 +25,16 @@ Tính năng chính của trang web là lưu trữ tài liệu, tệp tin PDF và
 
 Nếu bạn muốn đóng góp các nội dung liên quan, như tài liệu, sách, có thể gửi mail cho [tôi](mailto:duy5a247@gmail.com) . Hoặc trực tiếp clone repo này về, thực hiện thay đổi, commit và push lên branch của bạn, sau đó tạo pull request, tôi sẽ trực tiếp đánh giá và thông qua thay đổi nếu đạt yêu cầu.
 
-Đầu tiên, bạn cần clone repo này về, hãy chắc chắn bạn đã cài đặt Git hoặc Github CLI một cách hoàn thiện
+Đầu tiên, bạn cần fork repo này rồi clone repo về, hãy chắc chắn bạn đã cài đặt Git hoặc Github CLI một cách hoàn thiện
+Fork repo này của tôi :
+Vào đường dẫn [này](https://github.com/Duy247/physx-cnh/fork) và fork một phiên bản về GitHub của bạn
 - Đối với Github CLI
 ```cmd
-gh repo clone Duy247/physx-cnh
+gh repo clone <username>/physx-cnh
 ```
 - Đối với Git
 ```cmd
-git clone https://github.com/Duy247/physx-cnh.git
+git clone https://github.com/<username>/physx-cnh.git
 ```
 Tiếp theo, bạn cần tạo một branch riêng cho bản thân
 ```cmd
