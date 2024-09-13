@@ -465,6 +465,7 @@
                 <li><a href="./nav/physics?type=lessons&level=all" id="lessons">Nội Dung Ngày Học</a></li>
                 <li><a href="/daily/daily" id="dailyCurrent">Bài Tập Hàng Ngày</a></li>
                 <li><a href="./roadmap">Lộ trình ôn tập</a></li>
+                <li><a href="./donate" id="donate">Ủng hộ duy trì trang web</a></li>
             </ul>
             <div class="bottom-links">
                 <ul class="menu-list-bottom">
@@ -505,6 +506,7 @@
         var materialsOlympiad = document.getElementById('materialsOlympiad');
         var materialsVltt = document.getElementById('materialsVltt');
         var lessons = document.getElementById('lessons');
+        var donate = document.getElementById('donate');
         
         if (isMobileDevice()) {         
             booksPreVpho.href = "./nav/physics_mobile?type=book&level=pre-vpho";
