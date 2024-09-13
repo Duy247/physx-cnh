@@ -105,7 +105,7 @@
               $author = trim($bookData[1]);
               $file = trim($bookData[2]);
               $description = trim($bookData[3]);
-              echo '<a class="book-item" data-file="' . $file . '" data-title="' . htmlspecialchars($title) . '" data-author="' . htmlspecialchars($author) . '"><li>' . $title . '<br>' . $author . '<br>' . $description . '</li></a> <hr>';
+              echo '<a class="book-item" data-file="' . $file . '" data-title="' . htmlspecialchars($title) . '" data-author="' . htmlspecialchars($author) . '"><li>' . $title . '<br>' . $author . '<br>' . $description . '</li><hr></a> ';
           }
       }
     ?>

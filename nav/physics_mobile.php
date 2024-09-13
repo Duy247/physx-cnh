@@ -113,7 +113,7 @@
                   $viewerUrl = $HTMBaseUrl . $file;;
                 }         
                 
-                echo '<a class="book-item" href="' . $viewerUrl . '" data-title="' . htmlspecialchars($title) . '" data-author="' . htmlspecialchars($author) . '"><li>' . $title . '<br>' . $author . '<br>' . $description . '</li></a> <hr>';
+                echo '<a class="book-item" href="' . $viewerUrl . '" data-title="' . htmlspecialchars($title) . '" data-author="' . htmlspecialchars($author) . '"><li>' . $title . '<br>' . $author . '<br>' . $description . '</li> <hr></a>';
             }
         }
         ?>
