@@ -292,7 +292,9 @@ h1, h2 {
     animation-duration: 11s;
 }
 
-
+.qr-code{
+        width: 30%;
+    }
 
 @keyframes animate {
 
@@ -309,6 +311,11 @@ h1, h2 {
     }
 
 }
+@media screen and (max-width: 600px) {
+    .qr-code{
+        width: 80%;
+    }
+}
     </style>
 </head>
 <body>
@@ -318,7 +325,7 @@ h1, h2 {
                 <h1>Ủng hộ tôi để duy trì trang web</h1>
                 <h2>Trang web được lưu trữ trên GitHub, nhưng được host trên hosting tốn chi phí duy trì. Bạn có thể ủng hộ góp phần duy trì trang web.Tôi xin chân thành cảm ơn.</h2>
                 <hr>
-                <img src="./img/qr-code.jpg" alt="QR code for donation" class="qr-code" style="width:30%"> 
+                <img src="./img/qr-code.jpg" alt="QR code for donation" class="qr-code"> 
                              
             </div>
         </div>
