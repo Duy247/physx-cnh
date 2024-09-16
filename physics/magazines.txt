@@ -19,6 +19,7 @@ Vật lý & Tuổi Trẻ số 18| |/materials/vltt/18.pdf|
 Vật lý & Tuổi Trẻ số 19| |/materials/vltt/19.pdf| 
 Vật lý & Tuổi Trẻ số 20| |/materials/vltt/20.pdf| 
 Vật lý & Tuổi Trẻ số 25| |/materials/vltt/25.pdf| 
+Vật lý & Tuổi Trẻ số 84| |/materials/vltt/84.pdf| 
 Vật lý & Tuổi Trẻ số 85| |/materials/vltt/85.pdf| 
 Vật lý & Tuổi Trẻ số 86| |/materials/vltt/86.pdf| 
 Vật lý & Tuổi Trẻ số 87| |/materials/vltt/87.pdf| 
@@ -54,6 +55,18 @@ Vật lý & Tuổi Trẻ số 117| |/materials/vltt/117.pdf|
 Vật lý & Tuổi Trẻ số 118| |/materials/vltt/118.pdf| 
 Vật lý & Tuổi Trẻ số 119| |/materials/vltt/119.pdf| 
 Vật lý & Tuổi Trẻ số 120| |/materials/vltt/120.pdf| 
+Vật lý & Tuổi Trẻ số 128| |/materials/vltt/128.pdf| 
+Vật lý & Tuổi Trẻ số 132| |/materials/vltt/132.pdf| 
+Vật lý & Tuổi Trẻ số 142| |/materials/vltt/142.pdf| 
+Vật lý & Tuổi Trẻ số 143| |/materials/vltt/143.pdf| 
+Vật lý & Tuổi Trẻ số 144| |/materials/vltt/144.pdf| 
+Vật lý & Tuổi Trẻ số 151| |/materials/vltt/151.pdf|
+Vật lý & Tuổi Trẻ số 155| |/materials/vltt/155.pdf|  
+Vật lý & Tuổi Trẻ số 156| |/materials/vltt/156.pdf| 
+Vật lý & Tuổi Trẻ số 171| |/materials/vltt/171.pdf|
+Vật lý & Tuổi Trẻ số 173| |/materials/vltt/173.pdf| 
+Vật lý & Tuổi Trẻ số 178| |/materials/vltt/178.pdf| 
+Vật lý & Tuổi Trẻ số 180| |/materials/vltt/180.pdf| 
 Quantum số thử nghiệm 1| |/materials/quantum/QuantumP1.pdf| 
 Quantum số thử nghiệm 2| |/materials/quantum/QuantumP2.pdf| 
 Quantum tập 1, số 1| |/materials/quantum/QuantumV1N1.pdf| 
