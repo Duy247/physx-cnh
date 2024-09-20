@@ -50,5 +50,10 @@ Thermodynamics|Jaan Kalda|/materials/handouts/thermodyn.pdf|
 Electric Circuits|Jaan Kalda|/materials/handouts/electricity-circuits.pdf|
 Wave Optics|Jaan Kalda|/materials/handouts/waveopt.pdf|
 Quantum Mechanics|Jaan Kalda|/materials/handouts/quant_ENG.pdf|
+Solution of Jaan Kalda's Mechanics |Physoly| /materials/handouts/KaldaMech-122.pdf|
+Solution of Jaan Kalda's Kinematics |Physoly| /materials/handouts/KaldaKin-200.pdf|
+Solution of Jaan Kalda's Thermodynamics |Physoly| /materials/handouts/KaldaThermo-121.pdf|
+Solution of Jaan Kalda's Waves |Physoly| /materials/handouts/KaldaWaves-131.pdf|
+Solution of Jaan Kalda's Celestial Mechanics |Physoly| /materials/handouts/KaldaCM_ENG.pdf|
 Relativity|Ainsaar|/materials/handouts/ainsaar_relativity.pdf|
 Harvard 90 Weekly Problems<br>2002-2004|David Morin|/materials/Havard_weekly_david_morin.pdf|
