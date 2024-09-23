@@ -350,6 +350,7 @@
 
         .news-content h3 {
             padding-left:10px;
+            padding-right:2rem;
             margin: 0;
             font-size: 1.2vw;
             font-weight: bold;
