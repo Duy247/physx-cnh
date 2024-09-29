@@ -15,5 +15,11 @@ Tuyển tập các bài tập vật lý đại cương Irodov<br>Dịch: Lương
 Kho vật lý sơ cấp Tập 1|Phạm Vũ Kim Hoàng|/books/kho-vlsc-1.pdf|
 Kho vật lý sơ cấp Tập 2|Phạm Vũ Kim Hoàng|/books/kho-vlsc-2.pdf|
 Kho vật lý sơ cấp Tập 3|Phạm Vũ Kim Hoàng|/books/kho-vlsc-3.pdf|
+Giải toán Vật lý 10 tập 1|Bùi Quang Hân|/books/gtvl_0_1.pdf|
+Giải toán Vật lý 10 tập 2|Bùi Quang Hân|/books/gtvl_0_2.pdf|
+Giải toán Vật lý 11 tập 1|Bùi Quang Hân|/books/gtvl_1_1.pdf|
+Giải toán Vật lý 11 tập 2|Bùi Quang Hân|/books/gtvl_1_2.pdf|
+Giải toán Vật lý 12 tập 1|Bùi Quang Hân|/books/gtvl_2_1.pdf|
+Giải toán Vật lý 12 tập 2|Bùi Quang Hân|/books/gtvl_2_2.pdf|
 Giáo trình vật lý thiên văn|Nguyễn Đình Noãn|/books/vat-ly-thien-van.pdf|NXB Giáo dục Việt Nam
 Thinking Physics | Caroll Epstein|/books/thinking-practically.pdf|
