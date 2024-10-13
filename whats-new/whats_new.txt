@@ -1,4 +1,4 @@
-* 20-09-24: Cập nhật bài giải của một số handouts Jaan Kalda
 * 29-09-24: Cập nhật đề thi PPDRPhO 2018-2024
 * 29-09-24: Cập nhật đề thi Zhautykov 2010-2023
 * 29-09-24: Cập nhật sách Giải toán vật lý Bùi Quang Hân
+* 13-10-2024: Cập nhật sách Vật lý hiện đại R.Gautreau và W.Savin

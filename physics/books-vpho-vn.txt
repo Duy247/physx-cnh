@@ -11,6 +11,7 @@ Quang học sóng|P.F.I.E.V|/books/PFIEV/PFIEV-optic-wave.pdf|Nhà xuất bản 
 Sóng|P.F.I.E.V|/books/PFIEV/PFIEV-wave.pdf|Nhà xuất bản Giáo dục
 Cơ học chất lỏng|P.F.I.E.V|/books/PFIEV/PFIEV-fluid.pdf|Nhà xuất bản Giáo dục
 Cơ học vật rắn|P.F.I.E.V|/books/PFIEV/PFIEV-solid.pdf|Nhà xuất bản Giáo dục
+Vật lý hiện đại|R.Gautreau and W.Savin|/books/vatlyhiendai.pdf|Nhà xuất bản Giáo dục
 Vật lí đại cương<br>Các nguyên lí và ứng dụng<br>Tập 1|Trần Ngọc Hợi|/books/vldc_nl_ud_1.pdf|Nhà xuất bản Giáo dục
 Vật lí đại cương<br>Các nguyên lí và ứng dụng<br>Tập 2|Trần Ngọc Hợi|/books/vldc_nl_ud_2.pdf|Nhà xuất bản Giáo dục
 Vật lí đại cương<br>Các nguyên lí và ứng dụng<br>Tập 3|Trần Ngọc Hợi|/books/vldc_nl_ud_3.pdf|Nhà xuất bản Giáo dục
