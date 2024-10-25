@@ -484,7 +484,7 @@
 
     <div id="content">
         <div id="top-part">
-            <h1>Tổng hợp tài liệu chuyên lý Nguyễn Huệ</h1>
+            <h1>Tài liệu chuyên lý Nguyễn Huệ</h1>
             <div class="text-container">
                 <div class="text-box" id="introduce">
                     <p>Đây là trang web tổng hợp tài liệu hỗ trợ học tập cho các học sinh thuộc đội tuyển vật lí. <br>Web được vận hành và duy trì trên nền tảng Github bởi Văn Thành Duy, chuyên lí Nguyễn Huệ K69.</p>
