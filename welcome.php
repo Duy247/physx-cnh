@@ -496,6 +496,10 @@
                         <li>Văn Thành Duy Lý 1 K69 CNH</li>
                         <li>Phạm Quang Chính Lý 2 K75 CNH</li>
                     </ul>
+                    <p>Cảm ơn tới các cá nhân đã đóng góp duy trì hosting</p>
+                    <ul>
+                        <li>Lê Anh Minh</li>
+                    </ul>
                 </div>
                 <div class="text-box" id="whats-new">
                     <h2><span class="rainbow-text">Cập nhật mới</span></h2>
