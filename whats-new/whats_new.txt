@@ -2,3 +2,4 @@
 * 29-09-24: Cập nhật đề thi Zhautykov 2010-2023
 * 29-09-24: Cập nhật sách Giải toán vật lý Bùi Quang Hân
 * 13-10-2024: Cập nhật sách Vật lý hiện đại R.Gautreau và W.Savin
+* 17-11-2024: Cập nhật đề Fyziklani 2018-2023
