@@ -497,7 +497,7 @@
                     </ul>
                     <p>Cảm ơn tới các cá nhân đã đóng góp duy trì hosting</p>
                     <ul>
-                        <li>Lê Anh Minh</li>
+                        <li>Lê Anh Minh | Bùi Hoàng Bách | Trần Hải Thiện | Cao Thái Sơn</li>
                     </ul>
                 </div>
                 <div class="text-box" id="whats-new">
