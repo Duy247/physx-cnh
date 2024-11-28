@@ -492,8 +492,7 @@
                     <p>Để yêu cầu tìm và bổ sung tài liệu, liên hệ <b><a href="mailto:duy5a247@gmail.com">duy5a247@gmail.com</a></b> hoặc tới <a href="https://github.com/Duy247/physx-cnh">repository github</a> và đọc thêm hướng dẫn <br>Nếu quá trình load và tải tài liệu bị chậm, hãy sử dụng DNS Cloudfare 1.1.1.1</p>         
                     <p>Cảm ơn tới các cá nhân đã đóng góp tài liệu</p>
                     <ul>
-                        <li>Văn Thành Duy Lý 1 K69 CNH</li>
-                        <li>Phạm Quang Chính Lý 2 K75 CNH</li>
+                        <li>Văn Thành Duy Lý 1 K69 CNH | Phạm Quang Chính Lý 2 K75 CNH</li>
                     </ul>
                     <p>Cảm ơn tới các cá nhân đã đóng góp duy trì hosting</p>
                     <ul>
