@@ -489,7 +489,7 @@
                 <div class="text-box" id="introduce">
                     <p>Đây là trang web tổng hợp tài liệu hỗ trợ học tập cho các học sinh thuộc đội tuyển vật lí. <br>Web được vận hành và duy trì trên nền tảng Github bởi Văn Thành Duy, chuyên lí Nguyễn Huệ K69.</p>
                     <p>Trang web vận hành tốt nhất trên trình duyệt máy tính (PC / Chromebook / Samsung Dex). <br>Để truy cập vào các tài liệu, vui lòng chọn mục từ menu bên trái. </p>
-                    <p>Để yêu cầu tìm và bổ sung tài liệu, liên hệ <b><a href="mailto:duy5a247@gmail.com">duy5a247@gmail.com</a></b> hoặc tới <a href="https://github.com/Duy247/physx-cnh">repository github</a> và đọc thêm hướng dẫn <br>Nếu quá trình load và tải tài liệu bị chậm, hãy sử dụng DNS Cloudfare 1.1.1.1</p>         
+                    <p>Để yêu cầu tìm và bổ sung tài liệu, liên hệ <b><a href="mailto:duy5a247@gmail.com">duy5a247@gmail.com</a></b> hoặc tới <a href="https://github.com/Duy247/physx-cnh" style= "color:red;">repository github</a> và đọc thêm hướng dẫn <br>Nếu quá trình load và tải tài liệu bị chậm, hãy sử dụng DNS Cloudfare 1.1.1.1</p>         
                     <p>Cảm ơn tới các cá nhân đã đóng góp tài liệu</p>
                     <ul>
                         <li>Văn Thành Duy Lý 1 K69 CNH | Phạm Quang Chính Lý 2 K75 CNH</li>
