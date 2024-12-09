@@ -89,7 +89,7 @@
             list-style: none;
             width: 20px;
             height: 20px;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.0);
             animation: animate 25s linear infinite;
             bottom: -150px;
             text-align: center;
@@ -233,7 +233,7 @@
                 <li><img src="https://pngimg.com/uploads/money/small/money_PNG3525.png"></li>
         </ul>
     </div > 
-    <audio autoplay loop>
+    <audio id="background-music" autoplay loop>
         <source src="../image/Raccy.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
@@ -242,6 +242,11 @@
             document.querySelector('.area').style.backgroundImage = "url('../image/money-gif-4.gif')";
             document.querySelector('.container').classList.add('bouncy', 'rainbow');
         }, 9500);
+
+        setTimeout(() => {
+            document.querySelector('.area').style.backgroundImage = "none";
+            document.getElementById('background-music').pause();
+        }, 42000);
     </script>
 </body>
 </html>
