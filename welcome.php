@@ -496,7 +496,7 @@
                     </ul>
                     <p>Cảm ơn tới các cá nhân đã đóng góp duy trì hosting</p>
                     <ul>
-                        <li>Nguyễn Thành Long aka Log | Lê Anh Minh | Bùi Hoàng Bách | Trần Hải Thiện | Cao Thái Sơn</li>
+                        <li>Nguyễn Thành Long aka Log | Lê Anh Minh | Bùi Hoàng Bách | Trần Hải Thiện | Cao Thái Sơn | Nguyễn Hoàng Minh </li>
                     </ul>
                 </div>
                 <div class="text-box" id="whats-new">
