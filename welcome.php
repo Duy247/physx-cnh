@@ -469,7 +469,7 @@
                 </li>
                 <li><a href="./nav/physics?type=paper-sol&level=pho" id="materialsOlympiad">Đề Thi & Đáp Án</a></li>
                 <li><a href="./nav/physics?type=lessons&level=all" id="lessons">Nội Dung Ngày Học</a></li>
-                <li><a href="/daily/daily" id="dailyCurrent">Bài Tập Hàng Ngày</a></li>
+                <li><a href="/daily/daily" id="dailyCurrent">Bài Tập Hàng Ngày - xPhO</a></li>
                 <li><a href="./roadmap">Lộ trình ôn tập</a></li>
                 <li><a href="./donate" id="donate">Ủng hộ duy trì trang web</a></li>
             </ul>

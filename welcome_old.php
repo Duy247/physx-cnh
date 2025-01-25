@@ -432,7 +432,7 @@
                     Nội dung các ngày học
                 </a>
                 <a href="/daily/current" class="link-box" id="dailyCurrent">
-                    <span class="rainbow-text">Bài tập hàng ngày</span>
+                    <span class="rainbow-text">Bài Tập Hàng Ngày - xPhO</span>
                 </a>
                 
             </div>   

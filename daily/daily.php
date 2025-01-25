@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bài tập hàng ngày</title>
+    <title>Bài Tập Hàng Ngày - xPhO</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="../image/favicon.ico">
@@ -447,7 +447,7 @@
                 </li>
                 <li><a href="../nav/physics?type=paper-sol&level=pho" id="materialsOlympiad">Đề Thi & Đáp Án</a></li>
                 <li><a href="../nav/physics?type=lessons&level=all" id="lessons">Nội Dung Ngày Học</a></li>
-                <li><a href="../daily/daily" id="dailyCurrent">Bài Tập Hàng Ngày</a></li>
+                <li><a href="../daily/daily" id="dailyCurrent">Bài Tập Hàng Ngày - xPhO</a></li>
                 <li><a href="../roadmap">Lộ trình ôn tập</a></li>
                 <li><a href="../donate">Ủng hộ duy trì trang web</a></li>
             </ul>
