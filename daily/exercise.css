@@ -341,7 +341,7 @@ select {
     margin: 10px 0;
     border: 1px solid #1d1d52;
     border-radius: 4px;
-    background-color: #f4f4f4;
+    background-color: #e8ec6a; /* Changed background color */
     color: #1d1d52;
     font-size: 1rem;
 }

@@ -1,4 +1,4 @@
 * 13-10-2024: Cập nhật sách Vật lý hiện đại R.Gautreau và W.Savin
 * 17-11-2024: Cập nhật đề Fyziklani 2018-2023
 * 17-11-2024: Cập nhật đề Physics Brawl 2012-2023
-* 25-01-2025: Cập nhật bài tập hàng ngày CLB Vật lý xPhO
+* 26-01-2025: Cập nhật bài tập hàng ngày CLB Vật lý xPhO

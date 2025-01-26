@@ -30,54 +30,6 @@
         #choose-date-btn:hover {
             background-color: #4e54c8;
         }
-        .fc-daygrid-day:hover .fc-daygrid-day-top {
-            position: relative;
-        }
-        .fc-daygrid-day:hover .exercise-titles {
-            display: block;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            border: 1px solid #ddd;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            padding: 10px;
-            width: 8rem;
-            max-height: 200px;
-            overflow-y: auto;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-        .exercise-titles span {
-            display: inline-block;
-            padding-left: 100%;
-            animation: scroll 10s linear infinite;
-        }
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-        .exercise-titles {
-            display: none;
-        }
-        .slideshow-container {
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
     </style>
 </head>
 <body>
@@ -101,7 +53,6 @@
                         <input type="hidden" name="date" value="<?php echo $_GET['date']; ?>">
                         <label for="exercise-select">Chọn bài tập:</label>
                         <select id="exercise-select" name="exercise" onchange="this.form.submit()">
-                            <option value="" disabled selected>Chọn bài tập</option>
                             <?php
                             foreach ($data['exercise'] as $index => $exercise) {
                                 $selected = (isset($_GET['exercise']) && $_GET['exercise'] == $index) ? 'selected' : '';
@@ -194,17 +145,10 @@
                     foreach ($files as $file) {
                         $json = file_get_contents($file);
                         $data = json_decode($json, true);
-                        $titles = implode(' <br> ', array_column($data['exercise'], 'title'));
-                        echo "{ title: '" . $data['datetext'] . "', start: '" . date('Y-m-d', strtotime($data['date'])) . "', url: '?date=" . basename($file) . "', extendedProps: { titles: '" . $titles . "' } },";
+                        echo "{ title: '" . $data['datetext'] . "', start: '" . date('Y-m-d', strtotime($data['date'])) . "', url: '?date=" . basename($file) . "' },";
                     }
                     ?>
                 ],
-                eventDidMount: function(info) {
-                    var titlesDiv = document.createElement('div');
-                    titlesDiv.className = 'exercise-titles';
-                    titlesDiv.innerHTML = '<span>' + info.event.extendedProps.titles + '</span>';
-                    info.el.appendChild(titlesDiv);
-                },
                 eventClick: function(info) {
                     info.jsEvent.preventDefault();
                     if (info.event.url) {
@@ -220,7 +164,6 @@
             document.getElementById('exercise-container').style.display = 'block';
             document.getElementById('choose-date-btn').style.display = 'block';
         }
-
     </script>
 </body>
 </html>
