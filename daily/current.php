@@ -194,7 +194,7 @@
                     foreach ($files as $file) {
                         $json = file_get_contents($file);
                         $data = json_decode($json, true);
-                        $titles = implode(' <br> ', array_column($data['exercise'], 'title'));
+                        $titles = implode(' <br> ', array_column($data['exercise'], 'quicktitle'));
                         echo "{ title: '" . $data['datetext'] . "', start: '" . date('Y-m-d', strtotime($data['date'])) . "', url: '?date=" . basename($file) . "', extendedProps: { titles: '" . $titles . "' } },";
                     }
                     ?>
