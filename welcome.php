@@ -503,12 +503,12 @@
                     <h2><span class="rainbow-text">Cập nhật mới</span></h2>
                     <ul>                 
                         <?php
-                        $whatsNewFile = './whats-new/whats_new.txt'; // Path to your text file
+                        $whatsNewFile = './whats-new/whats_new.txt'; 
                         if (file_exists($whatsNewFile)) {
                             $lines = file($whatsNewFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
                             foreach ($lines as $line) {
-                                if (strpos($line, '* ') === 0) { // Check if the line starts with '* '
-                                    echo '<li>' . substr($line, 2) . '</li>'; // Remove '* ' and add to the list
+                                if (strpos($line, '* ') === 0) { 
+                                    echo '<li>' . substr($line, 2) . '</li>'; 
                                 }
                             }
                         } else {
@@ -692,20 +692,18 @@
         const headings = document.querySelectorAll('.news-content h3');
 
         headings.forEach(heading => {
-        let timeoutId; // To store the timeout ID
+        let timeoutId; 
 
         heading.addEventListener('mouseenter', () => {
             heading.classList.add('show-paragraph');
 
-            // Clear any existing timeout
             clearTimeout(timeoutId); 
         });
 
         heading.addEventListener('mouseleave', () => {
-            // Set a timeout to remove the class after a delay
             timeoutId = setTimeout(() => {
             heading.classList.remove('show-paragraph');
-            }, 15000); // Adjust the delay (in milliseconds) as needed
+            }, 15000); 
         });
         });
     </script> 
