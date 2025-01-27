@@ -361,3 +361,35 @@ button {
 button:hover {
     background-color: #4e54c8;
 }
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000; 
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); 
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+}
+.modal h2 {
+    margin-top: 0;
+}
+.close-modal-btn {
+    float: right;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}

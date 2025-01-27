@@ -30,41 +30,6 @@
         #choose-date-btn:hover {
             background-color: #4e54c8;
         }
-        .fc-daygrid-day:hover .fc-daygrid-day-top {
-            position: relative;
-        }
-        .fc-daygrid-day:hover .exercise-titles {
-            display: block;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            border: 1px solid #ddd;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            padding: 10px;
-            width: 8rem;
-            max-height: 200px;
-            overflow-y: auto;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-        .exercise-titles span {
-            display: inline-block;
-            padding-left: 100%;
-            animation: scroll 10s linear infinite;
-        }
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-        .exercise-titles {
-            display: none;
-        }
         .slideshow-container {
             width: 100%;
             position: relative;
@@ -77,6 +42,37 @@
         .slide {
             min-width: 100%;
             box-sizing: border-box;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            position: relative;
+        }
+        .close-modal-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -151,6 +147,15 @@
                 <li><img src="https://media.tenor.com/bdela5G4BHkAAAAi/peepo-meme.gif"></li>
         </ul>
     </div > 
+    <div id="exercise-modal" class="modal">
+        <div class="modal-content">        
+            <button class="close-modal-btn" onclick="toggleModal(false)">×</button>
+            <h2 id="modal-date-title"></h2>
+            <h3>Bao gồm các bài tập</h3>
+            <div id="modal-exercise-titles"></div>
+            <button id="view-exercises-btn" onclick="proceedToExercises()">Xem</button>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.min.js"></script>
     <script>
         function toggleHint(event) {
@@ -184,6 +189,19 @@
             document.getElementById('choose-date-btn').style.display = 'none';
         }
 
+        function toggleModal(show, dateTitle='', titles='', url='') {
+            const modal = document.getElementById('exercise-modal');
+            document.getElementById('view-exercises-btn').dataset.url = url;
+            document.getElementById('modal-date-title').innerText = dateTitle;
+            document.getElementById('modal-exercise-titles').innerHTML = titles;
+            modal.style.display = show ? 'flex' : 'none';
+        }
+
+        function proceedToExercises() {
+            const url = document.getElementById('view-exercises-btn').dataset.url;
+            if (url) window.location.href = url;
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -199,20 +217,21 @@
                     }
                     ?>
                 ],
-                eventDidMount: function(info) {
-                    var titlesDiv = document.createElement('div');
-                    titlesDiv.className = 'exercise-titles';
-                    titlesDiv.innerHTML = '<span>' + info.event.extendedProps.titles + '</span>';
-                    info.el.appendChild(titlesDiv);
-                },
                 eventClick: function(info) {
                     info.jsEvent.preventDefault();
                     if (info.event.url) {
-                        window.location.href = info.event.url;
+                        const dateTitle = info.event.title;
+                        const titles = info.event.extendedProps.titles.replace(/<br>/g,'<br/>');
+                        toggleModal(true, dateTitle, titles, info.event.url);
                     }
                 }
             });
             calendar.render();
+            document.getElementById('exercise-modal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    toggleModal(false);
+                }
+            });
         });
 
         if (window.location.search.includes('date')) {
