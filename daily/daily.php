@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="../image/favicon.ico">
-    <link rel="stylesheet" href="./daily.css">
-        
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/daily.css">
 </head>
 <body>
     <div id="menu">  
@@ -47,7 +47,7 @@
     </div>
 
     <div id="content">
-        <iframe id="content-iframe" src="./current.php" frameborder="0"></iframe>
+        <iframe id="content-iframe" src="./exercise.php" frameborder="0"></iframe>
     </div>
 
     <script>
