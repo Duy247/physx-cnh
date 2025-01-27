@@ -184,7 +184,7 @@
         }
         #top-part {
             height: 60%;
-            padding:1rem 2rem 0rem 2rem;
+            padding:1rem 0rem 0rem 0rem;
             box-sizing: border-box;
             font-size: 1.0rem;     
             text-align: justify;
@@ -206,7 +206,7 @@
             justify-content: space-between;
         }
         .text-box {
-            flex: 1;
+            flex: auto;
             margin: 0 10px;
             padding: 0.5em 1.0em 0.5em 1em;
             background: rgba(255, 255, 255, 0.6);
@@ -214,12 +214,14 @@
             border-radius: 10px;
             color: black;
             font-size: 1.8vh;
+            max-height: 400px;
+            overflow-y: hidden;
         }
         #introduce {
-            flex: 3;     
+            flex: auto;     
         }
         #whats-new {
-            flex: 2;
+            flex: 0 0 35%;
         }
         .text-box a{
             text-decoration: none;
@@ -243,38 +245,47 @@
             backdrop-filter: blur(2px);
             height: 40%;
             gap: 2%;
-            margin: 0rem 2rem 0rem 2rem;
+            margin: 0rem 0rem 0rem 0rem;
             border-radius:6px;
         }
 
-        #l-bottom-part {
-            flex: 0 0 57%;          
+        #l-bottom-part {          
+            flex:auto;
             box-sizing: border-box;
             padding-top:0.5rem; 
             padding-bottom: 0.5rem;
-            border-radius: 10px 10px 0 0;
+            border-radius: 10px;
             margin-left:0.5rem;
         }     
-        #l-bottom-part img { /* Targets all images directly inside #r-bottom-part */
-            border-radius: 10px; /* Adjust the value as needed for the desired roundness */      
+        #l-bottom-part img { 
+            border-radius: 10px; 
         }
         #r-bottom-part {
-            flex: 0 0 40%;
-            box-sizing: border-box;
+            flex: 0 0 37.5%;         
             display: flex;
             align-items: center;
             justify-content: center;           
-            border-radius: 10px 10px 0 0;
+            border-radius: 10px 10px 10px 10px;
             padding:0.5rem 0.5rem 0.5rem 0; 
-        }
-        #r-bottom-part img { /* Targets all images directly inside #r-bottom-part */
-            border-radius: 10px; /* Adjust the value as needed for the desired roundness */      
         }
         .slideshow-container {
             position: relative;
             width: 100%;
             height: 100%;
-            overflow: hidden;  
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;          
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slideshow-container img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+            border-radius: 10px;
         }
 
         .mySlides {
@@ -346,6 +357,7 @@
             background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
             text-align: justify;
+            border-radius: 0 0 10px 10px;
         }
 
         .news-content h3 {
@@ -371,12 +383,13 @@
         }
         .news-dots {
             position: relative;
-            bottom: 20px;
+            width: 100px;
+            max-width: 200px; 
             left: 50%;
-            transform: translateX(0%);
-            opacity: 0.3;
-            align-self: auto;
+            transform: translateX(-50%);
+            bottom: 20px;      
         }
+
         .news-dots:hover {
             opacity: 1;
         }
@@ -387,13 +400,15 @@
             border-radius: 50%;
             background-color: #bbb;
             margin: 0 5px;
-            cursor: pointer;
+            cursor: pointer;  
+            opacity: 0.3;
         }
 
         .news-dot.active {
             background-color: #fff;
+            opacity: 0.6;
         }
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 600px) and (orientation: portrait) {
             body {
                 overflow: auto;
             }
