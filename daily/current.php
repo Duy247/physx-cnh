@@ -63,6 +63,8 @@
             border: 1px solid #888;
             width: 80%;
             max-width: 500px;
+            max-height: 80%;
+            overflow-y: auto;
             position: relative;
         }
         .close-modal-btn {
@@ -84,7 +86,7 @@
                 <div class="note">
                     Đây là các bài tập được đăng trên nhóm xPhO Physics Club. Mỗi ngày sẽ có một bộ bốn bài Cơ - Nhiệt - Điện - Quang được đăng trên nhóm. Mình sẽ đăng tải lại ở đây kết hợp cùng các comment và gợi ý giải bài tập. Chúc các bạn học tốt! Tham gia nhóm Discord của xPhO tại <a href="https://discord.gg/ZUVKMZM58s" target="_blank">đây</a>.
                 </div>
-                <button id="choose-date-btn" onclick="window.location.href='./current.php'">Chọn ngày khác</button>
+                <button id="choose-date-btn" onclick="window.location.href='./current.php'">Quay lại</button>
                 <div id="calendar"></div>
                 <div id="exercise-container" style="display: none;">
                     <?php
@@ -212,8 +214,11 @@
                     foreach ($files as $file) {
                         $json = file_get_contents($file);
                         $data = json_decode($json, true);
-                        $titles = implode(' <br> ', array_column($data['exercise'], 'quicktitle'));
-                        echo "{ title: '" . $data['datetext'] . "', start: '" . date('Y-m-d', strtotime($data['date'])) . "', url: '?date=" . basename($file) . "', extendedProps: { titles: '" . $titles . "' } },";
+                        $titles = '';
+                        foreach ($data['exercise'] as $exercise) {
+                            $titles .= $exercise['quicktitle'] . '<br><div style="text-align: center;"><img src="' . $exercise['quickimg'] . '" style="max-width: 30%; height: auto;"></div><br>';
+                        }
+                        echo "{ title: '" . $data['datetext'] . "', start: '" . date('Y-m-d', strtotime($data['date'])) . "', url: '?date=" . basename($file) . "', extendedProps: { titles: `" . $titles . "` } },";
                     }
                     ?>
                 ],
