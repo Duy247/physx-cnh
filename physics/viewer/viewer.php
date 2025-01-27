@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="./pdf.min.js"></script>
     <style>
         /* Add your custom styles here */
     </style>
@@ -31,7 +31,7 @@
             var url = <?php echo json_encode($_GET['url'] ?? ''); ?>;
 
             var pdfjsLib = window['pdfjs-dist/build/pdf'];
-            pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.worker.min.js';
+            pdfjsLib.GlobalWorkerOptions.workerSrc = './pdf.worker.min.js';
             var pdfDoc = null;
             var currentPage = 1;
             var totalPages = 0;
@@ -94,11 +94,9 @@
 
                 updatePageInfo();
 
-                // Remove the notification when the book is ready
                 var notification = document.getElementById('notification');
                 notification.parentNode.removeChild(notification);
 
-                // Set the href attribute of the download button to the PDF URL
                 var downloadButton = document.getElementById('downloadButton');
                 downloadButton.href = url;
             });
