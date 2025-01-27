@@ -169,7 +169,7 @@
             materialsOlympiad.href = "./nav/physics_mobile?type=paper-sol&level=pho";
             materialsVltt.href = "./nav/physics_mobile?type=magazines&level=all";
             lessons.href = "./nav/physics_mobile?type=lessons&level=all";
-            daily.href = "./daily/current";
+            daily.href = "./daily/exercise";
             donate.href = "./physics/donate";
         }
         function updateHitCount() {
