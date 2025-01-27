@@ -19,7 +19,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 0;
-    opacity: 0.5;
+    opacity: 0.9;
 }
 h1, h2 {
     margin-bottom: 10px;
@@ -42,6 +42,7 @@ h1, h2 {
     height: auto;
 }
 .note {
+    margin-top:10px;
     margin-bottom: 20px;
     padding: 20px;
     background-color: #d6d6d6;
@@ -162,7 +163,7 @@ h1, h2 {
     flex-direction: column;
     align-items: center;
     height: 85vh;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .context h1{
@@ -366,7 +367,23 @@ button:hover {
     width: 70%;
     max-height: 80%;
     margin: auto;
+    padding: 1rem;
+    opacity: 0.9;
+    background-color: #ffffffce;
+    border-radius: 10px;
 }
+
+#calendar table, #calendar th, #calendar td {
+    border: 1px solid #1d1d51;
+}
+
+#calendar > div.fc-view-harness.fc-view-harness-active {
+    background: url('/daily/img/calendar_logo.png') no-repeat center center;
+    background-size: contain;
+}
+
+
+
 #choose-date-btn {
     display: none;
     margin-bottom: 20px;
