@@ -10,72 +10,7 @@
     <link rel="stylesheet" href="./exercise.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.min.css">
     <style>
-        #calendar {
-            width: 70%;
-            max-height: 80%;
-            margin: auto;
-        }
-        #choose-date-btn {
-            display: none;
-            margin-bottom: 20px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            background-color: #1d1d52;
-            color: white;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        #choose-date-btn:hover {
-            background-color: #4e54c8;
-        }
-        .slideshow-container {
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
-            max-height: 80%;
-            overflow-y: auto;
-            position: relative;
-        }
-        .close-modal-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
+        
     </style>
 </head>
 <body>
