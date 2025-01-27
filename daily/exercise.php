@@ -21,7 +21,7 @@
                 <div class="note">
                     Đây là các bài tập được đăng trên nhóm xPhO Physics Club. Mỗi ngày sẽ có một bộ bốn bài Cơ - Nhiệt - Điện - Quang được đăng trên nhóm. Mình sẽ đăng tải lại ở đây kết hợp cùng các comment và gợi ý giải bài tập. Chúc các bạn học tốt! Tham gia nhóm Discord của xPhO tại <a href="https://discord.gg/ZUVKMZM58s" target="_blank">đây</a>.
                 </div>
-                <button id="choose-date-btn" onclick="window.location.href='./current.php'">Quay lại</button>
+                <button id="choose-date-btn" onclick="window.location.href='./exercise.php'">Quay lại</button>
                 <div id="calendar"></div>
                 <div id="exercise-container" style="display: none;">
                     <?php
