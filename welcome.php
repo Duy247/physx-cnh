@@ -147,6 +147,13 @@
         </div>
     </div>
 
+    <div id="newYearModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="/newyear/img.png" alt="New Year Poster" style="width:100%; border-radius: 10px;">
+        </div>
+    </div>
+
     <script>
         function isMobileDevice() {
             return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -281,6 +288,45 @@
             }, 15000); 
         });
         });
+
+        function setCookie(name, value, hours) {
+            var date = new Date();
+            date.setTime(date.getTime() + (hours * 60 * 60 * 1000));
+            var expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        window.onload = function() {
+            var modal = document.getElementById("newYearModal");
+            var span = document.getElementsByClassName("close")[0];
+
+            if (!getCookie("seenNewYearPoster")) {
+                modal.style.display = "block";
+            }
+
+            span.onclick = function() {
+                modal.style.display = "none";
+                setCookie("seenNewYearPoster", "true", 3);
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    setCookie("seenNewYearPoster", "true", 3);
+                }
+            }
+        }
     </script> 
 </body>
 </html>
