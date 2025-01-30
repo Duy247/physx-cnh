@@ -1,242 +1,51 @@
 {
     "Tôi cần \n MỘT BÀI BÁO \n KHOA HỌC": {
-      content: "<br><br>Bạn đã bao giờ cần phải tìm đọc, hay đơn giản hơn là hiểu cụ thể một bài báo khoa học mà bạn cần dẫn nguồn?"
+      content: "<br><br>Bạn đã bao giờ cần phải tìm đọc, hay đơn giản hơn là hiểu cụ thể một bài báo khoa học mà bạn cần dẫn nguồn? <br><br> Đối với sinh viên đại học, việc tiếp cận các bài báo khoa học là một phần không thể thiếu trong quá trình học tập và nghiên cứu, từ viết đồ án cho đến báo đăng.<br>Tuy nhiên, một trong những rào cản lớn nhất chính là vấn nạn 'vòi tiền' từ các nhà xuất bản học thuật, khiến giá của các bài báo khoa học trở nên quá cao, thậm chí lên đến hàng chục đô la cho một bài viết. <br>Các nhà xuất bản nổi tiếng như <b>Elsevier</b>, <b>Springer</b>, hay <b>Wiley</b> thường yêu cầu mức phí rất cao để truy cập vào các tạp chí khoa học uy tín. <br> Chẳng hạn, một bài báo trên tạp chí của Elsevier có thể có giá lên đến 35-50 Trump, quân ăn cướp, trong khi một bài trên tạp chí của Springer có thể tốn 30-40 Trump. <br>Điều này gây khó khăn lớn cho sinh viên, những người thường có ngân sách hạn chế, mỳ không có mà ăn. Tóm lại, việc tìm kiếm các nguồn tài liệu miễn phí trở thành một lựa chọn không thể bỏ qua. Sơ đồ tương tác của mình sẽ giúp bạn hiểu cách tiếp cận các bài báo khoa học miễn phí một cách hiệu quả."
     },
-    "Đội tuyển VPhO": {
-      content: "<br><br>Ôn tập từ khoảng giữa tháng 10 tới đầu tháng 1 năm sau. <br>Đây là nơi kết thúc của bạn? Tuỳ thực lực"
+    "Bài báo có DOI?": {
+      content: "<br><br>Bạn đã bao giờ nghe đến cái tên <b>DOI</b>, ai cũng nhắc đến khi nói về bài báo khoa học? <br><br>DOI, hay <b>Digital Object Identifier</b>, giống như mã vạch hay số định danh dành cho bài báo khoa học. Nó là một chuỗi số và chữ duy nhất, dạng 10.1234/abc567, giúp bạn tìm ra bài báo đó trong một biển thông tin mênh mông trên Internet. <br>Nếu không có DOI, người dùng sẽ phải lần mò, gõ từ khóa lung tung vì phải tìm theo tên, rồi cuối cùng vẫn chẳng tìm thấy cái bài báo mình cần. <br><br>DOI sinh ra để giúp bạn tìm bài báo nhanh chóng mà còn đảm bảo rằng bạn đang đọc đúng phiên bản chính thức, không phải bản lậu hay bản đã chỉnh sửa lung tung. <br>Ví dụ, nếu bạn thấy một bài báo có DOI kiểu 10.1007/s12345-678-9, bạn có thể yên tâm rằng đó là bài báo đã được công bố, tuỳ thuộc đầu báo mà có thể là peer review, Scopus - hàng xịn. <br><br> Nếu bạn đọc được tiêu đề của bài báo khi đang Google, thì khả năng rất cao nó đã được công bố và có DOI"
     },
-    "Động học": {
-      content: `<br><br><b>Phân tích được các vấn đề thực tiễn có liên quan :
-      </b><br><ul><li>Hệ quy chiếu. Cộng vận tốc. Vận tốc và gia tốc của chất điểm chuyển động tròn không đều.</li>
-      <li>Vận tốc góc và gia tốc góc trong chuyển động quay của vật rắn. </li>
-      <li>Khảo sát chuyển động phẳng (song phẳng) về mặt động học </li></ul>
-      <b>Dạng bài tập :</b>
-      <ul>
-          <li>Bài tập chất điểm</li>
-      </ul>
-      `
+    "Đây là sách?": {
+      content: "<br><br>Nếu văn bản mà bạn đang tìm thật sự <b>không có DOI</b> thì có thể có hai khả năng <br><br>Rất có thể nó không phải là một bài báo khoa học mà là một chương trong một cuốn sách. <br>Hoặc, nó có thể là một <i>bài báo</i> nhưng không phải báo khoa học mà là báo đăng trong tạp chí<br>Và thay vì DOI, bạn sẽ phải tìm được cuốn sách hoặc tạp chí theo một cái gọi là ISBN (International Standard Book Number). <br><br>ISBN là một dãy số duy nhất dành riêng cho sách, thường có 10 hoặc 13 chữ số, ví dụ như 978-3-16-148410-0. <br>Nó giúp bạn xác định chính xác cuốn sách bạn cần, từ tác giả, nhà xuất bản, đến cả phiên bản (bìa cứng hay bìa mềm)."
     },
-    "Tĩnh học vật rắn":{
-      content:`
-        <ul>
-          <li>Vận dụng được điều kiện tổng quát của cân bằng vào các bài toán cân bằng.</li>
-          <li>Xác định được trục quay để tính momen lực sao cho hệ phương trình cần giải được đơn giản.</li>
-          <li>Xác định khối tâm của một hệ bằng phương pháp tổng hợp lực hoặc tích phân.</li>
-          <li>Điều kiện cân bằng lực cân bằng mômen (sử dụng phép tính vectơ hoặc phép tính theo hình chiếu vectơ; áp dụng cho trường hợp một chiều và hai chiều).</li>
-          <li>Lực đàn hồi, lực ma sát trượt, lực ma sát nghỉ.</li>
-          <li>Định luật Hooke, ứng suất,   biến dạng và môđun Young.</li>
-          <li>Vận dụng kiến thức để khảo sát các dạng cân bằng của vật rắn.</li>
-        </ul>
-        <b>Dạng bài tập :</b>
-        <ul>
-            <li>Bài toán xác định khối tâm của vật rắn.</li>
-            <li>Bài toán cân bằng vật rắn. (Áp dụng điều kiện cân bằng tổng quát)</li>
-        </ul>
-      `
+    "Check LibGen":{
+      content:"<br><br> URL hiện tại: <a href='https://www.libgen.is/'>LibGen.is</a> <br><b>Library Genesis</b> (hay còn gọi là LibGen) - đây chính là thiên đường dành cho những ai đam mê đọc sách và tài liệu nhưng lại không muốn bỏ ra cả đống tiền để mua, vì chúng ta nghèo. <br>LibGen là một thư viện trực tuyến khổng lồ, với sứ mệnh phá bỏ rào cản về chi phí và giúp mọi người tiếp cận tri thức một cách dễ dàng hơn. <br><br>Mục tiêu tồn tại của LibGen là để chia sẻ tri thức miễn phí. Nó được xây dựng để chống lại sự độc quyền của các nhà xuất bản lớn, những người thường bán sách và tài liệu học thuật với giá cắt cổ. <br>LibGen tin rằng tri thức nên được tự do và dễ dàng tiếp cận cho tất cả mọi người, không phân biệt giàu nghèo. <br><br>Về nội dung, LibGen có gần như <b>mọi thứ</b> bạn cần: từ sách giáo khoa, sách khoa học, tiểu thuyết, tạp chí học thuật, đến cả các bài báo nghiên cứu. <br>Bạn có thể tìm thấy sách từ các lĩnh vực như khoa học tự nhiên, kỹ thuật, y học, văn học, triết học, và nhiều hơn nữa. <br>Tuy nhiên, nội dung của LibGen phụ thuộc vào việc người dùng sở hữu các bản mềm tải lên, nếu không có ai tải lên thì đương nhiên LibGen sẽ không có đầu sách bạn đang tìm"
     },
-    "Động lực học cơ hệ và vật rắn.\n Các định luật bảo toàn":{
-      content:`
-        <br><br><b>Khảo sát được chuyển động phẳng của vật rắn về mặt động lực học:</b>  
-        <ul>
-          <li>Vận dụng được các phương trình động lực học để xác định gia tốc của khối tâm và gia tốc của các vật chuyển động phẳng tổng quát.</li>
-          <li>Vận dụng được định lí về trục song song để tính momen quán tính của vật rắn (vòng, đĩa, quả cầu, quả cầu rỗng, thanh)</li>
-          <li>Thiết lập được công thức tính momen động lượng của một vật rắn đối với một trục bất kì.</li>
-          <li>Phát biểu được: định luật bảo toàn động lượng, định luật bảo toàn momen động lượng, định luật bảo toàn cơ năng.</li>
-          <li>Thiết lập được công thức tính động năng của vật rắn chuyển động tịnh tiến và chuyển động quay; Hiểu được định lí biến thiên động năng; Định lí biến thiên thế năng;</li>
-          <li>Vận dụng được định luật bảo toàn cơ năng và định lí biến thiên động năng để giải các bài toán về một vật chuyển động phẳng tổng quát hoặc chuyển động lăn không trượt.</li>
-          <li>Vận dụng được các định luật bảo toàn động lượng và momen động lượng để giải các bài tập về va chạm giữa một chất điểm với một vật rắn và về va chạm giữa hai vật rắn.</li>
-        </ul>
-        <b>Dạng bài tập :</b>
-        <ul>
-            <li>Bài toán cơ hệ vật rắn.</li>
-            <li>Bài toán áp dụng các định luật bảo toàn.</li>
-            <li>Chuyển động ném xiên-ngang.</li>
-            <li>Chuyển động song phẳng của hệ, vật rắn.</li>
-        </ul>
-      `
+    "Check Z-Library":{
+      content:"<br><br> URL hiện tại: <a href='https://z-lib.io/'>Z-Lib.io</a> <br><br> Z-Library cũng là một lựa chọn khác nếu LibGen không có cuốn sách bạn đang tìm, mặc dù cơ sở dữ liệu khá giống nhau, tức là quyển sách nào đã có ở một trang thì trang kia khả năng cũng có, thi thoảng có một vài trường hợp đặc biệt"
     },
-    "Cơ học chất lưu":{
-      content:`
-        <br>
-        <ul>
-          <li>Trình bày được các khái niệm cơ bản của chất lưu lí tưởng (Chuyển động dừng, không nén, không xoáy).</li>
-          <li>Vận dụng được các phương trình, các định luật của tĩnh học chất lưu (định luật Acsimet, định luật Pascan) các định luật của động học chất lưu (định luật Becnulli, định luật Poadơi, …) giải thích các hiện tượng tự nhiên, các ứng dụng trong thực tiễn và giải quyết các vấn đề có liên quan.</li>
-          <li>Vận dụng được Phương trình liên tục.</li>
-          <li>Phát biểu và nêu ứng dụng của định luật được định luật Xtốc (Stokes) về lực cản của môi trường nhớt.</li>
-          <li>Các hiện tượng bề mặt chất lỏng: Nêu và vận dụng được công thức tính áp suất phụ, công thức tính năng lượng bề mặt. Viết được các công thức về hiện tượng mao dẫn.</li>
-        </ul>
-        <b>Dạng bài tập :</b>
-        <ul>
-            <li>Bài tập động học chất lưu đơn giản.</li>
-            <li>Bài tập về mao dẫn, chất lỏng, độ ẩm</li>
-        </ul>
-      `
+    "Chỉ là note / handout":{
+      content:"<br><br> Trong tình huống này, khả năng cao là tài liệu bạn đang tìm chỉ là một note hay handout bởi tác giả <br> Với tình huống này thì bạn nên email thẳng tác giả để xin bản nội dung đầy đủ <br> Thứ nhất, nếu cần sử dụng làm tư liệu, bạn nên tìm thông tin tương tự nhưng đã được công bố để có giá trị trích dẫn <br> Thứ hai, nếu note / handout này được đăng tải trên mạng xã hội, trang web cá nhân, hay blog của tác giả, cũng có thể trích dẫn trong các tình huống làm đồ án phạm vi khuôn khổ trường Đại học"
     },
-    "Điện trường":{
-      content:`
-        <br><br><b>Nắm được các nội dung: </b>
-        <ul>
-          <li>Thuyết điện tử.</li>
-          <li>Điện trường của một số vật đối xứng.</li>
-          <li>Định lí Ostrogradski- Gauss.</li>
-          <li>Điện thế và hiệu điện thế. </li>
-          <li>Vật dẫn và điện môi trong điện trường.</li>
-          <li>Điện dung của vật dẫn- Tụ điện</li>
-          <li>Năng lượng của trường tĩnh điện.</li>
-        </ul>
-        <b>Vận dụng kiến thức: </b>
-        <ul>
-          <li>Xác định cường độ điện trường của hệ điện tích.</li>
-          <li>Xác định cường độ điện trường của một số vật nhiễm điện có tính chất đối xứng. </li>
-          <li>Xác định điện thế của điện tích, hệ điện tích. </li>
-          <li>Xác định điện dung của vật dẫn và hệ các vật dẫn.</li>
-          <li>Thành lập các công thức xác định năng lượng điện trường. </li>
-        </ul>
-        <b>Dạng bài tập :</b>
-        <ul>
-            <li>Bài tập vận dụng kiến thức.</li>
-            <li>Bài tập chuyển động của hạt mang điện trong điện trường.</li>
-        </ul>
-      `
+    "Manuscript chưa công bố":{
+      content:"<br><br> Tương tự, trong tình huống này, khả năng đây là một Manuscript chưa công bố, cách tiếp cận hợp lý nhất là gửi email xin thẳng tác giả <br><br> <b>Lưu ý</b>, một bài báo không có DOI tức là bài báo chỉ đang dừng ở Manuscript và chưa tiến triển thêm, hoặc ở khâu preprint hay hội thảo không cấp DOI, hoặc công bố không chính thức <br> Chỉ những bài báo ở khâu preprint, hội thảo không cấp DOI mới có thể sử dụng để trích dẫn và sử dụng tham khảo tuy nhiên cần rất cẩn thận do chưa qua peer-review hoặc cần thận trọng về chất lượng hội thảo"
     },
-    "Mạch điện":{
-      content:`<br><br>
-        <b>Thảo luận để: </b>
-        <ul>
-          <li>Nêu được các phương pháp cơ bản giải bài toán mạch điện một chiều (phương pháp áp dụng định luật Ôm tổng quát).</li>
-          <li>Phương pháp điện thế nút.</li>
-          <li>Phương pháp Kiếc xốp.</li>
-          <li>Phương pháp nguồn tương đương.</li>
-          <li>Phương pháp chồng chập.</li>
-          <li>Vận dụng được các phương pháp cơ bản giải bài toán mạch điện một chiều để giải các bài toán mạch điện một chiều</li>
-        </ul>
-        <b>Dạng bài tập :</b>
-        <ul>
-            <li>Bài tập mạch điện.</li>
-        </ul>
-      `
+    "Google và tìm đi bạn trẻ":{
+      content:"<br><br>Nếu không biết bài báo có DOI hay không thì bạn phải tìm, do nó rất quan trọng trong việc xác định nên tiếp cận từ đâu"
     },
-    "Dao động":{
-      content:`<br><br>
-        <b>Dao động cơ điều hòa nâng cao gồm có:  </b>
-        <ul>
-          <li>Dao động của vật rắn.</li>
-          <li>Con lắc vật lí có chiều dài biến đổi.</li>
-          <li>Dao động của cơ hệ.</li>
-          <li>Dao động cơ cưỡng bức, cộng hưởng cơ.</li>
-        </ul>
-        <b>Dạng bài tập :</b>
-        <ul>
-            <li>Dao động cơ bản.</li>
-            <li>Sóng cơ bản.</li>
-        </ul>
-      `
+    "Check OA.mg":{
+      content:" <br><br> URL hiện tại <a href='https://oa.mg/'>OA.mg</a> <br> OA.mg về cơ bản chỉ là một công cụ tìm kiếm chuyên biệt dành cho các bài báo khoa học, đặc biệt tập trung vào việc cung cấp quyền truy cập mở (Open Access) cho người dùng. Tức là các bài báo này vốn đã có thể truy cập miễn phí, nhưng là do bạn chưa tìm được nên chúng ta phải ngó qua đây trước."
     },
-    "Trường điện từ":{
-      content:`<br><br>
-        <b>Nắm được các nội dung: </b>
-        <ul>
-          <li>Hiện tượng tự cảm và độ tự cảm.</li>
-          <li>Năng lượng của cuộn cảm.</li>
-          <li>Định luật Faraday.</li>
-          <li>Nguyên lí chồng chất điện trường và từ trường.</li>
-        </ul>
-        <b>Dạng bài tập :</b>
-        <ul>
-            <li>Bài tập cơ bản.</li>
-            <li>BT chuyển động của hạt mang điện trong điện trường/ từ trường.</li>
-        </ul>
-      `
+    "Check Sci-Hub":{
+      content:"<br><br> URL hiện tại: <a href='https://www.sci-hub.se/'>Sci-Hub.se</a> <br> Sci-Hub là một thư viện trực tuyến cung cấp quyền truy cập miễn phí vào hàng triệu bài báo khoa học và sách học thuật. Nó được thành lập vào năm 2011 bởi Alexandra Elbakyan, một nhà nghiên cứu từ Kazakhstan, với mục tiêu giúp các nhà khoa học trên toàn thế giới tiếp cận kiến thức mà không bị rào cản tài chính. <br><br> Sci-Hub vi phạm bản quyền của nhiều nhà xuất bản lớn, khiến nó bị kiện và chặn ở nhiều quốc gia. Chính ví thế các bài báo sau năm 2020 có thể khó truy cập hơn, đặc biệt các bài báo từ Mỹ hay châu Âu, vì thế nếu bài báo bạn đang tìm được công bố gần đây, hên xui nó sẽ có trên Sci-Hub"
     },
-    "Quang hình học \n Thiết bị quang":{
-      content:`<br><br>
-        <b>Nắm được các nội dung: </b>
-        <ul>
-          <li>Thấu kính mỏng; dựng ảnh tạo bởi thấu kính mỏng lí tưởng; phương trình thấu kính mỏng.</li>
-          <li>Kính hiển vi và kính thiên văn.</li>
-        </ul>
-        <b>Dạng bài tập :</b>
-        <ul>
-            <li>Bài tập thấu kính + quang hệ + dụng cụ quang + lưỡng chất phẳng</li>
-            <li>Bài tập kính hiển vi; kính thiên văn; kính lúp</li>
-        </ul>
-      `
+    "Check arXiv":{
+      content:"<br><br> URL hiện tại: <a href='https://arxiv.org/'>ArXiv.org</a><br>arXiv không phải một tạp chí khoa học mà chỉ là một kho lưu trữ bài báo chưa qua hoặc đang trong quá trình bình duyệt. Điều này giúp các nhà nghiên cứu chia sẻ công trình của mình nhanh chóng, mà không cần chờ quy trình bình duyệt kéo dài từ các tạp chí học thuật. <br><br> Các bài báo trên arxiv thực chất là <b>Preprint</b> - là bản nháp trước khi xuất bản chính thức, nó vẫn có giá trị trích dẫn vì khi các tác giả gửi bài báo lên các tạp chí thì họ thường lưu preprint ở đây, do quá trình peer-review tốn thời gian <br><br> <b>Lưu ý</b>, vì chưa qua bình duyệt nên bạn cần thận trọng khi sử dụng các bản preprint làm tư liệu tham khảo hay trích dẫn do có thể có vấn đề về chất lượng hay thậm chí gian lận học thuật"
     },
-    "Nhiệt động lực học \n Cổ điển":{
-      content:`<br><br>
-        <b>Nắm được các nội dung: </b>
-        <ul>
-          <li>Các khái niệm về cân bằng nhiệt và các quá trình thuận nghịch; nội năng, công và nhiệt.</li>
-          <li>Nguyên lí thứ nhất và thứ hai của nhiệt động lực học.</li>
-          <li>Bậc tự do bậc tự do tịnh tiến của khí đơn nguyên tử và lưỡng nguyên tử</li>
-          <li>Hiệu suất của động cơ nhiệt không lí tưởng.</li>
-        </ul>
-        <b>Dạng bài tập :</b>
-        <ul>
-            <li>Bài tập về chất khí lí tưởng + chu trình + nguyên lí 1 + nguyên lí 2</li>
-        </ul>
-      `
+    "Đi ăn mày":{
+      content:"<br><br> Kẻ thức thời là trang tuấn kiệt, không tìm được thì phải đi xin những người có. <br> Có rất nhiều trường Đại học trên thế giới cấp tài khoản truy cập các nguồn báo uy tín cho sinh viên, nếu bạn có mối quan hệ đủ rộng hoặc tìm đúng nơi, sẽ có người sẵn sàng giúp bạn tiếp cận tài liệu"
     },
-    "Truyền nhiệt và chuyển pha":{
-      content:`<br><br>
-        <b>Nắm được các nội dung: </b>
-        <ul>
-          <li>Áp suất hơi bão hòa, độ ẩm tuyệt đối, độ ẩm cực đại; độ ẩm tương đối.</li>
-          <li>Khái niệm về sự dẫn nhiệt; Phương trình truyền nhiệt.</li>
-          <li>Khái niệm pha (sôi, bay hơi, nóng chảy, thăng hoa) ẩn nhiệt; </li>
-          <li>Khái niệm về ngưng tụ, ngưng kết, đông đặc.</li>
-        </ul>
-        <b>Dạng bài tập :</b>
-        <ul>
-            <li>Bài tập cơ bản</li>
-        </ul>
-      `
+    "Đi xin\n/r/Scholar/":{
+      content:"<br><br> URL hiện tại: <a href='https://www.reddit.com/r/Scholar/'>Subreddit Scholar</a><br> Đây là một Subreddit nơi mà các thành viên chia sẻ - yêu cầu giúp đỡ tiếp cận các bài báo khoa học nằm sau paywall mà các nền tảng như Sci-Hub không có, không thuộc các đầu báo Open Access,... Bạn cần hiểu, bạn đang đi xin, vì thế khi đăng bài, chú ý tuân thủ nội quy Subreddit và tôn trọng ý kiến phản hồi" 
     },
-    "Động lực học cơ hệ và vật rắn.\n Các định luật bảo toàn\nLvl 2":{
-      content:`<br><br>
-        <b>Nắm được các nội dung: </b>
-        <ul>
-          <li>Phương pháp năng lượng. Phương pháp Euler-Lagrange.</li>
-          <li>Định lí công ảo</li>
-          <li>Dao động vật rắn.</li>
-          <li>Va chạm vật rắn.</li>
-        </ul>
-        <b>Dạng bài tập :</b>
-        <ul>
-            <li>Bài tập nâng cao</li>
-        </ul>
-      `
+    "Đi xin\nOrdo Nexus":{
+      content:"<br><br> URL hiện tại: <a href='https://t.me/nexus_search'>Ordo Nexus Telegram</a> và <a href='https://solarmind.libstc.cc'>LibSTC.cc</a> <br> Ordo Nexus cũng là một cộng đồng tương tự Scholar nhưng kín đáo hơn và hoạt động trên Telegram, đặc biệt mạnh khi xin các bài báo nguồn gốc từ các nước như Nga, Trung Quốc,... Bạn có thể tìm hiểu cách hoạt động của con bot Telegram, tuy nhiên quá trình xin tài liệu mất khả lâu do có rất nhiều yêu cầu, và các yêu cầu này được phân về cho những người có khả năng tiếp cận các bài báo"
     },
-    "Trường hấp dẫn. \n Cơ học thiên thể":{
-      content:`<br><br>
-        <b>Nắm được các nội dung: </b>
-        <ul>
-          <li>Định luật vạn vật hấp dẫn. Trường lực hấp dẫn. Thế năng hấp dẫn.   </li>
-          <li>Chuyển động trong trường hấp dẫn.</li>
-          <li>Các định luật Kepler</li>
-          <li>Chứng minh các phương trình của quỹ đạo cơ học thiên thể.</li>
-          <li>Thiết lập được công thức xác định các vận tốc vũ trụ.</li>
-        </ul>
-        <b>Dạng bài tập :</b>
-        <ul>
-            <li>Bài tập về tương tác hấp dẫn. (Nâng cao) </li>
-            <li>Bài toán chuyển động của vật trong trường lực xuyên tâm.</li>
-            <li>Bài tập nâng cao về 3 định luật Kepler </li>
-        </ul>
-      `
+    "Hỏi người quen":{
+      content:"<br><br> Tương tự thôi, bạn quen ai có khả năng, có tài khoản thì hỏi thẳng, may thì được giúp, không thì thôi"
     },
-    "Sóng mở rộng":{
-      content:`<br><br>
-        <b>Nắm được các nội dung: </b>
-        <ul>
-          <li>Sự lan truyền của sóng điều hòa: pha là một hàm tuyến tính của không gian và thời gian.</li>
-          <li>Sự chồng chất của sóng: tổng hợp sóng, giao thoa, sóng dừng.</li>
-        </ul>
-        <b>Dạng bài tập :</b>
-        <ul>
-            <li>Bài tập (Nâng cao) </li>
-        </ul>
-      `
+    "Email thẳng tác giả":{
+      content:"<br><br> Mail thẳng và hỏi tác giả một cách lịch sự chính là phương pháp hay gặp trong học thuật, các học giả thường sẽ rất cở mở chia sẻ công trình của mình qua kênh liên hệ cá nhân thay vì qua các tạp chí có paywall <br> <b>Lưu ý</b>, bạn đang đi xin, nên cần lịch sự, thận trọng trong câu từ"
     },
     "Cơ học chất lưu\nLvl 2":{
       content:`<br><br>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./image/favicon.ico">
     <script src="https://unpkg.com/gojs@3.0.11/release/go.js"></script>
-    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/common_reverse.css">
     <link rel="stylesheet" href="/css/roadmap.css">      
 </head>
 <body>
@@ -35,6 +35,7 @@
                 <li><a href="./nav/physics?type=lessons&level=all" id="lessons">Nội Dung Ngày Học</a></li>
                 <li><a href="/daily/daily" id="dailyCurrent">Bài Tập Hàng Ngày - xPhO</a></li>
                 <li><a href="./roadmap">Lộ trình ôn tập</a></li>
+                <li><a href="./article">Cách tìm bài báo khoa học</a></li>
                 <li><a href="./donate" id="donate">Ủng hộ duy trì trang web</a></li>
             </ul>
             <div class="bottom-links">
