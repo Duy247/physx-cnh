@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./image/favicon.ico">
     <script src="https://unpkg.com/gojs@3.0.11/release/go.js"></script>
-    <link rel="stylesheet" href="/css/common_reverse.css">
+    <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/roadmap.css">      
 </head>
 <body>
@@ -51,7 +51,7 @@
             <div id="myDiagramDiv" style="width: 100%; height: 70vh; background-color: #bababa"></div>  
                 <textarea id="mySavedModel" style="width: 100%; display:none">
                 <?php
-                        $Model = './roadmap/model.txt'; // Path to your text file
+                        $Model = './roadmap/article.txt'; // Path to your text file
                         echo "". file_get_contents($Model) . "";
                 ?> 
                 </textarea> 
@@ -62,7 +62,7 @@
 
     <script>
         <?php
-            $nodeDataList = './roadmap/node_data.txt'; // Path to your text file
+            $nodeDataList = './roadmap/article_des.txt'; // Path to your text file
             echo "const nodeDataList = " . file_get_contents($nodeDataList) . ";";
         ?>
         
