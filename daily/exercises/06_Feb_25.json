@@ -1,0 +1,20 @@
+{
+    "date" : "2025-02-06",
+    "datetext" : "06 tháng 2 2025",
+    "exercise": [      
+        {
+            "title": "Cơ học - CM.004 - Ném xiên có lực cản không khí",
+            "quicktitle" : "Ném xiên có lực cản không khí",
+            "quickimg": "./img/cm004.png",
+            "task": "Một vật được ném xiên từ mặt đất có vận tốc ban đầu $v_0$, góc ném là $\\theta$. Do có sức cản của không khí nên gia tốc của vật phụ thuộc vào vận tốc như sau: $$ a=g-\\alpha v $$trong đó $g$ là vec-tơ gia tốc trọng trường có chiều theo phương thẳng đứng huống xuống, $\\alpha$ là hằng số dương. <br>(1) Hãy viết phương trình chuyển động và phương trình quỹ đạo của chất điểm <br> (2) Hãy xác định vật đạt độ cao cực đại và thời điểm vật đạt độ cao cực đại.<br> Các kết quả sẽ thay đổi như thế nào khi $\\alpha \\rightarrow 0$. <br>Công thức toán: $\\ln (1+x) \\approx x-\\frac{x^2}{2}$ khi $x \\ll 1$.",
+            "hint": "Tham gia CLB xPhO và xem thảo luận tại <a href=\"https://discord.com/channels/854204281988972554/1339401096854110329\" target=\"_blank\">đây</a>"
+        },
+        {
+            "title": "Điện học - EM.004 - Nam châm rơi trong ống đồng",
+            "quicktitle" : "Nam châm rơi trong ống đồng",
+            "quickimg": "./img/em004.png",
+            "task": "Thả một nam châm nhỏ hình cầu rơi trong một ống dồng hình trụ rỗng rất dài (như hình vẽ). Ống đồng có độ dày $w$, đường kính $D \\gg w$, và có điện dẫn suất (độ dẫn điện) $\\sigma$. Nam châm nhỏ được xem như một chất điểm có khối lượng $m$ và momen lượng cực từ $\\vec{\\mu}$ có chiều không đổi hướng từ dưới lên trên. Từ trường do lượng cực từ $\\vec{\\mu}$ gây ra tại điểm cách lưỡng cực một khoảng $\\vec{r}$ được tính bằng biểu thức:$$\\vec{B}(\\vec{r})=\\frac{\\mu_0}{4 \\pi}\\left[\\frac{3(\\vec{\\mu} \\cdot \\vec{r}) \\vec{r}}{r^5}-\\frac{\\vec{\\mu}}{r^3}\\right]$$ <img src=\"./img/em004.png\" alt=\"EM.004\" style=\"max-width: 70%; height: auto;\"> Khi nam châm rơi trong ống đồng làm xuất hiện dòng điện cảm ứng bên trong ống đồng. Dòng điện cảm ứng này sinh ra lực hãm từ tác dụng lên nam châm. Do đó, ngay sau khi được thả, nam châm nhanh chóng đạt tới tốc độ tới hạn $v_t$ và chuyển động đều. Trong trường hợp nam châm được thả rơi dọc theo trục của ống đồng, hãy tìm tốc độ tới hạn $v_t$ theo $m, \\mu, D, w$ và $\\sigma$. Cho rằng trong quá trình chuyển động vector momen lưỡng cực $\\vec{\\mu}$ không thay đổi chiều. Bỏ qua các hiệu ứng bề mặt.<br> Công thức toán học có thể sử dụng: $\\int_0^{\\infty} \\frac{u^2 d u}{\\left(1+u^2\\right)^5}=\\frac{5 \\pi}{256}$.",
+            "hint": "Tham gia CLB xPhO và xem thảo luận tại <a href=\"https://discord.com/channels/854204281988972554/1339405144395092019\" target=\"_blank\">đây</a>"
+        }
+    ]
+}

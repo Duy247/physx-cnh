@@ -1,0 +1,20 @@
+{
+    "date" : "2025-02-07",
+    "datetext" : "07 tháng 2 2025",
+    "exercise": [      
+        {
+            "title": "Cơ học - CM.005 - Quỹ đạo Cycloid - Olympic quốc tế Tuymaada 2023",
+            "quicktitle" : "Quỹ đạo Cycloid - Olympic quốc tế Tuymaada 202",
+            "quickimg": "./img/cm005.png",
+            "task": "Một hạt nhỏ có thể trượt dọc theo dây được cố định trong một mặt phẳng thẳng đứng có hình dạng của một cycloid «ngược xuống» được mô tả là quỹ đạo của một điểm trên vành bánh xe có bán kính $R$, lăn không trượt dọc theo một đường thẳng ngang (hình vẽ). Tìm chu kỳ $T$ của dao động hạt nhỏ xung quanh một trong những điểm ở đáy của cycloid. <img src=\"./img/cm005.png\" alt=\"CM.005\" style=\"max-width: 70%; height: auto;\">",
+            "hint": "Tham gia CLB xPhO và xem thảo luận tại <a href=\"https://discord.com/channels/854204281988972554/1339401248566284358\" target=\"_blank\">đây</a>"
+        },
+        {
+            "title": "Điện học - EM.005 - Chuông Franklin",
+            "quicktitle" : "Chuông Franklin",
+            "quickimg": "./img/em005_1.png",
+            "task": "Chuông Franklin (Franklin Bells), còn được gọi là chuông tĩnh điện, là một thiết bị khoa học cổ điển được phát minh bởi Benjamin Franklin vào thế kỷ 18 để minh họa hiệu ứng trong tĩnh điện. Thiết bị chuông Franklin bao gồm (hình bên trái): Hai quả chuông kim loại (thường bằng đồng hoặc nhôm) được treo trên một giá đỡ, một quả cầu kim loại nhỏ (clapper) có thể di chuyển qua lại giữa hai chuông, một nguồn điện tĩnh như máy phát tĩnh điện Wimshurst. Trong bài toán này ta sẽ xét một mô hình đơn giản tương tự như chuông Franklin bằng cách sử dụng hai mặt phẳng kim loại song song. <br> (1)(i) Hai tấm điện cực phẳng song song có cạnh $a=15 \\mathrm{~cm}$, khoảng cách giữa hai tấm là $d=5.0 \\mathrm{~cm}$, tạo thành một tụ điện phẳng chứa không khí với hằng số điện môi chân không $\\varepsilon_0=8.85 \times 10^{-12} \\mathrm{C}^2 /\\left(\\mathrm{N} \\cdot \\mathrm{m}^2\\right)$. Hãy tính điện dung $C$ của tụ điện này. <br> (ii) Một quả cầu nhỏ dẫn điện có dây treo dài 10 cm được treo vào tấm $A$, dây treo cố định vào đầu trên tấm $A$, như hình 1-16(a). Ban đầu, quả cầu nhỏ tiếp xúc với tấm $A$. Quả cầu có khối lượng $m=0.10 \\mathrm{~g}$, bán kính $r=0.3 \\mathrm{~cm}$. Tính điện dung $C^{\\prime}$ của quả cầu nhỏ này.<img src=\"./img/em005.png\" alt=\"EM.005\" style=\"max-width: 70%; height: auto;\">. <br>(2) Tấm $B$ của tụ điện phẳng được nối đất, tấm $A$ được đặt ở hiệu điện thế $U=6.0 \\times 10^4 \\mathrm{~V}$ trong một khoảng thời gian ngắn, sau đó tách ra khỏi nguồn. Người ta quan sát thấy quả cầu nhỏ rời khỏi tấm $A$, di chuyển đến tấm $B$ và sau đó quay trở lại tấm $A$. Hiện tượng này lạ̣p đi lặp lại nhiều lần trước khi quả cầu gỗ đạt đến vị trí cân bằng cuối cùng. <br> (i) Giải thích vì sao quả cầu nhỏ chuyển động như vậy và tìm vị trí cân bằng cuối cùng với góc lệch $\theta$ (góc giữa dây treo và phương thẳng đứng). <br> (ii) Tính hiệu điện thế cuối cùng $U_f$ giữa hai tấm tụ điện.<br> (iii) Tính số lần $k$ mà quả cầu nhỏ chuyển động qua lại giữa tấm $A$ và tấm $B$ trước khi đạt đến trạng thái cân bằng.<br> (iv) Vẽ đồ thị biểu diễn mối quan hệ $U_f=f(k)$, tức hiệu điện thế cuối cùng là hàm của số lần qua lại $k$.",
+            "hint": "Tham gia CLB xPhO và xem thảo luận tại <a href=\"https://discord.com/channels/854204281988972554/1339405687821959279\" target=\"_blank\">đây</a>"
+        }
+    ]
+}
