@@ -4,6 +4,7 @@ Nhiệt động học 1|P.F.I.E.V|/books/PFIEV/PFIEV-thermodynamic-1.pdf|Nhà xu
 Nhiệt động học 2|P.F.I.E.V|/books/PFIEV/PFIEV-thermodynamic-2.pdf|Nhà xuất bản Giáo dục
 Điện từ học 1|P.F.I.E.V|/books/PFIEV/PFIEV-electromagnetism-1.pdf|Nhà xuất bản Giáo dục
 Điện từ học 2|P.F.I.E.V|/books/PFIEV/PFIEV-electromagnetism-2.pdf|Nhà xuất bản Giáo dục
+Cơ học lý thuyết|Nguyễn Đình Dũng|/books/cohoclythuyet_nguyendinhdung.pdf | ĐHQG Hà Nội
 Điện học|Vũ Thanh Khiết|/books/Dienhoc_VuThanhKhiet.pdf|ĐHSP Hà Nội
 Điện tử học|P.F.I.E.V|/books/PFIEV/PFIEV-electric.pdf|Nhà xuất bản Giáo dục
 Quang học|P.F.I.E.V|/books/PFIEV/PFIEV-optic.pdf|Nhà xuất bản Giáo dục
