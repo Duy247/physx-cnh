@@ -229,6 +229,16 @@
         .glow {
             animation: glow 1.5s infinite alternate;
         }
+        /* Golden glow effect */
+        @keyframes gold-glow {
+            0% { color: #FFD700; text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #fff8dc; }
+            50% { color: #fff8dc; text-shadow: 0 0 15px #FFD700, 0 0 30px #FFD700, 0 0 40px #fff8dc; }
+            100% { color: #FFD700; text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #fff8dc; }
+        }
+        .gold-glow {
+            animation: gold-glow 1.5s infinite alternate;
+            color: #FFD700;
+        }
     </style>
 </head>
 <body> 
@@ -257,7 +267,7 @@
                         <li>Bùi Hoàng Bách</li>
                         <li>Trần Hải Thiện</li>
                         <li>Cao Thái Sơn</li>
-                        <li>Nguyễn Hoàng Minh</li>
+                        <li><span class="gold-glow">Nguyễn Hoàng Minh</span></li>
                     </ul>
                 </div>
             </div>
