@@ -175,7 +175,7 @@
             box-sizing: border-box;
             font-size: 1.0rem;     
             text-align: justify;
-            background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+            background-image: url('/image/library.jpg');
             background-size:cover;
                     -webkit-animation: slidein 100s;
                     animation: slidein 100s;

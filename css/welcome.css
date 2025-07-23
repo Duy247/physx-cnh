@@ -4,7 +4,7 @@
     height: 100%; /* 100% of body height */
     width: 80%;
     float: left; /* Position the content next to the menu */
-    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+    background-image: url('/image/library.jpg');
     background-size:cover;
             -webkit-animation: slidein 100s;
             animation: slidein 100s;
@@ -72,7 +72,7 @@ to {background-position: -100px 0px;background-size:2250px;}
 }
 #top-part h1 {
     text-align: center;
-    color: hsl(0, 0%, 15%,0.7);
+    color: hsla(0, 0%, 100%, 0.7);
     padding: 0;
     font-size: 5vh;
     margin-bottom:0.5rem;

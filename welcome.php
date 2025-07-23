@@ -48,6 +48,7 @@
                 <li><a href="./roadmap">Lộ trình ôn tập</a></li>
                 <li><a href="./article">Cách tìm bài báo khoa học</a></li>
                 <li><a href="./donate" id="donate">Ủng hộ duy trì trang web</a></li>
+                <li><a href="https://astronomy.physx-cnh.com" id="donate"><b>AstroGallery</b></a></li>
             </ul>
             <div class="bottom-links">
                 <ul class="menu-list-bottom">

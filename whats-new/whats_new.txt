@@ -1,3 +1,4 @@
 * 30-01-2025: Cập nhật roadmap cách tìm bài báo khoa học
 * 16-02-2025: Cập nhật bài tập hàng ngày CLB Vật lý xPhO
-* 23-04-2024: Cập nhật Cơ học lý thuyết - Nguyễn Đình Dũng
+* 23-04-2025: Cập nhật Cơ học lý thuyết - Nguyễn Đình Dũng
+* 24-07-2025: Ra mắt <a href="https://astronomy.physx-cnh.com">AstroGallery</a> - thư viện ảnh thiên văn
