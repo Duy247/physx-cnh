@@ -1,0 +1,85 @@
+END USER LICENSE AGREEMENT (EULA)
+
+Last Updated: 2026-04-25
+
+This End User License Agreement ("Agreement") is a legal agreement
+between you ("User") and [Van Thanh Duy] ("Licensor") for the
+use of the software plugin ("MBKarate For AutoTest").
+
+By installing or using the Plugin, you agree to be bound by the terms of
+this Agreement.
+
+1.  License Grant
+
+Licensor grants you a limited, non-exclusive, non-transferable,
+non-sublicensable license to install and use the Plugin solely for your
+personal or internal business purposes.
+
+2.  Restrictions
+
+You agree not to:
+
+-   Copy, modify, or create derivative works of the Plugin
+-   Reverse engineer, decompile, or attempt to extract the source code
+-   Distribute, sublicense, sell, rent, lease, or transfer the Plugin
+-   Use the Plugin in any way that violates applicable laws or
+    regulations
+
+3.  Ownership
+
+The Plugin is licensed, not sold. All rights, title, and interest in and
+to the Plugin, including all intellectual property rights, remain the
+exclusive property of the Licensor.
+
+4.  Updates
+
+Licensor may provide updates, bug fixes, or enhancements at its sole
+discretion. These updates may be subject to additional terms.
+
+5.  Termination
+
+This Agreement is effective until terminated.
+
+It will terminate automatically if you fail to comply with any term.
+Upon termination, you must stop using and delete all copies of the
+Plugin.
+
+6.  Disclaimer of Warranties
+
+The Plugin is provided â€œAS ISâ€, without warranty of any kind.
+
+To the maximum extent permitted by law, Licensor disclaims all
+warranties, including but not limited to: - Merchantability - Fitness
+for a particular purpose - Non-infringement
+
+7.  Limitation of Liability
+
+To the maximum extent permitted by law, Licensor shall not be liable
+for:
+
+-   Any indirect, incidental, special, or consequential damages
+-   Loss of data, profits, or business interruption
+
+Even if Licensor has been advised of the possibility of such damages.
+
+8.  Third-Party Components
+
+The Plugin may include or rely on third-party libraries or components.
+Such components are subject to their respective licenses.
+
+9.  Governing Law
+
+This Agreement shall be governed by and construed in accordance with the
+laws of [Your Country], without regard to conflict of law principles.
+
+10. Changes to This Agreement
+
+Licensor reserves the right to modify this Agreement at any time.
+Continued use of the Plugin after changes constitutes acceptance of the
+updated terms.
+
+11. Contact Information
+
+If you have any questions about this Agreement, please contact:
+
+[Van Thanh Duy] [duy5a247@gmail.com]
