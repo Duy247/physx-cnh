@@ -2,9 +2,9 @@ END USER LICENSE AGREEMENT (EULA)
 
 Last Updated: 2026-04-25
 
-This End User License Agreement (“Agreement”) is a legal agreement
-between you (“User”) and [Van Thanh Duy] (“Licensor”) for the
-use of the software plugin (“MBTraining Engine Framework”).
+This End User License Agreement ("Agreement") is a legal agreement
+between you ("User") and [Van Thanh Duy] ("Licensor") for the
+use of the software plugin ("MBTraining Engine Framework").
 
 By installing or using the Plugin, you agree to be bound by the terms of
 this Agreement.
