@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./image/favicon.ico">
     <link rel="stylesheet" href="/css/common.css?v=20260726-1">
-    <link rel="stylesheet" href="/css/welcome.css">
+    <link rel="stylesheet" href="/css/welcome.css?v=20260726-2">
         
 </head>
 <body>
@@ -72,7 +72,7 @@
             <div class="text-container">
                 <div class="text-box" id="introduce">
                     <p>Đây là trang web tổng hợp tài liệu hỗ trợ học tập cho các học sinh thuộc đội tuyển vật lí. <br>Web được vận hành và duy trì trên nền tảng Github bởi Văn Thành Duy, chuyên lí Nguyễn Huệ K69.</p>
-                    <p>Trang web vận hành tốt nhất trên trình duyệt máy tính (PC / Chromebook / Samsung Dex). <br>Để truy cập vào các tài liệu, vui lòng chọn mục từ menu bên trái. </p>
+                    <p>Trang web hỗ trợ cả máy tính và điện thoại. Để truy cập tài liệu, hãy mở menu điều hướng; trên điện thoại, nút menu nằm ở góc trên bên phải.</p>
                     <p>Để yêu cầu tìm và bổ sung tài liệu, liên hệ <b><a href="mailto:duy5a247@gmail.com">duy5a247@gmail.com</a></b> hoặc tới <a href="https://github.com/Duy247/physx-cnh" style= "color:red;">repository github</a> và đọc thêm hướng dẫn <br>Nếu quá trình load và tải tài liệu bị chậm, hãy sử dụng DNS Cloudfare 1.1.1.1</p>         
                     <p>Cảm ơn tới các cá nhân đã đóng góp tài liệu</p>
                     <ul>
@@ -105,19 +105,23 @@
         </div> 
         <div id="bottom-part">
             <div id="l-bottom-part">
+                <h2 class="mobile-section-title">Tin nổi bật</h2>
                 <div class="news-slideshow-container">
                     <?php
                     $jsonFile = './whats-new/news.json';
                     $jsonData = file_get_contents($jsonFile);
-                    $newsItems = json_decode($jsonData, true);
+                    $newsItems = json_decode($jsonData, true) ?: [];
 
                     foreach ($newsItems as $index => $newsItem) {
-                        $backgroundImage = $newsItem['background_image'];
-                        $headline = $newsItem['headline'];
-                        $detail = $newsItem['detail'];
+                        $backgroundImage = trim((string) ($newsItem['background_image'] ?? ''));
+                        $headline = htmlspecialchars((string) ($newsItem['headline'] ?? ''), ENT_QUOTES, 'UTF-8');
+                        $detail = htmlspecialchars((string) ($newsItem['detail'] ?? ''), ENT_QUOTES, 'UTF-8');
 
-                        echo '<div class="news-slide">';
-                        echo '<img src="' . $backgroundImage . '" alt="News Image">';
+                        echo '<div class="news-slide' . ($backgroundImage === '' ? ' text-only' : '') . '">';
+                        if ($backgroundImage !== '') {
+                            $safeBackgroundImage = htmlspecialchars($backgroundImage, ENT_QUOTES, 'UTF-8');
+                            echo '<img src="' . $safeBackgroundImage . '" alt="' . $headline . '">';
+                        }
                         echo '<div class="news-content">';
                         echo '<h3>' . $headline . '</h3>';
                         echo '<p>' . $detail . '</p>';
@@ -126,16 +130,19 @@
                     }
                     ?>
                 </div>
-                <div class="news-dots">
+                <?php if (count($newsItems) > 1): ?>
+                <div class="news-dots" aria-label="Chọn tin nổi bật">
                     <?php
                     $totalSlides = count($newsItems);
                     for ($i = 0; $i < $totalSlides; $i++) {
-                        echo '<span class="news-dot" onclick="currentNewsSlide(' . ($i + 1) . ')"></span>';
+                        echo '<button class="news-dot" type="button" aria-label="Tin ' . ($i + 1) . '" onclick="currentNewsSlide(' . ($i + 1) . ')"></button>';
                     }
                     ?>
                 </div>
+                <?php endif; ?>
             </div>
             <div id="r-bottom-part">
+                <h2 class="mobile-section-title">Hình ảnh hoạt động</h2>
                 <div class="slideshow-container">
                     <?php
                     $imageDirectory = './physics/img/';
