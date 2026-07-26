@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-const MAX_DOWNLOAD_BYTES = 536870912; // 512 MiB
+const MAX_DOWNLOAD_BYTES = 5368709120; // 5 GiB
 const MAX_REDIRECTS = 5;
 
 session_start([
@@ -534,7 +534,7 @@ function downloadRemoteFile(string $initialUrl, string $directory): array
 
         if ($tooLarge || $progressTooLarge) {
             @unlink($temporaryPath);
-            return ['success' => false, 'message' => 'The remote file exceeds the 512 MB limit.', 'file' => '', 'bytes' => 0];
+            return ['success' => false, 'message' => 'The remote file exceeds the 5 GB limit.', 'file' => '', 'bytes' => 0];
         }
 
         if ($status >= 300 && $status < 400 && $location !== '') {
@@ -550,7 +550,7 @@ function downloadRemoteFile(string $initialUrl, string $directory): array
         if ($completed === false) {
             @unlink($temporaryPath);
             $message = str_contains(strtolower($curlError), 'maximum file size')
-                ? 'The remote file exceeds the 512 MB limit.'
+                ? 'The remote file exceeds the 5 GB limit.'
                 : 'The remote download failed: ' . ($curlError !== '' ? $curlError : 'unknown cURL error');
             return ['success' => false, 'message' => $message, 'file' => '', 'bytes' => 0];
         }
@@ -1033,7 +1033,7 @@ usort($files, static fn (array $left, array $right): int => $right['modified'] <
                 <input type="url" id="file_url" name="file_url" placeholder="https://example.com/archive.zip" required>
                 <button type="submit">Fetch file</button>
             </div>
-            <p class="limit">HTTP/HTTPS only · Public hosts only · Maximum file size 512 MB</p>
+            <p class="limit">HTTP/HTTPS only · Public hosts only · Maximum file size 5 GB</p>
         </form>
 
         <?php if ($message !== null): ?>
