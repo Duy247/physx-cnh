@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
     body {
       display: flex;
-      max-height: 100vh;
+      height: 100vh;
+      overflow: hidden;
       margin: 0;
       font-family: 'Montserrat', sans-serif;
       background-color: #1d1d52;
@@ -9,7 +10,8 @@
     .menu {
       width: 20%;
       background-color: #dce0e8;
-      height: 100%;
+      height: 100vh;
+      min-height: 0;
       text-align: center;
       transition: width 0.3s ease;
       position: relative;
@@ -48,6 +50,7 @@
       flex: 1;
       min-height: 0;
       overflow-y: scroll;
+      overscroll-behavior: contain;
       transition: opacity 0.3s ease;
     }
     .menu.retracted .book-container,
@@ -205,8 +208,10 @@
     @media (max-width: 768px) {
       body {
         flex-direction: column;
+        height: auto;
         min-height: 100vh;
         max-height: none;
+        overflow: auto;
       }
       .menu {
         width: 100%;
