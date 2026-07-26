@@ -96,11 +96,6 @@
       color: white;
       font-size: 12px;
     }
-    .book-actions .download-resource {
-      background: #dce0e8;
-      border: 1px solid #26245f;
-      color: #26245f;
-    } /* download action */
     .iframe-container {
       flex: 1;
       padding: 20px;
@@ -295,9 +290,6 @@
       .book-actions a {
         padding: 10px 6px;
         font-size: 14px;
-      }
-      .book-actions .download-resource {
-        display: none;
       }
       .book-actions .open-resource {
         flex-basis: 100%;

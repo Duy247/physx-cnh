@@ -161,9 +161,6 @@ $catalog = $catalogs[$type . ':' . $level] ?? $catalogs['book:pre-vpho'];
                     }
                     echo '</div><div class="book-actions">';
                     echo '<a class="open-resource" href="' . $safeUrl . '">' . ($isPdf ? 'Mở PDF' : 'Mở tài liệu') . '</a>';
-                    if ($isPdf) {
-                        echo '<a class="download-resource" href="' . $safeUrl . '" download>Tải xuống</a>';
-                    }
                     echo '</div></article>';
                 }
             }
