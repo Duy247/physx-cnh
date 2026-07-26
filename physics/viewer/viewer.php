@@ -1,106 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>PDF Viewer</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
-    <script src="./pdf.min.js"></script>
-    <style>
-        /* Add your custom styles here */
-    </style>
-</head>
-<body>
-    <div id="notification">Đang tải ...</div>
-    <div class="navigation">
-        <button id="prevPage">&lt;</button>
-        <input type="number" id="pageInput" min="1">
-        <button id="jumpPage">Nhảy</button>
-        <button id="nextPage">&gt;</button>
-        
-        <br><span id="pageInfo"></span>
-    </div>
-    <div id="pdf-container">
-        <canvas id="pdf-canvas"></canvas>
-    </div>
-    <button class="download-button"><a href="" id="downloadButton" download>Tải xuống</a></button>
-    
-    <a href="/welcome"><img src="/image/logo.png" alt="logo" style="width: 40%; display: block; margin: 0 auto;"></a>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var url = <?php echo json_encode($_GET['url'] ?? ''); ?>;
+<?php
+declare(strict_types=1);
 
-            var pdfjsLib = window['pdfjs-dist/build/pdf'];
-            pdfjsLib.GlobalWorkerOptions.workerSrc = './pdf.worker.min.js';
-            var pdfDoc = null;
-            var currentPage = 1;
-            var totalPages = 0;
-            var scale = 1.5;
+$url = isset($_GET['url']) ? trim((string) $_GET['url']) : '';
+$parts = $url !== '' ? parse_url($url) : false;
 
-            function renderPage(num) {
-                pdfDoc.getPage(num).then(function(page) {
-                    var viewport = page.getViewport({scale: scale});
-                    var canvas = document.getElementById('pdf-canvas');
-                    var ctx = canvas.getContext('2d');
-                    canvas.height = viewport.height;
-                    canvas.width = viewport.width;
+if ($parts === false || !isset($parts['path'])) {
+    http_response_code(400);
+    header('Content-Type: text/plain; charset=utf-8');
+    echo 'Invalid PDF URL.';
+    exit;
+}
 
-                    var renderContext = {
-                        canvasContext: ctx,
-                        viewport: viewport
-                    };
-                    page.render(renderContext);
-                });
-            }
+if (isset($parts['host'])) {
+    $host = strtolower($parts['host']);
+    if ($host !== 'physx-cnh.com' && $host !== 'www.physx-cnh.com') {
+        http_response_code(400);
+        header('Content-Type: text/plain; charset=utf-8');
+        echo 'External PDF URLs are not allowed.';
+        exit;
+    }
+}
 
-            function showPage(pageNum) {
-                if (pageNum < 1 || pageNum > totalPages) {
-                    return;
-                }
-                currentPage = pageNum;
-                renderPage(pageNum);
-                updatePageInfo();
-            }
+$decodedPath = rawurldecode($parts['path']);
+if (
+    strpos($decodedPath, '/physics/') !== 0 ||
+    strpos($decodedPath, '..') !== false ||
+    strtolower(pathinfo($decodedPath, PATHINFO_EXTENSION)) !== 'pdf'
+) {
+    http_response_code(400);
+    header('Content-Type: text/plain; charset=utf-8');
+    echo 'Invalid PDF path.';
+    exit;
+}
 
-            function updatePageInfo() {
-                document.getElementById('pageInfo').textContent = 'Page ' + currentPage + ' of ' + totalPages;
-                document.getElementById('pageInput').value = currentPage;
-            }
-
-            pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
-                pdfDoc = pdfDoc_;
-                totalPages = pdfDoc.numPages;
-
-                showPage(currentPage);
-
-                document.getElementById('prevPage').addEventListener('click', function() {
-                    if (currentPage > 1) {
-                        showPage(currentPage - 1);
-                    }
-                });
-
-                document.getElementById('nextPage').addEventListener('click', function() {
-                    if (currentPage < totalPages) {
-                        showPage(currentPage + 1);
-                    }
-                });
-
-                document.getElementById('jumpPage').addEventListener('click', function() {
-                    var pageNum = parseInt(document.getElementById('pageInput').value);
-                    if (!isNaN(pageNum) && pageNum >= 1 && pageNum <= totalPages) {
-                        showPage(pageNum);
-                    }
-                });
-
-                updatePageInfo();
-
-                var notification = document.getElementById('notification');
-                notification.parentNode.removeChild(notification);
-
-                var downloadButton = document.getElementById('downloadButton');
-                downloadButton.href = url;
-            });
-        });
-    </script>
-</body>
-</html>
+$encodedPath = implode('/', array_map('rawurlencode', explode('/', $decodedPath)));
+header('Cache-Control: no-store');
+header('Location: ' . $encodedPath, true, 302);
+exit;

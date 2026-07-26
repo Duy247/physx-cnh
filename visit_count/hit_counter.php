@@ -1,25 +1,65 @@
 <?php
-session_start(); // Start a session
+declare(strict_types=1);
 
-$count_file = './visit.txt'; // Store outside the public directory
+header('Content-Type: application/json; charset=utf-8');
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Pragma: no-cache');
 
-// Generate a token if it doesn't exist in the session
-if (!isset($_SESSION['token'])) {
-    $_SESSION['token'] = bin2hex(random_bytes(16)); // Generate a secure token
-    setcookie('token', $_SESSION['token'], time() + (86400 * 30), '/'); // Store in a cookie for 30 days
+function respond(int $status, array $payload): void
+{
+    http_response_code($status);
+    echo json_encode($payload, JSON_UNESCAPED_UNICODE);
+    exit;
 }
 
-// Check if the token from the request matches the session token
-if (isset($_COOKIE['token']) && $_COOKIE['token'] === $_SESSION['token']) {
-    $count = file_exists($count_file) ? (int)file_get_contents($count_file) : 0;
+$method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
+if ($method !== 'GET' && $method !== 'POST') {
+    header('Allow: GET, POST');
+    respond(405, ['error' => 'Method not allowed']);
+}
+
+$countFile = __DIR__ . DIRECTORY_SEPARATOR . 'visit.txt';
+$handle = @fopen($countFile, 'c+');
+if ($handle === false) {
+    respond(500, ['error' => 'Counter storage is unavailable']);
+}
+
+$lockType = $method === 'POST' ? LOCK_EX : LOCK_SH;
+if (!flock($handle, $lockType)) {
+    fclose($handle);
+    respond(500, ['error' => 'Unable to lock counter storage']);
+}
+
+rewind($handle);
+$rawCount = stream_get_contents($handle);
+$rawCount = $rawCount === false ? '' : trim($rawCount);
+
+if (!preg_match('/^\d+$/', $rawCount)) {
+    flock($handle, LOCK_UN);
+    fclose($handle);
+    respond(500, ['error' => 'Counter storage contains invalid data']);
+}
+
+$count = (int) $rawCount;
+
+if ($method === 'POST') {
+    if ($count === PHP_INT_MAX) {
+        flock($handle, LOCK_UN);
+        fclose($handle);
+        respond(500, ['error' => 'Counter has reached its maximum value']);
+    }
+
     $count++;
-    file_put_contents($count_file, $count);
+    rewind($handle);
 
-    header('Content-Type: application/json');
-    echo json_encode(['count' => $count]);
-} else {
-    // Deny access if tokens don't match
-    http_response_code(403); // Forbidden
-    echo json_encode(['error' => 'Invalid token']);
+    if (!ftruncate($handle, 0) || fwrite($handle, (string) $count) === false || !fflush($handle)) {
+        flock($handle, LOCK_UN);
+        fclose($handle);
+        respond(500, ['error' => 'Unable to update counter storage']);
+    }
 }
-?>
+
+flock($handle, LOCK_UN);
+fclose($handle);
+
+respond(200, ['count' => $count]);

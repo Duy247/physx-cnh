@@ -1,6 +1,8 @@
 DirectoryIndex welcome.php index.php index.html
 ErrorDocument 404 /404.php
 RewriteEngine On
+RewriteRule ^nav/physics_mobile(?:\.php)?$ /nav/physics [R=301,L,NE]
+
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.*)$ $1.php [L]
 

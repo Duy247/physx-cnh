@@ -8,11 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./image/favicon.ico">
     <script src="https://unpkg.com/gojs@3.0.11/release/go.js"></script>
-    <link rel="stylesheet" href="/css/common_reverse.css">
+    <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/roadmap.css">      
 </head>
 <body>
-    <div id="menu">  
+    <header class="mobile-header">
+        <a href="/welcome" aria-label="PhysX-CNH home"><img src="/image/logo.png" alt="PhysX-CNH"></a>
+        <button id="menu-toggle" type="button" aria-controls="menu" aria-expanded="false" aria-label="Mở menu">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+    </header>
+    <div id="menu">
         <div id="m-top-part">
             <img src="/image/logo.png" class="logo">
         </div>
@@ -47,6 +53,7 @@
             </div>
         </div>
     </div>
+    <div id="menu-backdrop" hidden></div>
 
     <div id="content">
         <div id="sample">
@@ -67,59 +74,8 @@
             $nodeDataList = './roadmap/node_data.txt'; // Path to your text file
             echo "const nodeDataList = " . file_get_contents($nodeDataList) . ";";
         ?>
-        
-        function isMobileDevice() {
-            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        }
-        var booksPreVpho = document.getElementById('booksPreVpho');
-        var booksVn = document.getElementById('booksVn');
-        var booksEn = document.getElementById('booksEn');
-        var materialsPreVpho = document.getElementById('materialsPreVpho');
-        var materialsOlympiad = document.getElementById('materialsOlympiad');
-        var materialsVltt = document.getElementById('materialsVltt');
-        var lessons = document.getElementById('lessons');
-        var donate = document.getElementById('donate');
-        
-        if (isMobileDevice()) {         
-            booksPreVpho.href = "./nav/physics_mobile?type=book&level=pre-vpho";
-            booksVn.href = "./nav/physics_mobile?type=book&level=vpho-vn";
-            booksEn.href = "./nav/physics_mobile?type=book&level=vpho-en";
-            materialsPreVpho.href = "./nav/physics_mobile?type=material&level=pho";
-            materialsOlympiad.href = "./nav/physics_mobile?type=paper-sol&level=pho";
-            materialsVltt.href = "./nav/physics_mobile?type=magazines&level=all";
-            lessons.href = "./nav/physics_mobile?type=lessons&level=all";
-        }
-        function updateHitCount() {
-            fetch('./visit_count/hit_counter.php') 
-                .then(response => response.json())
-                .then(data => {
-                    const hitCount = data.count;
-                    document.getElementById('hitCount').textContent = hitCount;
-                })
-                .catch(error => {
-                    console.error('Error fetching hit count:', error);
-                });
-        }
-
-        window.addEventListener('load', updateHitCount);
-        document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
-            toggle.addEventListener('click', function(event) {
-                event.preventDefault();
-                var dropdown = toggle.parentElement;
-                dropdown.classList.toggle('active');
-            });
-        });
-
-        document.addEventListener('click', function(event) {
-            var dropdowns = document.querySelectorAll('.dropdown');
-            dropdowns.forEach(function(dropdown) {
-                if (!dropdown.contains(event.target)) {
-                    dropdown.classList.remove('active');
-                }
-            });
-        });
-        
-    </script> 
+    </script>
+    <script src="/js/site-shell.js"></script>
     <script id="code">
   function init() {
     myDiagram = new go.Diagram('myDiagramDiv', {

@@ -1,147 +1,138 @@
+<?php
+declare(strict_types=1);
+
+$catalogs = [
+    'book:pre-vpho' => [
+        'title' => 'Sách trước Vòng chọn VPhO',
+        'heading' => 'SÁCH IN / ẤN BẢN',
+        'subheading' => 'Trước vòng chọn VPhO',
+        'file' => __DIR__ . '/../physics/books-pre-vpho.txt',
+        'welcome' => '/nav/welcome/books-pre-vpho.html',
+    ],
+    'book:vpho-vn' => [
+        'title' => 'Sách VPhO và Vòng chọn (VN)',
+        'heading' => 'SÁCH IN / ẤN BẢN',
+        'subheading' => 'VPhO và vòng chọn',
+        'file' => __DIR__ . '/../physics/books-vpho-vn.txt',
+        'welcome' => '/nav/welcome/books-vpho-vn.html',
+    ],
+    'book:vpho-en' => [
+        'title' => 'Sách VPhO và Vòng chọn (EN)',
+        'heading' => 'SÁCH IN / ẤN BẢN — TIẾNG ANH',
+        'subheading' => 'VPhO và vòng chọn',
+        'file' => __DIR__ . '/../physics/books-vpho-en.txt',
+        'welcome' => '/nav/welcome/books-vpho-en.html',
+    ],
+    'material:pho' => [
+        'title' => 'Tài liệu và handouts',
+        'heading' => 'TÀI LIỆU / HANDOUTS',
+        'subheading' => 'VPhO trở lên',
+        'file' => __DIR__ . '/../physics/materials-pho.txt',
+        'welcome' => '/nav/welcome/materials-pho.html',
+    ],
+    'paper-sol:pho' => [
+        'title' => 'Đề thi & Đáp án',
+        'heading' => 'ĐỀ THI & ĐÁP ÁN',
+        'subheading' => 'PhO cấp khu vực đến quốc tế',
+        'file' => __DIR__ . '/../physics/paper-sol-pho.txt',
+        'welcome' => '/nav/welcome/paper-sol-pho.html',
+    ],
+    'magazines:all' => [
+        'title' => 'Tạp chí',
+        'heading' => 'TẠP CHÍ',
+        'subheading' => 'PhO cấp khu vực đến quốc tế',
+        'file' => __DIR__ . '/../physics/magazines.txt',
+        'welcome' => '/nav/welcome/magazines.html',
+    ],
+    'lessons:all' => [
+        'title' => 'Nội dung ngày học',
+        'heading' => 'NỘI DUNG NGÀY HỌC',
+        'subheading' => 'Đội tuyển vật lí CNH',
+        'file' => __DIR__ . '/../physics/lessons.txt',
+        'welcome' => '/nav/welcome/lessons.html',
+    ],
+];
+
+$type = isset($_GET['type']) ? (string) $_GET['type'] : 'book';
+$level = isset($_GET['level']) ? (string) $_GET['level'] : 'pre-vpho';
+$catalog = $catalogs[$type . ':' . $level] ?? $catalogs['book:pre-vpho'];
+?>
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-  <?php
-    $type = isset($_GET['type']) ? $_GET['type'] : 'book';
-    $level = isset($_GET['level']) ? $_GET['level'] : 'pre-vpho';
-    
-    $title = 'Tài liệu HSG Vật lí';
-    
-    if ($type === 'book' && $level === 'pre-vpho') {
-      $title = 'Sách trước Vòng chọn VPhO';
-    } elseif ($type === 'book' && $level === 'vpho-vn') {
-      $title = 'Sách VPhO và Vòng chọn (VN)';
-    } elseif ($type === 'book' && $level === 'vpho-en') {
-      $title = 'Sách VPhO và Vòng chọn (EN)';
-    } elseif ($type ==='material' && $level === 'pho') {
-      $title = 'Tài liệu và handouts';
-    } elseif ($type ==='paper-sol' && $level === 'pho') {
-      $title = 'Đề thi & Đáp án';
-    } elseif ($type ==='magazines' && $level === 'all') {
-      $title = 'Tạp chí';
-    } elseif ($type ==='lessons' && $level === 'all') {
-      $title = 'Nội dung ngày học';
-    }  else {
-      $title = 'Tài liệu HSG Vật lí khác';
-    }
-  ?>
-  
-  <title><?php echo $title; ?></title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="shortcut icon" type="image/x-icon" href="../image/favicon.ico">
-  <link rel="stylesheet" href="./style.css"> 
-  <meta charset="UTF-8">
-  <style>
-    
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo htmlspecialchars($catalog['title'], ENT_QUOTES, 'UTF-8'); ?></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+    <link rel="stylesheet" href="/nav/style.css">
 </head>
 <body>
-  <div class="menu">  
-    <ul>
-    <div class="fixed-header">
-    <a href="/welcome">
-      <div id="logo-container">
-      <img src="/image/logo.png" alt="logo" class="logo">
-      </div>
-    </a>
-	  
-    <?php
-    $type = isset($_GET['type']) ? $_GET['type'] : 'none';
-    $level = isset($_GET['level']) ? $_GET['level'] : 'none';
-    
-    if ($type ==='book' && $level === 'pre-vpho') {
-      echo '<h2>SÁCH IN / ẤN BẢN</h2>';
-      echo '<h3>Trước vòng chọn VPhO</h3>';
-      $filePath = '../physics/books-pre-vpho.txt';
-    } elseif ($type ==='book' && $level === 'vpho-vn') {
-        echo '<h2>SÁCH IN / ẤN BẢN</h2>';
-        echo '<h3>VPhO và vòng chọn</h3>';
-        $filePath = '../physics/books-vpho-vn.txt';
-    } elseif ($type ==='book' && $level === 'vpho-en') {
-        echo '<h2>SÁCH IN / ẤN BẢN<br>Tiếng Anh</h2>';
-        echo '<h3>VPhO và vòng chọn</h3>';
-        $filePath = '../physics/books-vpho-en.txt';
-    } elseif ($type ==='material' && $level === 'pho') {
-        echo '<h2>TÀI LIỆU / HANDOUTS</h2>';
-        echo '<h3>VPhO trở lên</h3>';
-        $filePath = '../physics/materials-pho.txt';
-    } elseif ($type ==='paper-sol' && $level === 'pho') {
-      echo '<h2>ĐỀ THI & ĐÁP ÁN</h2>';
-      echo '<h3>PhO cấp khu vực đến quốc tế</h3>';
-      $filePath = '../physics/paper-sol-pho.txt';
-    } elseif ($type ==='magazines' && $level === 'all') {
-      echo '<h2>TẠP CHÍ</h2>';
-      echo '<h3>PhO cấp khu vực đến quốc tế</h3>';
-      $filePath = '../physics/magazines.txt';
-    } elseif ($type ==='lessons' && $level === 'all') {
-      echo '<h2>NỘI DUNG NGÀY HỌC</h2>';
-      echo '<h3>Đội tuyển vật lí CNH</h3>';
-      $filePath = '../physics/lessons.txt';
-    } else {
-        echo '<h3>Khác</h3>';
-        $filePath = '../physics/books-other.txt';
-    }
-    ?>
-    <div class="search-container">
-      <input type="text" id="search-input" placeholder="Tìm sách theo tên...">
-    </div>
+    <aside class="menu" id="catalog-menu">
+        <div class="fixed-header">
+            <a href="/welcome" aria-label="PhysX-CNH home">
+                <div id="logo-container"><img src="/image/logo.png" alt="PhysX-CNH" class="logo"></div>
+            </a>
+            <h2><?php echo htmlspecialchars($catalog['heading'], ENT_QUOTES, 'UTF-8'); ?></h2>
+            <h3><?php echo htmlspecialchars($catalog['subheading'], ENT_QUOTES, 'UTF-8'); ?></h3>
+            <div class="search-container">
+                <label class="visually-hidden" for="search-input">Tìm tài liệu</label>
+                <input type="search" id="search-input" placeholder="Tìm theo tên hoặc tác giả...">
+            </div>
+            <div class="sort-options">
+                <label for="sort-select">Sắp theo:</label>
+                <select id="sort-select">
+                    <option value="title">Tên tài liệu</option>
+                    <option value="author">Tác giả</option>
+                </select>
+            </div>
+        </div>
 
-    <div class="sort-options">
-      <label for="sort-select">Sắp theo:</label>
-      <select id="sort-select">
-        <option value="title">Tên tài liệu</option>
-        <option value="author">Tác giả</option>
-      </select>
-    </div>
-    </div>
-    
-    <div class="book-container">
-    <?php          
-      $lines = file($filePath);           
-      foreach ($lines as $line) {                
-          $bookData = explode('|', $line);               
-          if (count($bookData) == 4) {
-              $title = trim($bookData[0]);
-              $author = trim($bookData[1]);
-              $file = trim($bookData[2]);
-              $description = trim($bookData[3]);
-              echo '<a class="book-item" data-file="' . $file . '" data-title="' . htmlspecialchars($title) . '" data-author="' . htmlspecialchars($author) . '"><li>' . $title . '<br>' . $author . '<br>' . $description . '</li><hr></a> ';
-          }
-      }
-    ?>
-    </div>
-    
-    </ul>
-    <button class="menu-toggle" aria-label="Toggle Menu">&lt;</button>
-  </div>
-  <div class="iframe-container">
-    <iframe id="content-iframe" src="" frameborder="0"></iframe>
-  </div>
-  <script src="./script.js"></script> 
-  <script>
-    (function() {
-    var iframe = document.getElementById('content-iframe');
-    var type = '<?php echo $type; ?>';
-    var level = '<?php echo $level; ?>';
+        <div class="book-container" role="list">
+            <?php
+            $lines = @file($catalog['file'], FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+            if ($lines === false) {
+                echo '<p class="catalog-error">Không thể tải danh mục tài liệu.</p>';
+            } else {
+                foreach ($lines as $line) {
+                    $bookData = explode('|', $line);
+                    if (count($bookData) !== 4) {
+                        continue;
+                    }
 
-    if (type === 'book' && level === 'pre-vpho') {
-      iframe.src = './welcome/books-pre-vpho.html';
-    } else if (type === 'book' && level === 'vpho-vn') {
-      iframe.src = './welcome/books-vpho-vn.html';
-    } else if (type === 'book' && level === 'vpho-en') {
-      iframe.src = './welcome/books-vpho-en.html';
-    } else if (type === 'material' && level === 'pho') {
-      iframe.src = './welcome/materials-pho.html';
-    } else if (type === 'paper-sol' && level === 'pho') {
-      iframe.src = './welcome/paper-sol-pho.html';
-    } else if (type === 'magazines' && level === 'all') {
-      iframe.src = './welcome/magazines.html';
-    } else if (type === 'lessons' && level === 'all') {
-      iframe.src = './welcome/lessons.html';
-    } else {
-      iframe.src = './welcome/books-other.html';
-    }
-  })();
-  </script>
+                    [$title, $author, $file, $description] = array_map('trim', $bookData);
+                    if ($file === '' || $file[0] !== '/' || strpos($file, '..') !== false) {
+                        continue;
+                    }
+
+                    $resourceUrl = '/physics' . $file;
+                    $isPdf = strtolower(pathinfo($file, PATHINFO_EXTENSION)) === 'pdf';
+                    $searchTitle = htmlspecialchars(strip_tags($title), ENT_QUOTES, 'UTF-8');
+                    $searchAuthor = htmlspecialchars(strip_tags($author), ENT_QUOTES, 'UTF-8');
+                    $safeUrl = htmlspecialchars($resourceUrl, ENT_QUOTES, 'UTF-8');
+
+                    echo '<article class="book-item" role="listitem" data-title="' . $searchTitle . '" data-author="' . $searchAuthor . '">';
+                    echo '<div class="book-details"><strong>' . $title . '</strong><br>' . $author;
+                    if ($description !== '') {
+                        echo '<br><span class="book-description">' . $description . '</span>';
+                    }
+                    echo '</div><div class="book-actions">';
+                    echo '<a class="open-resource" href="' . $safeUrl . '">' . ($isPdf ? 'Mở PDF' : 'Mở tài liệu') . '</a>';
+                    if ($isPdf) {
+                        echo '<a class="download-resource" href="' . $safeUrl . '" download>Tải xuống</a>';
+                    }
+                    echo '</div></article>';
+                }
+            }
+            ?>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-controls="catalog-menu" aria-expanded="true" aria-label="Thu gọn danh mục">&lt;</button>
+    </aside>
+
+    <main class="iframe-container">
+        <iframe id="content-iframe" src="<?php echo htmlspecialchars($catalog['welcome'], ENT_QUOTES, 'UTF-8'); ?>" title="Trình xem tài liệu"></iframe>
+    </main>
+    <script src="/nav/script.js"></script>
 </body>
 </html>

@@ -13,6 +13,8 @@
       text-align: center;
       transition: width 0.3s ease;
       position: relative;
+      display: flex;
+      flex-direction: column;
     }
 
     #logo-container{
@@ -42,51 +44,60 @@
       color:black;
       font-size:14px;
     }
-    .menu ul {
-      list-style-type: none;
-      padding:0;
-      margin: 0;
-      height: 100vh;
+    .book-container {
+      flex: 1;
+      min-height: 0;
       overflow-y: scroll;
       transition: opacity 0.3s ease;
     }
-    .menu.retracted ul {
+    .menu.retracted .book-container,
+    .menu.retracted .fixed-header {
       opacity: 0;
       pointer-events: none;
     }
-    .menu li {
-      width:95%;
-      margin-bottom: 10px;
+    .book-item {
+      display: block;
+      width: 95%;
+      box-sizing: border-box;
+      margin: 0 auto 10px;
       background-color: #dce0e8;
+      border-bottom: 1px solid #1d1d52;
       border-radius: 4px;
       color: black;
       font-size: 14px;
       font-weight: bold;
-      padding-top:5px;
-      padding-bottom:5px;
+      padding: 8px;
     }
-    .menu li::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background-color: #26245f;
-      transition: left 0.2s ease;
-      z-index: -1;
+    .book-details {
+      line-height: 1.35;
     }
-    .menu li:hover {
-      transform: scale(1.00);
-      font-weight: bold;
+    .book-description {
+      font-weight: normal;
+    }
+    .book-actions {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      margin-top: 8px;
+    }
+    .book-actions a {
+      flex: 1;
+      padding: 7px 5px;
+      border-radius: 4px;
+      background: #26245f;
       color: white;
+      font-size: 12px;
     }
-    .menu li:hover::before {
-      left: 0;
-    }
+    .book-actions .download-resource {
+      background: #dce0e8;
+      border: 1px solid #26245f;
+      color: #26245f;
+    } /* download action */
     .iframe-container {
       flex: 1;
       padding: 20px;
+      height: 100vh;
+      box-sizing: border-box;
       transition: filter 0.3s ease;
     }
     .menu:hover ~ .iframe-container {
@@ -159,6 +170,21 @@
     z-index: 1; /* Ensure it's on top of the scrollable content */
     padding-bottom: 10px; /* Add some spacing below */
   }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .catalog-error {
+    padding: 16px;
+    color: #8b0000;
+  }
     /* Custom scroll bar styles */
     ::-webkit-scrollbar {
       width: 0px;
@@ -176,19 +202,43 @@
     ::-webkit-scrollbar-button {
       display: none;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       body {
         flex-direction: column;
+        min-height: 100vh;
+        max-height: none;
       }
       .menu {
         width: 100%;
         height: auto;
-        max-height: 200px;
-      }
-      .menu ul {
         max-height: none;
       }
+      .menu .fixed-header {
+        position: relative;
+      }
       .iframe-container {
-        height: calc(100vh - 260px);
+        display: none;
+      }
+      .book-container {
+        flex: none;
+        height: auto;
+        max-height: none;
+        overflow: visible;
+        padding-bottom: 16px;
+      }
+      .book-item {
+        width: calc(100% - 20px);
+        margin-bottom: 8px;
+      }
+      .menu-toggle {
+        display: none;
+      }
+      .menu h2 {
+        white-space: normal;
+        font-size: 1.2rem;
+      }
+      .book-actions a {
+        padding: 10px 6px;
+        font-size: 14px;
       }
     }
