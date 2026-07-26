@@ -65,7 +65,7 @@ $catalog = $catalogs[$type . ':' . $level] ?? $catalogs['book:pre-vpho'];
     <title><?php echo htmlspecialchars($catalog['title'], ENT_QUOTES, 'UTF-8'); ?></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
-    <link rel="stylesheet" href="/nav/style.css">
+    <link rel="stylesheet" href="/nav/style.css?v=20260726-1">
 </head>
 <body>
     <aside class="menu" id="catalog-menu">
@@ -133,6 +133,6 @@ $catalog = $catalogs[$type . ':' . $level] ?? $catalogs['book:pre-vpho'];
     <main class="iframe-container">
         <iframe id="content-iframe" src="<?php echo htmlspecialchars($catalog['welcome'], ENT_QUOTES, 'UTF-8'); ?>" title="Trình xem tài liệu"></iframe>
     </main>
-    <script src="/nav/script.js"></script>
+    <script src="/nav/script.js?v=20260726-1"></script>
 </body>
 </html>

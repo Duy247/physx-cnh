@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
-    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/common.css?v=20260726-1">
     <link rel="stylesheet" href="/css/daily.css">
 </head>
 <body>
@@ -53,6 +53,6 @@
     <main id="content">
         <iframe id="content-iframe" src="/daily/exercise.php" title="Bài tập hàng ngày"></iframe>
     </main>
-    <script src="/js/site-shell.js"></script>
+    <script src="/js/site-shell.js?v=20260726-1"></script>
 </body>
 </html>

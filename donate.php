@@ -423,7 +423,7 @@
             }
         }
     </style>
-    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/common.css?v=20260726-1">
 
 </head>
 <body>
@@ -472,7 +472,7 @@
         <iframe id="content-iframe" src="./physics/donate.html" frameborder="0"></iframe>
     </div>
 
-    <script src="/js/site-shell.js"></script>
+    <script src="/js/site-shell.js?v=20260726-1"></script>
 </body>
 </html>
 

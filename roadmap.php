@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./image/favicon.ico">
     <script src="https://unpkg.com/gojs@3.0.11/release/go.js"></script>
-    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/common.css?v=20260726-1">
     <link rel="stylesheet" href="/css/roadmap.css">      
 </head>
 <body>
@@ -75,7 +75,7 @@
             echo "const nodeDataList = " . file_get_contents($nodeDataList) . ";";
         ?>
     </script>
-    <script src="/js/site-shell.js"></script>
+    <script src="/js/site-shell.js?v=20260726-1"></script>
     <script id="code">
   function init() {
     myDiagram = new go.Diagram('myDiagramDiv', {
