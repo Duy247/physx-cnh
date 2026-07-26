@@ -17,6 +17,8 @@ if (!isset($_SESSION['hub_csrf']) || !is_string($_SESSION['hub_csrf'])) {
 $downloadDir = __DIR__ . DIRECTORY_SEPARATOR . 'downloads';
 $message = null;
 $messageType = 'success';
+$fileMessage = null;
+$fileMessageType = 'success';
 
 if (!is_dir($downloadDir) && !mkdir($downloadDir, 0755, true) && !is_dir($downloadDir)) {
     http_response_code(500);
@@ -186,6 +188,44 @@ function callGitHubApi(string $path): array
 function encodeGitHubPath(string $value): string
 {
     return implode('/', array_map('rawurlencode', explode('/', $value)));
+}
+
+/**
+ * @return array{success: bool, message: string}
+ */
+function deleteStoredFile(string $requestedName, string $directory): array
+{
+    if (
+        $requestedName === ''
+        || basename($requestedName) !== $requestedName
+        || str_contains($requestedName, "\0")
+        || str_starts_with($requestedName, '.')
+    ) {
+        return ['success' => false, 'message' => 'Invalid filename.'];
+    }
+
+    $resolvedDirectory = realpath($directory);
+    $candidate = $resolvedDirectory === false
+        ? false
+        : $resolvedDirectory . DIRECTORY_SEPARATOR . $requestedName;
+    $resolvedFile = $candidate === false ? false : realpath($candidate);
+
+    if (
+        $resolvedDirectory === false
+        || $candidate === false
+        || $resolvedFile === false
+        || !str_starts_with($resolvedFile, $resolvedDirectory . DIRECTORY_SEPARATOR)
+        || !is_file($resolvedFile)
+        || is_link($candidate)
+    ) {
+        return ['success' => false, 'message' => 'The selected file was not found.'];
+    }
+
+    if (!unlink($resolvedFile)) {
+        return ['success' => false, 'message' => 'The selected file could not be deleted.'];
+    }
+
+    return ['success' => true, 'message' => 'Deleted ' . $requestedName . '.'];
 }
 
 /**
@@ -594,6 +634,12 @@ function downloadRemoteFile(string $initialUrl, string $directory): array
 $githubResult = null;
 $githubUrl = '';
 
+if (isset($_SESSION['hub_flash']) && is_array($_SESSION['hub_flash'])) {
+    $fileMessage = (string) ($_SESSION['hub_flash']['message'] ?? '');
+    $fileMessageType = (string) ($_SESSION['hub_flash']['type'] ?? 'success');
+    unset($_SESSION['hub_flash']);
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $message === null) {
     $submittedToken = (string) ($_POST['csrf_token'] ?? '');
     if (!hash_equals($_SESSION['hub_csrf'], $submittedToken)) {
@@ -612,6 +658,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $message === null) {
                 ? $result['message'] . ' ' . $result['file'] . ' (' . formatBytes($result['bytes']) . ')'
                 : $result['message'];
             $messageType = $result['success'] ? 'success' : 'error';
+        } elseif ($action === 'delete_file') {
+            $requestedName = (string) ($_POST['file_name'] ?? '');
+            $result = deleteStoredFile($requestedName, $downloadDir);
+            if ($result['success']) {
+                $_SESSION['hub_flash'] = ['message' => $result['message'], 'type' => 'success'];
+                header('Location: /hub/#files-title', true, 303);
+                exit;
+            }
+            $fileMessage = $result['message'];
+            $fileMessageType = 'error';
         } else {
             http_response_code(400);
             $message = 'Unknown action.';
@@ -766,6 +822,7 @@ usort($files, static fn (array $left, array $right): int => $right['modified'] <
         }
         .notice.success { color: var(--success); background: rgba(52, 211, 153, 0.08); }
         .notice.error { color: var(--error); background: rgba(251, 113, 133, 0.08); }
+        .inventory-notice { margin: 0 0 18px; }
         .inventory-heading {
             display: flex;
             align-items: end;
@@ -810,6 +867,7 @@ usort($files, static fn (array $left, array $right): int => $right['modified'] <
         .file-link {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             min-height: 40px;
             padding: 0 14px;
             background: #21304b;
@@ -817,6 +875,25 @@ usort($files, static fn (array $left, array $right): int => $right['modified'] <
             text-decoration: none;
         }
         .file-link:hover { background: #2c4165; }
+        .file-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .delete-form {
+            margin: 0;
+        }
+        .delete-button {
+            min-height: 40px;
+            padding: 0 14px;
+            border: 1px solid rgba(251, 113, 133, 0.55);
+            background: rgba(251, 113, 133, 0.1);
+            color: #fda4af;
+        }
+        .delete-button:hover {
+            border-color: var(--error);
+            background: rgba(251, 113, 133, 0.18);
+        }
         .result-card {
             margin-top: 22px;
             padding: 20px;
@@ -935,14 +1012,17 @@ usort($files, static fn (array $left, array $right): int => $right['modified'] <
             .action-link,
             .copy-button { width: 100%; }
             .file-row {
-                grid-template-columns: 1fr auto;
-                gap: 8px 12px;
+                grid-template-columns: 1fr;
+                gap: 8px;
             }
             .file-meta { white-space: normal; }
-            .file-link {
-                grid-column: 2;
-                grid-row: 1 / span 2;
+            .file-actions {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin-top: 6px;
             }
+            .delete-form,
+            .delete-button { width: 100%; }
         }
     </style>
 </head>
@@ -1047,6 +1127,10 @@ usort($files, static fn (array $left, array $right): int => $right['modified'] <
             <span class="count"><?= count($files) ?> file<?= count($files) === 1 ? '' : 's' ?></span>
         </div>
 
+        <?php if ($fileMessage !== null): ?>
+            <div class="notice inventory-notice <?= escapeHtml($fileMessageType) ?>" role="status"><?= escapeHtml($fileMessage) ?></div>
+        <?php endif; ?>
+
         <?php if ($files === []): ?>
             <p class="empty">No files are available yet.</p>
         <?php else: ?>
@@ -1058,7 +1142,15 @@ usort($files, static fn (array $left, array $right): int => $right['modified'] <
                             <?= escapeHtml(formatBytes((int) $file['size'])) ?><br>
                             <?= escapeHtml(gmdate('Y-m-d H:i', (int) $file['modified'])) ?> UTC
                         </span>
-                        <a class="file-link" href="/hub/download.php?file=<?= rawurlencode($file['name']) ?>">Download</a>
+                        <div class="file-actions">
+                            <a class="file-link" href="/hub/download.php?file=<?= rawurlencode($file['name']) ?>">Download</a>
+                            <form class="delete-form" method="post" data-delete-form data-file-name="<?= escapeHtml($file['name']) ?>">
+                                <input type="hidden" name="csrf_token" value="<?= escapeHtml($_SESSION['hub_csrf']) ?>">
+                                <input type="hidden" name="action" value="delete_file">
+                                <input type="hidden" name="file_name" value="<?= escapeHtml($file['name']) ?>">
+                                <button class="delete-button" type="submit" aria-label="Delete <?= escapeHtml($file['name']) ?>">Delete</button>
+                            </form>
+                        </div>
                     </li>
                 <?php endforeach; ?>
             </ul>
@@ -1078,6 +1170,16 @@ usort($files, static fn (array $left, array $right): int => $right['modified'] <
             button.textContent = 'Copy failed';
         }
         window.setTimeout(() => { button.textContent = originalLabel; }, 1600);
+    });
+
+    document.addEventListener('submit', (event) => {
+        const form = event.target.closest('[data-delete-form]');
+        if (!form) return;
+
+        const fileName = form.dataset.fileName || 'this file';
+        if (!window.confirm(`Permanently delete "${fileName}"?`)) {
+            event.preventDefault();
+        }
     });
 </script>
 </body>
