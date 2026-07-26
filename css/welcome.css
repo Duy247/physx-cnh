@@ -274,18 +274,34 @@ to {background-position: -100px 0px;background-size:2250px;}
     margin: auto;
     top: 50%;
     transform: translateY(-50%);
-    width: 80%; 
-    max-width: 600px; 
+    width: min(80vw, calc(70.64vh - 23px));
+    max-width: 600px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content a {
+    display: block;
+}
+
+.modal-content img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
 }
 
 .close {
     position: absolute;
     top: 10px;
     right: 20px;
+    z-index: 1;
+    padding: 0;
+    border: 0;
+    background: transparent;
     color: #aaa;
+    font-family: Arial, sans-serif;
     font-size: 56px;
+    line-height: 1;
     font-weight: bold;
     cursor: pointer;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);

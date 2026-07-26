@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./image/favicon.ico">
     <link rel="stylesheet" href="/css/common.css?v=20260726-1">
-    <link rel="stylesheet" href="/css/welcome.css?v=20260726-2">
+    <link rel="stylesheet" href="/css/welcome.css?v=20260726-3">
         
 </head>
 <body>
@@ -162,10 +162,12 @@
         </div>
     </div>
 
-    <div id="newYearModal" class="modal">
+    <div id="collaborationModal" class="modal" role="dialog" aria-modal="true" aria-label="Tìm cộng tác viên PhysX-CNH">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <img src="/newyear/img.png" alt="New Year Poster" style="width:100%; border-radius: 10px;">
+            <button class="close" type="button" aria-label="Đóng thông báo">&times;</button>
+            <a href="mailto:duy5a247@gmail.com?subject=Cộng tác duy trì PhysX-CNH" aria-label="Gửi email đăng ký cộng tác duy trì PhysX-CNH">
+                <img src="/newyear/img.png?v=20260726-1" alt="Tìm cộng tác viên duy trì PhysX-CNH, cập nhật tài liệu, đề thi mới nhất cùng lời giải">
+            </a>
         </div>
     </div>
 
@@ -204,6 +206,9 @@
             var i;
             var newsSlides = document.getElementsByClassName("news-slide");
             var newsDots = document.getElementsByClassName("news-dot");
+            if (newsSlides.length === 0) {
+                return;
+            }
             if (n > newsSlides.length) {
                 newsSlideIndex = 1;
             }
@@ -217,21 +222,30 @@
                 newsDots[i].className = newsDots[i].className.replace(" active", "");
             }
             newsSlides[newsSlideIndex - 1].style.display = "block";
-            newsDots[newsSlideIndex - 1].className += " active";
+            if (newsDots[newsSlideIndex - 1]) {
+                newsDots[newsSlideIndex - 1].className += " active";
+            }
         }
 
-        var newsSlideInterval = setInterval(function() {
-            plusNewsSlides(1);
-        }, 30000);
+        var newsSlideInterval = null;
+        if (document.getElementsByClassName("news-slide").length > 1) {
+            newsSlideInterval = setInterval(function() {
+                plusNewsSlides(1);
+            }, 30000);
+        }
 
         var newsSlideshow = document.querySelector(".news-slideshow-container");
         newsSlideshow.addEventListener("mouseover", function() {
-            clearInterval(newsSlideInterval);
+            if (newsSlideInterval) {
+                clearInterval(newsSlideInterval);
+            }
         });
         newsSlideshow.addEventListener("mouseout", function() {
-            newsSlideInterval = setInterval(function() {
-                plusNewsSlides(1);
-            }, 10000);
+            if (document.getElementsByClassName("news-slide").length > 1) {
+                newsSlideInterval = setInterval(function() {
+                    plusNewsSlides(1);
+                }, 10000);
+            }
         });
 
         const headings = document.querySelectorAll('.news-content h3');
@@ -271,24 +285,31 @@
         }
 
         window.onload = function() {
-            var modal = document.getElementById("newYearModal");
+            var modal = document.getElementById("collaborationModal");
             var span = document.getElementsByClassName("close")[0];
 
-            if (!getCookie("seenNewYearPoster")) {
+            if (!getCookie("seenCollaborationPosterV1")) {
                 modal.style.display = "block";
             }
 
-            span.onclick = function() {
+            function closeCollaborationModal() {
                 modal.style.display = "none";
-                setCookie("seenNewYearPoster", "true", 3);
+                setCookie("seenCollaborationPosterV1", "true", 3);
             }
+
+            span.onclick = closeCollaborationModal;
 
             window.onclick = function(event) {
                 if (event.target == modal) {
-                    modal.style.display = "none";
-                    setCookie("seenNewYearPoster", "true", 3);
+                    closeCollaborationModal();
                 }
             }
+
+            window.addEventListener("keydown", function(event) {
+                if (event.key === "Escape" && modal.style.display === "block") {
+                    closeCollaborationModal();
+                }
+            });
         }
     </script> 
 </body>
