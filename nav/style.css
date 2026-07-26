@@ -7,6 +7,11 @@
       font-family: 'Montserrat', sans-serif;
       background-color: #1d1d52;
     }
+    body > #menu,
+    .mobile-header,
+    #menu-backdrop {
+      display: none;
+    }
     .menu {
       width: 20%;
       background-color: #dce0e8;
@@ -213,13 +218,27 @@
         max-height: none;
         overflow: auto;
       }
+      .mobile-header {
+        display: flex;
+      }
+      body > #menu {
+        display: flex;
+      }
       .menu {
         width: 100%;
         height: auto;
         max-height: none;
       }
       .menu .fixed-header {
-        position: relative;
+        position: sticky;
+        top: 56px;
+        z-index: 2;
+        padding: 14px 16px 12px;
+        box-sizing: border-box;
+        box-shadow: 0 3px 10px rgba(20, 24, 55, 0.14);
+      }
+      #logo-container {
+        display: none;
       }
       .iframe-container {
         display: none;
@@ -239,8 +258,39 @@
         display: none;
       }
       .menu h2 {
+        margin-top: 0;
         white-space: normal;
         font-size: 1.2rem;
+      }
+      .menu h3 {
+        margin-bottom: 12px;
+      }
+      .search-container {
+        margin-bottom: 10px;
+      }
+      .search-container input {
+        width: 100%;
+        min-height: 42px;
+        padding: 8px 10px;
+        box-sizing: border-box;
+        border: 1px solid #77769b;
+        border-radius: 6px;
+        background: #fff;
+        font: inherit;
+      }
+      .sort-options {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 0;
+      }
+      .sort-options label {
+        margin: 0;
+      }
+      .sort-options select {
+        min-height: 42px;
+        padding: 7px 10px;
       }
       .book-actions a {
         padding: 10px 6px;
