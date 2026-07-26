@@ -10,8 +10,8 @@ session_start([
     'use_strict_mode' => true,
 ]);
 
-if (!isset($_SESSION['blackmagic_csrf']) || !is_string($_SESSION['blackmagic_csrf'])) {
-    $_SESSION['blackmagic_csrf'] = bin2hex(random_bytes(24));
+if (!isset($_SESSION['hub_csrf']) || !is_string($_SESSION['hub_csrf'])) {
+    $_SESSION['hub_csrf'] = bin2hex(random_bytes(24));
 }
 
 $downloadDir = __DIR__ . DIRECTORY_SEPARATOR . 'downloads';
@@ -22,6 +22,54 @@ if (!is_dir($downloadDir) && !mkdir($downloadDir, 0755, true) && !is_dir($downlo
     http_response_code(500);
     $message = 'The downloads folder could not be created.';
     $messageType = 'error';
+}
+
+$legacyDownloadDir = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'blackmagic' . DIRECTORY_SEPARATOR . 'downloads';
+if ($message === null && is_dir($legacyDownloadDir) && realpath($legacyDownloadDir) !== realpath($downloadDir)) {
+    $legacyFiles = new DirectoryIterator($legacyDownloadDir);
+    foreach ($legacyFiles as $legacyFile) {
+        if (
+            !$legacyFile->isFile()
+            || $legacyFile->isLink()
+            || $legacyFile->isDot()
+            || str_starts_with($legacyFile->getFilename(), '.')
+        ) {
+            continue;
+        }
+
+        $source = $legacyFile->getPathname();
+        $fileName = $legacyFile->getFilename();
+        $destination = $downloadDir . DIRECTORY_SEPARATOR . $fileName;
+        $suffix = 1;
+        $alreadyMigrated = false;
+        while (file_exists($destination)) {
+            $sourceHash = @hash_file('sha256', $source);
+            $destinationHash = @hash_file('sha256', $destination);
+            if (
+                is_file($destination)
+                && filesize($source) === filesize($destination)
+                && is_string($sourceHash)
+                && is_string($destinationHash)
+                && hash_equals($sourceHash, $destinationHash)
+            ) {
+                $alreadyMigrated = true;
+                break;
+            }
+            $extension = pathinfo($fileName, PATHINFO_EXTENSION);
+            $stem = pathinfo($fileName, PATHINFO_FILENAME);
+            $candidate = $stem . '-legacy-' . $suffix . ($extension === '' ? '' : '.' . $extension);
+            $destination = $downloadDir . DIRECTORY_SEPARATOR . $candidate;
+            $suffix++;
+        }
+
+        if ($alreadyMigrated) {
+            continue;
+        }
+
+        if (!@rename($source, $destination) && @copy($source, $destination)) {
+            @unlink($source);
+        }
+    }
 }
 
 function escapeHtml(string $value): string
@@ -41,6 +89,184 @@ function formatBytes(int $bytes): string
     }
 
     return ($unit === 0 ? (string) $bytes : number_format($value, 1)) . ' ' . $units[$unit];
+}
+
+/**
+ * @return array{valid: bool, owner: string, repository: string, message: string}
+ */
+function parseGitHubRepositoryUrl(string $url): array
+{
+    if (!filter_var($url, FILTER_VALIDATE_URL)) {
+        return ['valid' => false, 'owner' => '', 'repository' => '', 'message' => 'Enter a valid GitHub repository URL.'];
+    }
+
+    $parts = parse_url($url);
+    $scheme = strtolower((string) ($parts['scheme'] ?? ''));
+    $host = strtolower((string) ($parts['host'] ?? ''));
+    $segments = array_values(array_filter(explode('/', trim((string) ($parts['path'] ?? ''), '/')), 'strlen'));
+
+    if (!in_array($scheme, ['http', 'https'], true) || !in_array($host, ['github.com', 'www.github.com'], true)) {
+        return ['valid' => false, 'owner' => '', 'repository' => '', 'message' => 'Only github.com repository links are supported.'];
+    }
+
+    if (count($segments) < 2) {
+        return ['valid' => false, 'owner' => '', 'repository' => '', 'message' => 'The link must include an owner and repository.'];
+    }
+
+    $owner = $segments[0];
+    $repository = preg_replace('/\.git$/i', '', $segments[1]) ?? '';
+    if (
+        $owner === ''
+        || $repository === ''
+        || !preg_match('/^[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})$/', $owner)
+        || !preg_match('/^[A-Za-z0-9_.-]+$/', $repository)
+    ) {
+        return ['valid' => false, 'owner' => '', 'repository' => '', 'message' => 'The GitHub owner or repository name is invalid.'];
+    }
+
+    return ['valid' => true, 'owner' => $owner, 'repository' => $repository, 'message' => ''];
+}
+
+/**
+ * @return array{success: bool, status: int, data: array<string, mixed>, message: string}
+ */
+function callGitHubApi(string $path): array
+{
+    if (!function_exists('curl_init')) {
+        return ['success' => false, 'status' => 500, 'data' => [], 'message' => 'GitHub lookup is unavailable because cURL is not installed on this server.'];
+    }
+
+    $handle = curl_init('https://api.github.com' . $path);
+    if ($handle === false) {
+        return ['success' => false, 'status' => 500, 'data' => [], 'message' => 'GitHub lookup could not be started.'];
+    }
+
+    $headers = [
+        'Accept: application/vnd.github+json',
+        'X-GitHub-Api-Version: 2022-11-28',
+        'User-Agent: PhysX-CNH-Utility-Hub/1.0',
+    ];
+    $token = trim((string) getenv('GITHUB_TOKEN'));
+    if ($token !== '') {
+        $headers[] = 'Authorization: Bearer ' . $token;
+    }
+
+    curl_setopt_array($handle, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_FOLLOWLOCATION => false,
+        CURLOPT_CONNECTTIMEOUT => 12,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTPHEADER => $headers,
+        CURLOPT_SSL_VERIFYPEER => true,
+        CURLOPT_SSL_VERIFYHOST => 2,
+    ]);
+
+    $body = curl_exec($handle);
+    $status = (int) curl_getinfo($handle, CURLINFO_RESPONSE_CODE);
+    $curlError = curl_error($handle);
+    curl_close($handle);
+
+    if (!is_string($body)) {
+        return ['success' => false, 'status' => $status, 'data' => [], 'message' => 'GitHub could not be reached. ' . $curlError];
+    }
+
+    $data = json_decode($body, true);
+    if (!is_array($data)) {
+        return ['success' => false, 'status' => $status, 'data' => [], 'message' => 'GitHub returned an unreadable response.'];
+    }
+
+    if ($status < 200 || $status >= 300) {
+        $apiMessage = trim((string) ($data['message'] ?? 'GitHub rejected the request.'));
+        return ['success' => false, 'status' => $status, 'data' => $data, 'message' => $apiMessage];
+    }
+
+    return ['success' => true, 'status' => $status, 'data' => $data, 'message' => ''];
+}
+
+function encodeGitHubPath(string $value): string
+{
+    return implode('/', array_map('rawurlencode', explode('/', $value)));
+}
+
+/**
+ * @return array{success: bool, message: string, repository?: array<string, mixed>, release?: array<string, mixed>|null}
+ */
+function analyzeGitHubRepository(string $url): array
+{
+    $parsed = parseGitHubRepositoryUrl($url);
+    if (!$parsed['valid']) {
+        return ['success' => false, 'message' => $parsed['message']];
+    }
+
+    $apiSlug = '/' . rawurlencode($parsed['owner']) . '/' . rawurlencode($parsed['repository']);
+    $repositoryResponse = callGitHubApi('/repos' . $apiSlug);
+    if (!$repositoryResponse['success']) {
+        $message = $repositoryResponse['status'] === 404
+            ? 'The repository was not found or is not publicly accessible.'
+            : 'Repository lookup failed: ' . $repositoryResponse['message'];
+        return ['success' => false, 'message' => $message];
+    }
+
+    $repositoryData = $repositoryResponse['data'];
+    $defaultBranch = trim((string) ($repositoryData['default_branch'] ?? ''));
+    if ($defaultBranch === '') {
+        return ['success' => false, 'message' => 'GitHub did not report a default branch for this repository.'];
+    }
+
+    $fullName = (string) ($repositoryData['full_name'] ?? ($parsed['owner'] . '/' . $parsed['repository']));
+    $repository = [
+        'full_name' => $fullName,
+        'description' => trim((string) ($repositoryData['description'] ?? '')),
+        'html_url' => (string) ($repositoryData['html_url'] ?? ('https://github.com/' . $fullName)),
+        'default_branch' => $defaultBranch,
+        'archive_url' => 'https://github.com/' . rawurlencode($parsed['owner']) . '/' . rawurlencode($parsed['repository'])
+            . '/archive/refs/heads/' . encodeGitHubPath($defaultBranch) . '.zip',
+    ];
+
+    $releaseResponse = callGitHubApi('/repos' . $apiSlug . '/releases/latest');
+    if (!$releaseResponse['success']) {
+        if ($releaseResponse['status'] === 404) {
+            return ['success' => true, 'message' => 'No published release was found.', 'repository' => $repository, 'release' => null];
+        }
+        return [
+            'success' => true,
+            'message' => 'The repository was found, but its latest release could not be loaded: ' . $releaseResponse['message'],
+            'repository' => $repository,
+            'release' => null,
+        ];
+    }
+
+    $releaseData = $releaseResponse['data'];
+    $assets = [];
+    foreach (($releaseData['assets'] ?? []) as $asset) {
+        if (!is_array($asset)) {
+            continue;
+        }
+        $assetUrl = (string) ($asset['browser_download_url'] ?? '');
+        if (!str_starts_with($assetUrl, 'https://github.com/')) {
+            continue;
+        }
+        $assets[] = [
+            'name' => (string) ($asset['name'] ?? 'Release asset'),
+            'url' => $assetUrl,
+            'size' => (int) ($asset['size'] ?? 0),
+            'content_type' => (string) ($asset['content_type'] ?? ''),
+            'download_count' => (int) ($asset['download_count'] ?? 0),
+        ];
+    }
+
+    return [
+        'success' => true,
+        'message' => '',
+        'repository' => $repository,
+        'release' => [
+            'name' => trim((string) ($releaseData['name'] ?? '')),
+            'tag_name' => (string) ($releaseData['tag_name'] ?? ''),
+            'html_url' => (string) ($releaseData['html_url'] ?? ''),
+            'published_at' => (string) ($releaseData['published_at'] ?? ''),
+            'assets' => $assets,
+        ],
+    ];
 }
 
 function isPublicIp(string $ip): bool
@@ -365,19 +591,32 @@ function downloadRemoteFile(string $initialUrl, string $directory): array
     return ['success' => false, 'message' => 'The remote URL exceeded the redirect limit.', 'file' => '', 'bytes' => 0];
 }
 
+$githubResult = null;
+$githubUrl = '';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $message === null) {
     $submittedToken = (string) ($_POST['csrf_token'] ?? '');
-    if (!hash_equals($_SESSION['blackmagic_csrf'], $submittedToken)) {
+    if (!hash_equals($_SESSION['hub_csrf'], $submittedToken)) {
         http_response_code(400);
         $message = 'The form expired. Refresh the page and try again.';
         $messageType = 'error';
     } else {
-        $url = trim((string) ($_POST['file_url'] ?? ''));
-        $result = downloadRemoteFile($url, $downloadDir);
-        $message = $result['success']
-            ? $result['message'] . ' ' . $result['file'] . ' (' . formatBytes($result['bytes']) . ')'
-            : $result['message'];
-        $messageType = $result['success'] ? 'success' : 'error';
+        $action = (string) ($_POST['action'] ?? 'download_url');
+        if ($action === 'analyze_github') {
+            $githubUrl = trim((string) ($_POST['github_url'] ?? ''));
+            $githubResult = analyzeGitHubRepository($githubUrl);
+        } elseif ($action === 'download_url') {
+            $url = trim((string) ($_POST['file_url'] ?? ''));
+            $result = downloadRemoteFile($url, $downloadDir);
+            $message = $result['success']
+                ? $result['message'] . ' ' . $result['file'] . ' (' . formatBytes($result['bytes']) . ')'
+                : $result['message'];
+            $messageType = $result['success'] ? 'success' : 'error';
+        } else {
+            http_response_code(400);
+            $message = 'Unknown action.';
+            $messageType = 'error';
+        }
     }
 }
 
@@ -404,7 +643,7 @@ usort($files, static fn (array $left, array $right): int => $right['modified'] <
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Blackmagic URL Downloader</title>
+    <title>Utility Hub · PhysX-CNH</title>
     <style>
         :root {
             color-scheme: dark;
@@ -463,6 +702,15 @@ usort($files, static fn (array $left, array $right): int => $right['modified'] <
             border-radius: 20px;
             background: rgba(16, 24, 42, 0.92);
             box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+        }
+        .panel h2 {
+            margin: 0 0 8px;
+            font-size: clamp(1.35rem, 4vw, 2rem);
+        }
+        .panel-description {
+            margin: 0 0 20px;
+            color: var(--muted);
+            line-height: 1.55;
         }
         label {
             display: block;
@@ -569,6 +817,100 @@ usort($files, static fn (array $left, array $right): int => $right['modified'] <
             text-decoration: none;
         }
         .file-link:hover { background: #2c4165; }
+        .result-card {
+            margin-top: 22px;
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: #09101f;
+        }
+        .result-head {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .result-head h3 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+        .result-head a,
+        .release-title a {
+            color: var(--accent);
+        }
+        .description {
+            margin: 8px 0 0;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+        .branch {
+            flex: 0 0 auto;
+            padding: 5px 9px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            color: var(--accent);
+            font-size: 0.78rem;
+            font-weight: 750;
+        }
+        .direct-list {
+            display: grid;
+            gap: 10px;
+            margin: 18px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+        .direct-row {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto auto;
+            align-items: center;
+            gap: 12px;
+            padding: 13px 14px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--surface-soft);
+        }
+        .direct-details { min-width: 0; }
+        .direct-name {
+            display: block;
+            overflow-wrap: anywhere;
+            font-weight: 750;
+        }
+        .direct-meta {
+            display: block;
+            margin-top: 3px;
+            color: var(--muted);
+            font-size: 0.8rem;
+            overflow-wrap: anywhere;
+        }
+        .action-link,
+        .copy-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 40px;
+            padding: 0 14px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 800;
+            text-decoration: none;
+        }
+        .action-link {
+            background: var(--accent-strong);
+            color: #04202a;
+        }
+        .copy-button {
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text);
+        }
+        .release-title {
+            margin: 24px 0 0;
+            font-size: 1.05rem;
+        }
+        .inline-notice {
+            margin: 18px 0 0;
+            color: var(--muted);
+        }
         .empty {
             margin: 0;
             padding: 28px;
@@ -581,6 +923,17 @@ usort($files, static fn (array $left, array $right): int => $right['modified'] <
             .shell { padding-top: 34px; }
             .download-form { grid-template-columns: 1fr; }
             button { width: 100%; }
+            .result-head { display: block; }
+            .branch {
+                display: inline-block;
+                margin-top: 12px;
+            }
+            .direct-row {
+                grid-template-columns: 1fr 1fr;
+            }
+            .direct-details { grid-column: 1 / -1; }
+            .action-link,
+            .copy-button { width: 100%; }
             .file-row {
                 grid-template-columns: 1fr auto;
                 gap: 8px 12px;
@@ -595,14 +948,87 @@ usort($files, static fn (array $left, array $right): int => $right['modified'] <
 </head>
 <body>
 <main class="shell">
-    <p class="eyebrow">Blackmagic Utility</p>
-    <h1>Download a remote file by URL.</h1>
-    <p class="intro">The server streams the source into the local downloads folder. Existing files remain available below for direct, resumable download.</p>
+    <p class="eyebrow">PhysX-CNH Utility Hub</p>
+    <h1>Fetch files and inspect GitHub releases.</h1>
+    <p class="intro">Turn a repository page into direct source and release links, or ask the server to fetch a remote file into the shared downloads folder.</p>
+
+    <section class="panel" aria-labelledby="github-title">
+        <h2 id="github-title">GitHub repository</h2>
+        <p class="panel-description">Paste a public repository link to find its default-branch source archive and every file attached to the latest published release.</p>
+        <form method="post">
+            <input type="hidden" name="csrf_token" value="<?= escapeHtml($_SESSION['hub_csrf']) ?>">
+            <input type="hidden" name="action" value="analyze_github">
+            <label for="github_url">Repository URL</label>
+            <div class="download-form">
+                <input type="url" id="github_url" name="github_url" value="<?= escapeHtml($githubUrl) ?>" placeholder="https://github.com/dvx/lofi" required>
+                <button type="submit">Find direct links</button>
+            </div>
+        </form>
+
+        <?php if (is_array($githubResult) && !$githubResult['success']): ?>
+            <div class="notice error" role="alert"><?= escapeHtml($githubResult['message']) ?></div>
+        <?php elseif (is_array($githubResult) && isset($githubResult['repository'])): ?>
+            <?php $repository = $githubResult['repository']; ?>
+            <div class="result-card">
+                <div class="result-head">
+                    <div>
+                        <h3><a href="<?= escapeHtml($repository['html_url']) ?>" target="_blank" rel="noopener noreferrer"><?= escapeHtml($repository['full_name']) ?></a></h3>
+                        <?php if ($repository['description'] !== ''): ?>
+                            <p class="description"><?= escapeHtml($repository['description']) ?></p>
+                        <?php endif; ?>
+                    </div>
+                    <span class="branch">Default: <?= escapeHtml($repository['default_branch']) ?></span>
+                </div>
+
+                <ul class="direct-list">
+                    <li class="direct-row">
+                        <div class="direct-details">
+                            <span class="direct-name">Default branch source (.zip)</span>
+                            <span class="direct-meta"><?= escapeHtml($repository['archive_url']) ?></span>
+                        </div>
+                        <a class="action-link" href="<?= escapeHtml($repository['archive_url']) ?>">Download ZIP</a>
+                        <button class="copy-button" type="button" data-copy-url="<?= escapeHtml($repository['archive_url']) ?>">Copy link</button>
+                    </li>
+                </ul>
+
+                <?php if (is_array($githubResult['release'])): ?>
+                    <?php $release = $githubResult['release']; ?>
+                    <h4 class="release-title">
+                        Latest release: <?= escapeHtml($release['name'] !== '' ? $release['name'] : $release['tag_name']) ?>
+                        <?php if ($release['html_url'] !== ''): ?>
+                            · <a href="<?= escapeHtml($release['html_url']) ?>" target="_blank" rel="noopener noreferrer">release page</a>
+                        <?php endif; ?>
+                    </h4>
+                    <?php if ($release['assets'] === []): ?>
+                        <p class="inline-notice">This release has no uploaded files.</p>
+                    <?php else: ?>
+                        <ul class="direct-list">
+                            <?php foreach ($release['assets'] as $asset): ?>
+                                <li class="direct-row">
+                                    <div class="direct-details">
+                                        <span class="direct-name"><?= escapeHtml($asset['name']) ?></span>
+                                        <span class="direct-meta"><?= escapeHtml(formatBytes((int) $asset['size'])) ?> · <?= number_format((int) $asset['download_count']) ?> downloads</span>
+                                    </div>
+                                    <a class="action-link" href="<?= escapeHtml($asset['url']) ?>">Download</a>
+                                    <button class="copy-button" type="button" data-copy-url="<?= escapeHtml($asset['url']) ?>">Copy link</button>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                <?php else: ?>
+                    <p class="inline-notice"><?= escapeHtml($githubResult['message']) ?></p>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
+    </section>
 
     <section class="panel" aria-labelledby="download-title">
+        <h2 id="download-title">URL downloader</h2>
+        <p class="panel-description">Fetch a public HTTP or HTTPS URL into this Hub’s downloads folder.</p>
         <form method="post">
-            <label id="download-title" for="file_url">Remote file URL</label>
-            <input type="hidden" name="csrf_token" value="<?= escapeHtml($_SESSION['blackmagic_csrf']) ?>">
+            <label for="file_url">Remote file URL</label>
+            <input type="hidden" name="csrf_token" value="<?= escapeHtml($_SESSION['hub_csrf']) ?>">
+            <input type="hidden" name="action" value="download_url">
             <div class="download-form">
                 <input type="url" id="file_url" name="file_url" placeholder="https://example.com/archive.zip" required>
                 <button type="submit">Fetch file</button>
@@ -632,12 +1058,27 @@ usort($files, static fn (array $left, array $right): int => $right['modified'] <
                             <?= escapeHtml(formatBytes((int) $file['size'])) ?><br>
                             <?= escapeHtml(gmdate('Y-m-d H:i', (int) $file['modified'])) ?> UTC
                         </span>
-                        <a class="file-link" href="/blackmagic/download.php?file=<?= rawurlencode($file['name']) ?>">Download</a>
+                        <a class="file-link" href="/hub/download.php?file=<?= rawurlencode($file['name']) ?>">Download</a>
                     </li>
                 <?php endforeach; ?>
             </ul>
         <?php endif; ?>
     </section>
 </main>
+<script>
+    document.addEventListener('click', async (event) => {
+        const button = event.target.closest('[data-copy-url]');
+        if (!button) return;
+
+        const originalLabel = button.textContent;
+        try {
+            await navigator.clipboard.writeText(button.dataset.copyUrl);
+            button.textContent = 'Copied';
+        } catch {
+            button.textContent = 'Copy failed';
+        }
+        window.setTimeout(() => { button.textContent = originalLabel; }, 1600);
+    });
+</script>
 </body>
 </html>
