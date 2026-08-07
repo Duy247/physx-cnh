@@ -23,33 +23,6 @@ Tính năng chính của trang web là lưu trữ tài liệu, tệp tin PDF và
 
 ## Đóng góp
 
-Nếu bạn muốn đóng góp các nội dung liên quan, như tài liệu, sách, có thể gửi mail cho [tôi](mailto:duy5a247@gmail.com) . Hoặc trực tiếp clone repo này về, thực hiện thay đổi, commit và push lên branch của bạn, sau đó tạo pull request, tôi sẽ trực tiếp đánh giá và thông qua thay đổi nếu đạt yêu cầu.
+Đóng góp tài liệu được thực hiện qua fork và Pull Request vào branch `master`. Cộng tác viên chỉ cần thêm PDF, đăng ký tài liệu, push branch lên fork; chủ repository sẽ review và merge.
 
-Đầu tiên, bạn cần fork repo này rồi clone repo về, hãy chắc chắn bạn đã cài đặt Git hoặc Github CLI một cách hoàn thiện
-Fork repo này của tôi :
-Vào đường dẫn [này](https://github.com/Duy247/physx-cnh/fork) và fork một phiên bản về GitHub của bạn
-- Đối với Github CLI
-```cmd
-gh repo clone <username>/physx-cnh
-```
-- Đối với Git
-```cmd
-git clone https://github.com/<username>/physx-cnh.git
-```
-Tiếp theo, bạn cần tạo một branch riêng cho bản thân
-```cmd
-git checkout -b <branch_name>
-```
-Sau đó, các bạn có thể thực hiện các thay đổi sử dụng IDE tuỳ ý, tôi recommend Visual Studio Code với tính năng hỗ trợ làm việc với các git repo rất nhanh gọn.
-Khi đã thực hiện các thay đổi xong, bạn có thể sử dụng chính các tính năng có sẵn của Visual Studio Code để commit, push các thay đổi 
-```cmd
-git commit -m "Commit message"
-git push origin <branch_name>
-```
-
-Cuối cùng ,các bạn quay lại nền tảng Github, tới branch của bạn vừa push và tạo pull request, chọn branch của bạn là nguồn (source) và branch master của tôi là target. Thực hiện yêu cầu pull request rồi Submit.
-
-Chi tiết cách thức vận hành và tạo thay đổi được ghi trong wiki của repo.
-
-
- 
+Xem quy trình đầy đủ tại [CONTRIBUTING.md](CONTRIBUTING.md), hoặc bắt đầu bằng cách [fork repository](https://github.com/Duy247/physx-cnh/fork).

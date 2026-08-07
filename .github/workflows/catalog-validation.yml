@@ -1,0 +1,97 @@
+name: Catalog validation
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out catalog code without historical PDF blobs
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout: |
+            .github
+            config
+            nav
+            physics/catalog
+            schema
+            src
+            tests
+            tools
+          sparse-checkout-cone-mode: true
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: none
+
+      - name: Lint PHP
+        shell: bash
+        run: find config nav src tests tools -name '*.php' -print0 | xargs -0 -n1 php -l
+
+      - name: Validate catalog tree
+        run: php tools/catalog.php validate --git-tree=HEAD
+
+      - name: Run catalog tests
+        env:
+          CATALOG_SKIP_FILES: '1'
+        run: php tests/catalog_test.php
+
+      - name: Fetch pull-request base
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: git fetch --filter=blob:none origin "${{ github.base_ref }}:refs/remotes/origin/${{ github.base_ref }}"
+
+      - name: Enforce contributor change policy
+        if: github.event_name == 'pull_request'
+        run: php tools/catalog.php validate --git-tree=HEAD --changed-from="origin/${{ github.base_ref }}"
+
+      - name: Validate newly added PDF blobs
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="origin/${{ github.base_ref }}"
+          mapfile -d '' pdfs < <(git diff --name-only --diff-filter=A -z "$base"...HEAD -- 'physics/**/*.pdf')
+          if (( ${#pdfs[@]} == 0 )); then
+            echo "No new PDFs in this pull request." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq qpdf
+          {
+            echo "## Added PDFs"
+            echo
+            echo "| File | Size | SHA-256 |"
+            echo "| --- | ---: | --- |"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          for pdf in "${pdfs[@]}"; do
+            temporary="$(mktemp --suffix=.pdf)"
+            git show "HEAD:$pdf" > "$temporary"
+            size="$(stat -c '%s' "$temporary")"
+            if (( size > 99614720 )); then
+              echo "PDF exceeds 95 MiB: $pdf" >&2
+              exit 1
+            fi
+            if [[ "$(head -c 5 "$temporary")" != "%PDF-" ]]; then
+              echo "Invalid PDF signature: $pdf" >&2
+              exit 1
+            fi
+            qpdf --check "$temporary"
+            checksum="$(sha256sum "$temporary" | cut -d' ' -f1)"
+            printf '| `%s` | %s bytes | `%s` |\n' "$pdf" "$size" "$checksum" >> "$GITHUB_STEP_SUMMARY"
+            rm -f "$temporary"
+          done

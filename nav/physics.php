@@ -1,61 +1,31 @@
 <?php
 declare(strict_types=1);
 
-$catalogs = [
-    'book:pre-vpho' => [
-        'title' => 'Sách trước Vòng chọn VPhO',
-        'heading' => 'SÁCH IN / ẤN BẢN',
-        'subheading' => 'Trước vòng chọn VPhO',
-        'file' => __DIR__ . '/../physics/books-pre-vpho.txt',
-        'welcome' => '/nav/welcome/books-pre-vpho.html',
-    ],
-    'book:vpho-vn' => [
-        'title' => 'Sách VPhO và Vòng chọn (VN)',
-        'heading' => 'SÁCH IN / ẤN BẢN',
-        'subheading' => 'VPhO và vòng chọn',
-        'file' => __DIR__ . '/../physics/books-vpho-vn.txt',
-        'welcome' => '/nav/welcome/books-vpho-vn.html',
-    ],
-    'book:vpho-en' => [
-        'title' => 'Sách VPhO và Vòng chọn (EN)',
-        'heading' => 'SÁCH IN / ẤN BẢN — TIẾNG ANH',
-        'subheading' => 'VPhO và vòng chọn',
-        'file' => __DIR__ . '/../physics/books-vpho-en.txt',
-        'welcome' => '/nav/welcome/books-vpho-en.html',
-    ],
-    'material:pho' => [
-        'title' => 'Tài liệu và handouts',
-        'heading' => 'TÀI LIỆU / HANDOUTS',
-        'subheading' => 'VPhO trở lên',
-        'file' => __DIR__ . '/../physics/materials-pho.txt',
-        'welcome' => '/nav/welcome/materials-pho.html',
-    ],
-    'paper-sol:pho' => [
-        'title' => 'Đề thi & Đáp án',
-        'heading' => 'ĐỀ THI & ĐÁP ÁN',
-        'subheading' => 'PhO cấp khu vực đến quốc tế',
-        'file' => __DIR__ . '/../physics/paper-sol-pho.txt',
-        'welcome' => '/nav/welcome/paper-sol-pho.html',
-    ],
-    'magazines:all' => [
-        'title' => 'Tạp chí',
-        'heading' => 'TẠP CHÍ',
-        'subheading' => 'PhO cấp khu vực đến quốc tế',
-        'file' => __DIR__ . '/../physics/magazines.txt',
-        'welcome' => '/nav/welcome/magazines.html',
-    ],
-    'lessons:all' => [
-        'title' => 'Nội dung ngày học',
-        'heading' => 'NỘI DUNG NGÀY HỌC',
-        'subheading' => 'Đội tuyển vật lí CNH',
-        'file' => __DIR__ . '/../physics/lessons.txt',
-        'welcome' => '/nav/welcome/lessons.html',
-    ],
-];
+require_once __DIR__ . '/../src/CatalogRepository.php';
+
+/** @var array<string, array<string, mixed>> $catalogs */
+$catalogs = require __DIR__ . '/../config/catalogs.php';
 
 $type = isset($_GET['type']) ? (string) $_GET['type'] : 'book';
 $level = isset($_GET['level']) ? (string) $_GET['level'] : 'pre-vpho';
 $catalog = $catalogs[$type . ':' . $level] ?? $catalogs['book:pre-vpho'];
+$catalogItems = [];
+$catalogLoadFailed = false;
+
+try {
+    $repository = new CatalogRepository(__DIR__ . '/../physics');
+    $catalogItems = $repository->load((string) $catalog['manifest']);
+} catch (CatalogException $error) {
+    $catalogLoadFailed = true;
+    error_log('PhysX-CNH catalog error: ' . $error->getMessage());
+}
+
+$catalogText = static fn (string $value): string => nl2br(htmlspecialchars($value, ENT_QUOTES, 'UTF-8'), false);
+$catalogSearchText = static fn (string $value): string => htmlspecialchars(
+    preg_replace('/\s+/u', ' ', $value) ?? $value,
+    ENT_QUOTES,
+    'UTF-8'
+);
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -132,39 +102,40 @@ $catalog = $catalogs[$type . ':' . $level] ?? $catalogs['book:pre-vpho'];
         </div>
 
         <div class="book-container" role="list">
-            <?php
-            $lines = @file($catalog['file'], FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-            if ($lines === false) {
-                echo '<p class="catalog-error">Không thể tải danh mục tài liệu.</p>';
-            } else {
-                foreach ($lines as $line) {
-                    $bookData = explode('|', $line);
-                    if (count($bookData) !== 4) {
-                        continue;
-                    }
-
-                    [$title, $author, $file, $description] = array_map('trim', $bookData);
-                    if ($file === '' || $file[0] !== '/' || strpos($file, '..') !== false) {
-                        continue;
-                    }
-
-                    $resourceUrl = '/physics' . $file;
-                    $isPdf = strtolower(pathinfo($file, PATHINFO_EXTENSION)) === 'pdf';
-                    $searchTitle = htmlspecialchars(strip_tags($title), ENT_QUOTES, 'UTF-8');
-                    $searchAuthor = htmlspecialchars(strip_tags($author), ENT_QUOTES, 'UTF-8');
-                    $safeUrl = htmlspecialchars($resourceUrl, ENT_QUOTES, 'UTF-8');
-
-                    echo '<article class="book-item" role="listitem" data-title="' . $searchTitle . '" data-author="' . $searchAuthor . '">';
-                    echo '<div class="book-details"><strong>' . $title . '</strong><br>' . $author;
-                    if ($description !== '') {
-                        echo '<br><span class="book-description">' . $description . '</span>';
-                    }
-                    echo '</div><div class="book-actions">';
-                    echo '<a class="open-resource" href="' . $safeUrl . '">' . ($isPdf ? 'Mở PDF' : 'Mở tài liệu') . '</a>';
-                    echo '</div></article>';
-                }
-            }
-            ?>
+            <?php if ($catalogLoadFailed): ?>
+                <p class="catalog-error">Không thể tải danh mục tài liệu.</p>
+            <?php else: ?>
+                <?php foreach ($catalogItems as $item): ?>
+                    <?php
+                    $resourceUrl = CatalogRepository::resourceUrl($item['file']);
+                    $isPdf = strtolower(pathinfo($item['file'], PATHINFO_EXTENSION)) === 'pdf';
+                    ?>
+                    <article
+                        class="book-item"
+                        role="listitem"
+                        data-title="<?php echo $catalogSearchText($item['title']); ?>"
+                        data-author="<?php echo $catalogSearchText($item['author']); ?>"
+                    >
+                        <div class="book-details">
+                            <strong><?php echo $catalogText($item['title']); ?></strong>
+                            <?php if ($item['author'] !== ''): ?>
+                                <br><?php echo $catalogText($item['author']); ?>
+                            <?php endif; ?>
+                            <?php if ($item['description'] !== ''): ?>
+                                <br><span class="book-description"><?php echo $catalogText($item['description']); ?></span>
+                            <?php endif; ?>
+                            <?php if ($item['source'] !== ''): ?>
+                                <br><span class="book-source">Nguồn: <?php echo $catalogText($item['source']); ?></span>
+                            <?php endif; ?>
+                        </div>
+                        <div class="book-actions">
+                            <a class="open-resource" href="<?php echo htmlspecialchars($resourceUrl, ENT_QUOTES, 'UTF-8'); ?>">
+                                <?php echo $isPdf ? 'Mở PDF' : 'Mở tài liệu'; ?>
+                            </a>
+                        </div>
+                    </article>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
 
         <button class="menu-toggle" type="button" aria-controls="catalog-menu" aria-expanded="true" aria-label="Thu gọn danh mục">&lt;</button>

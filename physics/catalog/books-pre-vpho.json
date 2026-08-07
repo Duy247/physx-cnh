@@ -1,0 +1,180 @@
+{
+    "version": 1,
+    "items": [
+        {
+            "title": "Cơ học 1",
+            "author": "Tô Giang",
+            "file": "books/cohoc1.pdf",
+            "description": "Bồi dưỡng HSG Vật lí THPT",
+            "source": ""
+        },
+        {
+            "title": "Cơ học 2",
+            "author": "Tô Giang",
+            "file": "books/cohoc2.pdf",
+            "description": "Bồi dưỡng HSG Vật lí THPT",
+            "source": ""
+        },
+        {
+            "title": "Cơ học 3",
+            "author": "Tô Giang",
+            "file": "books/cohoc3.pdf",
+            "description": "Bồi dưỡng HSG Vật lí THPT",
+            "source": ""
+        },
+        {
+            "title": "Nhiệt học và vật lí phân tử",
+            "author": "Phạm Quý Tư",
+            "file": "books/nhiethocvaphantu.pdf",
+            "description": "Bồi dưỡng HSG Vật lí THPT",
+            "source": ""
+        },
+        {
+            "title": "Điện học 1",
+            "author": "Vũ Thanh Khiết - Nguyễn Thế Khôi",
+            "file": "books/dienhoc1.pdf",
+            "description": "Bồi dưỡng HSG Vật lí THPT",
+            "source": ""
+        },
+        {
+            "title": "Điện học 2",
+            "author": "Vũ Thanh Khiết",
+            "file": "books/dienhoc2.pdf",
+            "description": "Bồi dưỡng HSG Vật lí THPT",
+            "source": ""
+        },
+        {
+            "title": "Quang học 1",
+            "author": "Ngô Quốc Quýnh",
+            "file": "books/quanghoc1.pdf",
+            "description": "Bồi dưỡng HSG Vật lí THPT",
+            "source": ""
+        },
+        {
+            "title": "Quang học 2",
+            "author": "Ngô Quốc Quýnh",
+            "file": "books/quanghoc2.pdf",
+            "description": "Bồi dưỡng HSG Vật lí THPT",
+            "source": ""
+        },
+        {
+            "title": "Vật lí hiện đại",
+            "author": "Vũ Thanh Khiết",
+            "file": "books/vatlihiendai.pdf",
+            "description": "Bồi dưỡng HSG Vật lí THPT",
+            "source": ""
+        },
+        {
+            "title": "Tài liệu chuyên vật lí 1",
+            "author": "Tô Giang - Vũ Thanh Khiết\nNguyễn Thế Khôi",
+            "file": "books/tai_lieu_chuyen_1.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Tài liệu chuyên vật lí 2",
+            "author": "Tô Giang - Vũ Thanh Khiết\nNguyễn Thế Khôi",
+            "file": "books/tai_lieu_chuyen_2.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Bài tập Cơ học - Nhiệt học",
+            "author": "Vũ Thanh Khiết",
+            "file": "books/bt_co_nhiet.pdf",
+            "description": "Bồi dưỡng HSG Vật lí THPT",
+            "source": ""
+        },
+        {
+            "title": "Bài tập Điện học - Quang học\nVật lí hiện đại",
+            "author": "Vũ Thanh Khiết",
+            "file": "books/bt_dien_quang_hien_dai.pdf",
+            "description": "Bồi dưỡng HSG Vật lí THPT",
+            "source": ""
+        },
+        {
+            "title": "Tuyển tập các bài tập vật lý đại cương Irodov",
+            "author": "Dịch: Lương Duyên Bình, Nguyễn Quang Hậu",
+            "file": "books/irodov-vi.pdf",
+            "description": "NXB Đại học và Trung học chuyên nghiệp Hà Nội",
+            "source": ""
+        },
+        {
+            "title": "Kho vật lý sơ cấp Tập 1",
+            "author": "Phạm Vũ Kim Hoàng",
+            "file": "books/kho-vlsc-1.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Kho vật lý sơ cấp Tập 2",
+            "author": "Phạm Vũ Kim Hoàng",
+            "file": "books/kho-vlsc-2.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Kho vật lý sơ cấp Tập 3",
+            "author": "Phạm Vũ Kim Hoàng",
+            "file": "books/kho-vlsc-3.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Giải toán Vật lý 10 tập 1",
+            "author": "Bùi Quang Hân",
+            "file": "books/gtvl_0_1.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Giải toán Vật lý 10 tập 2",
+            "author": "Bùi Quang Hân",
+            "file": "books/gtvl_0_2.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Giải toán Vật lý 11 tập 1",
+            "author": "Bùi Quang Hân",
+            "file": "books/gtvl_1_1.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Giải toán Vật lý 11 tập 2",
+            "author": "Bùi Quang Hân",
+            "file": "books/gtvl_1_2.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Giải toán Vật lý 12 tập 1",
+            "author": "Bùi Quang Hân",
+            "file": "books/gtvl_2_1.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Giải toán Vật lý 12 tập 2",
+            "author": "Bùi Quang Hân",
+            "file": "books/gtvl_2_2.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Giáo trình vật lý thiên văn",
+            "author": "Nguyễn Đình Noãn",
+            "file": "books/vat-ly-thien-van.pdf",
+            "description": "NXB Giáo dục Việt Nam",
+            "source": ""
+        },
+        {
+            "title": "Thinking Physics",
+            "author": "Caroll Epstein",
+            "file": "books/thinking-practically.pdf",
+            "description": "",
+            "source": ""
+        }
+    ]
+}

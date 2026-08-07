@@ -1,0 +1,257 @@
+{
+    "version": 1,
+    "items": [
+        {
+            "title": "1000 Solved Problems in Modern Physics",
+            "author": "Ahmad A. Kamal",
+            "file": "books/1000-solved.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "300 Creative Physics Problems with Solutions",
+            "author": "László Holics",
+            "file": "books/300-creative.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Mathematical methods for\nPhysics and Engineering",
+            "author": "K.F.Riley, M.P.Hobson, S.J.Bence",
+            "file": "books/riley_hobson_bence.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "200 Puzzling Physics Problems",
+            "author": "",
+            "file": "books/200-puzzling-physics-problems.pdf",
+            "description": "Tiếng anh\nP.Gnadig - Cambridge",
+            "source": ""
+        },
+        {
+            "title": "200 More Puzzling Physics Problems",
+            "author": "",
+            "file": "books/200-more-puzzling-physics-problems.pdf",
+            "description": "Tiếng anh\nP.Gnadig - Cambridge",
+            "source": ""
+        },
+        {
+            "title": "Problems in General Physics",
+            "author": "I.E.Irodov",
+            "file": "books/irodov_problem.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Solution to I.E.Irodov's\nProblems in General Physics\nPart 1 - Tiếng anh",
+            "author": "Abhay Kumar Singh",
+            "file": "books/irodov_solution_1.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Solution to I.E.Irodov's\nProblems in General Physics\nPart 2 - Tiếng anh",
+            "author": "Abhay Kumar Singh",
+            "file": "books/irodov_solution_2.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Problems in Physics",
+            "author": "Krotov - Mir MOSCOW",
+            "file": "books/krotov-physics.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Physics A General Course\nMechanics & Molecular Physics",
+            "author": "I.V.Savelyev - Mir MOSCOW",
+            "file": "books/savelyev_1_en.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Physics A General Course\nElectricity & Magnetism\nWaves & Optics",
+            "author": "I.V.Savelyev - Mir MOSCOW",
+            "file": "books/savelyev_2_en.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Physics A General Course\nQuantum optics, atomic physics\nSolid state physics",
+            "author": "I.V.Savelyev - Mir MOSCOW",
+            "file": "books/savelyev_3_en.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Introduction to Mechanics",
+            "author": "Kleppner & Kolenkow",
+            "file": "books/introduction-to-mechanics-2014.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Introduction to classical mechanics",
+            "author": "David Morin",
+            "file": "books/mechanic_morin_vn.pdf",
+            "description": "Dịch: ĐHKHTN Hà Nội",
+            "source": ""
+        },
+        {
+            "title": "Solution Introduction to classical mechanics",
+            "author": "David Morin",
+            "file": "books/solution_morin.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Vibrations and Waves",
+            "author": "A.P.French",
+            "file": "books/vib_waves_french.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "An Introduction to Thermal Physics",
+            "author": "Daniel V Schroeder",
+            "file": "books/An_Introduction_to_Thermal_Physics.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Solution An Introduction to Thermal Physics",
+            "author": "Daniel V Schroeder",
+            "file": "books/solution_schroeder.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Electricity and Magnetism",
+            "author": "Edward M. Purcell & David Morin",
+            "file": "books/electricity_magnetism_purcell.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Introduction to Electrodynamics",
+            "author": "David J Griffiths",
+            "file": "books/Electrodynamic_Griffith.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Solution Introduction to Electrodynamics",
+            "author": "David J Griffiths",
+            "file": "books/solution_griffiths.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Problems in Classical Electromagnetism",
+            "author": "A. Macchi,G. Moruzzi,F. Pegoraro",
+            "file": "books/problems_in_classical_electromagn.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Optics",
+            "author": "Eugene Hecht",
+            "file": "books/optics_eugene_hecht.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Modern Physics",
+            "author": "Kenneth S Krane",
+            "file": "books/modern_krane.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Solution Modern Physics",
+            "author": "Kenneth S Krane",
+            "file": "books/sol_modern_krane.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Fundamental Astronomy",
+            "author": "H.Karttunen, P.Kroger, H.Oja",
+            "file": "books/fundamental_astronomy.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Fundamental of Astrodynamics",
+            "author": "R.Bate, D.Mueller, E.White",
+            "file": "books/astrodynamics.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Concepts in Thermal Physics",
+            "author": "Stephen J.Blundell, Katherine M.Blundell",
+            "file": "books/concepts_in_thermal_physics.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Solution Concepts in Thermal Physics",
+            "author": "Stephen J.Blundell, Katherine M.Blundell",
+            "file": "books/solution_concepts_in_thermal_physics.pdf",
+            "description": "Tiếng anh",
+            "source": ""
+        },
+        {
+            "title": "Competitive Physics: Mechanics and Waves",
+            "author": "Jinhui Wang & Bernard Ricardo",
+            "file": "books/competitive_physics-1.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Competitive Physics: Thermodynamics, Electromagnetism\nand Relativity",
+            "author": "Jinhui Wang & Bernard Ricardo",
+            "file": "books/competitive_physics-2.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Physics Olympiads: Basic to Advanced Exercises",
+            "author": "The Committee of JPhO",
+            "file": "books/japan_physics_olympiad.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Physics to a Degree",
+            "author": "Thomas & Raine",
+            "file": "books/physics-to-a-degree.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Thinking Like a Physicist",
+            "author": "N Thompson",
+            "file": "books/thinking-like-physicist.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "A Guide to Physics Problems\nPart 1: Mechanics, Relativity, and Electrodynamics",
+            "author": "Sidney B. Cahn, Boris E. Nadgorny",
+            "file": "books/a_guide_to_physics_problems_1.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "A Guide to Physics Problems\nPart 2: Thermodynamics, Statistical Physics, and Quantum Mechanics",
+            "author": "Sidney B. Cahn, Boris E. Nadgorny",
+            "file": "books/a_guide_to_physics_problems_2.pdf",
+            "description": "",
+            "source": ""
+        }
+    ]
+}

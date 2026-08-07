@@ -82,6 +82,11 @@
     .book-description {
       font-weight: normal;
     }
+    .book-source {
+      color: #3e4660;
+      font-size: 0.9em;
+      font-weight: normal;
+    }
     .book-actions {
       display: flex;
       gap: 6px;

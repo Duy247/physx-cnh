@@ -1,0 +1,77 @@
+<?php
+declare(strict_types=1);
+
+$root = dirname(__DIR__);
+
+return [
+    'book:pre-vpho' => [
+        'id' => 'books-pre-vpho',
+        'type' => 'book',
+        'level' => 'pre-vpho',
+        'title' => 'Sách trước Vòng chọn VPhO',
+        'heading' => 'SÁCH IN / ẤN BẢN',
+        'subheading' => 'Trước vòng chọn VPhO',
+        'manifest' => $root . '/physics/catalog/books-pre-vpho.json',
+        'welcome' => '/nav/welcome/books-pre-vpho.html',
+    ],
+    'book:vpho-vn' => [
+        'id' => 'books-vpho-vn',
+        'type' => 'book',
+        'level' => 'vpho-vn',
+        'title' => 'Sách VPhO và Vòng chọn (VN)',
+        'heading' => 'SÁCH IN / ẤN BẢN',
+        'subheading' => 'VPhO và vòng chọn',
+        'manifest' => $root . '/physics/catalog/books-vpho-vn.json',
+        'welcome' => '/nav/welcome/books-vpho-vn.html',
+    ],
+    'book:vpho-en' => [
+        'id' => 'books-vpho-en',
+        'type' => 'book',
+        'level' => 'vpho-en',
+        'title' => 'Sách VPhO và Vòng chọn (EN)',
+        'heading' => 'SÁCH IN / ẤN BẢN — TIẾNG ANH',
+        'subheading' => 'VPhO và vòng chọn',
+        'manifest' => $root . '/physics/catalog/books-vpho-en.json',
+        'welcome' => '/nav/welcome/books-vpho-en.html',
+    ],
+    'material:pho' => [
+        'id' => 'materials-pho',
+        'type' => 'material',
+        'level' => 'pho',
+        'title' => 'Tài liệu và handouts',
+        'heading' => 'TÀI LIỆU / HANDOUTS',
+        'subheading' => 'VPhO trở lên',
+        'manifest' => $root . '/physics/catalog/materials-pho.json',
+        'welcome' => '/nav/welcome/materials-pho.html',
+    ],
+    'paper-sol:pho' => [
+        'id' => 'paper-sol-pho',
+        'type' => 'paper-sol',
+        'level' => 'pho',
+        'title' => 'Đề thi & Đáp án',
+        'heading' => 'ĐỀ THI & ĐÁP ÁN',
+        'subheading' => 'PhO cấp khu vực đến quốc tế',
+        'manifest' => $root . '/physics/catalog/paper-sol-pho.json',
+        'welcome' => '/nav/welcome/paper-sol-pho.html',
+    ],
+    'magazines:all' => [
+        'id' => 'magazines',
+        'type' => 'magazines',
+        'level' => 'all',
+        'title' => 'Tạp chí',
+        'heading' => 'TẠP CHÍ',
+        'subheading' => 'PhO cấp khu vực đến quốc tế',
+        'manifest' => $root . '/physics/catalog/magazines.json',
+        'welcome' => '/nav/welcome/magazines.html',
+    ],
+    'lessons:all' => [
+        'id' => 'lessons',
+        'type' => 'lessons',
+        'level' => 'all',
+        'title' => 'Nội dung ngày học',
+        'heading' => 'NỘI DUNG NGÀY HỌC',
+        'subheading' => 'Đội tuyển vật lí CNH',
+        'manifest' => $root . '/physics/catalog/lessons.json',
+        'welcome' => '/nav/welcome/lessons.html',
+    ],
+];

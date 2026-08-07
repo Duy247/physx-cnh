@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://physx-cnh.com/schema/catalog.schema.json",
+  "title": "PhysX-CNH catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "items"],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "file"],
+        "properties": {
+          "title": {"type": "string", "minLength": 1, "maxLength": 300, "pattern": "^[^<>]*$"},
+          "author": {"type": "string", "maxLength": 500, "pattern": "^[^<>]*$"},
+          "file": {"type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(?:/|$))(?!.*\\\\)[^\\u0000-\\u001F\\u007F]+$"},
+          "description": {"type": "string", "maxLength": 2000, "pattern": "^[^<>]*$"},
+          "source": {"type": "string", "maxLength": 1000, "pattern": "^[^<>]*$"},
+          "legacy": {"type": "boolean"}
+        }
+      }
+    }
+  }
+}

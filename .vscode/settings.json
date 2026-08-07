@@ -1,0 +1,8 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["/physics/catalog/*.json"],
+      "url": "./schema/catalog.schema.json"
+    }
+  ]
+}

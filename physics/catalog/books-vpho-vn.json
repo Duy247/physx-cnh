@@ -1,0 +1,201 @@
+{
+    "version": 1,
+    "items": [
+        {
+            "title": "Cơ học 1",
+            "author": "P.F.I.E.V",
+            "file": "books/PFIEV/PFIEV-mechanic-1.pdf",
+            "description": "Nhà xuất bản Giáo dục",
+            "source": ""
+        },
+        {
+            "title": "Cơ học 2",
+            "author": "P.F.I.E.V",
+            "file": "books/PFIEV/PFIEV-mechanic-2.pdf",
+            "description": "Nhà xuất bản Giáo dục",
+            "source": ""
+        },
+        {
+            "title": "Nhiệt động học 1",
+            "author": "P.F.I.E.V",
+            "file": "books/PFIEV/PFIEV-thermodynamic-1.pdf",
+            "description": "Nhà xuất bản Giáo dục",
+            "source": ""
+        },
+        {
+            "title": "Nhiệt động học 2",
+            "author": "P.F.I.E.V",
+            "file": "books/PFIEV/PFIEV-thermodynamic-2.pdf",
+            "description": "Nhà xuất bản Giáo dục",
+            "source": ""
+        },
+        {
+            "title": "Điện từ học 1",
+            "author": "P.F.I.E.V",
+            "file": "books/PFIEV/PFIEV-electromagnetism-1.pdf",
+            "description": "Nhà xuất bản Giáo dục",
+            "source": ""
+        },
+        {
+            "title": "Điện từ học 2",
+            "author": "P.F.I.E.V",
+            "file": "books/PFIEV/PFIEV-electromagnetism-2.pdf",
+            "description": "Nhà xuất bản Giáo dục",
+            "source": ""
+        },
+        {
+            "title": "Cơ học lý thuyết",
+            "author": "Nguyễn Đình Dũng",
+            "file": "books/cohoclythuyet_nguyendinhdung.pdf",
+            "description": "ĐHQG Hà Nội",
+            "source": ""
+        },
+        {
+            "title": "Điện học",
+            "author": "Vũ Thanh Khiết",
+            "file": "books/Dienhoc_VuThanhKhiet.pdf",
+            "description": "ĐHSP Hà Nội",
+            "source": ""
+        },
+        {
+            "title": "Điện tử học",
+            "author": "P.F.I.E.V",
+            "file": "books/PFIEV/PFIEV-electric.pdf",
+            "description": "Nhà xuất bản Giáo dục",
+            "source": ""
+        },
+        {
+            "title": "Quang học",
+            "author": "P.F.I.E.V",
+            "file": "books/PFIEV/PFIEV-optic.pdf",
+            "description": "Nhà xuất bản Giáo dục",
+            "source": ""
+        },
+        {
+            "title": "Quang học sóng",
+            "author": "P.F.I.E.V",
+            "file": "books/PFIEV/PFIEV-optic-wave.pdf",
+            "description": "Nhà xuất bản Giáo dục",
+            "source": ""
+        },
+        {
+            "title": "Sóng",
+            "author": "P.F.I.E.V",
+            "file": "books/PFIEV/PFIEV-wave.pdf",
+            "description": "Nhà xuất bản Giáo dục",
+            "source": ""
+        },
+        {
+            "title": "Cơ học chất lỏng",
+            "author": "P.F.I.E.V",
+            "file": "books/PFIEV/PFIEV-fluid.pdf",
+            "description": "Nhà xuất bản Giáo dục",
+            "source": ""
+        },
+        {
+            "title": "Cơ học vật rắn",
+            "author": "P.F.I.E.V",
+            "file": "books/PFIEV/PFIEV-solid.pdf",
+            "description": "Nhà xuất bản Giáo dục",
+            "source": ""
+        },
+        {
+            "title": "Vật lý hiện đại",
+            "author": "R.Gautreau and W.Savin",
+            "file": "books/vatlyhiendai.pdf",
+            "description": "Nhà xuất bản Giáo dục",
+            "source": ""
+        },
+        {
+            "title": "Vật lí đại cương\nCác nguyên lí và ứng dụng\nTập 1",
+            "author": "Trần Ngọc Hợi",
+            "file": "books/vldc_nl_ud_1.pdf",
+            "description": "Nhà xuất bản Giáo dục",
+            "source": ""
+        },
+        {
+            "title": "Vật lí đại cương\nCác nguyên lí và ứng dụng\nTập 2",
+            "author": "Trần Ngọc Hợi",
+            "file": "books/vldc_nl_ud_2.pdf",
+            "description": "Nhà xuất bản Giáo dục",
+            "source": ""
+        },
+        {
+            "title": "Vật lí đại cương\nCác nguyên lí và ứng dụng\nTập 3",
+            "author": "Trần Ngọc Hợi",
+            "file": "books/vldc_nl_ud_3.pdf",
+            "description": "Nhà xuất bản Giáo dục",
+            "source": ""
+        },
+        {
+            "title": "Tuyển tập các bài tập\nVật lý đại cương Tập 1",
+            "author": "Phan Hồng Liên",
+            "file": "books/phan_hong_lien_1.pdf",
+            "description": "NXB Giáo dục Việt Nam",
+            "source": ""
+        },
+        {
+            "title": "Tuyển tập các bài tập\nVật lý đại cương Tập 2",
+            "author": "Phan Hồng Liên",
+            "file": "books/phan_hong_lien_2.pdf",
+            "description": "NXB Giáo dục Việt Nam",
+            "source": ""
+        },
+        {
+            "title": "Bài tập và lời giải cơ học",
+            "author": "Yung-Kuo Lim",
+            "file": "books/BT_loi_giai_mechanic.pdf",
+            "description": "NXB Giáo dục Việt Nam",
+            "source": ""
+        },
+        {
+            "title": "Bài tập và lời giải nhiệt động lực học\nvà vật lý thống kê",
+            "author": "Yung-Kuo Lim",
+            "file": "books/BT_loi_giai_thermo.pdf",
+            "description": "NXB Giáo dục Việt Nam",
+            "source": ""
+        },
+        {
+            "title": "Bài tập và lời giải điện từ học",
+            "author": "Yung-Kuo Lim",
+            "file": "books/BT_loi_giai_electromagnetism.pdf",
+            "description": "NXB Giáo dục Việt Nam",
+            "source": ""
+        },
+        {
+            "title": "Bài tập và lời giải quang học",
+            "author": "Yung-Kuo Lim",
+            "file": "books/BT_loi_giai_optic.pdf",
+            "description": "NXB Giáo dục Việt Nam",
+            "source": ""
+        },
+        {
+            "title": "Bài tập và lời giải cơ học lượng tử",
+            "author": "Yung-Kuo Lim",
+            "file": "books/BT_loi_giai_quantum.pdf",
+            "description": "NXB Giáo dục Việt Nam",
+            "source": ""
+        },
+        {
+            "title": "Bài tập và lời giải vật lý nguyên tử",
+            "author": "Yung-Kuo Lim",
+            "file": "books/BT_loi_giai_atomic.pdf",
+            "description": "NXB Giáo dục Việt Nam",
+            "source": ""
+        },
+        {
+            "title": "Bài tập và lời giải vật lý chất rắn\nvà thuyết tương đối",
+            "author": "Yung-Kuo Lim",
+            "file": "books/BT_loi_giai_solid.pdf",
+            "description": "NXB Giáo dục Việt Nam",
+            "source": ""
+        },
+        {
+            "title": "Olympic cơ học toàn quốc 2014-2018",
+            "author": "Hội cơ học Việt Nam",
+            "file": "books/olympic_co_hoc.pdf",
+            "description": "NXB ĐHBKHN",
+            "source": ""
+        }
+    ]
+}

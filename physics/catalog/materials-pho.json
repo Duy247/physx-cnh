@@ -1,0 +1,418 @@
+{
+    "version": 1,
+    "items": [
+        {
+            "title": "Ý tưởng giải toán chuyển động",
+            "author": "Nguyễn Ngọc Tuấn - ĐHBKHN\naka tuanphysics",
+            "file": "materials/handouts/y-tuong-giai-toan-chuyen-dong.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Khối tâm và momen quán tính vật rắn bằng tích phân",
+            "author": "Source: Tạp chí và Tư liệu vật lý\nĐịnh dạng LaTeX: Physiad",
+            "file": "materials/handouts/xG.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Giải BT Cơ học thiên thể",
+            "author": "Thành viên Zinc\nCLB Vật lí xPhO",
+            "file": "materials/handouts/Orbital_Mech._Probs.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Chứng minh công thức dao động tắt dần",
+            "author": "Ngô Minh Ngọc - Tạp chí và Tư Liệu Vật lý\nĐịnh dạng LaTeX: Physiad",
+            "file": "materials/handouts/dao_dong.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Chuyển động của hạt trong\ntrường xuyên tâm",
+            "author": "Thành viên Zinc\nCLB Vật lí xPhO",
+            "file": "materials/handouts/Motion_in_central_field.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Chuyển động trong trường hấp dẫn",
+            "author": "Tạp chí và Tư liệu Vật lý\nĐịnh dạng LaTeX: Physiad",
+            "file": "materials/handouts/motion_g.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Orbital Mechanics",
+            "author": "Thành viên Kien T.Pham\nCLB Vật lí xPhO",
+            "file": "materials/handouts/Ly_thuyet_Kepler.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Đĩa Euler",
+            "author": "Thành viên Zinc\nCLB Vật lí xPhO",
+            "file": "materials/handouts/Euler_s_disk.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Vật lí Billiard",
+            "author": "Thành viên Zinc\nCLB Vật lí xPhO",
+            "file": "materials/handouts/Billiard_Physics.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Bài tập Cơ học tương đối tính",
+            "author": "Lê Đại Nam",
+            "file": "materials/handouts/tuong_doi.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Chuyên đề luyện thi HSG - Cơ học",
+            "author": "Tạp chí và Tư liệu Vật Lý",
+            "file": "materials/chuyen-de-co-hoc.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Nhiệt động lực học",
+            "author": "Thành viên Zinc\nCLB Vật lí xPhO",
+            "file": "materials/handouts/thermodynamic_notes.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Thuyết động học chất khí",
+            "author": "Thành viên Zinc\nCLB Vật lí xPhO",
+            "file": "materials/handouts/Kinetic_theory_of_gases.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Chu trình - Động cơ nhiệt",
+            "author": "Phạm Vũ Kim Hoàng",
+            "file": "materials/handouts/dong-co.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Lý thuyết Mạch",
+            "author": "Sưu tầm: CLB Vật lí xPhO",
+            "file": "materials/handouts/ly-thuyet-mach.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Mẹo bài toán mạch điện phức tạp",
+            "author": "Thành viên Zinc\nCLB Vật lí xPhO",
+            "file": "materials/handouts/AC_by_complex_numbers.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Chuyên đề cảm ứng điện từ\nchuyển động của điện tích",
+            "author": "Nguyễn Chí Trung - THPT Chuyên Bắc Ninh",
+            "file": "materials/handouts/cam-ung-dien-tu-2020.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Phương pháp ảnh điện",
+            "author": "",
+            "file": "materials/handouts/anhdien.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Vận dụng phương pháp ảnh điện\nđể giải một số bài tập tĩnh điện",
+            "author": "Lê Quốc Anh - THPT Chuyên Quốc học",
+            "file": "materials/handouts/van_dung_anh_dien.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Chuyên đề phương pháp ảnh điện",
+            "author": "Sưu tầm: Phạm Quang Chính Lí 2 K75",
+            "file": "materials/handouts/chuyen_de_anh_dien.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Phương pháp giải bài tập\nđiện động lực học",
+            "author": "Phạm Thị Minh Giang",
+            "file": "materials/handouts/phuong-phap-dien-dong-hoc.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Lưỡng cực điện và từ",
+            "author": "Thành viên Zinc\nCLB Vật lí xPhO",
+            "file": "materials/handouts/Dipole_1.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Khúc xạ ánh sáng",
+            "author": "Physiads",
+            "file": "materials/handouts/khucxa.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Quang trình",
+            "author": "Thành viên log\nCLB Vật lí xPhO",
+            "file": "materials/handouts/Quang_trinh.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Nguyên lý Fermat",
+            "author": "Sưu tầm: CLB Vật lí xPhO",
+            "file": "materials/handouts/nguyen-li-fermat.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Chiết suất biến đổi",
+            "author": "Thành viên log\nCLB Vật lí xPhO",
+            "file": "materials/handouts/chiet_suat_bien_doi.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Hệ quang học đồng trục",
+            "author": "Sưu tầm: CLB Vật lí xPhO",
+            "file": "materials/handouts/he-quang-hoc-dong-truc.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Nhiều xạ ánh sáng",
+            "author": "Thành viên ZincMutation\nCLB Vật lí xPhO",
+            "file": "materials/handouts/Nhieu-xa.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Giải Gặp gỡ Toán học Vật lý",
+            "author": "Tạo chí và Tư liệu Vật lý",
+            "file": "materials/handouts/ggthvl.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Công thức trong hệ toạ độ cong",
+            "author": "Sưu tầm: CLB Vật lí xPhO",
+            "file": "materials/handouts/curvelinear.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Bảng tích phân",
+            "author": "Sưu tầm: CLB Vật lí xPhO",
+            "file": "materials/handouts/integral-table.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Ứng dụng Đạo hàm, Tích phân",
+            "author": "Murray Bourne\nDịch : ĐHQG TP.HCM",
+            "file": "materials/handouts/ung_dung_dao_ham_tich_phan.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Phương trình vi phân tuyến tính bậc hai",
+            "author": "Sưu tầm: Phạm Quang Chính Lí 2 K75",
+            "file": "materials/handouts/PTVP_tuyen_tinh_bac_2.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Kỹ thuật giải toán tích phân",
+            "author": "Tạp chí và tư liệu toán học",
+            "file": "materials/handouts/ky-thuat-giai-toan-tich-phan.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Tuyển chọn các bài toán vật lý nâng cao",
+            "author": "Nguyễn Anh Văn",
+            "file": "materials/handouts/bai_toan_vat_ly.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Formulas for IPhO",
+            "author": "Jaan Kalda\nSưu tầm: Phạm Quang Chính Lí 2 K75",
+            "file": "materials/handouts/formulas.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Chương trình IPhO",
+            "author": "Jaan Kalda\nSưu tầm: CLB Vật lí xPhO",
+            "file": "materials/handouts/IPhO_syllabus.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Mechanics handouts",
+            "author": "Kevin Zhou",
+            "file": "materials/handouts/mechanics-kevinzhou.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Thermodynamics handouts",
+            "author": "Kevin Zhou",
+            "file": "materials/handouts/thermodynamics-kevinzhou.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Electromagnetism handouts",
+            "author": "Kevin Zhou",
+            "file": "materials/handouts/electromagnetism-kevinzhou.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Waves handouts",
+            "author": "Kevin Zhou",
+            "file": "materials/handouts/waves-kevinzhou.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Modern Physics handouts",
+            "author": "Kevin Zhou",
+            "file": "materials/handouts/modern-kevinzhou.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Relativity Physics handouts",
+            "author": "Kevin Zhou",
+            "file": "materials/handouts/relativity-kevinzhou.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Problem Solving handouts",
+            "author": "Kevin Zhou",
+            "file": "materials/handouts/problems-kevinzhou.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Problem Sets handouts",
+            "author": "Kevin Zhou",
+            "file": "materials/handouts/problems-2-kevinzhou.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Problems on Mechanics",
+            "author": "Jaan Kalda",
+            "file": "materials/handouts/meh_ENG.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Problems on Mechanics 2",
+            "author": "Jaan Kalda",
+            "file": "materials/handouts/meh_ENG2.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Problems on Kinematics",
+            "author": "Jaan Kalda",
+            "file": "materials/handouts/kin_ENG.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Thermodynamics",
+            "author": "Jaan Kalda",
+            "file": "materials/handouts/thermodyn.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Electric Circuits",
+            "author": "Jaan Kalda",
+            "file": "materials/handouts/electricity-circuits.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Wave Optics",
+            "author": "Jaan Kalda",
+            "file": "materials/handouts/waveopt.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Quantum Mechanics",
+            "author": "Jaan Kalda",
+            "file": "materials/handouts/quant_ENG.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Solution of Jaan Kalda's Mechanics",
+            "author": "Physoly",
+            "file": "materials/handouts/KaldaMech-122.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Solution of Jaan Kalda's Kinematics",
+            "author": "Physoly",
+            "file": "materials/handouts/KaldaKin-200.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Solution of Jaan Kalda's Thermodynamics",
+            "author": "Physoly",
+            "file": "materials/handouts/KaldaThermo-121.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Solution of Jaan Kalda's Waves",
+            "author": "Physoly",
+            "file": "materials/handouts/KaldaWaves-131.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Solution of Jaan Kalda's Celestial Mechanics",
+            "author": "Physoly",
+            "file": "materials/handouts/KaldaCM_ENG.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Relativity",
+            "author": "Ainsaar",
+            "file": "materials/handouts/ainsaar_relativity.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Harvard 90 Weekly Problems\n2002-2004",
+            "author": "David Morin",
+            "file": "materials/Havard_weekly_david_morin.pdf",
+            "description": "",
+            "source": ""
+        }
+    ]
+}

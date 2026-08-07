@@ -1,0 +1,97 @@
+{
+    "version": 1,
+    "items": [
+        {
+            "title": "Bài tập mở đầu\n12/08/24",
+            "author": "",
+            "file": "lessons/physics_test1208.html",
+            "description": "",
+            "source": "",
+            "legacy": true
+        },
+        {
+            "title": "Giải bài tập mở đầu\n12/08/24",
+            "author": "",
+            "file": "lessons/solution1208.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Phương pháp năng lượng & Euler-Lagrange - VTDuy\n15/08/24",
+            "author": "",
+            "file": "lessons/energy_lagrange.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Phương pháp công ảo - VTDuy\n16/08/24",
+            "author": "",
+            "file": "lessons/virtualwork_160824.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Phương án thực hành - VTDuy\n17/08/24",
+            "author": "",
+            "file": "lessons/experiment_170824.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Luyện tập tính toán\n22/08/24",
+            "author": "",
+            "file": "lessons/train_calculation.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Luyện tập\n23/08/24",
+            "author": "",
+            "file": "lessons/train_230824.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Luyện tập\n29/08/24",
+            "author": "",
+            "file": "lessons/train_290824.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Luyện tập\n30/08/24",
+            "author": "",
+            "file": "lessons/train_300824.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Luyện tập\n05/09/24",
+            "author": "",
+            "file": "lessons/train_050924.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Luyện tập\n21/09/24",
+            "author": "",
+            "file": "lessons/train_210924.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Giải bài hạt mưa",
+            "author": "",
+            "file": "lessons/exercise_raindrop.pdf",
+            "description": "",
+            "source": ""
+        },
+        {
+            "title": "Giải bài căng dây - vòng 2 TP",
+            "author": "",
+            "file": "lessons/exercise_tensionstring.pdf",
+            "description": "",
+            "source": ""
+        }
+    ]
+}
