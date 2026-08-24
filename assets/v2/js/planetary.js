@@ -51,20 +51,17 @@ if (host) {
       const line = new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(points), new THREE.LineBasicMaterial({ color, transparent: true, opacity }));
       parent.add(line); return line;
     };
-    const placeOrbitingLabel = ({ x,y,ux,uy,halfWidth,halfHeight,clearance,width,minY,maxY }) => {
-      const baseAngle=Math.atan2(uy,ux),edge=12,step=Math.PI/90;
-      for(let turn=0;turn<=90;turn+=1){
-        const offsets=turn===0?[0]:[turn*step,-turn*step];
-        for(const offset of offsets){
-          const angle=baseAngle+offset,cx=Math.cos(angle),cy=Math.sin(angle);
-          const distance=clearance+halfWidth*Math.abs(cx)+halfHeight*Math.abs(cy)+6;
-          const labelX=x+cx*distance,labelY=y+cy*distance;
-          if(labelX-halfWidth>=edge&&labelX+halfWidth<=width-edge&&labelY-halfHeight>=minY&&labelY+halfHeight<=maxY){
-            return {x:labelX,y:labelY};
-          }
-        }
+    const projectedBox = new THREE.Box3();
+    const projectedCorner = new THREE.Vector3();
+    const projectedObjectSupport = (object,x,y,dx,dy,width,height) => {
+      projectedBox.setFromObject(object);
+      let support=0;
+      for(const px of [projectedBox.min.x,projectedBox.max.x]) for(const py of [projectedBox.min.y,projectedBox.max.y]) for(const pz of [projectedBox.min.z,projectedBox.max.z]) {
+        projectedCorner.set(px,py,pz).project(camera);
+        const cornerX=(projectedCorner.x*.5+.5)*width,cornerY=(-projectedCorner.y*.5+.5)*height;
+        support=Math.max(support,(cornerX-x)*dx+(cornerY-y)*dy);
       }
-      return {x:Math.max(halfWidth+edge,Math.min(width-halfWidth-edge,x)),y:Math.max(minY+halfHeight,Math.min(maxY-halfHeight,y))};
+      return Math.max(4,support);
     };
     const metal = new THREE.MeshStandardMaterial({ color:0xd6d2c5,metalness:.72,roughness:.3 });
     const gold = new THREE.MeshStandardMaterial({ color:0xb99036,metalness:.62,roughness:.36 });
@@ -150,14 +147,18 @@ if (host) {
           const ux=dx/length,uy=dy/length;
           const text=label.querySelector('span');
           const halfWidth=Math.max(text?.offsetWidth||70,70)/2,halfHeight=Math.max(text?.offsetHeight||30,30)/2;
-          const clearance=Math.max(8,size*(width<600?45:50));
-          const placed=placeOrbitingLabel({x:naturalX,y:naturalY,ux,uy,halfWidth,halfHeight,clearance,width,minY:width<600?98:84,maxY:height-(width<600?108:68)});
-          const labelX=placed.x,labelY=placed.y;
+          const tangentLength=Math.hypot(-uy-.16*ux,ux-.16*uy)||1;
+          const tx=(-uy-.16*ux)/tangentLength,ty=(ux-.16*uy)/tangentLength;
+          const objectSupport=Math.max(4,size*(width<600?64:72));
+          const textSupport=halfWidth*Math.abs(tx)+halfHeight*Math.abs(ty);
+          const distance=objectSupport+textSupport+2;
+          const labelX=naturalX+tx*distance,labelY=naturalY+ty*distance;
           label.style.setProperty('--label-offset-x',`${labelX-naturalX}px`);
           label.style.setProperty('--label-offset-y',`${labelY-naturalY}px`);
           label.style.transform=`translate3d(${naturalX}px,${naturalY}px,0) translate(-50%,-50%)`;
           label.dataset.anchorX=naturalX.toFixed(2); label.dataset.anchorY=naturalY.toFixed(2);
           label.dataset.labelX=labelX.toFixed(2); label.dataset.labelY=labelY.toFixed(2);
+          label.dataset.objectSupport=objectSupport.toFixed(2);
           const show=projected.z<1&&scrollY<height*.72;
           label.style.opacity=show?'1':'0'; label.style.pointerEvents=show?'auto':'none';
         });
@@ -203,13 +204,18 @@ if (host) {
           const ux=dx/length,uy=dy/length;
           const text=label.querySelector('span');
           const halfWidth=Math.max(text?.offsetWidth||92,92)/2,halfHeight=Math.max(text?.offsetHeight||44,44)/2;
-          const placed=placeOrbitingLabel({x,y,ux,uy,halfWidth,halfHeight,clearance:width<600?22:20,width,minY:width<600?98:84,maxY:height-(width<600?130:105)});
-          const labelX=placed.x,labelY=placed.y;
+          const tangentLength=Math.hypot(-uy-.12*ux,ux-.12*uy)||1;
+          const tx=(-uy-.12*ux)/tangentLength,ty=(ux-.12*uy)/tangentLength;
+          const objectSupport=projectedObjectSupport(satellite,x,y,tx,ty,width,height);
+          const textSupport=halfWidth*Math.abs(tx)+halfHeight*Math.abs(ty);
+          const distance=objectSupport+textSupport+2;
+          const labelX=x+tx*distance,labelY=y+ty*distance;
           label.style.setProperty('--label-offset-x',`${labelX-x}px`);
           label.style.setProperty('--label-offset-y',`${labelY-y}px`);
           label.style.transform=`translate3d(${x}px,${y}px,0) translate(-50%,-50%)`;
           label.dataset.anchorX=x.toFixed(2); label.dataset.anchorY=y.toFixed(2);
           label.dataset.labelX=labelX.toFixed(2); label.dataset.labelY=labelY.toFixed(2);
+          label.dataset.objectSupport=objectSupport.toFixed(2);
           const onScreen=x>-20&&x<width+20&&y>-20&&y<height+20;
           const show=projected.z<1&&onScreen&&scrollY<height*.72; label.style.opacity=show?'1':'0'; label.style.pointerEvents=show?'auto':'none';
         });
@@ -248,7 +254,7 @@ if (host) {
         const stamp = Math.floor(time * 4);
         if (stamp !== lastStamp) { host.dataset.animationFrame = String(stamp); lastStamp = stamp; }
         if(!reduced){world.rotation.y+=(pointer.x*.11-world.rotation.y)*.022;world.rotation.x+=(-pointer.y*.07-world.rotation.x)*.022;camera.position.x+=(pointer.x*.18-camera.position.x)*.02;}
-        camera.lookAt(0,0,0); world.updateMatrixWorld(true); projectors.forEach((project)=>project()); renderer.render(scene,camera);
+        camera.lookAt(0,0,0); camera.updateMatrixWorld(true); world.updateMatrixWorld(true); projectors.forEach((project)=>project()); renderer.render(scene,camera);
       }
       requestAnimationFrame(render);
     };

@@ -26,7 +26,8 @@ test('physics label anchor dots remain tied to projected satellites', async ({ p
     const x=marker.left+marker.width/2,y=marker.top+marker.height/2;
     return Math.hypot(Math.max(text.left-x,0,x-text.right),Math.max(text.top-y,0,y-text.bottom));
   }));
-  protectedSatelliteGaps.forEach(distance => expect(distance).toBeGreaterThan(20));
+  const satelliteSupports = await labels.evaluateAll(nodes => nodes.map(node => Number(node.dataset.objectSupport)));
+  protectedSatelliteGaps.forEach((distance,index) => expect(distance).toBeGreaterThan(satelliteSupports[index]+.5));
   const offsets = await labels.evaluateAll((nodes) => nodes.map((label) => {
     const host = label.closest('[data-planetary]').getBoundingClientRect();
     const marker = label.querySelector('i').getBoundingClientRect();
@@ -58,7 +59,8 @@ test('hub renders eight planets with Earth as the Physics space', async ({ page 
     const x=marker.left+marker.width/2,y=marker.top+marker.height/2;
     return Math.hypot(Math.max(text.left-x,0,x-text.right),Math.max(text.top-y,0,y-text.bottom));
   }));
-  protectedPlanetGaps.forEach(distance => expect(distance).toBeGreaterThan(12));
+  const planetSupports = await planets.evaluateAll(nodes => nodes.map(node => Number(node.dataset.objectSupport)));
+  protectedPlanetGaps.forEach((distance,index) => expect(distance).toBeGreaterThan(planetSupports[index]+.5));
   const planetTargets = await planets.evaluateAll(links => links.map(link => {
     const marker = link.querySelector('i').getBoundingClientRect();
     return document.elementFromPoint(marker.left + marker.width / 2, marker.top + marker.height / 2)?.closest('a')?.getAttribute('href');
