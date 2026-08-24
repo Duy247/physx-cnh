@@ -43,7 +43,7 @@ RewriteRule ^nav/physics_mobile(?:\.php)?$ /nav/physics [R=301,L,NE]
 
 # The physical physics directory remains the PDF origin; only its bare URL is a page.
 RewriteRule ^physics/?$ index.php [QSA,L]
-RewriteRule ^(?:library(?:/[a-z0-9-]+)?|document/[a-z0-9-]+|guides/(?:roadmap|research)|donate|donators|legal|nav/physics|sitemap\.xml|robots\.txt)$ index.php [QSA,L,NC]
+RewriteRule ^(?:math|it|chemistry|library(?:/[a-z0-9-]+)?|document/[a-z0-9-]+|guides/(?:roadmap|research)|donate|donators|legal|nav/physics|sitemap\.xml|robots\.txt)$ index.php [QSA,L,NC]
 
 # Existing files and auxiliary tools continue to be served unchanged.
 RewriteCond %{REQUEST_FILENAME} -f [OR]

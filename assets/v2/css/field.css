@@ -1,0 +1,12 @@
+.field-space { position:relative; display:grid; min-height:calc(100svh - 82px); overflow:hidden; place-items:center; color:#274044; background:radial-gradient(circle at 50% 46%,#fffdf4,#e8ece7 58%,#ccd4d0); }
+.field-space::before,.field-space::after { position:absolute; width:min(74vw,760px); aspect-ratio:1; border:1px solid #77878355; border-radius:50%; content:""; transform:rotate(-14deg) scaleY(.36); }
+.field-space::after { width:min(94vw,980px); border-color:#9b81754a; transform:rotate(18deg) scaleY(.28); }
+.field-planet { position:absolute; width:min(52vw,430px); aspect-ratio:1; overflow:hidden; border:1px solid #727d7955; border-radius:50%; background:radial-gradient(circle at 34% 28%,#f0eee5,#a9aeaa 58%,#737b78); box-shadow:inset -45px -30px 75px #35403d66,0 35px 100px #56605d35; filter:grayscale(1) saturate(.15); }
+.field-planet::before,.field-planet::after,.field-planet i { position:absolute; border-radius:50%; content:""; background:#68716e24; box-shadow:inset 6px 7px 12px #3c454238; }
+.field-planet::before { top:19%; left:20%; width:18%; aspect-ratio:1; }.field-planet::after { right:16%; bottom:23%; width:27%; aspect-ratio:1; }.field-planet i { top:55%; left:17%; width:11%; aspect-ratio:1; }
+.field-space section { position:relative; z-index:2; display:grid; justify-items:center; padding:32px; text-align:center; }
+.field-space section p { margin-bottom:16px; font:600 .7rem/1 var(--font-geist-mono); letter-spacing:.18em; }
+.field-space h1 { font:300 clamp(4.4rem,11vw,9rem)/.82 var(--font-physics); letter-spacing:-.065em; }
+.field-space section span { margin-top:25px; padding:8px 13px; border:1px solid #64747075; border-radius:999px; font:600 .65rem/1 var(--font-geist-mono); letter-spacing:.15em; text-transform:uppercase; }
+.field-space section a { margin-top:38px; padding:13px 18px; color:#153f45; background:#fffdf1c9; border:1px solid #647f7c70; border-radius:999px; font-weight:600; backdrop-filter:blur(12px); }
+@media(max-width:760px){.field-space{min-height:calc(100svh - 68px)}.field-planet{width:82vw}.field-space h1{font-size:4.7rem}}

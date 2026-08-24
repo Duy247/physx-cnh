@@ -1,5 +1,11 @@
 <main id="main-content" class="main hub-main">
-  <div class="world"><div class="stage hub" data-planetary="hub"><div class="aura"></div><div class="vignette"></div></div></div>
+  <div class="world"><div class="stage hub" data-planetary="hub"><div class="aura"></div><div class="vignette"></div>
+    <nav class="planetLabelLayer" aria-label="Các không gian học tập">
+      <?php foreach ([['Toán học','/math',false],['Vật lý','/physics',true],['Tin học','/it',false],['Hóa học','/chemistry',false]] as $index => [$field,$href,$active]): ?>
+        <a class="planetLabel<?= $active ? ' isActive' : ' isStone' ?>" href="<?= $href ?>" data-hub-planet="<?= $index ?>"><i></i><span><?= e($field) ?></span></a>
+      <?php endforeach; ?>
+    </nav>
+  </div></div>
   <div class="noise" aria-hidden="true"></div>
   <section class="hero" aria-label="CNH Study Hub"></section>
   <section class="fields" id="fields" aria-labelledby="fields-title">

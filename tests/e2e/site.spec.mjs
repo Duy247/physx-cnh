@@ -9,6 +9,27 @@ test('planetary scenes animate instead of freezing', async ({ page }) => {
   await expect(page.locator('canvas')).toBeVisible();
 });
 
+test('hub planets expose four labeled spaces', async ({ page }) => {
+  await page.goto('/');
+  const planets = page.locator('[data-hub-planet]');
+  await expect(planets).toHaveCount(4);
+  const spaces = page.getByRole('navigation', { name: 'Các không gian học tập' });
+  await expect(spaces.getByRole('link', { name: 'Vật lý', exact: true })).toHaveAttribute('href', '/physics');
+  await expect(spaces.getByRole('link', { name: 'Toán học', exact: true })).toHaveAttribute('href', '/math');
+  await expect(spaces.getByRole('link', { name: 'Tin học', exact: true })).toHaveAttribute('href', '/it');
+  await expect(spaces.getByRole('link', { name: 'Hóa học', exact: true })).toHaveAttribute('href', '/chemistry');
+  const planetTargets = await planets.evaluateAll(links => links.map(link => {
+    const marker = link.querySelector('i').getBoundingClientRect();
+    return document.elementFromPoint(marker.left + marker.width / 2, marker.top + marker.height / 2)?.closest('a')?.getAttribute('href');
+  }));
+  expect(planetTargets).toEqual(['/math', '/physics', '/it', '/chemistry']);
+  for (const route of ['/math', '/it', '/chemistry']) {
+    const response = await page.goto(route);
+    expect(response.status()).toBe(200);
+    await expect(page.getByText('Chưa mở')).toBeVisible();
+  }
+});
+
 test('orbit link scopes books and removes redundant kind control', async ({ page }) => {
   await page.goto('/physics');
   await page.getByRole('link', { name: /Sách chuyên Vật lý/i }).click({ force: true });

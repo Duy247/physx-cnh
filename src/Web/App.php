@@ -38,6 +38,15 @@ final class App
                 'inbound' => array_reverse(array_slice($documents, -4)),
             ]);
         }
+        $fieldSpaces = [
+            '/math' => ['Toán học', 'MATHEMATICS / 02'],
+            '/it' => ['Tin học', 'COMPUTING / 03'],
+            '/chemistry' => ['Hóa học', 'CHEMISTRY / 04'],
+        ];
+        if (isset($fieldSpaces[$path])) {
+            [$field, $code] = $fieldSpaces[$path];
+            $this->page('field', $field . ' — CNH Study Hub', 'hub', false, ['field' => $field, 'code' => $code]);
+        }
         if ($path === '/library') {
             $this->library();
         }
@@ -146,7 +155,7 @@ final class App
     private function sitemap(): never
     {
         header('Content-Type: application/xml; charset=utf-8');
-        $urls = ['/', '/physics', '/library', '/guides/roadmap', '/guides/research', '/donate', '/donators', '/legal'];
+        $urls = ['/', '/physics', '/math', '/it', '/chemistry', '/library', '/guides/roadmap', '/guides/research', '/donate', '/donators', '/legal'];
         foreach ($this->catalog->documents() as $document) {
             $urls[] = '/document/' . rawurlencode((string) $document['slug']);
         }

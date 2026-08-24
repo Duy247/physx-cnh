@@ -6,6 +6,7 @@ if (host) {
   const variant = host.dataset.planetary;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const labels = [...host.querySelectorAll('[data-satellite]')];
+  const hubLabels = [...host.querySelectorAll('[data-hub-planet]')];
   const relayBoard = document.querySelector('[data-relay]');
   let renderer;
   try {
@@ -60,11 +61,25 @@ if (host) {
       [
         [1.45,.18,0xb88b68,.22,.7,false], [2.2,.32,0x178398,.15,2.4,true],
         [3.05,.25,0x777b79,.105,4.2,false], [4.05,.42,0x8d8b86,.075,5.45,false],
-      ].forEach(([radius,size,color,speed,phase,physics]) => {
+      ].forEach(([radius,size,color,speed,phase,physics], index) => {
         orbit(radius, physics ? .48 : .23);
         const planet = new THREE.Mesh(new THREE.SphereGeometry(size, 32, 32), new THREE.MeshPhysicalMaterial({ color, roughness: .46, clearcoat: .3 }));
         world.add(planet);
         if (physics) { const marker = new THREE.Mesh(new THREE.TorusGeometry(size * 1.55,.018,8,64), new THREE.MeshBasicMaterial({ color:0x0d687c,transparent:true,opacity:.65 })); marker.rotation.x=Math.PI/2.8; planet.add(marker); }
+        const projected = new THREE.Vector3();
+        projectors.push(() => {
+          const label=hubLabels[index]; if (!label) return;
+          planet.getWorldPosition(projected).project(camera);
+          const width=host.clientWidth,height=host.clientHeight;
+          const naturalX=(projected.x*.5+.5)*width,leftSide=naturalX<width/2;
+          const labelWidth=Math.max(label.offsetWidth,80);
+          const x=leftSide?Math.max(labelWidth+14,naturalX):Math.min(width-labelWidth-14,naturalX);
+          const y=Math.max(width<600?105:92,Math.min(height-(width<600?115:75),(-projected.y*.5+.5)*height));
+          label.classList.toggle('isLeft',leftSide);
+          label.style.transform=`translate3d(${x}px,${y}px,0) translate(${leftSide?'-100%':'0'},-50%)`;
+          const show=projected.z<1&&scrollY<height*.72;
+          label.style.opacity=show?'1':'0'; label.style.pointerEvents=show?'auto':'none';
+        });
         updates.push((time) => { const angle=phase+time*speed; planet.position.set(Math.cos(angle)*radius,Math.sin(angle*.72)*.08,Math.sin(angle)*radius*.58); planet.rotation.y=time*(.18+speed); });
       });
       updates.push((time) => { sun.rotation.y=time*.08; corona.rotation.y=-time*.04; corona.rotation.z=time*.025; });

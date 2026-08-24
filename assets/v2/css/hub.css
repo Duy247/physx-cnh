@@ -1,7 +1,7 @@
 .main { position: relative; isolation: isolate; overflow: clip; color: #f4f2eb; background: #070912; }
-.world { position: fixed; z-index: 0; inset: 0; height: 100svh; pointer-events: none; }
+.world { position: fixed; z-index: 0; inset: 0; height: 100svh; pointer-events: auto; }
 .noise { position: fixed; z-index: 1; inset: 0; opacity: .22; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E"); }
-.hero { position: relative; display: flex; min-height: calc(100svh - 82px); flex-direction: column; justify-content: center; width: min(1440px, calc(100% - 48px)); margin: 0 auto; padding: clamp(88px, 11vw, 154px) clamp(0px, 5vw, 72px) 80px; }
+.hero { position: relative; display: flex; min-height: calc(100svh - 82px); flex-direction: column; justify-content: center; width: min(1440px, calc(100% - 48px)); margin: 0 auto; padding: clamp(88px, 11vw, 154px) clamp(0px, 5vw, 72px) 80px; pointer-events:none; }
 .hero::before { position: absolute; top: 9%; bottom: 9%; left: 0; width: 1px; content: ""; background: linear-gradient(transparent, #8499cf66 15%, #8499cf66 85%, transparent); }
 .heroMeta { position: absolute; top: 30px; right: 0; left: 0; display: flex; justify-content: space-between; color: #9299b1; font: 600 .58rem/1 var(--font-geist-mono); letter-spacing: .16em; }
 .heroCopy { position: relative; z-index: 2; width: min(820px, 72%); }
@@ -31,10 +31,21 @@
 .futureCard .cardSymbol { color: #a2a4a4; opacity: .075; }.futureCard .cardBody > p { color: #8f9191; }.futureCard .cardFoot { color: #777a7b; }
 .amber, .violet, .green { --card-accent: #7f8389; }
 .futureSymbol { position:absolute; top:50%; right:7%; color:#6f7472; opacity:.1; font:200 clamp(8rem,18vw,17rem)/1 var(--font-physics); transform:translateY(-50%); }
+.planetLabelLayer { position:absolute; z-index:5; inset:0; overflow:hidden; pointer-events:none; }
+.planetLabel { position:absolute; top:0; left:0; display:flex; align-items:center; gap:8px; width:max-content; color:#324541; pointer-events:auto; will-change:transform; }
+.planetLabel i { position:relative; width:10px; height:10px; flex:0 0 auto; border:2px solid #fffdf1; border-radius:50%; background:#7a817e; box-shadow:0 0 0 1px #69736f,0 0 14px #42504c40; }
+.planetLabel i::after { position:absolute; top:50%; left:50%; width:var(--planet-hit,70px); aspect-ratio:1; border:1px solid transparent; border-radius:50%; content:""; transform:translate(-50%,-50%); transition:border-color .2s,background .2s; }
+.planetLabel:hover i::after,.planetLabel:focus-visible i::after { border-color:#3c76785c; background:#f5f3e411; }
+.planetLabel span { padding:8px 12px; border:1px solid #747f7b69; border-radius:999px; background:#f8f5ebdc; box-shadow:0 8px 24px #3a484426; font:500 .8rem/1 var(--font-physics); backdrop-filter:blur(12px); }
+.planetLabel.isLeft { flex-direction:row-reverse; }
+.planetLabel[data-hub-planet="0"]{--planet-hit:66px}.planetLabel[data-hub-planet="1"]{--planet-hit:104px}.planetLabel[data-hub-planet="2"]{--planet-hit:74px}.planetLabel[data-hub-planet="3"]{--planet-hit:90px}
+.planetLabel.isActive { color:#0f5661; }.planetLabel.isActive i { background:#16808c; box-shadow:0 0 0 1px #24727a,0 0 18px #16808c70; }.planetLabel.isActive span { border-color:#22818a78; background:#f4f9f2e8; }
+.planetLabel:hover span,.planetLabel:focus-visible span { color:#fffdf4; background:#1a626c; border-color:#1a626c; }
 .manifesto { position: relative; z-index: 2; width: min(1220px, calc(100% - 48px)); min-height: 82svh; margin: 0 auto; padding: 150px 0 120px; }.manifesto::before { position: absolute; z-index: -1; inset: 0 -20%; content: ""; background: linear-gradient(180deg, transparent, #070912e8 16%, #070912f5 80%, #070912); }.manifesto h2 em { color: #f2d276; font-weight: 300; }.principles { display: grid; grid-template-columns: repeat(3,1fr); margin-top: 90px; border-top: 1px solid #66708a66; border-bottom: 1px solid #66708a66; }.principles p { display: grid; min-height: 220px; grid-template-rows: auto auto 1fr; gap: 17px; padding: 30px; }.principles p + p { border-left: 1px solid #66708a66; }.principles span { color: #8ea2e7; font: 600 .62rem/1 var(--font-geist-mono); }.principles strong { font: 400 1.7rem/1 var(--font-physics); }.principles small { max-width: 260px; align-self: end; color: #858da5; font-size: .86rem; line-height: 1.6; }
 @keyframes rise { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } } @keyframes drift { 50% { transform:translateY(7px); } }
 @media (max-width: 760px) { .hero { width: calc(100% - 32px); min-height: calc(100svh - 68px); padding: 80px 8px 75px 22px; }.heroMeta { top: 20px; font-size: .48rem; }.heroCopy { width: 100%; }.hero h1 { font-size: clamp(4rem, 21vw, 6rem); line-height: .8; }.lead { max-width: 88%; margin-top: 34px; }.coordinates { display:none; }.fields { width: calc(100% - 32px); padding: 100px 0; }.sectionHeading { grid-template-columns:1fr; gap:25px; margin-bottom:45px; }.sectionHeading h2 { font-size: 3.7rem; }.fieldGrid { grid-template-columns:1fr; gap:18px; }.physicsCard { grid-column:auto; min-height:460px; }.fieldCard { min-height:360px; padding:24px; border-radius:22px; }.cardSymbol { width:65%; height:65%; right:-5%; }.cardBody h3,.futureCard .cardBody h3 { font-size:3.7rem; }.manifesto { width:calc(100% - 32px); padding:100px 0 80px; }.manifesto h2 { font-size:3.5rem; }.principles { grid-template-columns:1fr; margin-top:60px; }.principles p { min-height:170px; }.principles p + p { border-top:1px solid #66708a66; border-left:0; } }
 @media (prefers-reduced-motion:reduce) { .heroCopy > *,.jumpLink svg { animation:none; }.fieldCard { transform:none; } }
+@media(max-width:760px){.planetLabel{gap:5px}.planetLabel span{padding:7px 9px;font-size:.69rem}.planetLabel i{width:9px;height:9px}}
 
 /* Planetary light system */
 .main { color:#102c37; background:#f7f3e8; }
