@@ -18,8 +18,6 @@
     <h2 id="about-title">Về chúng tôi</h2>
     <figure class="legacyShowcase" data-showcase data-images='<?= e(json_encode($showcaseImages, JSON_UNESCAPED_SLASHES)) ?>'>
       <div class="showcaseFrame"><img src="<?= $showcaseImages[0] ?>" alt="Hình ảnh hoạt động PhysX-CNH" loading="lazy" decoding="async" fetchpriority="low"></div>
-      <figcaption><span>Hình ảnh hoạt động</span><span data-showcase-count>01 / <?= str_pad((string) count($showcaseImages), 2, '0', STR_PAD_LEFT) ?></span></figcaption>
-      <div class="showcaseControls"><button type="button" data-showcase-prev aria-label="Ảnh trước">←</button><button type="button" data-showcase-next aria-label="Ảnh tiếp theo">→</button></div>
     </figure>
   </section>
   <section class="fields" id="fields" aria-labelledby="fields-title">

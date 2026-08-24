@@ -31,14 +31,17 @@ test('hub planets expose four labeled spaces', async ({ page }) => {
 });
 
 test('legacy activity showcase cycles one local image at a time', async ({ page }) => {
+  await page.addInitScript(() => {
+    const nativeSetInterval = window.setInterval;
+    window.setInterval = (callback, delay, ...args) => nativeSetInterval(callback, Math.min(delay, 100), ...args);
+  });
   await page.goto('/');
   const showcase = page.locator('[data-showcase]');
   const image = showcase.locator('img');
   await expect(showcase).toBeVisible();
   const first = await image.getAttribute('src');
-  await showcase.locator('[data-showcase-next]').click();
   await expect(image).not.toHaveAttribute('src', first);
-  await expect(showcase.locator('[data-showcase-count]')).toContainText('02 / 10');
+  await expect(showcase.locator('figcaption, button')).toHaveCount(0);
 });
 
 test('orbit link scopes books and removes redundant kind control', async ({ page }) => {
