@@ -46,7 +46,7 @@ if (host) {
     const dust = new THREE.Points(dustGeometry, new THREE.PointsMaterial({ color: 0x477d82, size: 0.025, transparent: true, opacity: 0.3, depthWrite: false }));
     world.add(dust); updates.push((time) => { dust.rotation.y = time * 0.006; });
     const orbit = (radius, opacity = .28, parent = world, color = 0x517a80) => {
-      const curve = new THREE.EllipseCurve(0, 0, radius, radius * .58, 0, Math.PI * 2);
+      const curve = new THREE.EllipseCurve(0, 0, radius, radius, 0, Math.PI * 2);
       const points = curve.getPoints(220).map((point) => new THREE.Vector3(point.x, 0, point.y));
       const line = new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(points), new THREE.LineBasicMaterial({ color, transparent: true, opacity }));
       parent.add(line); return line;
@@ -136,7 +136,7 @@ if (host) {
           const show=projected.z<1&&scrollY<height*.72;
           label.style.opacity=show?'1':'0'; label.style.pointerEvents=show?'auto':'none';
         });
-        updates.push((time) => { const angle=phase+time*speed; planet.position.set(Math.cos(angle)*radius,Math.sin(angle*.72)*.08,Math.sin(angle)*radius*.58); planet.rotation.y=time*(.18+speed); });
+        updates.push((time) => { const angle=phase+time*speed; planet.position.set(Math.cos(angle)*radius,Math.sin(angle*.72)*.08,Math.sin(angle)*radius); planet.rotation.y=time*(.18+speed); });
       });
       updates.push((time) => { sun.rotation.y=time*.08; corona.rotation.y=-time*.04; corona.rotation.z=time*.025; });
       world.rotation.z = -.08;
@@ -192,8 +192,16 @@ if (host) {
       if (!host.clientWidth || !host.clientHeight) return;
       renderer.setSize(host.clientWidth,host.clientHeight,false); camera.aspect=host.clientWidth/host.clientHeight;
       const portrait=camera.aspect<.72,wide=camera.aspect>1.35;
-      camera.position.z=variant==='physics'?(portrait?10.4:wide?6.9:7.8):(portrait?15.5:wide?10.2:12.2);
-      camera.position.y=variant==='hub'?(portrait?6.45:wide?4.15:5.35):.2; camera.updateProjectionMatrix();
+      if (variant === 'hub') {
+        // Keep the orbital plane legible: mostly overhead, with just enough
+        // perspective to preserve depth without letting planets hide behind the Sun.
+        camera.position.y=portrait?16.2:wide?11.5:13.4;
+        camera.position.z=portrait?5.8:wide?4.3:4.9;
+      } else {
+        camera.position.y=.2;
+        camera.position.z=portrait?10.4:wide?6.9:7.8;
+      }
+      camera.updateProjectionMatrix();
     };
     new ResizeObserver(resize).observe(host); resize();
     new IntersectionObserver(([entry]) => { inView=entry.isIntersecting; },{threshold:.02}).observe(host);
