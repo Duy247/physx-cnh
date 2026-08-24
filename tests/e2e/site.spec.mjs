@@ -74,7 +74,7 @@ test('field cards orbit a left-side pivot as the page scrolls', async ({ page })
 
 test('orbit link scopes books and removes redundant kind control', async ({ page }) => {
   await page.goto('/physics');
-  await page.getByRole('link', { name: /Sách chuyên Vật lý/i }).click({ force: true });
+  await page.getByRole('link', { name: /Sách chuyên Vật lý/i }).evaluate((link) => link.click());
   await expect(page).toHaveURL(/\/library\?kind=book&orbit=1/);
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Sách');
   await expect(page.locator('[data-result-count]')).toContainText('89');
