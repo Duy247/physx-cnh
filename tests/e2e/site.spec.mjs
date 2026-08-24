@@ -30,6 +30,17 @@ test('hub planets expose four labeled spaces', async ({ page }) => {
   }
 });
 
+test('legacy activity showcase cycles one local image at a time', async ({ page }) => {
+  await page.goto('/');
+  const showcase = page.locator('[data-showcase]');
+  const image = showcase.locator('img');
+  await expect(showcase).toBeVisible();
+  const first = await image.getAttribute('src');
+  await showcase.locator('[data-showcase-next]').click();
+  await expect(image).not.toHaveAttribute('src', first);
+  await expect(showcase.locator('[data-showcase-count]')).toContainText('02 / 10');
+});
+
 test('orbit link scopes books and removes redundant kind control', async ({ page }) => {
   await page.goto('/physics');
   await page.getByRole('link', { name: /Sách chuyên Vật lý/i }).click({ force: true });
@@ -87,7 +98,7 @@ test('locally bundled fonts, covers, scripts and graphs have no missing assets',
   page.on('response', response => {
     if (response.status() === 404) missing.push(response.url());
   });
-  for (const path of ['/physics', '/library', '/guides/roadmap', '/guides/research']) {
+  for (const path of ['/', '/physics', '/library', '/guides/roadmap', '/guides/research']) {
     await page.goto(path);
     await page.waitForLoadState('networkidle');
   }

@@ -29,4 +29,34 @@
       card.style.setProperty('--ry', '0deg');
     });
   });
+
+  const showcase = document.querySelector('[data-showcase]');
+  if (showcase) {
+    const images = JSON.parse(showcase.dataset.images || '[]');
+    const image = showcase.querySelector('img');
+    const count = showcase.querySelector('[data-showcase-count]');
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let index = 0;
+    let timer = null;
+    const show = (next) => {
+      if (!images.length || !image) return;
+      index = (next + images.length) % images.length;
+      showcase.classList.add('isChanging');
+      const source = images[index];
+      const swap = () => {
+        image.src = source;
+        image.onload = () => showcase.classList.remove('isChanging');
+        if (count) count.textContent = `${String(index + 1).padStart(2, '0')} / ${String(images.length).padStart(2, '0')}`;
+      };
+      setTimeout(swap, reduced ? 0 : 160);
+    };
+    const stop = () => { if (timer) clearInterval(timer); timer = null; };
+    const start = () => { if (!reduced && !document.hidden) { stop(); timer = setInterval(() => show(index + 1), 8000); } };
+    showcase.querySelector('[data-showcase-prev]')?.addEventListener('click', () => { show(index - 1); start(); });
+    showcase.querySelector('[data-showcase-next]')?.addEventListener('click', () => { show(index + 1); start(); });
+    showcase.addEventListener('mouseenter', stop);
+    showcase.addEventListener('mouseleave', start);
+    document.addEventListener('visibilitychange', () => document.hidden ? stop() : start());
+    start();
+  }
 })();
