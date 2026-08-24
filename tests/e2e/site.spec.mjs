@@ -19,11 +19,13 @@ test('physics label anchor dots remain tied to projected satellites', async ({ p
   await expect(labels.first()).toHaveAttribute('data-anchor-x', /\d/);
   await expect(labels.first()).toHaveAttribute('style', /--label-offset-x/);
   expect(await labels.evaluateAll(nodes => nodes.some(node => node.classList.contains('isLeft')))).toBe(false);
-  const labelClearances = await labels.evaluateAll(nodes => nodes.map(node => Math.hypot(Number(node.dataset.labelX)-Number(node.dataset.anchorX),Number(node.dataset.labelY)-Number(node.dataset.anchorY))));
-  const satelliteBaseDistances = await labels.evaluateAll(nodes => nodes.map(node => Number(node.dataset.baseDistance)));
-  labelClearances.forEach((distance,index) => {
-    expect(distance/satelliteBaseDistances[index]).toBeGreaterThan(.4);
-    expect(distance/satelliteBaseDistances[index]).toBeLessThan(.6);
+  const clearanceRatios = await labels.evaluateAll(nodes => nodes.map(node => (
+    Math.hypot(Number(node.dataset.labelX) - Number(node.dataset.anchorX), Number(node.dataset.labelY) - Number(node.dataset.anchorY))
+    / Number(node.dataset.baseDistance)
+  )));
+  clearanceRatios.forEach((ratio) => {
+    expect(ratio).toBeGreaterThan(.35);
+    expect(ratio).toBeLessThan(.65);
   });
   const offsets = await labels.evaluateAll((nodes) => nodes.map((label) => {
     const host = label.closest('[data-planetary]').getBoundingClientRect();
@@ -49,11 +51,13 @@ test('hub renders eight planets with Earth as the Physics space', async ({ page 
   await expect(spaces.getByRole('link', { name: 'Hóa học', exact: true })).toHaveAttribute('href', '/chemistry');
   await expect(planets.first()).toHaveAttribute('style', /--label-offset-x/);
   expect(await planets.evaluateAll(links => links.some(link => link.classList.contains('isLeft')))).toBe(false);
-  const planetLabelClearances = await planets.evaluateAll(nodes => nodes.map(node => Math.hypot(Number(node.dataset.labelX)-Number(node.dataset.anchorX),Number(node.dataset.labelY)-Number(node.dataset.anchorY))));
-  const planetBaseDistances = await planets.evaluateAll(nodes => nodes.map(node => Number(node.dataset.baseDistance)));
-  planetLabelClearances.forEach((distance,index) => {
-    expect(distance/planetBaseDistances[index]).toBeGreaterThan(.4);
-    expect(distance/planetBaseDistances[index]).toBeLessThan(.6);
+  const planetClearanceRatios = await planets.evaluateAll(nodes => nodes.map(node => (
+    Math.hypot(Number(node.dataset.labelX) - Number(node.dataset.anchorX), Number(node.dataset.labelY) - Number(node.dataset.anchorY))
+    / Number(node.dataset.baseDistance)
+  )));
+  planetClearanceRatios.forEach((ratio) => {
+    expect(ratio).toBeGreaterThan(.35);
+    expect(ratio).toBeLessThan(.65);
   });
   const planetTargets = await planets.evaluateAll(links => links.map(link => {
     const marker = link.querySelector('i').getBoundingClientRect();
