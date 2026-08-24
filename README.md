@@ -1,9 +1,9 @@
-# PhysX-CNH - Hub tài liệu chuyên lí 
+# PhysX-CNH - Kho nguồn tài liệu
 Đây là repository của trang web [PhysX-CNH](https://physx-cnh.com)
 
 Xem wiki tại [đây](https://github.com/Duy247/physx-cnh/wiki)
 
-Trang web được duy trì và vận hành thông qua Github, được deploy trên hosting của Hostinger.
+Repository này là nguồn chuẩn cho giao diện PHP, manifest và toàn bộ kho PDF của PhysX-CNH. Hostinger phục vụ trực tiếp website, ảnh bìa, thư viện trình duyệt và tài liệu; production không phụ thuộc Vercel hay Blob.
 
 ## Mục tiêu
 
@@ -13,13 +13,18 @@ Trang web được tạo ra nhằm mục đích hỗ trợ các học sinh khố
 
 ## Kỹ thuật
 
-Trang web được host sử dụng máy chủ hosting của Hostinger, bất kỳ thay đổi nào của repo này sẽ ngay lập tức được pull về bên máy chủ hosting.
+Manifest JSON trong `physics/catalog/` là nguồn chuẩn. `public-snapshot.json` chứa đúng 325 tài liệu đã biên mục; `inventory.json` theo dõi 1.366 PDF nhưng không đưa 1.047 tệp nháp lên thư viện. PHP 8.1+ đọc snapshot tại chỗ và Hostinger là origin duy nhất.
 
-Trang web hiện tại đang sử dụng ngôn ngữ lập trình PHP, giúp điều hành trang web dễ dàng hơn.
+```bash
+npm install
+npm run catalog:inventory
+npm run graphs:generate
+python tools/generate-pdf-covers.py
+```
 
 ## Tính năng
 
-Tính năng chính của trang web là lưu trữ tài liệu, tệp tin PDF và người dùng có thể xem trực tiếp các tài liệu này sử dụng trình duyệt trên thiết bị máy tính hoặc điện thoại.
+Website cung cấp hệ hành tinh Three.js, tìm kiếm và lọc metadata, ảnh bìa nhẹ, sơ đồ học tập GoJS và trình đọc PDF.js tiêu chuẩn. Trang đọc không lưu ghi chú hay tiến độ.
 
 ## Đóng góp
 

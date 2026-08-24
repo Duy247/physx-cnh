@@ -1,10 +1,52 @@
-DirectoryIndex welcome.php index.php index.html
-ErrorDocument 404 /404.php
+DirectoryIndex index.php index.html
+ErrorDocument 404 /index.php
 RewriteEngine On
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.pdf$">
+        Header always set Access-Control-Allow-Origin "*"
+        Header always set Access-Control-Allow-Methods "GET, HEAD, OPTIONS"
+        Header always set Access-Control-Expose-Headers "Accept-Ranges, Content-Range, Content-Length"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    <FilesMatch "\.(?:css|js|mjs|woff2|webp)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# Canonical replacements for the old PHP entry points.
+RewriteRule ^welcome/?$ / [R=301,L,NE]
+RewriteRule ^roadmap/?$ /guides/roadmap [R=301,L,NE]
+RewriteRule ^article/?$ /guides/research [R=301,L,NE]
+RewriteRule ^welcome\.php$ / [R=301,L,NE]
+RewriteRule ^roadmap\.php$ /guides/roadmap [R=301,L,NE]
+RewriteRule ^article\.php$ /guides/research [R=301,L,NE]
+RewriteRule ^donate\.php$ /donate [R=301,L,NE]
+RewriteRule ^donators\.php$ /donators [R=301,L,NE]
+RewriteRule ^disclaimer(?:\.html)?$ /legal [R=301,L,NE]
 RewriteRule ^nav/physics_mobile(?:\.php)?$ /nav/physics [R=301,L,NE]
+
+# The physical physics directory remains the PDF origin; only its bare URL is a page.
+RewriteRule ^physics/?$ index.php [QSA,L]
+RewriteRule ^(?:library(?:/[a-z0-9-]+)?|document/[a-z0-9-]+|guides/(?:roadmap|research)|donate|donators|legal|nav/physics|sitemap\.xml|robots\.txt)$ index.php [QSA,L,NC]
+
+# Existing files and auxiliary tools continue to be served unchanged.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
 
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.*)$ $1.php [L]
 
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
+
+RewriteRule ^ index.php [QSA,L]

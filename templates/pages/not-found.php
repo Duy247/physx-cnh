@@ -1,0 +1,1 @@
+<main id="main-content" class="page-shell"><p class="page-kicker">404 / LOST IN ORBIT</p><h1 class="page-title">Không tìm thấy trang</h1><p class="page-intro">Tín hiệu này không còn nằm trong quỹ đạo của thư viện.</p><p style="margin-top:28px"><a class="button" href="/">Trở về hệ chính <?= icon('arrow',18) ?></a></p></main>

@@ -13,6 +13,10 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.1', '8.3']
     steps:
       - name: Check out catalog code without historical PDF blobs
         uses: actions/checkout@v4
@@ -21,24 +25,33 @@ jobs:
           filter: blob:none
           sparse-checkout: |
             .github
+            assets/v2/covers
             config
+            data
             nav
             physics/catalog
+            roadmap
             schema
             src
+            templates
             tests
             tools
+            index.php
+            package.json
+            package-lock.json
           sparse-checkout-cone-mode: true
 
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.3'
+          php-version: ${{ matrix.php }}
           coverage: none
 
       - name: Lint PHP
         shell: bash
-        run: find config nav src tests tools -name '*.php' -print0 | xargs -0 -n1 php -l
+        run: |
+          php -l index.php
+          find config nav src templates tests tools -name '*.php' -print0 | xargs -0 -n1 php -l
 
       - name: Validate catalog tree
         run: php tools/catalog.php validate --git-tree=HEAD
@@ -47,6 +60,9 @@ jobs:
         env:
           CATALOG_SKIP_FILES: '1'
         run: php tests/catalog_test.php
+
+      - name: Run planetary web tests
+        run: php tests/web_test.php
 
       - name: Fetch pull-request base
         if: github.event_name == 'pull_request'
@@ -95,3 +111,48 @@ jobs:
             printf '| `%s` | %s bytes | `%s` |\n' "$pdf" "$size" "$checksum" >> "$GITHUB_STEP_SUMMARY"
             rm -f "$temporary"
           done
+
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the planetary interface without historical PDF blobs
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            assets/v2
+            data
+            image
+            physics/catalog
+            src
+            templates
+            tests/e2e
+            tools/dev-router.php
+            index.php
+            package.json
+            package-lock.json
+            playwright.config.mjs
+          sparse-checkout-cone-mode: true
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: none
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install browser tests
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Test desktop and mobile behavior
+        env:
+          PHYSX_SKIP_PDF_TEST: '1'
+        run: npm run test:e2e

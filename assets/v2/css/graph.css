@@ -1,0 +1,34 @@
+.page { width: min(1500px, calc(100% - 36px)); margin: 0 auto; padding: 42px 0 80px; }
+.page > header { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 520px); gap: 12px 40px; align-items: end; margin-bottom: 24px; }
+.page > header :global(.page-kicker), .page > header h1 { grid-column: 1; }
+.page > header h1 { font-size: clamp(2.2rem, 5vw, 4.8rem); line-height: .94; letter-spacing: -.06em; }
+.page > header > p:last-child { grid-column: 2; grid-row: 1 / 3; color: var(--muted); line-height: 1.6; }
+.graphShell { position: relative; overflow: hidden; background: #fff; border: 3px solid var(--ink); box-shadow: 9px 9px 0 var(--yellow); }
+.graphShell:fullscreen { display: grid; grid-template-rows: auto 1fr; width: 100vw; height: 100dvh; background: white; }
+.graphBar { display: flex; min-height: 50px; align-items: center; justify-content: space-between; gap: 20px; padding: 7px 9px 7px 16px; color: var(--paper); background: var(--ink); }
+.graphBar span { display: flex; align-items: center; gap: 9px; font-size: .76rem; font-weight: 700; }
+.graphBar svg { width: 18px; flex: 0 0 auto; }
+.graphBar button { display: grid; width: 36px; height: 36px; flex: 0 0 auto; place-items: center; color: var(--paper); background: #303030; border: 1px solid #777; cursor: pointer; }
+.diagram { width: 100%; height: min(70vh, 760px); min-height: 520px; touch-action: none; }
+.graphShell:fullscreen .diagram { height: 100%; min-height: 0; }
+.detail { position: absolute; z-index: 5; right: 18px; bottom: 18px; width: min(520px, calc(100% - 36px)); max-height: min(52%, 480px); padding: 22px 25px; overflow: auto; background: color-mix(in srgb, var(--paper) 96%, transparent); border: 3px solid var(--ink); border-left: 9px solid var(--blue); box-shadow: 7px 7px 0 #15151566; }
+.detail > button { position: sticky; z-index: 2; top: 0; float: right; display: grid; width: 34px; height: 34px; place-items: center; color: var(--paper); background: var(--ink); border: 0; cursor: pointer; }
+.detail h2 { margin: 3px 42px 14px 0; font-size: clamp(1.25rem, 3vw, 1.8rem); white-space: pre-line; }
+.detail div { line-height: 1.6; }
+.detail ul { margin: 12px 0 12px 22px; }
+.detail a { color: var(--blue); text-decoration: underline; }
+@media (max-width: 720px) {
+  .page { width: calc(100% - 20px); padding-top: 24px; }
+  .page > header { display: block; }
+  .page > header > p:last-child { margin-top: 14px; }
+  .graphBar span { font-size: .65rem; line-height: 1.35; }
+  .diagram { height: 64dvh; min-height: 430px; }
+  .detail { right: 8px; bottom: 8px; width: calc(100% - 16px); max-height: 48%; padding: 18px; }
+}
+
+/* Planetary instrument panel */
+.page { position:relative; isolation:isolate; }.page::before { position:absolute; z-index:-1; top:20px; right:4%; width:260px; aspect-ratio:1; content:""; border:1px solid #4b818129; border-radius:50%; box-shadow:0 0 0 38px #5a8b8610,0 0 0 76px #5a8b8608; }
+.page > header { display:block; margin-bottom:30px; }.page > header h1 { color:#103740; font-weight:300; }
+.graphShell { background:#fffdf5; border:1px solid #668b8778; border-radius:24px; box-shadow:0 24px 65px #315b5e20; }
+.graphBar { color:#f8f4e9; background:#176b77; }.graphBar button { color:#f8f4e9; background:#0e5662; border-color:#77a8a8; border-radius:50%; }
+.detail { background:#fffdf5f2; border:1px solid #668b87; border-left:7px solid #176b77; border-radius:18px; box-shadow:0 14px 38px #315b5e2c; }.detail > button { background:#176b77; border-radius:50%; }.detail h2 { color:#103740; }

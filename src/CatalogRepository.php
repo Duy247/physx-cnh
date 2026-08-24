@@ -19,7 +19,7 @@ final class CatalogRepository
     }
 
     /**
-     * @return array<int, array{title: string, author: string, file: string, description: string, source: string, legacy: bool}>
+     * @return array<int, array{title: string, author: string, file: string, description: string, source: string, legacy: bool, delivery: string}>
      */
     public function load(string $manifestPath, bool $requireFiles = true): array
     {
@@ -50,12 +50,15 @@ final class CatalogRepository
             if (!is_array($rawItem)) {
                 throw new CatalogException($this->itemError($manifestPath, $index, 'must be an object'));
             }
-            $unknownFields = array_diff(array_keys($rawItem), ['title', 'author', 'file', 'description', 'source', 'legacy']);
+            $unknownFields = array_diff(array_keys($rawItem), ['title', 'author', 'file', 'description', 'source', 'legacy', 'delivery']);
             if ($unknownFields !== []) {
                 throw new CatalogException($this->itemError($manifestPath, $index, 'contains unknown field(s): ' . implode(', ', $unknownFields)));
             }
             if (isset($rawItem['legacy']) && !is_bool($rawItem['legacy'])) {
                 throw new CatalogException($this->itemError($manifestPath, $index, 'legacy must be a boolean'));
+            }
+            if (isset($rawItem['delivery']) && !in_array($rawItem['delivery'], ['hostinger', 'vercel-blob'], true)) {
+                throw new CatalogException($this->itemError($manifestPath, $index, 'delivery must be hostinger or vercel-blob'));
             }
 
             $item = [
@@ -65,6 +68,7 @@ final class CatalogRepository
                 'description' => $this->textField($rawItem, 'description', false, self::MAX_DESCRIPTION_LENGTH, $manifestPath, $index),
                 'source' => $this->textField($rawItem, 'source', false, self::MAX_SOURCE_LENGTH, $manifestPath, $index),
                 'legacy' => ($rawItem['legacy'] ?? false) === true,
+                'delivery' => (string) ($rawItem['delivery'] ?? 'hostinger'),
             ];
 
             $extension = strtolower(pathinfo($item['file'], PATHINFO_EXTENSION));

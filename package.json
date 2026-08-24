@@ -1,0 +1,17 @@
+{
+  "name": "physx-cnh-content",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "catalog:inventory": "node tools/catalog-inventory.mjs",
+    "graphs:generate": "node tools/generate-graph-data.mjs",
+    "covers:generate": "python tools/generate-pdf-covers.py",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}
