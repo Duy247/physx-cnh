@@ -2,6 +2,13 @@ DirectoryIndex index.php index.html
 ErrorDocument 404 /index.php
 RewriteEngine On
 
+# LiteSpeed does not consistently register modern module and WebAssembly MIME
+# types. PDF.js and Three.js require strict module MIME handling in browsers.
+AddType application/javascript .mjs
+AddType application/wasm .wasm
+AddType font/woff2 .woff2
+AddType application/octet-stream .bcmap
+
 <IfModule mod_headers.c>
     <FilesMatch "\.pdf$">
         Header always set Access-Control-Allow-Origin "*"
