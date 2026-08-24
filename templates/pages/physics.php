@@ -4,8 +4,8 @@
     <div class="stage physics" data-planetary="physics">
       <div class="aura"></div><div class="vignette"></div>
       <nav class="satelliteLayer" aria-label="Các kho tài liệu Vật lý">
-        <?php foreach ([['Sách chuyên Vật lý','book'],['Đề thi & đáp án','paper'],['Tài liệu chuyên đề','material'],['Tạp chí Vật lý','magazine']] as $index => [$label,$kind]): ?>
-          <a class="satelliteLabel" href="/library?kind=<?= $kind ?>&amp;orbit=1" data-satellite="<?= $index ?>"><i></i><span><?= e($label) ?></span></a>
+        <?php foreach ([['VINASAT-1','Sách chuyên Vật lý','book'],['VINASAT-2','Đề thi & đáp án','paper'],['VNREDSat-1','Tài liệu chuyên đề','material'],['PicoDragon','Tạp chí Vật lý','magazine']] as $index => [$spacecraft,$label,$kind]): ?>
+          <a class="satelliteLabel" href="/library?kind=<?= $kind ?>&amp;orbit=1" data-satellite="<?= $index ?>" data-spacecraft="<?= e($spacecraft) ?>"><i></i><span><b><?= e($spacecraft) ?></b><small><?= e($label) ?></small></span></a>
         <?php endforeach; ?>
       </nav>
     </div>

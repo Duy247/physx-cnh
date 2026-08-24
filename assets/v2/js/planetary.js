@@ -51,23 +51,80 @@ if (host) {
       const line = new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(points), new THREE.LineBasicMaterial({ color, transparent: true, opacity }));
       parent.add(line); return line;
     };
+    const metal = new THREE.MeshStandardMaterial({ color:0xd6d2c5,metalness:.72,roughness:.3 });
+    const gold = new THREE.MeshStandardMaterial({ color:0xb99036,metalness:.62,roughness:.36 });
+    const dark = new THREE.MeshStandardMaterial({ color:0x26343a,metalness:.48,roughness:.38 });
+    const panelMaterial = new THREE.MeshStandardMaterial({ color:0x245a82,metalness:.36,roughness:.42,emissive:0x123050,emissiveIntensity:.14 });
+    const addSolarPanel = (group, x, width=.42, height=.22) => {
+      const panel = new THREE.Mesh(new THREE.BoxGeometry(width,height,.025),panelMaterial); panel.position.x=x; group.add(panel);
+      for (const offset of [-.25,0,.25]) { const rib=new THREE.Mesh(new THREE.BoxGeometry(.008,height,.032),metal); rib.position.set(x+offset*width,0,.003); group.add(rib); }
+      const boom=new THREE.Mesh(new THREE.BoxGeometry(Math.max(.08,Math.abs(x)-width/2),.018,.018),metal); boom.position.x=x>0?(Math.abs(x)-width/2)/2:-(Math.abs(x)-width/2)/2; group.add(boom);
+    };
+    const makeCommSatellite = (accent, twinDish=false) => {
+      const craft=new THREE.Group();
+      const bus=new THREE.Mesh(new THREE.BoxGeometry(.28,.24,.26),new THREE.MeshStandardMaterial({color:accent,metalness:.55,roughness:.32})); craft.add(bus);
+      addSolarPanel(craft,-.43,.42,.24); addSolarPanel(craft,.43,.42,.24);
+      const mast=new THREE.Mesh(new THREE.CylinderGeometry(.012,.012,.25,8),metal); mast.rotation.x=Math.PI/2; mast.position.z=.23; craft.add(mast);
+      const dish=new THREE.Mesh(new THREE.SphereGeometry(.15,24,12,0,Math.PI*2,0,.55),gold); dish.scale.z=.32; dish.position.z=.34; dish.rotation.x=Math.PI; craft.add(dish);
+      if(twinDish){const smallDish=dish.clone();smallDish.scale.multiplyScalar(.58);smallDish.position.set(.12,.11,.25);craft.add(smallDish);}
+      return craft;
+    };
+    const makeObservationSatellite = () => {
+      const craft=new THREE.Group();
+      const bus=new THREE.Mesh(new THREE.BoxGeometry(.28,.34,.25),metal); craft.add(bus);
+      addSolarPanel(craft,-.42,.38,.32); addSolarPanel(craft,.42,.38,.32);
+      const lens=new THREE.Mesh(new THREE.CylinderGeometry(.075,.12,.19,20),dark); lens.rotation.x=Math.PI/2; lens.position.z=.21; craft.add(lens);
+      const antenna=new THREE.Mesh(new THREE.CylinderGeometry(.008,.008,.35,8),gold); antenna.position.y=.3; craft.add(antenna);
+      return craft;
+    };
+    const makeCubeSat = () => {
+      const craft=new THREE.Group();
+      const cube=new THREE.Mesh(new THREE.BoxGeometry(.25,.25,.25),panelMaterial); craft.add(cube);
+      const frame=new THREE.LineSegments(new THREE.EdgesGeometry(cube.geometry),new THREE.LineBasicMaterial({color:0xd8b64d})); craft.add(frame);
+      [[.13,.13,0],[-.13,.13,0],[.13,-.13,0],[-.13,-.13,0]].forEach(([x,y])=>{const antenna=new THREE.Mesh(new THREE.CylinderGeometry(.006,.006,.32,6),gold);antenna.position.set(x,y,.22);antenna.rotation.x=Math.PI/5;craft.add(antenna);});
+      return craft;
+    };
+    const surfacePoint = (latitude, longitude, radius) => {
+      const lat=THREE.MathUtils.degToRad(latitude),lon=THREE.MathUtils.degToRad(longitude);
+      return new THREE.Vector3(radius*Math.cos(lat)*Math.cos(lon),radius*Math.sin(lat),-radius*Math.cos(lat)*Math.sin(lon));
+    };
+    const makeMapLabel = (text, wide=false) => {
+      const canvas=document.createElement('canvas'); canvas.width=wide?768:384; canvas.height=96;
+      const context=canvas.getContext('2d'); context.clearRect(0,0,canvas.width,canvas.height);
+      context.fillStyle='rgba(250,247,237,.9)'; context.strokeStyle='rgba(159,110,28,.8)'; context.lineWidth=3;
+      context.beginPath(); context.roundRect(3,3,canvas.width-6,canvas.height-6,38); context.fill(); context.stroke();
+      context.fillStyle='#713f1f'; context.font='600 30px Arial, sans-serif'; context.textAlign='center'; context.textBaseline='middle'; context.fillText(text,canvas.width/2,canvas.height/2+1);
+      const texture=new THREE.CanvasTexture(canvas); texture.colorSpace=THREE.SRGBColorSpace;
+      const sprite=new THREE.Sprite(new THREE.SpriteMaterial({map:texture,transparent:true,depthTest:true,depthWrite:false}));
+      sprite.scale.set(wide?1.18:.66,.18,1); return sprite;
+    };
 
     if (variant === 'hub') {
+      host.dataset.planetCount='8';
+      const hubLabelMap=new Map(hubLabels.map((label)=>[Number(label.dataset.hubPlanet),label]));
       const sun = new THREE.Mesh(new THREE.SphereGeometry(.72, 48, 48), new THREE.MeshPhysicalMaterial({ color: 0xf2bd43, emissive: 0xe49a16, emissiveIntensity: 1.15, roughness: .22, clearcoat: .7 }));
       sun.position.y = .06; world.add(sun);
       const corona = new THREE.Mesh(new THREE.SphereGeometry(.96, 32, 32), new THREE.MeshBasicMaterial({ color: 0xf3c95d, transparent: true, opacity: .1, wireframe: true }));
       corona.position.copy(sun.position); world.add(corona);
       [
-        [1.45,.18,0xb88b68,.22,.7,false], [2.2,.32,0x178398,.15,2.4,true],
-        [3.05,.25,0x777b79,.105,4.2,false], [4.05,.42,0x8d8b86,.075,5.45,false],
-      ].forEach(([radius,size,color,speed,phase,physics], index) => {
+        [1.16,.09,0x8b8174,.34,.2,false,'Mercury'],
+        [1.54,.16,0xd4a260,.26,1.35,false,'Venus'],
+        [2.03,.2,0x278a9a,.205,2.35,true,'Earth'],
+        [2.49,.12,0xb85f43,.17,3.16,false,'Mars'],
+        [3.18,.37,0xc49160,.108,4.02,false,'Jupiter'],
+        [3.93,.3,0xd1b477,.084,4.74,false,'Saturn'],
+        [4.62,.22,0x73c8c8,.066,5.3,false,'Uranus'],
+        [5.28,.21,0x527bb6,.053,5.84,false,'Neptune'],
+      ].forEach(([radius,size,color,speed,phase,physics,name], index) => {
         orbit(radius, physics ? .48 : .23);
         const planet = new THREE.Mesh(new THREE.SphereGeometry(size, 32, 32), new THREE.MeshPhysicalMaterial({ color, roughness: .46, clearcoat: .3 }));
-        world.add(planet);
+        planet.name=name; world.add(planet);
         if (physics) { const marker = new THREE.Mesh(new THREE.TorusGeometry(size * 1.55,.018,8,64), new THREE.MeshBasicMaterial({ color:0x0d687c,transparent:true,opacity:.65 })); marker.rotation.x=Math.PI/2.8; planet.add(marker); }
+        if(name==='Saturn'){const rings=new THREE.Mesh(new THREE.RingGeometry(size*1.35,size*2.05,72),new THREE.MeshBasicMaterial({color:0xbba46f,transparent:true,opacity:.62,side:THREE.DoubleSide}));rings.rotation.x=Math.PI/2.45;planet.add(rings);}
+        if(name==='Uranus'){const rings=new THREE.Mesh(new THREE.RingGeometry(size*1.28,size*1.6,64),new THREE.MeshBasicMaterial({color:0x9bd4d1,transparent:true,opacity:.42,side:THREE.DoubleSide}));rings.rotation.x=Math.PI/2.08;planet.add(rings);}
         const projected = new THREE.Vector3();
         projectors.push(() => {
-          const label=hubLabels[index]; if (!label) return;
+          const label=hubLabelMap.get(index); if (!label) return;
           planet.getWorldPosition(projected).project(camera);
           const width=host.clientWidth,height=host.clientHeight;
           const naturalX=(projected.x*.5+.5)*width,leftSide=naturalX<width/2;
@@ -84,15 +141,30 @@ if (host) {
       updates.push((time) => { sun.rotation.y=time*.08; corona.rotation.y=-time*.04; corona.rotation.z=time*.025; });
       world.rotation.z = -.08;
     } else {
+      host.dataset.spacecraftCount='4';
       const planet = new THREE.Group(); world.add(planet);
-      const globe = new THREE.Mesh(new THREE.SphereGeometry(1.62,64,64), new THREE.MeshPhysicalMaterial({ color:0x76c4c7,emissive:0x1e6670,emissiveIntensity:.16,roughness:.5,clearcoat:.5 })); planet.add(globe);
-      const grid = new THREE.Mesh(new THREE.SphereGeometry(1.635,24,16), new THREE.MeshBasicMaterial({ color:0xf7f3e8,wireframe:true,transparent:true,opacity:.14 })); planet.add(grid);
+      const earthSurface=new THREE.Group(); planet.add(earthSurface);
+      const earthTexture=new THREE.TextureLoader().load('/assets/v2/images/earth-vietnam-map.webp?v=1',()=>{host.dataset.earthMap='loaded';});
+      earthTexture.colorSpace=THREE.SRGBColorSpace; earthTexture.anisotropy=Math.min(renderer.capabilities.getMaxAnisotropy(),8);
+      const globe = new THREE.Mesh(new THREE.SphereGeometry(1.62,64,64), new THREE.MeshPhysicalMaterial({ map:earthTexture,color:0xffffff,emissive:0x174b56,emissiveIntensity:.08,roughness:.62,clearcoat:.28 })); earthSurface.add(globe);
+      const grid = new THREE.Mesh(new THREE.SphereGeometry(1.635,24,16), new THREE.MeshBasicMaterial({ color:0xf7f3e8,wireframe:true,transparent:true,opacity:.11 })); earthSurface.add(grid);
       const atmosphere = new THREE.Mesh(new THREE.SphereGeometry(1.82,40,40), new THREE.MeshBasicMaterial({ color:0x63cad0,transparent:true,opacity:.075,side:THREE.BackSide })); planet.add(atmosphere);
-      const settings = [[2.42,2.55,[.2,.18,-.18],0x247f8b,.13],[2.62,.62,[-.18,.12,.24],0xd4a844,.105],[2.5,-.55,[.16,-.2,-.28],0x3f9297,.115],[2.72,3.72,[-.14,-.16,.2],0xb8664d,.095]];
-      const satellites = settings.map(([radius,phase,tilt,color,speed], index) => {
+      [[16,108.2,'VIỆT NAM',false],[16.5,112,'HOÀNG SA · PARACEL ISLANDS',true],[10,114,'TRƯỜNG SA · SPRATLY ISLANDS',true]].forEach(([lat,lon,text,wide],index)=>{
+        const marker=new THREE.Mesh(new THREE.SphereGeometry(index?0.028:0.04,16,16),new THREE.MeshBasicMaterial({color:index?0xf0c44e:0xe83d2f})); marker.position.copy(surfacePoint(lat,lon,1.65)); earthSurface.add(marker);
+        const label=makeMapLabel(text,wide); label.position.copy(surfacePoint(lat,lon,1.82+(index*.035)));
+        label.position.add(index===0?new THREE.Vector3(-.2,.16,.03):index===1?new THREE.Vector3(-.42,.36,.04):new THREE.Vector3(-.42,-.2,.04));
+        label.center.set(index?1:.5,.5); earthSurface.add(label);
+      });
+      const settings = [
+        [2.42,2.55,[.2,.18,-.18],0x247f8b,.13,()=>makeCommSatellite(0xc7a13c,false),'VINASAT-1'],
+        [2.62,.62,[-.18,.12,.24],0xd4a844,.105,()=>makeCommSatellite(0xc9c4b8,true),'VINASAT-2'],
+        [2.5,-.55,[.16,-.2,-.28],0x3f9297,.115,makeObservationSatellite,'VNREDSat-1'],
+        [2.72,3.72,[-.14,-.16,.2],0xb8664d,.095,makeCubeSat,'PicoDragon'],
+      ];
+      const satellites = settings.map(([radius,phase,tilt,color,speed,factory,name], index) => {
         const plane = new THREE.Group(); plane.rotation.set(...tilt); planet.add(plane);
         const path = new THREE.Mesh(new THREE.TorusGeometry(radius,.018,8,180), new THREE.MeshBasicMaterial({ color,transparent:true,opacity:.42 })); plane.add(path);
-        const satellite = new THREE.Mesh(new THREE.SphereGeometry(.105,24,24),new THREE.MeshPhysicalMaterial({color,roughness:.28,clearcoat:.8})); plane.add(satellite);
+        const satellite = factory(); satellite.name=name; satellite.scale.setScalar(index===3?.78:.92); plane.add(satellite);
         const projected = new THREE.Vector3();
         projectors.push(() => {
           const label=labels[index]; if (!label) return;
@@ -111,8 +183,8 @@ if (host) {
         return { satellite,radius,phase,speed };
       });
       updates.push((time) => {
-        globe.rotation.y=time*.08; grid.rotation.y=time*.035; atmosphere.scale.setScalar(1+Math.sin(time*1.2)*.012);
-        satellites.forEach(({satellite,radius,phase,speed}) => { const angle=phase+time*speed; satellite.position.set(Math.cos(angle)*radius,Math.sin(angle)*radius,0); satellite.rotation.y=time*.8; });
+        earthSurface.rotation.y=Math.PI+time*.026; atmosphere.scale.setScalar(1+Math.sin(time*1.2)*.012);
+        satellites.forEach(({satellite,radius,phase,speed}) => { const angle=phase+time*speed; satellite.position.set(Math.cos(angle)*radius,Math.sin(angle)*radius,0); satellite.rotation.y=time*.55; satellite.rotation.z=time*.18; });
       });
     }
 
@@ -120,8 +192,8 @@ if (host) {
       if (!host.clientWidth || !host.clientHeight) return;
       renderer.setSize(host.clientWidth,host.clientHeight,false); camera.aspect=host.clientWidth/host.clientHeight;
       const portrait=camera.aspect<.72,wide=camera.aspect>1.35;
-      camera.position.z=variant==='physics'?(portrait?10.4:wide?6.9:7.8):(portrait?12:wide?7.25:9.2);
-      camera.position.y=variant==='hub'?(portrait?5.4:wide?3.55:4.8):.2; camera.updateProjectionMatrix();
+      camera.position.z=variant==='physics'?(portrait?10.4:wide?6.9:7.8):(portrait?15.5:wide?10.2:12.2);
+      camera.position.y=variant==='hub'?(portrait?6.45:wide?4.15:5.35):.2; camera.updateProjectionMatrix();
     };
     new ResizeObserver(resize).observe(host); resize();
     new IntersectionObserver(([entry]) => { inView=entry.isIntersecting; },{threshold:.02}).observe(host);

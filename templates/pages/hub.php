@@ -1,8 +1,8 @@
 <main id="main-content" class="main hub-main">
   <div class="world"><div class="stage hub" data-planetary="hub"><div class="aura"></div><div class="vignette"></div>
     <nav class="planetLabelLayer" aria-label="Các không gian học tập">
-      <?php foreach ([['Toán học','/math',false],['Vật lý','/physics',true],['Tin học','/it',false],['Hóa học','/chemistry',false]] as $index => [$field,$href,$active]): ?>
-        <a class="planetLabel<?= $active ? ' isActive' : ' isStone' ?>" href="<?= $href ?>" data-hub-planet="<?= $index ?>"><i></i><span><?= e($field) ?></span></a>
+      <?php foreach ([['Toán học','/math',false,4],['Vật lý','/physics',true,2],['Tin học','/it',false,6],['Hóa học','/chemistry',false,1]] as [$field,$href,$active,$planetIndex]): ?>
+        <a class="planetLabel<?= $active ? ' isActive' : ' isStone' ?>" href="<?= $href ?>" data-hub-planet="<?= $planetIndex ?>"><i></i><span><?= e($field) ?></span></a>
       <?php endforeach; ?>
     </nav>
   </div></div>

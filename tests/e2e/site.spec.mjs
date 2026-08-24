@@ -13,6 +13,9 @@ test('physics label anchor dots remain tied to projected satellites', async ({ p
   await page.goto('/physics');
   const labels = page.locator('[data-satellite]');
   await expect(labels).toHaveCount(4);
+  await expect(page.locator('[data-planetary="physics"]')).toHaveAttribute('data-spacecraft-count', '4');
+  expect(await labels.evaluateAll(nodes => nodes.map(node => node.dataset.spacecraft))).toEqual(['VINASAT-1', 'VINASAT-2', 'VNREDSat-1', 'PicoDragon']);
+  await expect(page.locator('[data-planetary="physics"]')).toHaveAttribute('data-earth-map', 'loaded');
   await expect(labels.first()).toHaveAttribute('data-anchor-x', /\d/);
   const offsets = await labels.evaluateAll((nodes) => nodes.map((label) => {
     const host = label.closest('[data-planetary]').getBoundingClientRect();
@@ -25,12 +28,14 @@ test('physics label anchor dots remain tied to projected satellites', async ({ p
   offsets.forEach(({ x, y }) => { expect(x).toBeLessThan(1.5); expect(y).toBeLessThan(1.5); });
 });
 
-test('hub planets expose four labeled spaces', async ({ page }) => {
+test('hub renders eight planets with Earth as the Physics space', async ({ page }) => {
   await page.goto('/');
   const planets = page.locator('[data-hub-planet]');
   await expect(planets).toHaveCount(4);
+  await expect(page.locator('[data-planetary="hub"]')).toHaveAttribute('data-planet-count', '8');
   const spaces = page.getByRole('navigation', { name: 'Các không gian học tập' });
   await expect(spaces.getByRole('link', { name: 'Vật lý', exact: true })).toHaveAttribute('href', '/physics');
+  await expect(spaces.getByRole('link', { name: 'Vật lý', exact: true })).toHaveAttribute('data-hub-planet', '2');
   await expect(spaces.getByRole('link', { name: 'Toán học', exact: true })).toHaveAttribute('href', '/math');
   await expect(spaces.getByRole('link', { name: 'Tin học', exact: true })).toHaveAttribute('href', '/it');
   await expect(spaces.getByRole('link', { name: 'Hóa học', exact: true })).toHaveAttribute('href', '/chemistry');
@@ -142,7 +147,7 @@ test('standard PDF.js viewer reaches late pages', async ({ page }, testInfo) => 
   await page.goto('/document/problems-in-general-physics');
   await expect(page).toHaveURL(/\/assets\/v2\/pdfjs\/web\/viewer\.html/);
   await expect(page.locator('#numPages')).toContainText('402', { timeout: 20_000 });
-  await page.locator('#pageNumber').fill('400');
-  await page.locator('#pageNumber').press('Enter');
+  await page.waitForFunction(() => window.PDFViewerApplication?.pdfViewer?.pagesCount === 402);
+  await page.evaluate(() => { window.PDFViewerApplication.pdfViewer.currentPageNumber = 400; });
   await expect(page.locator('.page[data-page-number="400"] canvas')).toBeVisible({ timeout: 20_000 });
 });
