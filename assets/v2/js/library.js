@@ -27,12 +27,7 @@
 
   const normalize = (value) => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('vi');
   const escape = (value) => String(value || '').replace(/[&<>'"]/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
-  const bytes = (value) => {
-    if (!value) return '—';
-    const units = ['B', 'KB', 'MB', 'GB'];
-    const index = Math.min(Math.floor(Math.log(value) / Math.log(1024)), units.length - 1);
-    return `${(value / (1024 ** index)).toFixed(index > 1 ? 1 : 0)} ${units[index]}`;
-  };
+  const addedDate = (value) => value ? new Intl.DateTimeFormat('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value}T00:00:00Z`)) : '';
   const fileIcon = '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg>';
   const arrow = '<svg class="arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17 17 7M7 7h10v10"/></svg>';
 
@@ -58,7 +53,8 @@
       ? `<span class="cardVisual hasCover"><img src="${escape(document.cover)}" alt="" loading="lazy" decoding="async" width="82" height="112"></span>`
       : `<span class="cardVisual">${fileIcon}</span>`;
     const authors = (document.authors || []).join(', ');
-    return `<article class="card">${visual}<div><p class="meta"><span>${escape(labels[document.kind] || 'Tài liệu')}</span> ${escape(String(document.language).toUpperCase())} · ${bytes(document.bytes)}</p><h2><a href="/document/${encodeURIComponent(document.slug)}">${escape(document.title)}</a></h2>${authors ? `<p class="author">${escape(authors)}</p>` : ''}${document.description ? `<p class="description">${escape(document.description)}</p>` : ''}</div>${arrow}</article>`;
+    const facts = [String(document.language).toUpperCase(), document.pages ? `${document.pages} trang` : '', document.addedAt ? `thêm ${addedDate(document.addedAt)}` : ''].filter(Boolean).join(' · ');
+    return `<article class="card">${visual}<div><p class="meta"><span>${escape(labels[document.kind] || 'Tài liệu')}</span> ${escape(facts)}</p><h2><a href="/document/${encodeURIComponent(document.slug)}">${escape(document.title)}</a></h2>${authors ? `<p class="author">${escape(authors)}</p>` : ''}${document.description ? `<p class="description">${escape(document.description)}</p>` : ''}</div>${arrow}</article>`;
   };
   const render = () => {
     const current = state();

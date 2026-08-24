@@ -123,6 +123,13 @@ test('library never fetches PDFs to render cards and preserves Back state', asyn
     if (/\.pdf(?:$|\?)/i.test(request.url())) pdfRequests.push(request.url());
   });
   await page.goto('/library?kind=book&orbit=1');
+  const firstMeta = page.locator('.meta').first();
+  await expect(firstMeta).toContainText(/\d+ trang/);
+  await expect(firstMeta).toContainText(/thêm \d{2}\/\d{2}\/\d{4}/i);
+  await expect(firstMeta).not.toContainText(/\b(?:KB|MB|GB)\b/i);
+  const prepared = await page.locator('#library-data').evaluate((node) => JSON.parse(node.textContent));
+  expect(prepared.every((document) => document.addedAt && (document.pages || document.cover === null))).toBe(true);
+  expect(prepared.every((document) => !Object.hasOwn(document, 'bytes'))).toBe(true);
   const search = page.getByRole('searchbox');
   await search.fill('Irodov');
   await expect(page).toHaveURL(/q=Irodov/);

@@ -1,0 +1,1566 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-24T17:43:27.758338Z",
+  "documents": {
+    "books/cohoc1.pdf": {
+      "blob": "36063316ffa4bd744bb6c129b965a00ee809daf0",
+      "pages": 94,
+      "addedAt": "2024-09-01"
+    },
+    "books/cohoc2.pdf": {
+      "blob": "c1cb8545279280367bbb3dfe1cc7ecf88af370aa",
+      "pages": 92,
+      "addedAt": "2024-09-01"
+    },
+    "books/cohoc3.pdf": {
+      "blob": "8212d55625bf09ff52d98c78c749b35acb644143",
+      "pages": 256,
+      "addedAt": "2024-09-01"
+    },
+    "books/nhiethocvaphantu.pdf": {
+      "blob": "9fabe4ee63f1b8c82c7e3e6f68f03b34ab19ac41",
+      "pages": 250,
+      "addedAt": "2024-09-01"
+    },
+    "books/dienhoc1.pdf": {
+      "blob": "073460d1377cb23aaa8bf231bd13ee92f9ad5eb8",
+      "pages": 233,
+      "addedAt": "2024-09-01"
+    },
+    "books/dienhoc2.pdf": {
+      "blob": "48f6b1bcff4db9898cb6251ea629a464d1ecf067",
+      "pages": 122,
+      "addedAt": "2024-09-01"
+    },
+    "books/quanghoc1.pdf": {
+      "blob": "51d3d0a532de1d43c0448db2c05583d897bb4908",
+      "pages": 184,
+      "addedAt": "2024-09-01"
+    },
+    "books/quanghoc2.pdf": {
+      "blob": "8a193e89dec6d9532c0689fd054cceb574f7cc1d",
+      "pages": 144,
+      "addedAt": "2024-09-01"
+    },
+    "books/vatlihiendai.pdf": {
+      "blob": "7d7d0425a5915bcea1317128705b0b1c8e152e07",
+      "pages": 173,
+      "addedAt": "2024-09-01"
+    },
+    "books/tai_lieu_chuyen_1.pdf": {
+      "blob": "cc91b07f436410b13dfa56446b77e94197e8a73f",
+      "pages": 224,
+      "addedAt": "2024-09-01"
+    },
+    "books/tai_lieu_chuyen_2.pdf": {
+      "blob": "ea994b241000930673f1048bfc7efd8a576bbcc4",
+      "pages": 204,
+      "addedAt": "2024-09-01"
+    },
+    "books/bt_co_nhiet.pdf": {
+      "blob": "d06029f4764619d976727b6238b4d9000a13da69",
+      "pages": 240,
+      "addedAt": "2024-09-01"
+    },
+    "books/bt_dien_quang_hien_dai.pdf": {
+      "blob": "2c837f482f7238772f8c4c3d5be20f69e98a06c9",
+      "pages": 288,
+      "addedAt": "2024-09-01"
+    },
+    "books/irodov-vi.pdf": {
+      "blob": "140e37930f89057c1e7e5cc1510a6ca33bcff453",
+      "pages": 166,
+      "addedAt": "2024-09-01"
+    },
+    "books/kho-vlsc-1.pdf": {
+      "blob": "caf8a91d6dfbe53ad9264d07554a04e01adc45ed",
+      "pages": 1213,
+      "addedAt": "2024-09-01"
+    },
+    "books/kho-vlsc-2.pdf": {
+      "blob": "e79cb47723c07ab60566bb9f95f36b4f24ddb8e5",
+      "pages": 856,
+      "addedAt": "2024-09-01"
+    },
+    "books/kho-vlsc-3.pdf": {
+      "blob": "edd275c37a9149b8a05c138958478410ad0ec783",
+      "pages": 1000,
+      "addedAt": "2024-09-01"
+    },
+    "books/gtvl_0_1.pdf": {
+      "blob": "4fcfcd6b3e07ba05ded8b6febb7a5270c2803ae2",
+      "pages": 168,
+      "addedAt": "2024-09-29"
+    },
+    "books/gtvl_0_2.pdf": {
+      "blob": "ba124320743c9fb77e9f556dac62aaba45a81992",
+      "pages": 104,
+      "addedAt": "2024-09-29"
+    },
+    "books/gtvl_1_1.pdf": {
+      "blob": "2fff08d2ab8aca1305559ba255586326416bdbe0",
+      "pages": 393,
+      "addedAt": "2024-09-29"
+    },
+    "books/gtvl_1_2.pdf": {
+      "blob": "c7da1eb5b5bc5f3f9acdaed4a2d672d559cf68b2",
+      "pages": 408,
+      "addedAt": "2024-09-29"
+    },
+    "books/gtvl_2_1.pdf": {
+      "blob": "606d932c750a33335fa14546ade75527fb36f3d3",
+      "pages": 312,
+      "addedAt": "2024-09-29"
+    },
+    "books/gtvl_2_2.pdf": {
+      "blob": "fa7593679dedd8bf241be76e9c75efafbec0a415",
+      "pages": 308,
+      "addedAt": "2024-09-29"
+    },
+    "books/vat-ly-thien-van.pdf": {
+      "blob": "7a810701fee51b825d2231d6a9467ec7a934de14",
+      "pages": 351,
+      "addedAt": "2024-09-01"
+    },
+    "books/thinking-practically.pdf": {
+      "blob": "d3a9f2342d356bfd4c8384203112d5ecb2d5f110",
+      "pages": 585,
+      "addedAt": "2024-09-01"
+    },
+    "books/PFIEV/PFIEV-mechanic-1.pdf": {
+      "blob": "c636ad4c0d3bcb53ca7fb9163c2ad0286f678787",
+      "pages": 176,
+      "addedAt": "2024-09-01"
+    },
+    "books/PFIEV/PFIEV-mechanic-2.pdf": {
+      "blob": "da759a8bc5f46e36711d4b0b275b5d7727e1e103",
+      "pages": 171,
+      "addedAt": "2024-09-01"
+    },
+    "books/PFIEV/PFIEV-thermodynamic-1.pdf": {
+      "blob": "2d0f7218b870a9ae514d7ef310f9539868120afd",
+      "pages": 320,
+      "addedAt": "2024-09-01"
+    },
+    "books/PFIEV/PFIEV-thermodynamic-2.pdf": {
+      "blob": "8dd83488ce986d477e187b04d076128f05a34daf",
+      "pages": 155,
+      "addedAt": "2024-09-01"
+    },
+    "books/PFIEV/PFIEV-electromagnetism-1.pdf": {
+      "blob": "c5a683552fa160d337c3c9f439ab8ba0f96ece34",
+      "pages": 198,
+      "addedAt": "2024-09-01"
+    },
+    "books/PFIEV/PFIEV-electromagnetism-2.pdf": {
+      "blob": "f33a55d72bc8bd70692e4d55ed27ffb5b055a68f",
+      "pages": 265,
+      "addedAt": "2024-09-01"
+    },
+    "books/cohoclythuyet_nguyendinhdung.pdf": {
+      "blob": "afb1b09d8e88a6e25c5cd923e205ecfebe4a0eca",
+      "pages": 194,
+      "addedAt": "2025-04-23"
+    },
+    "books/Dienhoc_VuThanhKhiet.pdf": {
+      "blob": "e4ce183591b67daf3cea69444b357f8b5d567ac6",
+      "pages": 465,
+      "addedAt": "2024-09-01"
+    },
+    "books/PFIEV/PFIEV-electric.pdf": {
+      "blob": "b0b31e61dc5b8854d8a50779a0fe0b4922cc50cb",
+      "pages": 179,
+      "addedAt": "2024-09-01"
+    },
+    "books/PFIEV/PFIEV-optic.pdf": {
+      "blob": "5c54e4e2c8e06da749b701f87ae824d267af0c99",
+      "pages": 233,
+      "addedAt": "2024-09-01"
+    },
+    "books/PFIEV/PFIEV-optic-wave.pdf": {
+      "blob": "1ec542ce21e1d50e0266ab7096194dca6662be07",
+      "pages": 286,
+      "addedAt": "2024-09-01"
+    },
+    "books/PFIEV/PFIEV-wave.pdf": {
+      "blob": "2a79dbd00a5ccba3fa3b01e88ec0cdf0ef665fb4",
+      "pages": 282,
+      "addedAt": "2024-09-01"
+    },
+    "books/PFIEV/PFIEV-fluid.pdf": {
+      "blob": "c126d1dad9267eeaa181fa3a9d069d072e282d94",
+      "pages": 277,
+      "addedAt": "2024-09-01"
+    },
+    "books/PFIEV/PFIEV-solid.pdf": {
+      "blob": "edb8a34bc5c9b89694c194bb41ab56e7bf1a39f2",
+      "pages": 178,
+      "addedAt": "2024-09-01"
+    },
+    "books/vatlyhiendai.pdf": {
+      "blob": "97a6ef3c686be9e2a9b18f9fca32f3d97b177129",
+      "pages": 497,
+      "addedAt": "2024-10-13"
+    },
+    "books/vldc_nl_ud_1.pdf": {
+      "blob": "43d584cea6b274ab4e93cd063245da30259d7872",
+      "pages": 515,
+      "addedAt": "2024-09-01"
+    },
+    "books/vldc_nl_ud_2.pdf": {
+      "blob": "f695cb2a962b16d7f5f98a70dc927eac3616a446",
+      "pages": 493,
+      "addedAt": "2024-09-01"
+    },
+    "books/vldc_nl_ud_3.pdf": {
+      "blob": "aa1c49258698c00ef54c99cbbecddf3861df0eda",
+      "pages": 420,
+      "addedAt": "2024-09-01"
+    },
+    "books/phan_hong_lien_1.pdf": {
+      "blob": "111b903dab236ca8b6fd0b5156de380dc46082e5",
+      "pages": 476,
+      "addedAt": "2024-09-01"
+    },
+    "books/phan_hong_lien_2.pdf": {
+      "blob": "5cb98e1dcb3f2240f9873141d89056f7c66a8d8b",
+      "pages": 456,
+      "addedAt": "2024-09-01"
+    },
+    "books/BT_loi_giai_mechanic.pdf": {
+      "blob": "32f38cba9db49329ab570f2fbce1192390554520",
+      "pages": 730,
+      "addedAt": "2024-09-01"
+    },
+    "books/BT_loi_giai_thermo.pdf": {
+      "blob": "4bcbc5117077a76cba04b2a2078ac34082c5f7d2",
+      "pages": 405,
+      "addedAt": "2024-09-01"
+    },
+    "books/BT_loi_giai_electromagnetism.pdf": {
+      "blob": "fa308cfd2407612872a95068e01a10254abfeab1",
+      "pages": 662,
+      "addedAt": "2024-09-01"
+    },
+    "books/BT_loi_giai_optic.pdf": {
+      "blob": "64fd3e2fb6a1ef6cbd2fae549b55b4fa71d57167",
+      "pages": 200,
+      "addedAt": "2024-09-01"
+    },
+    "books/BT_loi_giai_quantum.pdf": {
+      "blob": "f0fe6bb33e41d0a59c901d11d1bdce14820f7ed7",
+      "pages": 754,
+      "addedAt": "2024-09-01"
+    },
+    "books/BT_loi_giai_atomic.pdf": {
+      "blob": "5eb6f211b6c9ac095c4ea06d7a4de02059b5adcf",
+      "pages": 700,
+      "addedAt": "2024-09-01"
+    },
+    "books/BT_loi_giai_solid.pdf": {
+      "blob": "f54e1368da478897fe65fea4300a894833ca348b",
+      "pages": 340,
+      "addedAt": "2024-09-01"
+    },
+    "books/olympic_co_hoc.pdf": {
+      "blob": "79b205efaa265d03c0be4d0043bd282abb6fef12",
+      "pages": 204,
+      "addedAt": "2024-09-01"
+    },
+    "books/1000-solved.pdf": {
+      "blob": "96eee7740c1293e542c99e30d04d30d1de4212bc",
+      "pages": 812,
+      "addedAt": "2024-09-01"
+    },
+    "books/300-creative.pdf": {
+      "blob": "bd60f3764a69e588baa16ba612467f5550f4e134",
+      "pages": 540,
+      "addedAt": "2024-09-01"
+    },
+    "books/riley_hobson_bence.pdf": {
+      "blob": "0011d17bc89c2e903d15ae4c85453558ffb1dde8",
+      "pages": 1363,
+      "addedAt": "2024-09-01"
+    },
+    "books/200-puzzling-physics-problems.pdf": {
+      "blob": "a266e39f5f17bdf7970dee4349a6723fb98dd3fd",
+      "pages": 263,
+      "addedAt": "2024-09-01"
+    },
+    "books/200-more-puzzling-physics-problems.pdf": {
+      "blob": "61655206b58762de8e32f694660214a175ab7c62",
+      "pages": 498,
+      "addedAt": "2024-09-01"
+    },
+    "books/irodov_problem.pdf": {
+      "blob": "237c8ab1703f6f9ff239ce4e53ffa8365f252d14",
+      "pages": 402,
+      "addedAt": "2024-09-01"
+    },
+    "books/irodov_solution_1.pdf": {
+      "blob": "0ffa53275870dc7355465ef285c812f7c14ed9e7",
+      "pages": 431,
+      "addedAt": "2024-09-01"
+    },
+    "books/irodov_solution_2.pdf": {
+      "blob": "19ab47b5ce15a381c1ff3837f13794bd262a0fd8",
+      "pages": 402,
+      "addedAt": "2024-09-01"
+    },
+    "books/krotov-physics.pdf": {
+      "blob": "62ed185e9c553b220b60e56f910f93da412c3403",
+      "pages": 315,
+      "addedAt": "2024-09-01"
+    },
+    "books/savelyev_1_en.pdf": {
+      "blob": "0d7c1466bd668a9d6ec764949bfbedfef6151b36",
+      "pages": 439,
+      "addedAt": "2024-09-01"
+    },
+    "books/savelyev_2_en.pdf": {
+      "blob": "cf71b12f48ed55cfc4e02022f309dce62b6d3036",
+      "pages": 509,
+      "addedAt": "2024-09-01"
+    },
+    "books/savelyev_3_en.pdf": {
+      "blob": "6a0ed07f41c38494d9eae4b7c43713755ebf5ed2",
+      "pages": 319,
+      "addedAt": "2024-09-01"
+    },
+    "books/introduction-to-mechanics-2014.pdf": {
+      "blob": "487ab8ce84ec9a020b0866cda9888f0b4ff1ce50",
+      "pages": 564,
+      "addedAt": "2024-09-01"
+    },
+    "books/mechanic_morin_vn.pdf": {
+      "blob": "b04063ab3f28a4bcbe473eddf4d78b24fc0d12ba",
+      "pages": 1069,
+      "addedAt": "2024-09-01"
+    },
+    "books/solution_morin.pdf": {
+      "blob": "95263717852de31f349d992e70aa022135d22842",
+      "pages": 168,
+      "addedAt": "2024-09-01"
+    },
+    "books/vib_waves_french.pdf": {
+      "blob": "a478fbdae1738740c61490e3fba5bd6debaa95f3",
+      "pages": 327,
+      "addedAt": "2024-09-01"
+    },
+    "books/An_Introduction_to_Thermal_Physics.pdf": {
+      "blob": "24d426090ff8ee6551d6b1c2bda682d5bc3e51ae",
+      "pages": 436,
+      "addedAt": "2024-09-01"
+    },
+    "books/solution_schroeder.pdf": {
+      "blob": "9c6544219fb761d706b471210d8946ecf50eae10",
+      "pages": 121,
+      "addedAt": "2024-09-01"
+    },
+    "books/electricity_magnetism_purcell.pdf": {
+      "blob": "c2e3fcdfea862a2f6653509a984988b418aa4974",
+      "pages": 863,
+      "addedAt": "2024-09-01"
+    },
+    "books/Electrodynamic_Griffith.pdf": {
+      "blob": "b1ee96da55ba04ae430e836c4b1ee54713eace0e",
+      "pages": 623,
+      "addedAt": "2024-09-01"
+    },
+    "books/solution_griffiths.pdf": {
+      "blob": "1784315df5e34bb35e4d728702283c441a52e046",
+      "pages": 297,
+      "addedAt": "2024-09-01"
+    },
+    "books/problems_in_classical_electromagn.pdf": {
+      "blob": "35ef047f842c7757e17edca9a41f2dfc34df9767",
+      "pages": 452,
+      "addedAt": "2024-09-04"
+    },
+    "books/optics_eugene_hecht.pdf": {
+      "blob": "099f296bbadf126a42164965fb3ba8835c925a46",
+      "pages": 704,
+      "addedAt": "2024-09-01"
+    },
+    "books/modern_krane.pdf": {
+      "blob": "15f9efddc0fa6e4fd50cbea4dc8dce44e84879ff",
+      "pages": 594,
+      "addedAt": "2024-09-01"
+    },
+    "books/sol_modern_krane.pdf": {
+      "blob": "60e7d14b109b9e503d2f43286c3a4657b874110d",
+      "pages": 325,
+      "addedAt": "2024-09-01"
+    },
+    "books/fundamental_astronomy.pdf": {
+      "blob": "bf0e6a212e3a145f605a3fc5b65d2ed8c29c585a",
+      "pages": 507,
+      "addedAt": "2024-09-01"
+    },
+    "books/astrodynamics.pdf": {
+      "blob": "41fcd98db487c6560155f45e45a1e9e1f28d970c",
+      "pages": 470,
+      "addedAt": "2024-09-04"
+    },
+    "books/concepts_in_thermal_physics.pdf": {
+      "blob": "9ed140c08abb22be4bc417dcc6c007a52d60b057",
+      "pages": 483,
+      "addedAt": "2024-09-01"
+    },
+    "books/solution_concepts_in_thermal_physics.pdf": {
+      "blob": "386b1d1755549e821e7fdb694d4ec8766a1a549e",
+      "pages": 66,
+      "addedAt": "2024-09-01"
+    },
+    "books/competitive_physics-1.pdf": {
+      "blob": "f7996aa3d0b0e23868afef767dcde04a0a280820",
+      "pages": 831,
+      "addedAt": "2024-09-01"
+    },
+    "books/competitive_physics-2.pdf": {
+      "blob": "b169bd2561b14ca477b72f7c7b2b1b4a7b301fc7",
+      "pages": 961,
+      "addedAt": "2024-09-01"
+    },
+    "books/japan_physics_olympiad.pdf": {
+      "blob": "b266e8eac89c28d5c1e0b50995c16e3c1f320b12",
+      "pages": 380,
+      "addedAt": "2024-09-01"
+    },
+    "books/physics-to-a-degree.pdf": {
+      "blob": "57e2a683ef4439e33044a9163460c94416e7d473",
+      "pages": 252,
+      "addedAt": "2024-09-01"
+    },
+    "books/thinking-like-physicist.pdf": {
+      "blob": "0fa870912b8c914e957fc631c4dd82893770199b",
+      "pages": 154,
+      "addedAt": "2024-09-01"
+    },
+    "books/a_guide_to_physics_problems_1.pdf": {
+      "blob": "f4e701990ef89a44289b456df8196b980cd092fc",
+      "pages": 350,
+      "addedAt": "2024-09-01"
+    },
+    "books/a_guide_to_physics_problems_2.pdf": {
+      "blob": "0ebad492115a7407797cbfc002ae5e547b8ade19",
+      "pages": 374,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/y-tuong-giai-toan-chuyen-dong.pdf": {
+      "blob": "3d8122e79fa1bea4bdce0852fab83b7a28fdbc9c",
+      "pages": 7,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/xG.pdf": {
+      "blob": "04380b8c3fbc4f7821ab24a3a2437ec8bb138ce4",
+      "pages": 13,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/Orbital_Mech._Probs.pdf": {
+      "blob": "61f48e6aac883096e79c34050f649fdc1eac805f",
+      "pages": 11,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/dao_dong.pdf": {
+      "blob": "184d07c18f89ea9ee84f209506fb46497877f228",
+      "pages": 6,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/Motion_in_central_field.pdf": {
+      "blob": "277214c47e3c9d96b3ea91b47a38256a6f9e7586",
+      "pages": 4,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/motion_g.pdf": {
+      "blob": "63ee2e0ef7c8e1ebedcd2011524bb87963266057",
+      "pages": 11,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/Ly_thuyet_Kepler.pdf": {
+      "blob": "0cad8dfb69bb108d307f99358f47a0ca02eb00af",
+      "pages": 6,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/Euler_s_disk.pdf": {
+      "blob": "174bbfceb08b3040dd747446c9a55b2742b16752",
+      "pages": 4,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/Billiard_Physics.pdf": {
+      "blob": "425e8cb5ced5a82ded3569e74bb92e41e157c058",
+      "pages": 9,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/tuong_doi.pdf": {
+      "blob": "99ef322e5c8a85764bf8de0a2aea0795bade09f0",
+      "pages": 22,
+      "addedAt": "2024-09-01"
+    },
+    "materials/chuyen-de-co-hoc.pdf": {
+      "blob": "8e11c220a2b303736df08a139997624b0c3a23f6",
+      "pages": 122,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/thermodynamic_notes.pdf": {
+      "blob": "a10982dd672e9b778a5d6e74fe640acf0fc19a4d",
+      "pages": 4,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/Kinetic_theory_of_gases.pdf": {
+      "blob": "0504b5453ce469615fe3cb42e6fbfb2b670bedcb",
+      "pages": 4,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/dong-co.pdf": {
+      "blob": "ad42728677ff44a95af44cd0a376658e0e66bc94",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/ly-thuyet-mach.pdf": {
+      "blob": "37d2a33696f4d162fdecd29951f2b80098393183",
+      "pages": 31,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/AC_by_complex_numbers.pdf": {
+      "blob": "5ccd1bdb9272e25e7f6ca45f6a45ee69a964c76c",
+      "pages": 4,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/cam-ung-dien-tu-2020.pdf": {
+      "blob": "f8f87d3189bbd338be9b267fb79ea75f00efa711",
+      "pages": 62,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/anhdien.pdf": {
+      "blob": "cb63724bc8cbd88bb22964b1f1cf583557d1197f",
+      "pages": 30,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/van_dung_anh_dien.pdf": {
+      "blob": "520937e1ea68d5a7d8f0c05cfa2aab019382e92a",
+      "pages": 38,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/chuyen_de_anh_dien.pdf": {
+      "blob": "5c6cb24ed2f064f1da50ee547a013037290d5110",
+      "pages": 7,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/phuong-phap-dien-dong-hoc.pdf": {
+      "blob": "cec2b605cc5fd6bbcb24e56ef0a59b6f5a4fd6fd",
+      "pages": 86,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/Dipole_1.pdf": {
+      "blob": "335286d99a2179adc14cd310fbf6dbe591e0bbdd",
+      "pages": 4,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/khucxa.pdf": {
+      "blob": "8f8a85a665d6dee59da2f5fef8a4a9b19bf93193",
+      "pages": 3,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/Quang_trinh.pdf": {
+      "blob": "4cde7810b70c96078e245ddf939cd63c2331743f",
+      "pages": 4,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/nguyen-li-fermat.pdf": {
+      "blob": "e3beeeb77dab143397136a8166f482c9c7f68db1",
+      "pages": 12,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/chiet_suat_bien_doi.pdf": {
+      "blob": "1acc2a7189e83eb7a53a0cc1ad2c66ecb249b733",
+      "pages": 5,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/he-quang-hoc-dong-truc.pdf": {
+      "blob": "06be939d8355f5b3fa51e4ecad207fc9b21721ff",
+      "pages": 36,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/Nhieu-xa.pdf": {
+      "blob": "4e6bc1ddf8c095bbbb063fbcb03ad2eb34e25882",
+      "pages": 6,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/ggthvl.pdf": {
+      "blob": "52e58167347c0aa37dd8028f08ee07dbdb2631d5",
+      "pages": 11,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/curvelinear.pdf": {
+      "blob": "01ecc04c4a37954a94ac350cebc44db65d511dd8",
+      "pages": 3,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/integral-table.pdf": {
+      "blob": "8d0147846b93c4cafb2c5457d628e829c00930c6",
+      "pages": 14,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/ung_dung_dao_ham_tich_phan.pdf": {
+      "blob": "c92297a18b123373662d79838e15bb6849c7e61a",
+      "pages": 360,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/PTVP_tuyen_tinh_bac_2.pdf": {
+      "blob": "00c2abf268c27a1b5abe7a0c2a509e5137faa317",
+      "pages": 2,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/ky-thuat-giai-toan-tich-phan.pdf": {
+      "blob": "0624331e482114367cb13c9cdb5fc9d6f9a6acf8",
+      "pages": 582,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/bai_toan_vat_ly.pdf": {
+      "blob": "008e5181924c0e822b48770b13b70a1124a1e37f",
+      "pages": 50,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/formulas.pdf": {
+      "blob": "f8d703340a2b3309b2b4ce017c3c3b0364c6137d",
+      "pages": 4,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/IPhO_syllabus.pdf": {
+      "blob": "c745cf7fd1775cf0526067e8621d658bf66ad86b",
+      "pages": 4,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/mechanics-kevinzhou.pdf": {
+      "blob": "b78910c772f4a771153e27a25927197a341ed502",
+      "pages": 416,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/thermodynamics-kevinzhou.pdf": {
+      "blob": "90f2c1d90a4bae9596c8e14a8e7fb0668d1f4dc1",
+      "pages": 150,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/electromagnetism-kevinzhou.pdf": {
+      "blob": "6844c660eef22118ac5f8ebff86ad9c8b88d5bb6",
+      "pages": 357,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/waves-kevinzhou.pdf": {
+      "blob": "829fc4a3dd98aa70f6ac4261038a5c348a0df960",
+      "pages": 82,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/modern-kevinzhou.pdf": {
+      "blob": "bb0cf1335e30cc0d25104e9488cb89eaa111d8dd",
+      "pages": 77,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/relativity-kevinzhou.pdf": {
+      "blob": "c1fc8a9c1ff239105615c5c50b3ea2ac529153e3",
+      "pages": 130,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/problems-kevinzhou.pdf": {
+      "blob": "29c56776b92716323432c83e61b1426c32f67d29",
+      "pages": 133,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/problems-2-kevinzhou.pdf": {
+      "blob": "60a715bb32d6c4a86e952bd13d2792d8ebedac2d",
+      "pages": 128,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/meh_ENG.pdf": {
+      "blob": "8b3c95366455785b43224163fe0b89ab4807f370",
+      "pages": 20,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/meh_ENG2.pdf": {
+      "blob": "5ac991db391a6bfc296a975dc18e7a5a7365871d",
+      "pages": 37,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/kin_ENG.pdf": {
+      "blob": "0d753696770d6795b32203d3ad22fd060ec8c54b",
+      "pages": 26,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/thermodyn.pdf": {
+      "blob": "f76a9f41cf2357c4d1764e2072a8960f1d2f8552",
+      "pages": 40,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/electricity-circuits.pdf": {
+      "blob": "9bd1754448ca0568c710184d85b3904dbe27576a",
+      "pages": 46,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/waveopt.pdf": {
+      "blob": "494bcd6e03d39ce2e096e7e30db2d226a6d4d938",
+      "pages": 14,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/quant_ENG.pdf": {
+      "blob": "785c9fac3ae5424f9ac42f3e5de055db714e6cb5",
+      "pages": 5,
+      "addedAt": "2024-09-01"
+    },
+    "materials/handouts/KaldaMech-122.pdf": {
+      "blob": "0fdec3e48ae1cded7ea661ea9fdc1f645cf857f0",
+      "pages": 84,
+      "addedAt": "2024-09-20"
+    },
+    "materials/handouts/KaldaKin-200.pdf": {
+      "blob": "e79a36f28a7c0d707c29de2a1e4c0eb8c9a8330f",
+      "pages": 63,
+      "addedAt": "2024-09-20"
+    },
+    "materials/handouts/KaldaThermo-121.pdf": {
+      "blob": "f592cb89260b3997f11ac3d70dcaab25b2a33f7b",
+      "pages": 76,
+      "addedAt": "2024-09-20"
+    },
+    "materials/handouts/KaldaWaves-131.pdf": {
+      "blob": "9520e8f106f9f4955de01a9e3aec0de8debcac1b",
+      "pages": 8,
+      "addedAt": "2024-09-20"
+    },
+    "materials/handouts/KaldaCM_ENG.pdf": {
+      "blob": "1b37c60102ca08b4ee00eddf250ba93099db0ef3",
+      "pages": 14,
+      "addedAt": "2024-09-20"
+    },
+    "materials/handouts/ainsaar_relativity.pdf": {
+      "blob": "76a9f86c2ff4ba1c6c449faa4e781955d99b4a94",
+      "pages": 22,
+      "addedAt": "2024-09-01"
+    },
+    "materials/Havard_weekly_david_morin.pdf": {
+      "blob": "4f658f66c508c216a45e2f5b492720e310ed02cf",
+      "pages": 308,
+      "addedAt": "2024-09-01"
+    },
+    "materials/30-4.pdf": {
+      "blob": "8924a90f101b6fea634b53d0c2ed846bb85b7704",
+      "pages": 130,
+      "addedAt": "2024-09-01"
+    },
+    "materials/DH.pdf": {
+      "blob": "5757094c0f42da48e028a7af10d44abe189807b7",
+      "pages": 923,
+      "addedAt": "2024-09-01"
+    },
+    "materials/HSGSO.pdf": {
+      "blob": "d9709657c413e363df3fcbc2577864d5ab843efa",
+      "pages": 58,
+      "addedAt": "2024-09-01"
+    },
+    "materials/SPhO.pdf": {
+      "blob": "6f39a5a4ee09c1bf80236ee3f02fcd968ab232e9",
+      "pages": 157,
+      "addedAt": "2024-09-01"
+    },
+    "materials/thi_thu_hsg_qg_2015.pdf": {
+      "blob": "2219c0c5749b59a50926ca8e6e4d2ccc1f2e3e77",
+      "pages": 8,
+      "addedAt": "2024-09-01"
+    },
+    "materials/VPhO2010-2013.pdf": {
+      "blob": "bcc5393bf542ab3ccb432fab8eb8514f6c99d2e6",
+      "pages": 59,
+      "addedAt": "2024-09-01"
+    },
+    "materials/VPhO2014-2017.pdf": {
+      "blob": "5af10d23ce4786ff82df939e312d2d709c1c0764",
+      "pages": 95,
+      "addedAt": "2024-09-01"
+    },
+    "materials/VPhO2001-2016.pdf": {
+      "blob": "fa66f645c34f4ec1dec66b89349c35f52ee03e2d",
+      "pages": 547,
+      "addedAt": "2024-09-16"
+    },
+    "materials/VPhO2018-2020.pdf": {
+      "blob": "328c63bfa82a86f23ff2044d6bcd1c024bbd2f5c",
+      "pages": 78,
+      "addedAt": "2024-09-01"
+    },
+    "materials/VPhO2021-2023.pdf": {
+      "blob": "0f0c84e847fdeac58e7aa7654d706c29dbd9d74e",
+      "pages": 62,
+      "addedAt": "2024-09-01"
+    },
+    "materials/VPhO_TST-2011-2016.pdf": {
+      "blob": "d9bcc73e937f7f85803d27f41afb101851841159",
+      "pages": 217,
+      "addedAt": "2024-09-01"
+    },
+    "materials/VPhO-xPhO.pdf": {
+      "blob": "158fa1f6d11c5f67117ad3698feecdfb86a8cd59",
+      "pages": 181,
+      "addedAt": "2024-09-01"
+    },
+    "books/rupho-15-17.pdf": {
+      "blob": "044799133d85bc0c11d1ba38f86528f28c4423c1",
+      "pages": 152,
+      "addedAt": "2024-09-01"
+    },
+    "materials/InPhO.pdf": {
+      "blob": "e54b415b3f1aa541fcf3e12b3fa883f60b677c27",
+      "pages": 187,
+      "addedAt": "2024-09-01"
+    },
+    "materials/ipho.olimpicos.net/index.htm": {
+      "blob": "b7b34120fb81968965fb6151a0674d5d567757ca",
+      "pages": null,
+      "addedAt": "2024-09-01"
+    },
+    "materials/apho.olimpicos.net/index.htm": {
+      "blob": "f7fec7fd5406005f04da5b4d5e8bf1fd0ed98232",
+      "pages": null,
+      "addedAt": "2024-09-01"
+    },
+    "materials/eupho.olimpicos.net/index.htm": {
+      "blob": "958fe631e837737c5e777d8e2c4742bedffef847",
+      "pages": null,
+      "addedAt": "2024-09-01"
+    },
+    "materials/nbpho.olimpicos.net/index.htm": {
+      "blob": "56f36f4be776f993c9b18e0830733b8ea45a9230",
+      "pages": null,
+      "addedAt": "2024-09-01"
+    },
+    "materials/rmph.olimpicos.net/index.htm": {
+      "blob": "e4d7f5412c20315629a9f95d1f76f3b7f9c6f169",
+      "pages": null,
+      "addedAt": "2024-09-01"
+    },
+    "materials/OPhO-20-23.pdf": {
+      "blob": "251e2d853fe055f03c99f03cdb9769c3b07eb78c",
+      "pages": 397,
+      "addedAt": "2024-09-01"
+    },
+    "materials/PPRDPhO-05-17.pdf": {
+      "blob": "69f4855b3c6bbca731e666129342b7bb01a5eaf7",
+      "pages": 269,
+      "addedAt": "2024-09-01"
+    },
+    "materials/PPRDPhO-18-24.pdf": {
+      "blob": "dfc2e28eb4ce0b15bd9982741b13c47ad7e02711",
+      "pages": 349,
+      "addedAt": "2024-09-29"
+    },
+    "materials/IZhO-10-23.pdf": {
+      "blob": "75f02a224573a115feca65f8fedff09afa0c3a61",
+      "pages": 472,
+      "addedAt": "2024-09-29"
+    },
+    "materials/HKPhO-04-16.pdf": {
+      "blob": "0deea55303b62bcf91bfcee8d538d9895fa4d148",
+      "pages": 349,
+      "addedAt": "2024-09-01"
+    },
+    "materials/USAPhO-14-24.pdf": {
+      "blob": "eb5068e5f16d9cc32680709636ed5d992ae9c054",
+      "pages": 403,
+      "addedAt": "2024-09-01"
+    },
+    "materials/F=ma.pdf": {
+      "blob": "d5f72469108206b117c2d7fa71a16b484960c5a5",
+      "pages": 309,
+      "addedAt": "2024-09-01"
+    },
+    "materials/F=ma-20-23.pdf": {
+      "blob": "2031fc5cbe3634a51a21f6c15db224fec4359f48",
+      "pages": 170,
+      "addedAt": "2024-09-01"
+    },
+    "materials/fyziklani-18-23.pdf": {
+      "blob": "ab94909920360c9539bdd978b308834d3746c503",
+      "pages": 264,
+      "addedAt": "2024-11-17"
+    },
+    "materials/physicsbrawl-12-23.pdf": {
+      "blob": "655efcae858566df2b44ffb50d81063c02ca4cf6",
+      "pages": 617,
+      "addedAt": "2024-11-18"
+    },
+    "materials/vltt/1.pdf": {
+      "blob": "b6caab97773aab475009497cc5e113217f5107da",
+      "pages": 29,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/2.pdf": {
+      "blob": "5d3448167524671845850414c46bacb27d958295",
+      "pages": 39,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/3.pdf": {
+      "blob": "297d9aa7482ce1c989abc2c34cc9513db03b5ed6",
+      "pages": 50,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/4.pdf": {
+      "blob": "3f5b2354aa3fa032be8e49b96f6dd6d772360815",
+      "pages": 31,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/5.pdf": {
+      "blob": "c37b5e149c8b4ac6e1ad75af2905296a16e4c6e5",
+      "pages": 36,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/6.pdf": {
+      "blob": "b729df45c88288cfdfa5e4a7570d5f02a29a1aa8",
+      "pages": 34,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/7.pdf": {
+      "blob": "daac9a5f95ac6f3aeec6a9b666bb7f9de969254d",
+      "pages": 30,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/8.pdf": {
+      "blob": "c6f297deeb94344b68d444c32b17bcab632b9f00",
+      "pages": 30,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/9.pdf": {
+      "blob": "cc55c45b4e1e5e8152067da53e2f187d9c2a9bda",
+      "pages": 32,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/10.pdf": {
+      "blob": "bbe11681894214f035203dba580397af9021f26b",
+      "pages": 34,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/11.pdf": {
+      "blob": "9e2b5a197ca2f3d129fd1720ed9a1bcfab9ee827",
+      "pages": 32,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/12.pdf": {
+      "blob": "f98d7a2a799c38cf1bbfad002077ea1ab528a598",
+      "pages": 32,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/13.pdf": {
+      "blob": "0cec3aef45bd2ed47cb2deedb8a4eea9d00c685c",
+      "pages": 33,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/14.pdf": {
+      "blob": "7b48720d7b169d3f0c924fbfd78ff95fb3fe802e",
+      "pages": 39,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/15.pdf": {
+      "blob": "a8b9a7b777e097cdf72929dca8b270f84bd45b6e",
+      "pages": 30,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/16.pdf": {
+      "blob": "c040988874cdfbce9a20db733030ab6af648da3b",
+      "pages": 33,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/17.pdf": {
+      "blob": "dd69b66cfefd7eb4fa3f3f87d245a7595c7c7815",
+      "pages": 37,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/18.pdf": {
+      "blob": "97ff66d73bb2589346ff88b385ba6aad075318c7",
+      "pages": 34,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/19.pdf": {
+      "blob": "65ffa8c954b3c4a9c13bbe34772fb10dcf336692",
+      "pages": 36,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/20.pdf": {
+      "blob": "cb2afaefb5be0cf97c331d9a1363aca49375400f",
+      "pages": 34,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/25.pdf": {
+      "blob": "95cd1d183e74f667861f6b4ed124e5df4c588eb9",
+      "pages": 39,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/84.pdf": {
+      "blob": "cbf200a1fc6d40ec78507f901158817e26e7f194",
+      "pages": 28,
+      "addedAt": "2024-09-16"
+    },
+    "materials/vltt/85.pdf": {
+      "blob": "4886474e2f987c95099e4affc849d57f4b5c50e0",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/86.pdf": {
+      "blob": "8cc8f298b75530410bf818da0187588a0a84a446",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/87.pdf": {
+      "blob": "c43e3ee9ba12fc1032e7bbdb7d85ac5a08e05bb4",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/88.pdf": {
+      "blob": "e26aa02e888c68380353bac765061a8c2b7f748f",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/90.pdf": {
+      "blob": "095d0ef9818c216f56c1a9232ce5f79602875fc0",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/91.pdf": {
+      "blob": "36d3bcd782cfabc6b0e2d19120bbfe4b1769d3a9",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/92.pdf": {
+      "blob": "183fe1b481a8f4fcf845f56025c71e84da9c3cd4",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/93.pdf": {
+      "blob": "4d27be9c5471a9f6066e2576c4a4c0f9048cb1a5",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/94.pdf": {
+      "blob": "3a12b4c3abc2a91eb71407a51e338ff93c86d34d",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/95.pdf": {
+      "blob": "c8bacd64d620882b7124df4edcdf7dfdd9eb680a",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/96.pdf": {
+      "blob": "0f080ed1231033058500dbcfaa96e66c4f8784ef",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/97.pdf": {
+      "blob": "a1709bb83e46ea2f932994c5b3f98a9a557a1b43",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/98.pdf": {
+      "blob": "61757c13c0bcd45fa3764c19b749ebcc7ad06e91",
+      "pages": 27,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/99.pdf": {
+      "blob": "3c1431ef75f625d6031f7e954ac829cf2418ca90",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/100.pdf": {
+      "blob": "c543fd753b495209e57f774f2c14837abc18531a",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/101.pdf": {
+      "blob": "48dc86ca5adad155949f3e0b81e100d484a4382a",
+      "pages": 34,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/102.pdf": {
+      "blob": "8be67f2e07a5f11efd0d00c6b9992a5896b682cd",
+      "pages": 34,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/103.pdf": {
+      "blob": "49fd50a61257af7b84ad7efbe9c8fadec86805a3",
+      "pages": 34,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/104.pdf": {
+      "blob": "b3fd4987685cc120f441ecfb6004d7914af7fa7f",
+      "pages": 34,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/105.pdf": {
+      "blob": "4413f2f2f42b0a6ed9f77029dde9763cae2fb6e6",
+      "pages": 33,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/106.pdf": {
+      "blob": "b1a875b2ac84c8d720a433a5c8efef283a690406",
+      "pages": 32,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/107.pdf": {
+      "blob": "151b147d8ae72251de2ef873ca5f8cea058541be",
+      "pages": 31,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/108.pdf": {
+      "blob": "9b448410034d4ee49a16d7615637f52221bab3e1",
+      "pages": 31,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/109.pdf": {
+      "blob": "e86b2a6dd7cc0ba30ac00f9472066c370b562cec",
+      "pages": 31,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/110.pdf": {
+      "blob": "c7d3d9c604b09beaccbf4164be4ce59916104169",
+      "pages": 30,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/111.pdf": {
+      "blob": "4ad424da2e14878498308c8c43328878eaf66c63",
+      "pages": 31,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/112.pdf": {
+      "blob": "5c060b8d6e37082e6b8da7146b8a164e30c6ffd2",
+      "pages": 31,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/113.pdf": {
+      "blob": "b1b7abf14ebfa8abbd252c55213a451c0ebec0df",
+      "pages": 31,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/114.pdf": {
+      "blob": "89a775e51b54b824190ab3b7f1244b6a7cff0137",
+      "pages": 34,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/115.pdf": {
+      "blob": "8dd318ff560c9cf233488c714741cfd77a4b48aa",
+      "pages": 35,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/116.pdf": {
+      "blob": "22f3b0b980cb425ea3a3868079f1dc1f0199574a",
+      "pages": 34,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/117.pdf": {
+      "blob": "6d6f443ab56962468c2da86f88ee867e8f290685",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/118.pdf": {
+      "blob": "a1ae5a09239b9deae197296235fbfad822d6ecdb",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/119.pdf": {
+      "blob": "34b19118da442b45c07b2a30300a73690840e272",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/120.pdf": {
+      "blob": "8fddf28dc38d355b59fa2a06e20d5ff43219cf04",
+      "pages": 28,
+      "addedAt": "2024-09-01"
+    },
+    "materials/vltt/128.pdf": {
+      "blob": "bc335d7ce17af3b2c22633f020341c119b7dd4f3",
+      "pages": 14,
+      "addedAt": "2024-09-16"
+    },
+    "materials/vltt/132.pdf": {
+      "blob": "6ea2d630e5bd467f1ae8e1c4320a55c322f0e7a4",
+      "pages": 14,
+      "addedAt": "2024-09-16"
+    },
+    "materials/vltt/142.pdf": {
+      "blob": "1602342f681b35945b26c372c71eaafc1861a60f",
+      "pages": 14,
+      "addedAt": "2024-09-16"
+    },
+    "materials/vltt/143.pdf": {
+      "blob": "e7cc69ee846a96f9fe03f3d8f6fdbdfd84950796",
+      "pages": 14,
+      "addedAt": "2024-09-16"
+    },
+    "materials/vltt/144.pdf": {
+      "blob": "3025f61017788168e2d2fc6c8e6ef4310c99cced",
+      "pages": 14,
+      "addedAt": "2024-09-16"
+    },
+    "materials/vltt/151.pdf": {
+      "blob": "e4f3326251f065d57fa6f1a0ccac131a8dda4995",
+      "pages": 13,
+      "addedAt": "2024-09-16"
+    },
+    "materials/vltt/155.pdf": {
+      "blob": "f237f9cb660a39df40e12b42df6ad4c852c2df63",
+      "pages": 14,
+      "addedAt": "2024-09-16"
+    },
+    "materials/vltt/156.pdf": {
+      "blob": "8f8e86c28204162533efb59d16598e7c159ecccb",
+      "pages": 14,
+      "addedAt": "2024-09-16"
+    },
+    "materials/vltt/171.pdf": {
+      "blob": "d8c88cad25634a7a2ed9dcfa2cd812b204aeaa61",
+      "pages": 14,
+      "addedAt": "2024-09-16"
+    },
+    "materials/vltt/173.pdf": {
+      "blob": "bfad40dcae499b6c9cdc55e3890f198ea6a05dfd",
+      "pages": 14,
+      "addedAt": "2024-09-16"
+    },
+    "materials/vltt/178.pdf": {
+      "blob": "838ab64f623aee3dd28651e619c6e73b54b3625c",
+      "pages": 13,
+      "addedAt": "2024-09-16"
+    },
+    "materials/vltt/180.pdf": {
+      "blob": "22c547848cb87ba0dd0a005695fa277c41b71cef",
+      "pages": 14,
+      "addedAt": "2024-09-16"
+    },
+    "materials/quantum/QuantumP1.pdf": {
+      "blob": "b48990fc606e913e0076468fd7cd5a8e7f12a47e",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumP2.pdf": {
+      "blob": "f01e22326114218fa5042b914f26b5404de284de",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV1N1.pdf": {
+      "blob": "88765deee1f73f2239615bdff1732d530b8cd073",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV1N2.pdf": {
+      "blob": "d98b98076370c33f25caa7730cf542c782a0b5a1",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV1N3.pdf": {
+      "blob": "bddb9bdb9e28dc023120aaae569c61992545b826",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV1N4.pdf": {
+      "blob": "5e188b9658b17d557e3b1ec071b0bfcdc8057222",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV2N1.pdf": {
+      "blob": "4dfd17b47aaadef7fafb636abdfd655963c1462c",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV2N2.pdf": {
+      "blob": "17c77f249976645ab1dab955e261c0c02f95d17e",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV2N3.pdf": {
+      "blob": "7127d1340524aab39709923a95d0ba5b2e7f2642",
+      "pages": 88,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV2N4.pdf": {
+      "blob": "55191a871e783ddc06c666294e1f3670a7993284",
+      "pages": 69,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV2N5.pdf": {
+      "blob": "d0408d473061199d336ed7f746fcdb7416fc6086",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV2N6.pdf": {
+      "blob": "6846806105bc34df3be90a5166e494351d532786",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV3N1.pdf": {
+      "blob": "5d8adc10e032274984108c03f11404585954d48a",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV3N2.pdf": {
+      "blob": "973b03e42e4899e53037d53755eb9c203521ba8f",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV3N3.pdf": {
+      "blob": "bce8bc753a82a3ecb761223778496bfeb9be2627",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV3N4.pdf": {
+      "blob": "c010ed8a7617f6630be5a44f4d3f022e25486c39",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV3N5.pdf": {
+      "blob": "7074de038fdf44dbf64376f1e32f3ad24bb2e7e5",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV3N6.pdf": {
+      "blob": "c23bb1d913bacfecec67a41364269578942f3617",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV4N1.pdf": {
+      "blob": "cc75fa40200fe57921f468478c4366a96e9e5040",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV4N2.pdf": {
+      "blob": "86fe29efa412a47d8d3c3598688b90e0fcf440ee",
+      "pages": 67,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV4N3.pdf": {
+      "blob": "067381540f43c5daf23ef9d251519744551aeb9e",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV4N4.pdf": {
+      "blob": "923c79833bd512422f6e6d39a6fbe6dfceab54a6",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV4N5.pdf": {
+      "blob": "6881b0dc152e20dd64483d2996ec02160fdf98e4",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV4N6.pdf": {
+      "blob": "9c508b069dbc338f1dcde9e60e9a560ea00b747c",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV5N1.pdf": {
+      "blob": "4cdecaf805da68f3078cbc1707a785833b4f28bc",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV5N2.pdf": {
+      "blob": "d617de857f9be606c5903f838b52af26176105f8",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV5N3.pdf": {
+      "blob": "0d8b380e9586999a561790443d1960c6d8806594",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV5N4.pdf": {
+      "blob": "909d85158ccb583eb37bb521fc2caf2863c89e81",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV5N5.pdf": {
+      "blob": "4f5b11c9d8fb2f7e8049fd45244354669eb9f947",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV5N6.pdf": {
+      "blob": "c033e234ebd3c6b797c9ccb0336cc8e40b2ea66f",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV6N1.pdf": {
+      "blob": "4dc947c44c55a39831b004eaf935a4f87a59d807",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV6N2.pdf": {
+      "blob": "a1364061b7214d26bfd8e98c7c9b79f02bcaaddb",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV6N3.pdf": {
+      "blob": "729b0f516719e90c254fcb97f637bdb8a0b1b820",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV6N4.pdf": {
+      "blob": "76f12856c663c215bd4d494d11e786634b4d6c66",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV6N5.pdf": {
+      "blob": "54271ff93da31ca4162bf0af4bbfb9e012f72d58",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV6N6.pdf": {
+      "blob": "b8018ff7c93e14e5f6eae445efa0b674270552c1",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV7N1.pdf": {
+      "blob": "68cf54c364034e8473ad3d89038c81734000a5f8",
+      "pages": 67,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV7N2.pdf": {
+      "blob": "9dca3eba4f79b8cc1e712c4f6833148b021e01c8",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV7N3.pdf": {
+      "blob": "240fcd67e8732f079ba1edf14cba9dcdd30fafcb",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV7N4.pdf": {
+      "blob": "34fba545afb98f465cec2fd9f7c83b120c8d932d",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV7N5.pdf": {
+      "blob": "e605a0ed6776a1783790e231de68584e97d268bf",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV7N6.pdf": {
+      "blob": "3ad287e0b9f38c3801d70c69f7a5685e1ba157b4",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV8N1.pdf": {
+      "blob": "1d7b2d9da7ab79534302098137b57793c644a448",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV8N2.pdf": {
+      "blob": "f076733186103c0a36b1ada7ae0b29548dcfbb6f",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV8N3.pdf": {
+      "blob": "eb78d5073ffc12ebdc4b57bbbb08496305e14b72",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV8N4.pdf": {
+      "blob": "bf9a9f3b81b9a9c76302302ba4365023e857ffbc",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV8N5.pdf": {
+      "blob": "5652946278c116f753f0a79e8633eb6c1c598fec",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV8N6.pdf": {
+      "blob": "619c9347ff614b6b35f1a19341ca05cfb895cdc8",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV9N1.pdf": {
+      "blob": "aee1726e478d059297965f1404bb1818ac8d4d92",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV9N2.pdf": {
+      "blob": "cbefb9ffa93f517d7275c2d6fd055eccf603cf61",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV9N3.pdf": {
+      "blob": "8797b8ad06faf7ebf790b34f1daab10edb7eaca8",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV9N4.pdf": {
+      "blob": "cf6acb7e2bc1c85c977ff5f7bd9e777375929e65",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV9N5.pdf": {
+      "blob": "e14f5dbc9f7d0180bea37ce5f8a53e592a53f2fe",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV9N6.pdf": {
+      "blob": "5a9319d0c07f5bf9a9e6db7ebdf4c052797d00f1",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV10N1.pdf": {
+      "blob": "91f5a76266035d43c89648bfb02054eb828b216a",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV10N2.pdf": {
+      "blob": "abed2143c5fa082cac550751dd41be272214d00b",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV10N3.pdf": {
+      "blob": "d10d866bf37f102df1aa7a3f88daa684a34e1f1e",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV10N4.pdf": {
+      "blob": "55dc1d736638bc729f3e14bdf86b7956191f92c7",
+      "pages": 68,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV10N5.pdf": {
+      "blob": "b3c6be6321df59f051749705d62fa6e2e05df07a",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV10N6.pdf": {
+      "blob": "3d2fe56cfc8c77d24856aadc66b7f3dfc72cf50c",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV11N1.pdf": {
+      "blob": "2aa0dd5ad590f004de24f0ea52ce06e6f7b31faa",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV11N2.pdf": {
+      "blob": "7a06d145cd1d3cf459ebae1afd45a1a3b9b7a03b",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV11N3.pdf": {
+      "blob": "cf6a9ed16ca50d104c1ce654ef34e5c011cc320e",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV11N4.pdf": {
+      "blob": "215605f5d04ac330b6708a0f69095c6d2b8674be",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV11N5.pdf": {
+      "blob": "860b25c939fd028a69dec57b1218158180fde6bf",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    },
+    "materials/quantum/QuantumV11N6.pdf": {
+      "blob": "bc549e495aab9f25220c7c6cf8fa4016ae60db8e",
+      "pages": 60,
+      "addedAt": "2024-09-01"
+    }
+  }
+}

@@ -11,6 +11,7 @@ check(($snapshot['counts']['pdf'] ?? 0) === 307, 'Expected 307 published PDFs.')
 check(!isset($snapshot['counts']['lesson']), 'Lesson count must not be published.');
 check(count($catalog->documents()) === 312, 'Document array count does not match snapshot.');
 check(count(array_filter($catalog->documents(), static fn (array $document): bool => ($document['kind'] ?? '') === 'lesson')) === 0, 'Lesson documents must not be public.');
+check(count(array_filter($catalog->documents(), static fn (array $document): bool => !preg_match('/^\d{4}-\d{2}-\d{2}$/', (string) ($document['addedAt'] ?? '')))) === 0, 'Every public document needs a prepared addition date.');
 
 $providers = array_unique(array_map(static fn (array $document): string => (string) ($document['delivery']['provider'] ?? ''), $catalog->documents()));
 check($providers === ['hostinger'], 'Every public record must be served by Hostinger.');
@@ -27,6 +28,7 @@ try {
 check($unsafeRejected, 'Path traversal was not rejected.');
 
 $pdfs = array_filter($catalog->documents(), static fn (array $document): bool => $document['format'] === 'pdf');
+check(count(array_filter($pdfs, static fn (array $document): bool => !is_int($document['pages'] ?? null) || $document['pages'] < 1)) === 0, 'Every published PDF needs a prepared page count.');
 $missingCovers = array_filter($pdfs, static fn (array $document): bool => $catalog->coverUrl($document) === null);
 check(count($missingCovers) === 0, 'Every current published PDF should have a cover.');
 

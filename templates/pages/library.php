@@ -5,7 +5,7 @@ foreach ($documents as $document) {
     $payload[] = [
         'slug' => $document['slug'], 'title' => $document['title'], 'authors' => $document['authors'],
         'description' => $document['description'], 'kind' => $document['kind'], 'language' => $document['language'],
-        'bytes' => $document['file']['bytes'], 'cover' => $catalogService->coverUrl($document),
+        'pages' => $document['pages'], 'addedAt' => $document['addedAt'], 'cover' => $catalogService->coverUrl($document),
     ];
 }
 $initialCount = count($initialDocuments);

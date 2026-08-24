@@ -38,8 +38,9 @@ final class App
                 $this->catalog->documents(),
                 static fn (array $document): bool => in_array($document['kind'] ?? '', $supportedKinds, true),
             ));
+            usort($documents, static fn (array $left, array $right): int => strcmp((string) ($right['addedAt'] ?? ''), (string) ($left['addedAt'] ?? '')));
             $this->page('physics', 'Vật lý — Thư viện chuyên', 'physics', true, [
-                'inbound' => array_reverse(array_slice($documents, -4)),
+                'inbound' => array_slice($documents, 0, 4),
             ]);
         }
         if ($path === '/about') {

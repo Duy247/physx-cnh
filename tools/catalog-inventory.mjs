@@ -5,6 +5,10 @@ import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const physicsRoot = path.join(root, "physics");
+let preparedMetadata = {};
+try {
+  preparedMetadata = JSON.parse(await readFile(path.join(physicsRoot, "catalog", "document-metadata.json"), "utf8")).documents || {};
+} catch {}
 const collections = [
   { id: "books-pre-vpho", kind: "book", level: "pre-vpho", title: "Sách trước Vòng chọn VPhO" },
   { id: "books-vpho-vn", kind: "book", level: "vpho-vn", title: "Sách VPhO và Vòng chọn (VN)" },
@@ -38,6 +42,7 @@ for (const collection of collections) {
     usedSlugs.add(slug);
     publishedFiles.add(item.file.toLowerCase());
     const extension = path.extname(item.file).toLowerCase();
+    const prepared = preparedMetadata[item.file] || {};
     let bytes = tree.get(item.file) || 0;
     if (!bytes) { try { bytes = (await stat(path.join(physicsRoot, ...item.file.split("/")))).size; } catch {} }
     documents.push({
@@ -46,6 +51,7 @@ for (const collection of collections) {
       description: item.description || "", source: item.source || "", collectionId: collection.id,
       collectionTitle: collection.title, kind: collection.kind, level: collection.level,
       language: collection.id === "books-vpho-en" ? "en" : "vi", format: extension === ".pdf" ? "pdf" : "html",
+      pages: Number.isInteger(prepared.pages) ? prepared.pages : null, addedAt: prepared.addedAt || null,
       legacy: item.legacy === true, status: "published",
       file: { path: item.file, bytes, mimeType: extension === ".pdf" ? "application/pdf" : "text/html" },
       cover: extension === ".pdf" ? `/assets/v2/covers/${slug}.webp` : null,

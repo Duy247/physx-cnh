@@ -18,6 +18,7 @@ Manifest JSON trong `physics/catalog/` là nguồn chuẩn. `public-snapshot.jso
 ```bash
 npm install
 npm run catalog:inventory
+npm run catalog:metadata
 npm run graphs:generate
 python tools/generate-pdf-covers.py
 ```
