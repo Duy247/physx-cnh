@@ -21,13 +21,47 @@
       const y = event.clientY - rect.top;
       card.style.setProperty('--mx', `${x}px`);
       card.style.setProperty('--my', `${y}px`);
-      card.style.setProperty('--ry', `${((x / rect.width) - 0.5) * 4}deg`);
-      card.style.setProperty('--rx', `${-((y / rect.height) - 0.5) * 4}deg`);
-    });
-    card.addEventListener('pointerleave', () => {
-      card.style.setProperty('--rx', '0deg');
-      card.style.setProperty('--ry', '0deg');
     });
   });
+
+  const fieldOrbit = document.querySelector('[data-field-orbit]');
+  if (fieldOrbit) {
+    const wheel = fieldOrbit.querySelector('.fieldGrid');
+    const cards = [...fieldOrbit.querySelectorAll('[data-field-card]')];
+    const steps = [...fieldOrbit.querySelectorAll('.fieldSteps i')];
+    let ticking = false;
+    const normalize = (angle) => ((angle + 180) % 360 + 360) % 360 - 180;
+    const render = () => {
+      ticking = false;
+      const available = Math.max(1, fieldOrbit.offsetHeight - innerHeight);
+      const progress = Math.min(1, Math.max(0, -fieldOrbit.getBoundingClientRect().top / available));
+      const turn = progress * -270;
+      const mobile = innerWidth <= 760;
+      const radius = mobile ? Math.min(270, Math.max(235, innerWidth * .66)) : Math.min(650, Math.max(430, innerWidth * .44));
+      wheel.style.setProperty('--orbit-radius', `${radius}px`);
+      let current = 0;
+      let closest = Infinity;
+      cards.forEach((card, index) => {
+        const angle = turn + index * 90;
+        const facing = Math.cos(angle * Math.PI / 180);
+        const distance = Math.abs(normalize(angle));
+        if (distance < closest) { closest = distance; current = index; }
+        const prominence = Math.max(0, (facing + 1) / 2);
+        card.style.transform = `translate(-50%,-50%) rotate(${angle}deg) translateX(${radius}px) rotate(${-angle}deg) scale(${.82 + prominence * .18})`;
+        card.style.opacity = `${.14 + prominence * .86}`;
+        card.style.zIndex = `${Math.round(prominence * 20) + 2}`;
+      });
+      cards.forEach((card, index) => card.classList.toggle('isCurrent', index === current));
+      steps.forEach((step, index) => step.classList.toggle('isCurrent', index === current));
+      fieldOrbit.dataset.fieldIndex = String(current);
+    };
+    const requestRender = () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(render); }
+    };
+    addEventListener('scroll', requestRender, { passive: true });
+    addEventListener('resize', requestRender);
+    fieldOrbit.classList.add('isOrbitReady');
+    render();
+  }
 
 })();

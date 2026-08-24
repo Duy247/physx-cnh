@@ -42,6 +42,19 @@ test('legacy activity reel moves automatically without controls', async ({ page 
   expect(await track.evaluate((node) => getComputedStyle(node).transform)).not.toBe(firstTransform);
 });
 
+test('field cards orbit a left-side pivot as the page scrolls', async ({ page }) => {
+  await page.goto('/');
+  const orbit = page.locator('[data-field-orbit]');
+  const cards = orbit.locator('[data-field-card]');
+  await expect(cards).toHaveCount(4);
+  await orbit.evaluate((node) => scrollTo(0, node.offsetTop));
+  await expect(orbit).toHaveAttribute('data-field-index', '0');
+  const firstTransform = await cards.first().evaluate((node) => node.style.transform);
+  await orbit.evaluate((node) => scrollTo(0, node.offsetTop + (node.offsetHeight - innerHeight) / 3));
+  await expect(orbit).toHaveAttribute('data-field-index', '1');
+  expect(await cards.first().evaluate((node) => node.style.transform)).not.toBe(firstTransform);
+});
+
 test('orbit link scopes books and removes redundant kind control', async ({ page }) => {
   await page.goto('/physics');
   await page.getByRole('link', { name: /Sách chuyên Vật lý/i }).click({ force: true });

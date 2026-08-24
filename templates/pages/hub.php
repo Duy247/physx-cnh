@@ -30,21 +30,24 @@
       </div>
     </div>
   </section>
-  <section class="fields" id="fields" aria-labelledby="fields-title">
-    <h1 class="sectionTitle" id="fields-title">Lĩnh vực</h1>
-    <div class="fieldGrid">
-      <a href="/physics" aria-label="Mở không gian Vật lý" class="fieldCard physicsCard">
-        <div class="cardGlow" aria-hidden="true"></div>
-        <span class="cardSymbol"><?= icon('atom', 260) ?></span>
-        <div class="cardBody"><h3>Vật lý</h3></div>
-        <div class="cardFoot"><span><strong><?= e($count) ?></strong> tài liệu</span><span>Đi vào <?= icon('arrow', 18) ?></span></div>
-      </a>
-      <?php foreach ([['Toán học', '∑'], ['Tin học', '01'], ['Hóa học', '⚗']] as [$field, $symbol]): ?>
-        <article class="fieldCard futureCard" aria-disabled="true">
-          <span class="futureSymbol" aria-hidden="true"><?= e($symbol) ?></span>
-          <div class="cardBody"><h3><?= e($field) ?></h3></div>
-        </article>
-      <?php endforeach; ?>
+  <section class="fields" id="fields" aria-labelledby="fields-title" data-field-orbit>
+    <div class="fieldStage">
+      <h1 class="sectionTitle" id="fields-title">Lĩnh vực</h1>
+      <div class="fieldGrid">
+        <a href="/physics" aria-label="Mở không gian Vật lý" class="fieldCard physicsCard" data-field-card>
+          <div class="cardGlow" aria-hidden="true"></div>
+          <span class="cardSymbol"><?= icon('atom', 260) ?></span>
+          <div class="cardBody"><h3>Vật lý</h3></div>
+          <div class="cardFoot"><span><strong><?= e($count) ?></strong> tài liệu</span><span>Đi vào <?= icon('arrow', 18) ?></span></div>
+        </a>
+        <?php foreach ([['Toán học', '∑'], ['Tin học', '01'], ['Hóa học', '⚗']] as [$field, $symbol]): ?>
+          <article class="fieldCard futureCard" aria-disabled="true" data-field-card>
+            <span class="futureSymbol" aria-hidden="true"><?= e($symbol) ?></span>
+            <div class="cardBody"><h3><?= e($field) ?></h3></div>
+          </article>
+        <?php endforeach; ?>
+      </div>
+      <div class="fieldSteps" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
     </div>
   </section>
 </main>

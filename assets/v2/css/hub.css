@@ -71,3 +71,31 @@
 .cardGlow { background:radial-gradient(450px circle at var(--mx) var(--my),#67cdd34d,transparent 44%); }
 .futureCard { color:#8a8b88; background-color:#d7d5ce; background-image:radial-gradient(circle at 22% 20%,#fff7 0 1px,transparent 2px),radial-gradient(circle at 74% 64%,#0001 0 2px,transparent 3px),linear-gradient(138deg,#e1dfd7e8,#bbbdbad9); border-color:#898c875c; box-shadow:0 20px 55px #59615e25,inset 0 1px #fff9; }
 .futureCard:hover { border-color:#898c875c; box-shadow:0 20px 55px #59615e25,inset 0 1px #fff9; }.futureCard .cardBody h3 { color:#777a78; }.futureCard .cardSymbol { color:#6f7472; opacity:.09; }
+
+/* Scroll-driven field cylinder */
+.fields { width:100%; height:380svh; margin:0; padding:0; }
+.fields::before { position:absolute; inset:0; background:linear-gradient(180deg,transparent 0,#edf3eee8 8%,#edf3eef7 92%,transparent 100%); }
+.fieldStage { position:sticky; top:0; overflow:hidden; width:min(1440px,100%); height:100svh; margin:0 auto; }
+.sectionTitle { position:absolute; z-index:30; top:clamp(84px,11vh,126px); left:clamp(28px,5vw,76px); margin:0; pointer-events:none; }
+.fieldGrid { --orbit-x:-70px; --orbit-y:58%; --orbit-radius:520px; position:absolute; inset:0; display:block; perspective:none; }
+.fieldGrid::before { position:absolute; z-index:0; top:var(--orbit-y); left:var(--orbit-x); width:calc(var(--orbit-radius) * 2); aspect-ratio:1; content:""; border:1px solid #42777a4a; border-radius:50%; box-shadow:0 0 0 28px #8fc2bd12,0 0 0 74px #669e9a0b,inset 0 0 80px #579b9820; transform:translate(-50%,-50%); }
+.fieldGrid::after { position:absolute; z-index:25; top:var(--orbit-y); left:var(--orbit-x); width:clamp(90px,10vw,138px); aspect-ratio:1; content:""; border:1px solid #416e706b; border-radius:50%; background:radial-gradient(circle at 38% 34%,#f9f6e9 0 7%,#9bc6bf 8% 22%,#397a7c 23% 25%,#dce9e2 26% 52%,#6fa29d 53% 55%,#eef3e8 56%); box-shadow:0 18px 45px #274e4c42,0 0 0 16px #e7efe799; transform:translate(-50%,-50%); }
+.fieldCard { position:absolute; top:var(--orbit-y); left:var(--orbit-x); width:min(1000px,78vw); min-height:0; height:min(48svh,470px); margin:0; padding:clamp(26px,3vw,42px); transform-origin:center; transition:border-color .25s,box-shadow .25s,opacity .16s; will-change:transform,opacity; }
+.fieldCard:not(:first-child) { opacity:.14; }
+.fieldCard.isCurrent { border-color:#2b858d99; box-shadow:0 32px 85px #315b5e32,0 0 60px #58bfc526,inset 0 1px #fff; }
+.physicsCard { grid-column:auto; min-height:0; }
+.cardBody h3,.futureCard .cardBody h3 { font-size:clamp(4.2rem,8vw,8rem); }
+.fieldSteps { position:absolute; z-index:31; right:clamp(22px,4vw,60px); bottom:clamp(28px,7vh,70px); display:flex; gap:10px; }
+.fieldSteps i { width:7px; height:7px; border:1px solid #426e6b80; border-radius:50%; background:#f5f2e8; transition:width .25s,background .25s; }
+.fieldSteps i.isCurrent { width:32px; background:#267a7f; border-color:#267a7f; border-radius:999px; }
+@media(max-width:760px){
+  .fields{height:340svh}
+  .fieldStage{height:100svh}
+  .sectionTitle{top:78px;left:20px;font-size:3.8rem}
+  .fieldGrid{--orbit-x:-60px;--orbit-y:59%;--orbit-radius:255px}
+  .fieldGrid::after{width:82px;box-shadow:0 12px 32px #274e4c42,0 0 0 11px #e7efe799}
+  .fieldCard{width:calc(100vw - 44px);height:min(43svh,360px);padding:23px;border-radius:22px}
+  .cardBody h3,.futureCard .cardBody h3{font-size:3.8rem}
+  .cardSymbol{right:-6%;width:70%;height:70%}
+  .fieldSteps{right:18px;bottom:24px}
+}
