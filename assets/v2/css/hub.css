@@ -87,6 +87,9 @@
 .fieldCard.isCurrent { border-color:#2b858d99; box-shadow:0 32px 85px #315b5e32,0 0 60px #58bfc526,inset 0 1px #fff; }
 .physicsCard { grid-column:auto; min-height:0; }
 .cardBody h3,.futureCard .cardBody h3 { font-size:clamp(4.2rem,8vw,8rem); }
+.cardFoot { font-size:clamp(.82rem,1.05vw,1rem); letter-spacing:.11em; }
+.cardFoot strong { font-size:clamp(1.9rem,2.5vw,2.7rem); }
+.cardFoot svg { width:24px; height:24px; }
 .fieldSteps { position:absolute; z-index:31; right:clamp(22px,4vw,60px); bottom:clamp(28px,7vh,70px); display:flex; gap:10px; }
 .fieldSteps i { width:7px; height:7px; border:1px solid #426e6b80; border-radius:50%; background:#f5f2e8; transition:width .25s,background .25s; }
 .fieldSteps i.isCurrent { width:32px; background:#267a7f; border-color:#267a7f; border-radius:999px; }
@@ -98,6 +101,9 @@
   .fieldGrid::after{width:82px;box-shadow:0 12px 32px #274e4c42,0 0 0 11px #e7efe799}
   .fieldCard{width:calc(100vw - 44px);height:min(43svh,360px);padding:23px;border-radius:22px}
   .cardBody h3,.futureCard .cardBody h3{font-size:3.8rem}
+  .cardFoot{font-size:.74rem;letter-spacing:.08em}
+  .cardFoot strong{font-size:1.75rem}
+  .cardFoot svg{width:21px;height:21px}
   .cardSymbol{right:-6%;width:70%;height:70%}
   .fieldSteps{right:18px;bottom:24px}
 }
