@@ -21,7 +21,7 @@ test('physics label anchor dots remain tied to projected satellites', async ({ p
   expect(await labels.evaluateAll(nodes => nodes.some(node => node.classList.contains('isLeft')))).toBe(false);
   const labelClearances = await labels.evaluateAll(nodes => nodes.map(node => Math.hypot(Number(node.dataset.labelX)-Number(node.dataset.anchorX),Number(node.dataset.labelY)-Number(node.dataset.anchorY))));
   const satelliteBaseDistances = await labels.evaluateAll(nodes => nodes.map(node => Number(node.dataset.baseDistance)));
-  labelClearances.forEach((distance,index) => expect(distance/satelliteBaseDistances[index]).toBeCloseTo(.25,1));
+  labelClearances.forEach((distance,index) => expect(distance/satelliteBaseDistances[index]).toBeCloseTo(.5,1));
   const offsets = await labels.evaluateAll((nodes) => nodes.map((label) => {
     const host = label.closest('[data-planetary]').getBoundingClientRect();
     const marker = label.querySelector('i').getBoundingClientRect();
@@ -48,7 +48,7 @@ test('hub renders eight planets with Earth as the Physics space', async ({ page 
   expect(await planets.evaluateAll(links => links.some(link => link.classList.contains('isLeft')))).toBe(false);
   const planetLabelClearances = await planets.evaluateAll(nodes => nodes.map(node => Math.hypot(Number(node.dataset.labelX)-Number(node.dataset.anchorX),Number(node.dataset.labelY)-Number(node.dataset.anchorY))));
   const planetBaseDistances = await planets.evaluateAll(nodes => nodes.map(node => Number(node.dataset.baseDistance)));
-  planetLabelClearances.forEach((distance,index) => expect(distance/planetBaseDistances[index]).toBeCloseTo(.25,1));
+  planetLabelClearances.forEach((distance,index) => expect(distance/planetBaseDistances[index]).toBeCloseTo(.5,1));
   const planetTargets = await planets.evaluateAll(links => links.map(link => {
     const marker = link.querySelector('i').getBoundingClientRect();
     return document.elementFromPoint(marker.left + marker.width / 2, marker.top + marker.height / 2)?.closest('a')?.getAttribute('href');

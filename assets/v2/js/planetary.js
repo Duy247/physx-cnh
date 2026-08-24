@@ -152,7 +152,7 @@ if (host) {
           const objectSupport=Math.max(4,size*(width<600?64:72));
           const textSupport=halfWidth*Math.abs(tx)+halfHeight*Math.abs(ty);
           const baseDistance=objectSupport+textSupport+2;
-          const distance=baseDistance*.25;
+          const distance=baseDistance*.5;
           const labelX=naturalX+tx*distance,labelY=naturalY+ty*distance;
           label.style.setProperty('--label-offset-x',`${labelX-naturalX}px`);
           label.style.setProperty('--label-offset-y',`${labelY-naturalY}px`);
@@ -211,7 +211,7 @@ if (host) {
           const objectSupport=projectedObjectSupport(satellite,x,y,tx,ty,width,height);
           const textSupport=halfWidth*Math.abs(tx)+halfHeight*Math.abs(ty);
           const baseDistance=objectSupport+textSupport+2;
-          const distance=baseDistance*.25;
+          const distance=baseDistance*.5;
           const labelX=x+tx*distance,labelY=y+ty*distance;
           label.style.setProperty('--label-offset-x',`${labelX-x}px`);
           label.style.setProperty('--label-offset-y',`${labelY-y}px`);
