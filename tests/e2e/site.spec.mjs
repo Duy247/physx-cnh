@@ -18,7 +18,12 @@ test('physics label anchor dots remain tied to projected satellites', async ({ p
   await expect(page.locator('[data-planetary="physics"]')).toHaveAttribute('data-earth-map', 'loaded');
   await expect(labels.first()).toHaveAttribute('data-anchor-x', /\d/);
   await expect(labels.first()).toHaveAttribute('style', /--label-offset-x/);
+  await expect(labels.first()).toHaveAttribute('style', /--leader-length/);
   expect(await labels.evaluateAll(nodes => nodes.some(node => node.classList.contains('isLeft')))).toBe(false);
+  const mapLabels = page.locator('[data-map-label]');
+  await expect(mapLabels).toHaveCount(3);
+  expect(await mapLabels.allTextContents()).toEqual(['Việt Nam', 'Hoàng Sa', 'Trường Sa']);
+  await expect(mapLabels.first()).toHaveAttribute('style', /--leader-length/);
   const clearanceRatios = await labels.evaluateAll(nodes => nodes.map(node => (
     Math.hypot(Number(node.dataset.labelX) - Number(node.dataset.anchorX), Number(node.dataset.labelY) - Number(node.dataset.anchorY))
     / Number(node.dataset.baseDistance)
@@ -50,6 +55,7 @@ test('hub renders eight planets with Earth as the Physics space', async ({ page 
   await expect(spaces.getByRole('link', { name: 'Tin học', exact: true })).toHaveAttribute('href', '/it');
   await expect(spaces.getByRole('link', { name: 'Hóa học', exact: true })).toHaveAttribute('href', '/chemistry');
   await expect(planets.first()).toHaveAttribute('style', /--label-offset-x/);
+  await expect(planets.first()).toHaveAttribute('style', /--leader-length/);
   expect(await planets.evaluateAll(links => links.some(link => link.classList.contains('isLeft')))).toBe(false);
   const planetClearanceRatios = await planets.evaluateAll(nodes => nodes.map(node => (
     Math.hypot(Number(node.dataset.labelX) - Number(node.dataset.anchorX), Number(node.dataset.labelY) - Number(node.dataset.anchorY))

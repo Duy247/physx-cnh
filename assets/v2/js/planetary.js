@@ -7,6 +7,7 @@ if (host) {
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const labels = [...host.querySelectorAll('[data-satellite]')];
   const hubLabels = [...host.querySelectorAll('[data-hub-planet]')];
+  const geoLabels = [...host.querySelectorAll('[data-map-label]')];
   let renderer;
   try {
     const scene = new THREE.Scene();
@@ -30,6 +31,12 @@ if (host) {
     const fill = new THREE.DirectionalLight(0x8fcbd0, 3.2); fill.position.set(-5, 4, 6); scene.add(fill);
     const updates = [];
     const projectors = [];
+    const setLeader = (label, offsetX, offsetY) => {
+      label.style.setProperty('--label-offset-x', `${offsetX}px`);
+      label.style.setProperty('--label-offset-y', `${offsetY}px`);
+      label.style.setProperty('--leader-length', `${Math.hypot(offsetX, offsetY)}px`);
+      label.style.setProperty('--leader-angle', `${Math.atan2(offsetY, offsetX)}rad`);
+    };
     const pointer = { x: 0, y: 0 };
     let pageVisible = !document.hidden;
     let inView = true;
@@ -100,17 +107,6 @@ if (host) {
       const lat=THREE.MathUtils.degToRad(latitude),lon=THREE.MathUtils.degToRad(longitude);
       return new THREE.Vector3(radius*Math.cos(lat)*Math.cos(lon),radius*Math.sin(lat),-radius*Math.cos(lat)*Math.sin(lon));
     };
-    const makeMapLabel = (text, wide=false) => {
-      const canvas=document.createElement('canvas'); canvas.width=wide?768:384; canvas.height=96;
-      const context=canvas.getContext('2d'); context.clearRect(0,0,canvas.width,canvas.height);
-      context.fillStyle='rgba(250,247,237,.9)'; context.strokeStyle='rgba(159,110,28,.8)'; context.lineWidth=3;
-      context.beginPath(); context.roundRect(3,3,canvas.width-6,canvas.height-6,38); context.fill(); context.stroke();
-      context.fillStyle='#713f1f'; context.font='600 30px Arial, sans-serif'; context.textAlign='center'; context.textBaseline='middle'; context.fillText(text,canvas.width/2,canvas.height/2+1);
-      const texture=new THREE.CanvasTexture(canvas); texture.colorSpace=THREE.SRGBColorSpace;
-      const sprite=new THREE.Sprite(new THREE.SpriteMaterial({map:texture,transparent:true,depthTest:true,depthWrite:false}));
-      sprite.scale.set(wide?1.18:.66,.18,1); return sprite;
-    };
-
     if (variant === 'hub') {
       host.dataset.planetCount='8';
       const hubLabelMap=new Map(hubLabels.map((label)=>[Number(label.dataset.hubPlanet),label]));
@@ -154,8 +150,7 @@ if (host) {
           const baseDistance=objectSupport+textSupport+2;
           const distance=baseDistance*.5;
           const labelX=naturalX+tx*distance,labelY=naturalY+ty*distance;
-          label.style.setProperty('--label-offset-x',`${labelX-naturalX}px`);
-          label.style.setProperty('--label-offset-y',`${labelY-naturalY}px`);
+          setLeader(label,labelX-naturalX,labelY-naturalY);
           label.style.transform=`translate3d(${naturalX}px,${naturalY}px,0) translate(-50%,-50%)`;
           label.dataset.anchorX=naturalX.toFixed(2); label.dataset.anchorY=naturalY.toFixed(2);
           label.dataset.labelX=labelX.toFixed(2); label.dataset.labelY=labelY.toFixed(2);
@@ -177,11 +172,30 @@ if (host) {
       const globe = new THREE.Mesh(new THREE.SphereGeometry(1.62,64,64), new THREE.MeshPhysicalMaterial({ map:earthTexture,color:0xffffff,emissive:0x174b56,emissiveIntensity:.08,roughness:.62,clearcoat:.28 })); earthSurface.add(globe);
       const grid = new THREE.Mesh(new THREE.SphereGeometry(1.635,24,16), new THREE.MeshBasicMaterial({ color:0xf7f3e8,wireframe:true,transparent:true,opacity:.11 })); earthSurface.add(grid);
       const atmosphere = new THREE.Mesh(new THREE.SphereGeometry(1.82,40,40), new THREE.MeshBasicMaterial({ color:0x63cad0,transparent:true,opacity:.075,side:THREE.BackSide })); planet.add(atmosphere);
-      [[16,108.2,'VIỆT NAM',false],[16.5,112,'HOÀNG SA',false],[10,114,'TRƯỜNG SA',false]].forEach(([lat,lon,text,wide],index)=>{
+      const mapMarkers=[];
+      [[16,108.2],[16.5,112],[10,114]].forEach(([lat,lon],index)=>{
         const marker=new THREE.Mesh(new THREE.SphereGeometry(index?0.028:0.04,16,16),new THREE.MeshBasicMaterial({color:index?0xf0c44e:0xe83d2f})); marker.position.copy(surfacePoint(lat,lon,1.65)); earthSurface.add(marker);
-        const label=makeMapLabel(text,wide); label.position.copy(surfacePoint(lat,lon,1.82+(index*.035)));
-        label.position.add(index===0?new THREE.Vector3(-.2,.16,.03):index===1?new THREE.Vector3(-.42,.36,.04):new THREE.Vector3(-.42,-.2,.04));
-        label.center.set(index?1:.5,.5); earthSurface.add(label);
+        mapMarkers.push(marker);
+      });
+      const mapProjected=new THREE.Vector3(),mapWorld=new THREE.Vector3(),earthWorld=new THREE.Vector3(),toCamera=new THREE.Vector3(),surfaceNormal=new THREE.Vector3();
+      projectors.push(()=>{
+        const width=host.clientWidth,height=host.clientHeight,compact=width<600;
+        const offsets=compact?[[62,-10],[72,-52],[74,48]]:[[90,-14],[108,-66],[112,62]];
+        earthSurface.getWorldPosition(earthWorld);
+        mapMarkers.forEach((marker,index)=>{
+          const label=geoLabels[index]; if(!label)return;
+          marker.getWorldPosition(mapWorld); mapProjected.copy(mapWorld).project(camera);
+          const x=(mapProjected.x*.5+.5)*width,y=(-mapProjected.y*.5+.5)*height;
+          const [offsetX,offsetY]=offsets[index];
+          setLeader(label,offsetX,offsetY);
+          label.style.transform=`translate3d(${x}px,${y}px,0) translate(-50%,-50%)`;
+          label.dataset.anchorX=x.toFixed(2); label.dataset.anchorY=y.toFixed(2);
+          label.dataset.labelX=(x+offsetX).toFixed(2); label.dataset.labelY=(y+offsetY).toFixed(2);
+          surfaceNormal.copy(mapWorld).sub(earthWorld).normalize(); toCamera.copy(camera.position).sub(earthWorld).normalize();
+          const facing=surfaceNormal.dot(toCamera)>.05;
+          const onScreen=x>-20&&x<width+20&&y>-20&&y<height+20;
+          label.style.opacity=facing&&mapProjected.z<1&&onScreen?'1':'0';
+        });
       });
       const settings = [
         [2.42,2.55,[.2,.18,-.18],0x247f8b,.13,()=>makeCommSatellite(0xc7a13c,false),'VINASAT-1'],
@@ -213,8 +227,7 @@ if (host) {
           const baseDistance=objectSupport+textSupport+2;
           const distance=baseDistance*.5;
           const labelX=x+tx*distance,labelY=y+ty*distance;
-          label.style.setProperty('--label-offset-x',`${labelX-x}px`);
-          label.style.setProperty('--label-offset-y',`${labelY-y}px`);
+          setLeader(label,labelX-x,labelY-y);
           label.style.transform=`translate3d(${x}px,${y}px,0) translate(-50%,-50%)`;
           label.dataset.anchorX=x.toFixed(2); label.dataset.anchorY=y.toFixed(2);
           label.dataset.labelX=labelX.toFixed(2); label.dataset.labelY=labelY.toFixed(2);

@@ -6,17 +6,24 @@
 .vignette { position: absolute; z-index: 2; inset: 0; pointer-events: none; background: linear-gradient(90deg, #f7f3e84d, transparent 28%, transparent 72%, #d4e1dd38), radial-gradient(circle, transparent 52%, #819a941a 100%); }
 .satelliteLayer { position:absolute; z-index:4; inset:0; overflow:hidden; pointer-events:none; }
 .satelliteLabel { position:absolute; top:0; left:0; display:block; width:9px; height:9px; color:#153f45; pointer-events:auto; will-change:transform; transition:opacity .2s ease; }
-.satelliteLabel i { position:absolute; inset:0; background:#176b77; border:2px solid #f8f4e9; border-radius:50%; box-shadow:0 0 0 1px #39777a,0 0 14px #176b7755; }
+.satelliteLabel::before,.geoLabel::before { position:absolute; z-index:0; top:50%; left:50%; width:var(--leader-length,0); height:1px; content:""; pointer-events:none; background:linear-gradient(90deg,#216f76b8,#78918ca0); transform:rotate(var(--leader-angle,0)); transform-origin:0 50%; }
+.satelliteLabel i { position:absolute; z-index:2; inset:0; background:#176b77; border:2px solid #f8f4e9; border-radius:50%; box-shadow:0 0 0 1px #39777a,0 0 14px #176b7755; }
 .satelliteLabel i::after { position:absolute; inset:-6px; content:""; border:1px solid #176b773d; border-radius:50%; }
-.satelliteLabel span { position:absolute; top:50%; left:50%; display:grid; width:max-content; max-width:220px; gap:2px; padding:7px 12px; background:#faf7eddb; border:1px solid #6d918c70; border-radius:14px; box-shadow:0 7px 20px #315b5e1c; transform:translate(-50%,-50%) translate(var(--label-offset-x,42px),var(--label-offset-y,0)); backdrop-filter:blur(10px); }
+.satelliteLabel span { position:absolute; z-index:2; top:50%; left:50%; display:grid; width:max-content; max-width:220px; gap:2px; padding:7px 12px; background:#faf7eddb; border:1px solid #6d918c70; border-radius:14px; box-shadow:0 7px 20px #315b5e1c; transform:translate(-50%,-50%) translate(var(--label-offset-x,42px),var(--label-offset-y,0)); backdrop-filter:blur(10px); }
 .satelliteLabel b { font:650 .68rem/1 var(--font-geist-mono); letter-spacing:.08em; text-transform:uppercase; }
 .satelliteLabel small { font:500 .72rem/1.15 var(--font-physics); white-space:nowrap; }
 .satelliteLabel:hover span,.satelliteLabel:focus-visible span { color:#f8f4e9; background:#176b77; }
+.geoLabelLayer { position:absolute; z-index:3; inset:0; overflow:hidden; pointer-events:none; }
+.geoLabel { position:absolute; top:0; left:0; width:7px; height:7px; color:#713f1f; will-change:transform; transition:opacity .2s ease; }
+.geoLabel::before { background:linear-gradient(90deg,#c28b35e0,#9e7539a6); }
+.geoLabel::after { position:absolute; z-index:2; inset:0; border:1px solid #fff9; border-radius:50%; content:""; background:#e9b43f; box-shadow:0 0 0 1px #a66f24; }
+.geoLabel:first-child::after { background:#e83d2f; box-shadow:0 0 0 1px #ae392e; }
+.geoLabel b { position:absolute; z-index:2; top:50%; left:50%; width:max-content; padding:6px 11px; border:1px solid #b78436a8; border-radius:999px; color:#713f1f; background:#faf7ede8; box-shadow:0 6px 18px #574a3120; font:650 .62rem/1 var(--font-geist-mono); letter-spacing:.055em; text-transform:uppercase; transform:translate(-50%,-50%) translate(var(--label-offset-x),var(--label-offset-y)); backdrop-filter:blur(8px); }
 .hud { position: absolute; z-index: 3; inset: 19px 20px auto; display: grid; grid-template-columns: 1fr auto; gap: 7px; color: #d5ddfa; pointer-events: none; font: 650 .57rem/1 var(--font-geist-mono); letter-spacing: .13em; }
 .hud b { grid-column: 1 / -1; justify-self: end; color: #efc961; font-size: .5rem; font-weight: 650; }
 .physics .hud { color: #b9edf0; }
 .isFallback::before, .isFallback::after { position: absolute; top: 50%; left: 50%; width: 68%; aspect-ratio: 1; border: 1px solid #66888a77; border-radius: 50%; content: ""; transform: translate(-50%, -50%) rotate(22deg); }
 .isFallback::after { width: 42%; border-color: #efc96177; transform: translate(-50%, -50%) rotate(-38deg); }
 @media (max-width: 780px) { .hud { inset: 15px 16px auto; }.vignette { background: radial-gradient(circle, transparent 48%, #718b851c 100%); } }
-@media (max-width:780px) { .satelliteLabel { width:8px; height:8px; }.satelliteLabel span { max-width:152px; padding:6px 8px; }.satelliteLabel b{font-size:.57rem}.satelliteLabel small{font-size:.62rem;white-space:normal} }
+@media (max-width:780px) { .satelliteLabel { width:8px; height:8px; }.satelliteLabel span { max-width:152px; padding:6px 8px; }.satelliteLabel b{font-size:.57rem}.satelliteLabel small{font-size:.62rem;white-space:normal}.geoLabel b{padding:5px 8px;font-size:.51rem} }
 @media (prefers-reduced-motion: reduce) { .hud b { display: none; } }

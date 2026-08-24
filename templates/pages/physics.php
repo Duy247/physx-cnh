@@ -8,6 +8,11 @@
           <a class="satelliteLabel" href="/library?kind=<?= $kind ?>&amp;orbit=1" data-satellite="<?= $index ?>" data-spacecraft="<?= e($spacecraft) ?>"><i></i><span><b><?= e($spacecraft) ?></b><small><?= e($label) ?></small></span></a>
         <?php endforeach; ?>
       </nav>
+      <div class="geoLabelLayer" aria-hidden="true">
+        <span class="geoLabel" data-map-label="vietnam"><b>Việt Nam</b></span>
+        <span class="geoLabel" data-map-label="hoang-sa"><b>Hoàng Sa</b></span>
+        <span class="geoLabel" data-map-label="truong-sa"><b>Trường Sa</b></span>
+      </div>
     </div>
   </div>
   <div class="spectralWash" aria-hidden="true"></div>

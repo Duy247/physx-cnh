@@ -48,10 +48,11 @@
 @keyframes showcase-reel { to { transform:translateX(0); } }
 .planetLabelLayer { position:absolute; z-index:5; inset:0; overflow:hidden; pointer-events:none; }
 .planetLabel { position:absolute; top:0; left:0; display:block; width:10px; height:10px; color:#324541; pointer-events:auto; will-change:transform; }
-.planetLabel i { position:absolute; inset:0; border:2px solid #fffdf1; border-radius:50%; background:#7a817e; box-shadow:0 0 0 1px #69736f,0 0 14px #42504c40; }
+.planetLabel::before { position:absolute; z-index:0; top:50%; left:50%; width:var(--leader-length,0); height:1px; content:""; pointer-events:none; background:linear-gradient(90deg,#657672b8,#8a9490a0); transform:rotate(var(--leader-angle,0)); transform-origin:0 50%; }
+.planetLabel i { position:absolute; z-index:2; inset:0; border:2px solid #fffdf1; border-radius:50%; background:#7a817e; box-shadow:0 0 0 1px #69736f,0 0 14px #42504c40; }
 .planetLabel i::after { position:absolute; top:50%; left:50%; width:var(--planet-hit,70px); aspect-ratio:1; border:1px solid transparent; border-radius:50%; content:""; transform:translate(-50%,-50%); transition:border-color .2s,background .2s; }
 .planetLabel:hover i::after,.planetLabel:focus-visible i::after { border-color:#3c76785c; background:#f5f3e411; }
-.planetLabel span { position:absolute; top:50%; left:50%; width:max-content; padding:8px 12px; border:1px solid #747f7b69; border-radius:999px; background:#f8f5ebdc; box-shadow:0 8px 24px #3a484426; font:500 .8rem/1 var(--font-physics); transform:translate(-50%,-50%) translate(var(--label-offset-x,38px),var(--label-offset-y,0)); backdrop-filter:blur(12px); }
+.planetLabel span { position:absolute; z-index:2; top:50%; left:50%; width:max-content; padding:8px 12px; border:1px solid #747f7b69; border-radius:999px; background:#f8f5ebdc; box-shadow:0 8px 24px #3a484426; font:500 .8rem/1 var(--font-physics); transform:translate(-50%,-50%) translate(var(--label-offset-x,38px),var(--label-offset-y,0)); backdrop-filter:blur(12px); }
 .planetLabel[data-hub-planet="1"]{--planet-hit:48px}.planetLabel[data-hub-planet="2"]{--planet-hit:58px}.planetLabel[data-hub-planet="4"]{--planet-hit:72px}.planetLabel[data-hub-planet="6"]{--planet-hit:58px}
 .planetLabel.isActive { color:#0f5661; }.planetLabel.isActive i { background:#16808c; box-shadow:0 0 0 1px #24727a,0 0 18px #16808c70; }.planetLabel.isActive span { border-color:#22818a78; background:#f4f9f2e8; }
 .planetLabel:hover span,.planetLabel:focus-visible span { color:#fffdf4; background:#1a626c; border-color:#1a626c; }
