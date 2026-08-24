@@ -50,7 +50,7 @@ if (($pageCss ?? '') === 'physics') {
       <?php foreach ($navigation as [$href, $label]): ?><a href="<?= $href ?>"><?= e($label) ?></a><?php endforeach; ?>
     </nav>
     <div class="header-actions">
-      <a class="icon-link" href="<?= $isHub ? '/physics' : '/library' ?>" aria-label="<?= $isHub ? 'Mở không gian Vật lý' : 'Tìm tài liệu' ?>"><?= icon($isHub ? 'orbit' : 'search', 19) ?></a>
+      <a class="icon-link" href="<?= $isHub ? '/physics' : '/library' ?>" aria-label="<?= $isHub ? 'Mở không gian Vật lý' : 'Tìm tài liệu' ?>"><?= icon($isHub ? 'orbit' : 'search', $isHub ? 21 : 19) ?></a>
       <?php if (!$isHub): ?><a class="icon-link hub-link" href="/" aria-label="Tất cả lĩnh vực"><?= icon('grid', 18) ?></a><?php endif; ?>
       <details class="mobile-menu">
         <summary aria-label="Mở menu"><?= icon('menu', 20) ?></summary>

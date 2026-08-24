@@ -32,7 +32,7 @@ function icon(string $name, int $size = 20): string
         'grid' => '<rect width="7" height="7" x="3" y="3"/><rect width="7" height="7" x="14" y="3"/><rect width="7" height="7" x="14" y="14"/><rect width="7" height="7" x="3" y="14"/>',
         'menu' => '<path d="M4 6h16M4 12h16M4 18h16"/>',
         'atom' => '<circle cx="12" cy="12" r="1"/><path d="M20.2 20.2c2.04-2.03-.79-8.15-6.3-13.66S2.27-1.8.24.24s.79 8.15 6.3 13.66 11.63 8.34 13.66 6.3Z" transform="translate(1.78 1.78) scale(.85)"/><path d="M3.8 20.2c-2.04-2.03.79-8.15 6.3-13.66S21.73-1.8 23.76.24s-.79 8.15-6.3 13.66S5.83 22.24 3.8 20.2Z" transform="translate(-1.78 1.78) scale(.85)"/>',
-        'orbit' => '<circle cx="12" cy="12" r="2.6"/><circle cx="19" cy="5" r="1.8"/><circle cx="5" cy="19" r="1.8"/><path d="M10.2 2.25a10 10 0 0 1 11.55 11.55M13.8 21.75A10 10 0 0 1 2.25 10.2"/>',
+        'orbit' => '<circle cx="12" cy="12" r="5.2"/><ellipse cx="12" cy="12" rx="10" ry="4.1" transform="rotate(-18 12 12)"/>',
         'arrow' => '<path d="M5 12h14M13 6l6 6-6 6"/>',
         'file' => '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/>',
         'satellite' => '<path d="m13 7 4 4M14 4l6 6M5 19l4-4M3 21l6-6M9 11l4 4M7 13l4 4"/><path d="M15 3 3 15l6 6L21 9z"/>',
