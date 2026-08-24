@@ -17,6 +17,8 @@ test('physics label anchor dots remain tied to projected satellites', async ({ p
   expect(await labels.evaluateAll(nodes => nodes.map(node => node.dataset.spacecraft))).toEqual(['VINASAT-1', 'VINASAT-2', 'VNREDSat-1', 'PicoDragon']);
   await expect(page.locator('[data-planetary="physics"]')).toHaveAttribute('data-earth-map', 'loaded');
   await expect(labels.first()).toHaveAttribute('data-anchor-x', /\d/);
+  await expect(labels.first()).toHaveAttribute('style', /--label-offset-x/);
+  expect(await labels.evaluateAll(nodes => nodes.some(node => node.classList.contains('isLeft')))).toBe(false);
   const offsets = await labels.evaluateAll((nodes) => nodes.map((label) => {
     const host = label.closest('[data-planetary]').getBoundingClientRect();
     const marker = label.querySelector('i').getBoundingClientRect();
