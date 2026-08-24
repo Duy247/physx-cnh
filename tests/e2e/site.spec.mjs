@@ -52,6 +52,7 @@ test('field cards orbit a left-side pivot as the page scrolls', async ({ page })
   const firstTransform = await cards.first().evaluate((node) => node.style.transform);
   await orbit.evaluate((node) => scrollTo(0, node.offsetTop + (node.offsetHeight - innerHeight) / 3));
   await expect(orbit).toHaveAttribute('data-field-index', '1');
+  expect(Math.abs(await orbit.locator('.fieldStage').evaluate((node) => node.getBoundingClientRect().top))).toBeLessThan(2);
   expect(await cards.first().evaluate((node) => node.style.transform)).not.toBe(firstTransform);
 });
 
