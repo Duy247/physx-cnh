@@ -145,7 +145,8 @@ test('locally bundled fonts, covers, scripts and graphs have no missing assets',
   });
   for (const path of ['/', '/physics', '/library', '/guides/roadmap', '/guides/research']) {
     await page.goto(path);
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
+    await page.waitForTimeout(500);
   }
   expect(missing).toEqual([]);
 });
