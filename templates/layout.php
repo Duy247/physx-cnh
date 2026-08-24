@@ -35,7 +35,7 @@ if (($pageCss ?? '') === 'physics') {
   <link rel="icon" href="/image/favicon.ico">
   <link rel="preload" href="/assets/v2/fonts/be-vietnam-pro-300-latin.woff2" as="font" type="font/woff2" crossorigin>
 <?php foreach (array_unique($cssFiles) as $css): ?>
-  <link rel="stylesheet" href="/assets/v2/css/<?= e($css) ?>.css?v=15">
+  <link rel="stylesheet" href="/assets/v2/css/<?= e($css) ?>.css?v=16">
 <?php endforeach; ?>
 </head>
 <body class="<?= e(implode(' ', $bodyClasses)) ?>">
