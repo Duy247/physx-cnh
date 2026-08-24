@@ -15,10 +15,20 @@
       '/physics/img/random_moment_1.jpg', '/physics/img/thapbut1.jpg',
   ]; ?>
   <section class="aboutSection" aria-labelledby="about-title">
-    <h2 id="about-title">Về chúng tôi</h2>
-    <figure class="legacyShowcase" data-showcase data-images='<?= e(json_encode($showcaseImages, JSON_UNESCAPED_SLASHES)) ?>'>
-      <div class="showcaseFrame"><img src="<?= $showcaseImages[0] ?>" alt="Hình ảnh hoạt động PhysX-CNH" loading="lazy" decoding="async" fetchpriority="low"></div>
-    </figure>
+    <div class="legacyShowcase" data-showcase>
+      <h2 id="about-title">Về chúng tôi</h2>
+      <div class="showcaseViewport">
+        <div class="showcaseTrack">
+          <?php for ($copy = 0; $copy < 2; $copy++): ?>
+            <div class="showcaseSet"<?= $copy ? ' aria-hidden="true"' : '' ?>>
+              <?php foreach ($showcaseImages as $index => $source): ?>
+                <figure class="showcaseFrame"><img src="<?= e($source) ?>" alt="<?= $copy ? '' : 'Hoạt động PhysX-CNH – ảnh ' . ($index + 1) ?>" loading="<?= $index < 3 && !$copy ? 'eager' : 'lazy' ?>" decoding="async"></figure>
+              <?php endforeach; ?>
+            </div>
+          <?php endfor; ?>
+        </div>
+      </div>
+    </div>
   </section>
   <section class="fields" id="fields" aria-labelledby="fields-title">
     <h1 class="sectionTitle" id="fields-title">Lĩnh vực</h1>

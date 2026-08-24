@@ -30,27 +30,4 @@
     });
   });
 
-  const showcase = document.querySelector('[data-showcase]');
-  if (showcase) {
-    const images = JSON.parse(showcase.dataset.images || '[]');
-    const image = showcase.querySelector('img');
-    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let index = 0;
-    let timer = null;
-    const show = (next) => {
-      if (!images.length || !image) return;
-      index = (next + images.length) % images.length;
-      showcase.classList.add('isChanging');
-      const source = images[index];
-      const swap = () => {
-        image.src = source;
-        image.onload = () => showcase.classList.remove('isChanging');
-      };
-      setTimeout(swap, reduced ? 0 : 160);
-    };
-    const stop = () => { if (timer) clearInterval(timer); timer = null; };
-    const start = () => { if (!document.hidden) { stop(); timer = setInterval(() => show(index + 1), 8000); } };
-    document.addEventListener('visibilitychange', () => document.hidden ? stop() : start());
-    start();
-  }
 })();

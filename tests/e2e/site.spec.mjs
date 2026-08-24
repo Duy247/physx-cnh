@@ -30,18 +30,16 @@ test('hub planets expose four labeled spaces', async ({ page }) => {
   }
 });
 
-test('legacy activity showcase cycles one local image at a time', async ({ page }) => {
-  await page.addInitScript(() => {
-    const nativeSetInterval = window.setInterval;
-    window.setInterval = (callback, delay, ...args) => nativeSetInterval(callback, Math.min(delay, 100), ...args);
-  });
+test('legacy activity reel moves automatically without controls', async ({ page }) => {
   await page.goto('/');
   const showcase = page.locator('[data-showcase]');
-  const image = showcase.locator('img');
   await expect(showcase).toBeVisible();
-  const first = await image.getAttribute('src');
-  await expect(image).not.toHaveAttribute('src', first);
+  await expect(showcase.locator('img')).toHaveCount(20);
   await expect(showcase.locator('figcaption, button')).toHaveCount(0);
+  const track = showcase.locator('.showcaseTrack');
+  const firstTransform = await track.evaluate((node) => getComputedStyle(node).transform);
+  await page.waitForTimeout(250);
+  expect(await track.evaluate((node) => getComputedStyle(node).transform)).not.toBe(firstTransform);
 });
 
 test('orbit link scopes books and removes redundant kind control', async ({ page }) => {

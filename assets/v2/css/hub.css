@@ -31,14 +31,18 @@
 .futureCard .cardSymbol { color: #a2a4a4; opacity: .075; }.futureCard .cardBody > p { color: #8f9191; }.futureCard .cardFoot { color: #777a7b; }
 .amber, .violet, .green { --card-accent: #7f8389; }
 .futureSymbol { position:absolute; top:50%; right:7%; color:#6f7472; opacity:.1; font:200 clamp(8rem,18vw,17rem)/1 var(--font-physics); transform:translateY(-50%); }
-.aboutSection { position:relative; z-index:2; display:grid; width:min(1220px,calc(100% - 48px)); grid-template-columns:minmax(250px,.7fr) minmax(0,1.3fr); gap:clamp(40px,8vw,110px); align-items:center; margin:0 auto; padding:100px 0 130px; }
+.aboutSection { position:relative; z-index:2; width:min(1440px,calc(100% - 48px)); margin:0 auto; padding:100px 0 130px; }
 .aboutSection::before { position:absolute; z-index:-1; inset:5% -18%; content:""; background:radial-gradient(ellipse,#eef3eceb,transparent 72%); }
-.aboutSection h2 { font:300 clamp(4rem,7.5vw,7.5rem)/.82 var(--font-physics); letter-spacing:-.065em; }
-.legacyShowcase { position:relative; width:100%; margin:0; padding:10px; color:#27474a; background:#fffdf0cf; border:1px solid #6e8b856b; border-radius:22px; box-shadow:0 24px 65px #3c504b30,inset 0 1px #fff; pointer-events:auto; backdrop-filter:blur(14px); }
-.showcaseFrame { position:relative; overflow:hidden; aspect-ratio:16/9; background:#cbd4d0; border-radius:12px; }
+.aboutSection h2 { position:absolute; z-index:4; top:50%; left:clamp(28px,6vw,88px); max-width:4.5em; color:#fffdf4; font:300 clamp(4rem,7.5vw,7.5rem)/.82 var(--font-physics); letter-spacing:-.065em; text-shadow:0 4px 35px #071a1de6; transform:translateY(-50%); }
+.legacyShowcase { position:relative; overflow:hidden; width:100%; color:#27474a; background:#b8c7c3; border:1px solid #6e8b856b; border-radius:26px; box-shadow:0 24px 65px #3c504b30,inset 0 1px #fff; }
+.legacyShowcase::after { position:absolute; z-index:3; inset:0; content:""; pointer-events:none; background:linear-gradient(90deg,#071d21d9 0,#0a292d9e 18%,#102d3035 38%,transparent 62%); }
+.showcaseViewport { overflow:hidden; width:100%; padding:12px 0; }
+.showcaseTrack { --reel-gap:12px; --reel-half-gap:6px; display:flex; width:max-content; gap:var(--reel-gap); transform:translateX(calc(-50% - var(--reel-half-gap))); animation:showcase-reel 62s linear infinite; will-change:transform; }
+.showcaseSet { display:flex; gap:var(--reel-gap); }
+.showcaseFrame { position:relative; overflow:hidden; width:clamp(260px,30vw,430px); height:clamp(300px,38vw,510px); flex:0 0 auto; margin:0; background:#cbd4d0; border-radius:15px; }
 .showcaseFrame::after { position:absolute; inset:0; content:""; pointer-events:none; box-shadow:inset 0 0 0 1px #fff6; }
-.showcaseFrame img { width:100%; height:100%; object-fit:cover; opacity:1; transition:opacity .28s ease; }
-.legacyShowcase.isChanging img { opacity:.12; }
+.showcaseFrame img { width:100%; height:100%; object-fit:cover; }
+@keyframes showcase-reel { to { transform:translateX(0); } }
 .planetLabelLayer { position:absolute; z-index:5; inset:0; overflow:hidden; pointer-events:none; }
 .planetLabel { position:absolute; top:0; left:0; display:flex; align-items:center; gap:8px; width:max-content; color:#324541; pointer-events:auto; will-change:transform; }
 .planetLabel i { position:relative; width:10px; height:10px; flex:0 0 auto; border:2px solid #fffdf1; border-radius:50%; background:#7a817e; box-shadow:0 0 0 1px #69736f,0 0 14px #42504c40; }
@@ -52,8 +56,8 @@
 .manifesto { position: relative; z-index: 2; width: min(1220px, calc(100% - 48px)); min-height: 82svh; margin: 0 auto; padding: 150px 0 120px; }.manifesto::before { position: absolute; z-index: -1; inset: 0 -20%; content: ""; background: linear-gradient(180deg, transparent, #070912e8 16%, #070912f5 80%, #070912); }.manifesto h2 em { color: #f2d276; font-weight: 300; }.principles { display: grid; grid-template-columns: repeat(3,1fr); margin-top: 90px; border-top: 1px solid #66708a66; border-bottom: 1px solid #66708a66; }.principles p { display: grid; min-height: 220px; grid-template-rows: auto auto 1fr; gap: 17px; padding: 30px; }.principles p + p { border-left: 1px solid #66708a66; }.principles span { color: #8ea2e7; font: 600 .62rem/1 var(--font-geist-mono); }.principles strong { font: 400 1.7rem/1 var(--font-physics); }.principles small { max-width: 260px; align-self: end; color: #858da5; font-size: .86rem; line-height: 1.6; }
 @keyframes rise { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } } @keyframes drift { 50% { transform:translateY(7px); } }
 @media (max-width: 760px) { .hero { width: calc(100% - 32px); min-height: calc(100svh - 68px); padding: 80px 8px 75px 22px; }.heroMeta { top: 20px; font-size: .48rem; }.heroCopy { width: 100%; }.hero h1 { font-size: clamp(4rem, 21vw, 6rem); line-height: .8; }.lead { max-width: 88%; margin-top: 34px; }.coordinates { display:none; }.fields { width: calc(100% - 32px); padding: 100px 0; }.sectionHeading { grid-template-columns:1fr; gap:25px; margin-bottom:45px; }.sectionHeading h2 { font-size: 3.7rem; }.fieldGrid { grid-template-columns:1fr; gap:18px; }.physicsCard { grid-column:auto; min-height:460px; }.fieldCard { min-height:360px; padding:24px; border-radius:22px; }.cardSymbol { width:65%; height:65%; right:-5%; }.cardBody h3,.futureCard .cardBody h3 { font-size:3.7rem; }.manifesto { width:calc(100% - 32px); padding:100px 0 80px; }.manifesto h2 { font-size:3.5rem; }.principles { grid-template-columns:1fr; margin-top:60px; }.principles p { min-height:170px; }.principles p + p { border-top:1px solid #66708a66; border-left:0; } }
-@media (prefers-reduced-motion:reduce) { .heroCopy > *,.jumpLink svg { animation:none; }.fieldCard { transform:none; } }
-@media(max-width:760px){.planetLabel{gap:5px}.planetLabel span{padding:7px 9px;font-size:.69rem}.planetLabel i{width:9px;height:9px}.aboutSection{width:calc(100% - 32px);grid-template-columns:1fr;gap:35px;padding:75px 0 95px}.aboutSection h2{font-size:4.4rem}.legacyShowcase{padding:7px;border-radius:16px}.showcaseFrame{border-radius:11px}}
+@media (prefers-reduced-motion:reduce) { .heroCopy > *,.jumpLink svg { animation:none; }.fieldCard { transform:none; }.showcaseTrack{animation-duration:150s} }
+@media(max-width:760px){.planetLabel{gap:5px}.planetLabel span{padding:7px 9px;font-size:.69rem}.planetLabel i{width:9px;height:9px}.aboutSection{width:calc(100% - 32px);padding:75px 0 95px}.aboutSection h2{left:24px;font-size:4.4rem}.legacyShowcase{border-radius:18px}.showcaseViewport{padding:8px 0}.showcaseTrack{--reel-gap:8px;--reel-half-gap:4px;animation-duration:50s}.showcaseFrame{width:72vw;height:105vw;max-height:470px;border-radius:11px}}
 
 /* Planetary light system */
 .main { color:#102c37; background:#f7f3e8; }
