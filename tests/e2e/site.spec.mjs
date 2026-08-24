@@ -75,6 +75,7 @@ test('legacy activity reel moves automatically without controls', async ({ page 
 
 test('activity reel leads to the personal introduction', async ({ page }) => {
   await page.goto('/');
+  expect(await page.locator('.aboutLink span').evaluate((node) => parseFloat(getComputedStyle(node).fontSize))).toBeGreaterThanOrEqual(12);
   await page.locator('.aboutLink').click();
   await expect(page).toHaveURL('/about');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Chào, mình là Duy.');
