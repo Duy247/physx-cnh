@@ -19,6 +19,14 @@ test('physics label anchor dots remain tied to projected satellites', async ({ p
   await expect(labels.first()).toHaveAttribute('data-anchor-x', /\d/);
   await expect(labels.first()).toHaveAttribute('style', /--label-offset-x/);
   expect(await labels.evaluateAll(nodes => nodes.some(node => node.classList.contains('isLeft')))).toBe(false);
+  const labelClearances = await labels.evaluateAll(nodes => nodes.map(node => Math.hypot(Number(node.dataset.labelX)-Number(node.dataset.anchorX),Number(node.dataset.labelY)-Number(node.dataset.anchorY))));
+  labelClearances.forEach(distance => expect(distance).toBeGreaterThan(40));
+  const protectedSatelliteGaps = await labels.evaluateAll(nodes => nodes.map(node => {
+    const marker=node.querySelector('i').getBoundingClientRect(),text=node.querySelector('span').getBoundingClientRect();
+    const x=marker.left+marker.width/2,y=marker.top+marker.height/2;
+    return Math.hypot(Math.max(text.left-x,0,x-text.right),Math.max(text.top-y,0,y-text.bottom));
+  }));
+  protectedSatelliteGaps.forEach(distance => expect(distance).toBeGreaterThan(20));
   const offsets = await labels.evaluateAll((nodes) => nodes.map((label) => {
     const host = label.closest('[data-planetary]').getBoundingClientRect();
     const marker = label.querySelector('i').getBoundingClientRect();
@@ -43,6 +51,14 @@ test('hub renders eight planets with Earth as the Physics space', async ({ page 
   await expect(spaces.getByRole('link', { name: 'Hóa học', exact: true })).toHaveAttribute('href', '/chemistry');
   await expect(planets.first()).toHaveAttribute('style', /--label-offset-x/);
   expect(await planets.evaluateAll(links => links.some(link => link.classList.contains('isLeft')))).toBe(false);
+  const planetLabelClearances = await planets.evaluateAll(nodes => nodes.map(node => Math.hypot(Number(node.dataset.labelX)-Number(node.dataset.anchorX),Number(node.dataset.labelY)-Number(node.dataset.anchorY))));
+  planetLabelClearances.forEach(distance => expect(distance).toBeGreaterThan(30));
+  const protectedPlanetGaps = await planets.evaluateAll(nodes => nodes.map(node => {
+    const marker=node.querySelector('i').getBoundingClientRect(),text=node.querySelector('span').getBoundingClientRect();
+    const x=marker.left+marker.width/2,y=marker.top+marker.height/2;
+    return Math.hypot(Math.max(text.left-x,0,x-text.right),Math.max(text.top-y,0,y-text.bottom));
+  }));
+  protectedPlanetGaps.forEach(distance => expect(distance).toBeGreaterThan(12));
   const planetTargets = await planets.evaluateAll(links => links.map(link => {
     const marker = link.querySelector('i').getBoundingClientRect();
     return document.elementFromPoint(marker.left + marker.width / 2, marker.top + marker.height / 2)?.closest('a')?.getAttribute('href');

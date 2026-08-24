@@ -51,6 +51,21 @@ if (host) {
       const line = new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(points), new THREE.LineBasicMaterial({ color, transparent: true, opacity }));
       parent.add(line); return line;
     };
+    const placeOrbitingLabel = ({ x,y,ux,uy,halfWidth,halfHeight,clearance,width,minY,maxY }) => {
+      const baseAngle=Math.atan2(uy,ux),edge=12,step=Math.PI/90;
+      for(let turn=0;turn<=90;turn+=1){
+        const offsets=turn===0?[0]:[turn*step,-turn*step];
+        for(const offset of offsets){
+          const angle=baseAngle+offset,cx=Math.cos(angle),cy=Math.sin(angle);
+          const distance=clearance+halfWidth*Math.abs(cx)+halfHeight*Math.abs(cy)+10;
+          const labelX=x+cx*distance,labelY=y+cy*distance;
+          if(labelX-halfWidth>=edge&&labelX+halfWidth<=width-edge&&labelY-halfHeight>=minY&&labelY+halfHeight<=maxY){
+            return {x:labelX,y:labelY};
+          }
+        }
+      }
+      return {x:Math.max(halfWidth+edge,Math.min(width-halfWidth-edge,x)),y:Math.max(minY+halfHeight,Math.min(maxY-halfHeight,y))};
+    };
     const metal = new THREE.MeshStandardMaterial({ color:0xd6d2c5,metalness:.72,roughness:.3 });
     const gold = new THREE.MeshStandardMaterial({ color:0xb99036,metalness:.62,roughness:.36 });
     const dark = new THREE.MeshStandardMaterial({ color:0x26343a,metalness:.48,roughness:.38 });
@@ -135,15 +150,14 @@ if (host) {
           const ux=dx/length,uy=dy/length;
           const text=label.querySelector('span');
           const halfWidth=Math.max(text?.offsetWidth||70,70)/2,halfHeight=Math.max(text?.offsetHeight||30,30)/2;
-          const clearance=Math.max(14,size*(width<600?44:65));
-          const distance=clearance+halfWidth*Math.abs(ux)+halfHeight*Math.abs(uy)+8;
-          const desiredX=naturalX+ux*distance,desiredY=naturalY+uy*distance;
-          const labelX=Math.max(halfWidth+14,Math.min(width-halfWidth-14,desiredX));
-          const labelY=Math.max(width<600?105:92,Math.min(height-(width<600?115:75),desiredY));
+          const clearance=Math.max(16,size*(width<600?70:65));
+          const placed=placeOrbitingLabel({x:naturalX,y:naturalY,ux,uy,halfWidth,halfHeight,clearance,width,minY:width<600?98:84,maxY:height-(width<600?108:68)});
+          const labelX=placed.x,labelY=placed.y;
           label.style.setProperty('--label-offset-x',`${labelX-naturalX}px`);
           label.style.setProperty('--label-offset-y',`${labelY-naturalY}px`);
           label.style.transform=`translate3d(${naturalX}px,${naturalY}px,0) translate(-50%,-50%)`;
           label.dataset.anchorX=naturalX.toFixed(2); label.dataset.anchorY=naturalY.toFixed(2);
+          label.dataset.labelX=labelX.toFixed(2); label.dataset.labelY=labelY.toFixed(2);
           const show=projected.z<1&&scrollY<height*.72;
           label.style.opacity=show?'1':'0'; label.style.pointerEvents=show?'auto':'none';
         });
@@ -189,15 +203,13 @@ if (host) {
           const ux=dx/length,uy=dy/length;
           const text=label.querySelector('span');
           const halfWidth=Math.max(text?.offsetWidth||92,92)/2,halfHeight=Math.max(text?.offsetHeight||44,44)/2;
-          const distance=16+halfWidth*Math.abs(ux)+halfHeight*Math.abs(uy)+8;
-          const desiredX=x+ux*distance,desiredY=y+uy*distance;
-          const labelX=Math.max(halfWidth+12,Math.min(width-halfWidth-12,desiredX));
-          const minLabelY=width<600?105:90+halfHeight;
-          const labelY=Math.max(minLabelY,Math.min(height-(width<600?115:75),desiredY));
+          const placed=placeOrbitingLabel({x,y,ux,uy,halfWidth,halfHeight,clearance:width<600?34:30,width,minY:width<600?98:84,maxY:height-(width<600?130:105)});
+          const labelX=placed.x,labelY=placed.y;
           label.style.setProperty('--label-offset-x',`${labelX-x}px`);
           label.style.setProperty('--label-offset-y',`${labelY-y}px`);
           label.style.transform=`translate3d(${x}px,${y}px,0) translate(-50%,-50%)`;
           label.dataset.anchorX=x.toFixed(2); label.dataset.anchorY=y.toFixed(2);
+          label.dataset.labelX=labelX.toFixed(2); label.dataset.labelY=labelY.toFixed(2);
           const onScreen=x>-20&&x<width+20&&y>-20&&y<height+20;
           const show=projected.z<1&&onScreen&&scrollY<height*.72; label.style.opacity=show?'1':'0'; label.style.pointerEvents=show?'auto':'none';
         });
