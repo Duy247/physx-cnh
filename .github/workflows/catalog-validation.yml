@@ -125,6 +125,7 @@ jobs:
             data
             image
             physics/catalog
+            physics/img
             src
             templates
             tests/e2e
