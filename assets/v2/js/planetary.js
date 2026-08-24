@@ -151,7 +151,8 @@ if (host) {
           const tx=(-uy-.16*ux)/tangentLength,ty=(ux-.16*uy)/tangentLength;
           const objectSupport=Math.max(4,size*(width<600?64:72));
           const textSupport=halfWidth*Math.abs(tx)+halfHeight*Math.abs(ty);
-          const distance=objectSupport+textSupport+2;
+          const baseDistance=objectSupport+textSupport+2;
+          const distance=baseDistance*.25;
           const labelX=naturalX+tx*distance,labelY=naturalY+ty*distance;
           label.style.setProperty('--label-offset-x',`${labelX-naturalX}px`);
           label.style.setProperty('--label-offset-y',`${labelY-naturalY}px`);
@@ -159,6 +160,7 @@ if (host) {
           label.dataset.anchorX=naturalX.toFixed(2); label.dataset.anchorY=naturalY.toFixed(2);
           label.dataset.labelX=labelX.toFixed(2); label.dataset.labelY=labelY.toFixed(2);
           label.dataset.objectSupport=objectSupport.toFixed(2);
+          label.dataset.baseDistance=baseDistance.toFixed(2);
           const show=projected.z<1&&scrollY<height*.72;
           label.style.opacity=show?'1':'0'; label.style.pointerEvents=show?'auto':'none';
         });
@@ -208,7 +210,8 @@ if (host) {
           const tx=(-uy-.12*ux)/tangentLength,ty=(ux-.12*uy)/tangentLength;
           const objectSupport=projectedObjectSupport(satellite,x,y,tx,ty,width,height);
           const textSupport=halfWidth*Math.abs(tx)+halfHeight*Math.abs(ty);
-          const distance=objectSupport+textSupport+2;
+          const baseDistance=objectSupport+textSupport+2;
+          const distance=baseDistance*.25;
           const labelX=x+tx*distance,labelY=y+ty*distance;
           label.style.setProperty('--label-offset-x',`${labelX-x}px`);
           label.style.setProperty('--label-offset-y',`${labelY-y}px`);
@@ -216,6 +219,7 @@ if (host) {
           label.dataset.anchorX=x.toFixed(2); label.dataset.anchorY=y.toFixed(2);
           label.dataset.labelX=labelX.toFixed(2); label.dataset.labelY=labelY.toFixed(2);
           label.dataset.objectSupport=objectSupport.toFixed(2);
+          label.dataset.baseDistance=baseDistance.toFixed(2);
           const onScreen=x>-20&&x<width+20&&y>-20&&y<height+20;
           const show=projected.z<1&&onScreen&&scrollY<height*.72; label.style.opacity=show?'1':'0'; label.style.pointerEvents=show?'auto':'none';
         });
