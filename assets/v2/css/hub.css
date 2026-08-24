@@ -73,6 +73,7 @@
 .futureCard:hover { border-color:#898c875c; box-shadow:0 20px 55px #59615e25,inset 0 1px #fff9; }.futureCard .cardBody h3 { color:#777a78; }.futureCard .cardSymbol { color:#6f7472; opacity:.09; }
 
 /* Scroll-driven field cylinder */
+.immersive-landing { overflow-x:clip; }
 .immersive-landing .site-frame,.hub-main { overflow:visible; }
 .fields { width:100%; height:380svh; margin:0; padding:0; }
 .fields::before { position:absolute; inset:0; background:linear-gradient(180deg,transparent 0,#edf3eee8 8%,#edf3eef7 92%,transparent 100%); }
