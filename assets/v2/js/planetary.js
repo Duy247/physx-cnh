@@ -180,7 +180,7 @@ if (host) {
       const mapProjected=new THREE.Vector3(),mapWorld=new THREE.Vector3(),earthWorld=new THREE.Vector3(),toCamera=new THREE.Vector3(),surfaceNormal=new THREE.Vector3();
       projectors.push(()=>{
         const width=host.clientWidth,height=host.clientHeight,compact=width<600;
-        const offsets=compact?[[62,-10],[72,-52],[74,48]]:[[90,-14],[108,-66],[112,62]];
+        const offsets=compact?[[-64,26],[72,-52],[74,48]]:[[-92,30],[108,-66],[112,62]];
         earthSurface.getWorldPosition(earthWorld);
         mapMarkers.forEach((marker,index)=>{
           const label=geoLabels[index]; if(!label)return;
