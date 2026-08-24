@@ -27,4 +27,31 @@
     <h2>Nếu có một tài liệu hay, một lỗi cần sửa, hoặc đơn giản muốn nói chuyện Vật lý:</h2>
     <div><a href="mailto:duy5a247@gmail.com">duy5a247@gmail.com <?= icon('arrow', 18) ?></a><a href="https://github.com/Duy247/physx-cnh">GitHub / Duy247 <?= icon('arrow', 18) ?></a></div>
   </section>
+
+  <section class="aboutThanks" aria-labelledby="about-thanks-title">
+    <header>
+      <p class="storyIndex">03 / CẢM ƠN</p>
+      <h2 id="about-thanks-title">Những người đã giúp PhysX-CNH đi xa hơn.</h2>
+    </header>
+    <div class="aboutThanksGroups">
+      <section>
+        <p class="aboutThanksLabel">GỬI TÀI LIỆU</p>
+        <ul>
+          <li><span>01</span>Văn Thành Duy</li>
+          <li><span>02</span>Phạm Quang Chính</li>
+        </ul>
+      </section>
+      <section>
+        <p class="aboutThanksLabel">ỦNG HỘ VẬN HÀNH</p>
+        <ul>
+          <li><span>01</span>Log xPhO</li>
+          <li><span>02</span>Lê Anh Minh</li>
+          <li><span>03</span>Bùi Hoàng Bách</li>
+          <li><span>04</span>Trần Hải Thiện</li>
+          <li><span>05</span>Cao Thái Sơn</li>
+          <li><span>06</span>Nguyễn Hoàng Minh</li>
+        </ul>
+      </section>
+    </div>
+  </section>
 </main>
