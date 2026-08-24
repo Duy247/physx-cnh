@@ -123,16 +123,27 @@ if (host) {
         if(name==='Saturn'){const rings=new THREE.Mesh(new THREE.RingGeometry(size*1.35,size*2.05,72),new THREE.MeshBasicMaterial({color:0xbba46f,transparent:true,opacity:.62,side:THREE.DoubleSide}));rings.rotation.x=Math.PI/2.45;planet.add(rings);}
         if(name==='Uranus'){const rings=new THREE.Mesh(new THREE.RingGeometry(size*1.28,size*1.6,64),new THREE.MeshBasicMaterial({color:0x9bd4d1,transparent:true,opacity:.42,side:THREE.DoubleSide}));rings.rotation.x=Math.PI/2.08;planet.add(rings);}
         const projected = new THREE.Vector3();
+        const sunProjected = new THREE.Vector3();
         projectors.push(() => {
           const label=hubLabelMap.get(index); if (!label) return;
           planet.getWorldPosition(projected).project(camera);
+          sun.getWorldPosition(sunProjected).project(camera);
           const width=host.clientWidth,height=host.clientHeight;
-          const naturalX=(projected.x*.5+.5)*width,leftSide=naturalX<width/2;
-          const labelWidth=Math.max(label.offsetWidth,80);
-          const x=leftSide?Math.max(labelWidth+14,naturalX):Math.min(width-labelWidth-14,naturalX);
-          const y=Math.max(width<600?105:92,Math.min(height-(width<600?115:75),(-projected.y*.5+.5)*height));
-          label.classList.toggle('isLeft',leftSide);
-          label.style.transform=`translate3d(${x}px,${y}px,0) translate(${leftSide?'-100%':'0'},-50%)`;
+          const naturalX=(projected.x*.5+.5)*width,naturalY=(-projected.y*.5+.5)*height;
+          const sunX=(sunProjected.x*.5+.5)*width,sunY=(-sunProjected.y*.5+.5)*height;
+          const dx=naturalX-sunX,dy=naturalY-sunY,length=Math.hypot(dx,dy)||1;
+          const ux=dx/length,uy=dy/length;
+          const text=label.querySelector('span');
+          const halfWidth=Math.max(text?.offsetWidth||70,70)/2,halfHeight=Math.max(text?.offsetHeight||30,30)/2;
+          const clearance=Math.max(14,size*(width<600?44:65));
+          const distance=clearance+halfWidth*Math.abs(ux)+halfHeight*Math.abs(uy)+8;
+          const desiredX=naturalX+ux*distance,desiredY=naturalY+uy*distance;
+          const labelX=Math.max(halfWidth+14,Math.min(width-halfWidth-14,desiredX));
+          const labelY=Math.max(width<600?105:92,Math.min(height-(width<600?115:75),desiredY));
+          label.style.setProperty('--label-offset-x',`${labelX-naturalX}px`);
+          label.style.setProperty('--label-offset-y',`${labelY-naturalY}px`);
+          label.style.transform=`translate3d(${naturalX}px,${naturalY}px,0) translate(-50%,-50%)`;
+          label.dataset.anchorX=naturalX.toFixed(2); label.dataset.anchorY=naturalY.toFixed(2);
           const show=projected.z<1&&scrollY<height*.72;
           label.style.opacity=show?'1':'0'; label.style.pointerEvents=show?'auto':'none';
         });

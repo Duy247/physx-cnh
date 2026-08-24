@@ -39,6 +39,8 @@ test('hub renders eight planets with Earth as the Physics space', async ({ page 
   await expect(spaces.getByRole('link', { name: 'Toán học', exact: true })).toHaveAttribute('href', '/math');
   await expect(spaces.getByRole('link', { name: 'Tin học', exact: true })).toHaveAttribute('href', '/it');
   await expect(spaces.getByRole('link', { name: 'Hóa học', exact: true })).toHaveAttribute('href', '/chemistry');
+  await expect(planets.first()).toHaveAttribute('style', /--label-offset-x/);
+  expect(await planets.evaluateAll(links => links.some(link => link.classList.contains('isLeft')))).toBe(false);
   const planetTargets = await planets.evaluateAll(links => links.map(link => {
     const marker = link.querySelector('i').getBoundingClientRect();
     return document.elementFromPoint(marker.left + marker.width / 2, marker.top + marker.height / 2)?.closest('a')?.getAttribute('href');

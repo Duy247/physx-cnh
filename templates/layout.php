@@ -68,7 +68,7 @@ if (($pageCss ?? '') === 'physics') {
   </footer>
 </div>
 <script src="/assets/v2/js/app.js?v=7" defer></script>
-<?php if (in_array($pageCss ?? '', ['hub', 'physics'], true)): ?><script type="module" src="/assets/v2/js/planetary.js?v=8"></script><?php endif; ?>
+<?php if (in_array($pageCss ?? '', ['hub', 'physics'], true)): ?><script type="module" src="/assets/v2/js/planetary.js?v=9"></script><?php endif; ?>
 <?php if (($pageCss ?? '') === 'library'): ?><script src="/assets/v2/js/library.js?v=4" defer></script><?php endif; ?>
 <?php if (($pageCss ?? '') === 'graph'): ?><script src="/assets/v2/vendor/go.js?v=4.0.3" defer></script><script src="/assets/v2/js/graphs.js?v=4" defer></script><?php endif; ?>
 </body>
