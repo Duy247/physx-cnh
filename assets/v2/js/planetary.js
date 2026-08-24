@@ -57,7 +57,7 @@ if (host) {
         const offsets=turn===0?[0]:[turn*step,-turn*step];
         for(const offset of offsets){
           const angle=baseAngle+offset,cx=Math.cos(angle),cy=Math.sin(angle);
-          const distance=clearance+halfWidth*Math.abs(cx)+halfHeight*Math.abs(cy)+10;
+          const distance=clearance+halfWidth*Math.abs(cx)+halfHeight*Math.abs(cy)+6;
           const labelX=x+cx*distance,labelY=y+cy*distance;
           if(labelX-halfWidth>=edge&&labelX+halfWidth<=width-edge&&labelY-halfHeight>=minY&&labelY+halfHeight<=maxY){
             return {x:labelX,y:labelY};
@@ -150,7 +150,7 @@ if (host) {
           const ux=dx/length,uy=dy/length;
           const text=label.querySelector('span');
           const halfWidth=Math.max(text?.offsetWidth||70,70)/2,halfHeight=Math.max(text?.offsetHeight||30,30)/2;
-          const clearance=Math.max(16,size*(width<600?70:65));
+          const clearance=Math.max(8,size*(width<600?45:50));
           const placed=placeOrbitingLabel({x:naturalX,y:naturalY,ux,uy,halfWidth,halfHeight,clearance,width,minY:width<600?98:84,maxY:height-(width<600?108:68)});
           const labelX=placed.x,labelY=placed.y;
           label.style.setProperty('--label-offset-x',`${labelX-naturalX}px`);
@@ -203,7 +203,7 @@ if (host) {
           const ux=dx/length,uy=dy/length;
           const text=label.querySelector('span');
           const halfWidth=Math.max(text?.offsetWidth||92,92)/2,halfHeight=Math.max(text?.offsetHeight||44,44)/2;
-          const placed=placeOrbitingLabel({x,y,ux,uy,halfWidth,halfHeight,clearance:width<600?34:30,width,minY:width<600?98:84,maxY:height-(width<600?130:105)});
+          const placed=placeOrbitingLabel({x,y,ux,uy,halfWidth,halfHeight,clearance:width<600?22:20,width,minY:width<600?98:84,maxY:height-(width<600?130:105)});
           const labelX=placed.x,labelY=placed.y;
           label.style.setProperty('--label-offset-x',`${labelX-x}px`);
           label.style.setProperty('--label-offset-y',`${labelY-y}px`);
