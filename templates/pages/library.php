@@ -1,5 +1,5 @@
 <?php
-$kindLabels = ['book' => 'Sách', 'material' => 'Chuyên đề', 'paper' => 'Đề thi', 'magazine' => 'Tạp chí', 'lesson' => 'Bài học'];
+$kindLabels = ['book' => 'Sách', 'material' => 'Chuyên đề', 'paper' => 'Đề thi', 'magazine' => 'Tạp chí'];
 $payload = [];
 foreach ($documents as $document) {
     $payload[] = [

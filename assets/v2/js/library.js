@@ -16,12 +16,12 @@
   const empty = root.querySelector('[data-empty]');
   const reset = root.querySelector('[data-reset]');
   const lockedKind = root.dataset.orbit === '1' ? root.dataset.initialKind : '';
-  const labels = { book: 'Sách', material: 'Chuyên đề', paper: 'Đề thi', magazine: 'Tạp chí', lesson: 'Bài học' };
+  const labels = { book: 'Sách', material: 'Chuyên đề', paper: 'Đề thi', magazine: 'Tạp chí' };
   let visible = 30;
 
   const params = new URLSearchParams(location.search);
   input.value = params.get('q') || input.value || '';
-  if (kindSelect && params.get('kind')) kindSelect.value = params.get('kind');
+  if (kindSelect && params.get('kind') && [...kindSelect.options].some((option) => option.value === params.get('kind'))) kindSelect.value = params.get('kind');
   if (languageSelect && params.get('language')) languageSelect.value = params.get('language');
   if (sortSelect && params.get('sort')) sortSelect.value = params.get('sort');
 
@@ -45,6 +45,7 @@
   const syncUrl = ({ q, kind, language, sort }) => {
     const url = new URL(location.href);
     [['q', q], ['kind', kind === 'all' ? '' : kind], ['language', language === 'all' ? '' : language], ['sort', sort === 'title' ? '' : sort]].forEach(([key, value]) => value ? url.searchParams.set(key, value) : url.searchParams.delete(key));
+    if (!lockedKind) url.searchParams.delete('orbit');
     history.replaceState(null, '', url);
   };
   const matches = (document, query) => {

@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-24T14:42:19.000Z",
+  "generatedAt": "2026-08-24T17:34:50.364Z",
   "counts": {
     "totalPdf": 1366,
-    "publishedPdf": 319,
-    "draftPdf": 1047
+    "publishedPdf": 307,
+    "draftPdf": 1059
   },
   "drafts": [
     {
@@ -24,6 +24,138 @@
       "file": {
         "path": "books/co_hoc_giai_tich.pdf",
         "bytes": 23351627,
+        "mimeType": "application/pdf"
+      },
+      "status": "draft",
+      "reason": "uncataloged"
+    },
+    {
+      "id": "draft:lessons-energy-lagrange",
+      "title": "energy lagrange",
+      "file": {
+        "path": "lessons/energy_lagrange.pdf",
+        "bytes": 382834,
+        "mimeType": "application/pdf"
+      },
+      "status": "draft",
+      "reason": "uncataloged"
+    },
+    {
+      "id": "draft:lessons-exercise-raindrop",
+      "title": "exercise raindrop",
+      "file": {
+        "path": "lessons/exercise_raindrop.pdf",
+        "bytes": 129360,
+        "mimeType": "application/pdf"
+      },
+      "status": "draft",
+      "reason": "uncataloged"
+    },
+    {
+      "id": "draft:lessons-exercise-tensionstring",
+      "title": "exercise tensionstring",
+      "file": {
+        "path": "lessons/exercise_tensionstring.pdf",
+        "bytes": 199252,
+        "mimeType": "application/pdf"
+      },
+      "status": "draft",
+      "reason": "uncataloged"
+    },
+    {
+      "id": "draft:lessons-experiment-170824",
+      "title": "experiment 170824",
+      "file": {
+        "path": "lessons/experiment_170824.pdf",
+        "bytes": 1115134,
+        "mimeType": "application/pdf"
+      },
+      "status": "draft",
+      "reason": "uncataloged"
+    },
+    {
+      "id": "draft:lessons-solution1208",
+      "title": "solution1208",
+      "file": {
+        "path": "lessons/solution1208.pdf",
+        "bytes": 233466,
+        "mimeType": "application/pdf"
+      },
+      "status": "draft",
+      "reason": "uncataloged"
+    },
+    {
+      "id": "draft:lessons-train-050924",
+      "title": "train 050924",
+      "file": {
+        "path": "lessons/train_050924.pdf",
+        "bytes": 263494,
+        "mimeType": "application/pdf"
+      },
+      "status": "draft",
+      "reason": "uncataloged"
+    },
+    {
+      "id": "draft:lessons-train-210924",
+      "title": "train 210924",
+      "file": {
+        "path": "lessons/train_210924.pdf",
+        "bytes": 222359,
+        "mimeType": "application/pdf"
+      },
+      "status": "draft",
+      "reason": "uncataloged"
+    },
+    {
+      "id": "draft:lessons-train-230824",
+      "title": "train 230824",
+      "file": {
+        "path": "lessons/train_230824.pdf",
+        "bytes": 199818,
+        "mimeType": "application/pdf"
+      },
+      "status": "draft",
+      "reason": "uncataloged"
+    },
+    {
+      "id": "draft:lessons-train-290824",
+      "title": "train 290824",
+      "file": {
+        "path": "lessons/train_290824.pdf",
+        "bytes": 226292,
+        "mimeType": "application/pdf"
+      },
+      "status": "draft",
+      "reason": "uncataloged"
+    },
+    {
+      "id": "draft:lessons-train-300824",
+      "title": "train 300824",
+      "file": {
+        "path": "lessons/train_300824.pdf",
+        "bytes": 258319,
+        "mimeType": "application/pdf"
+      },
+      "status": "draft",
+      "reason": "uncataloged"
+    },
+    {
+      "id": "draft:lessons-train-calculation",
+      "title": "train calculation",
+      "file": {
+        "path": "lessons/train_calculation.pdf",
+        "bytes": 338077,
+        "mimeType": "application/pdf"
+      },
+      "status": "draft",
+      "reason": "uncataloged"
+    },
+    {
+      "id": "draft:lessons-virtualwork-160824",
+      "title": "virtualwork 160824",
+      "file": {
+        "path": "lessons/virtualwork_160824.pdf",
+        "bytes": 275618,
         "mimeType": "application/pdf"
       },
       "status": "draft",

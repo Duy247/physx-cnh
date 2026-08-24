@@ -1,4 +1,4 @@
-<?php $kindLabels = ['book' => 'Sách', 'material' => 'Chuyên đề', 'paper' => 'Đề thi', 'magazine' => 'Tạp chí', 'lesson' => 'Bài học']; ?>
+<?php $kindLabels = ['book' => 'Sách', 'material' => 'Chuyên đề', 'paper' => 'Đề thi', 'magazine' => 'Tạp chí']; ?>
 <main id="main-content" class="main physics-main">
   <div class="world">
     <div class="stage physics" data-planetary="physics">

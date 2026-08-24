@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "generatedAt": "2026-08-24T14:42:19.001Z",
+  "generatedAt": "2026-08-24T17:34:50.365Z",
   "source": "Duy247/physx-cnh",
   "counts": {
-    "published": 325,
-    "pdf": 319,
-    "lesson": 6
+    "published": 312,
+    "pdf": 307
   },
   "collections": [
     {
@@ -43,12 +42,6 @@
       "kind": "magazine",
       "level": "all",
       "title": "Tạp chí"
-    },
-    {
-      "id": "lessons",
-      "kind": "lesson",
-      "level": "all",
-      "title": "Nội dung ngày học"
     }
   ],
   "documents": [
@@ -4416,7 +4409,7 @@
       "kind": "paper",
       "level": "pho",
       "language": "vi",
-      "format": "lesson",
+      "format": "html",
       "legacy": true,
       "status": "published",
       "file": {
@@ -4441,7 +4434,7 @@
       "kind": "paper",
       "level": "pho",
       "language": "vi",
-      "format": "lesson",
+      "format": "html",
       "legacy": true,
       "status": "published",
       "file": {
@@ -4466,7 +4459,7 @@
       "kind": "paper",
       "level": "pho",
       "language": "vi",
-      "format": "lesson",
+      "format": "html",
       "legacy": true,
       "status": "published",
       "file": {
@@ -4491,7 +4484,7 @@
       "kind": "paper",
       "level": "pho",
       "language": "vi",
-      "format": "lesson",
+      "format": "html",
       "legacy": true,
       "status": "published",
       "file": {
@@ -4516,7 +4509,7 @@
       "kind": "paper",
       "level": "pho",
       "language": "vi",
-      "format": "lesson",
+      "format": "html",
       "legacy": true,
       "status": "published",
       "file": {
@@ -8150,331 +8143,6 @@
         "mimeType": "application/pdf"
       },
       "cover": "/assets/v2/covers/quantum-tap-11-so-6.webp",
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "lessons:001",
-      "slug": "bai-tap-mo-dau-12-08-24",
-      "title": "Bài tập mở đầu — 12/08/24",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "lessons",
-      "collectionTitle": "Nội dung ngày học",
-      "kind": "lesson",
-      "level": "all",
-      "language": "vi",
-      "format": "lesson",
-      "legacy": true,
-      "status": "published",
-      "file": {
-        "path": "lessons/physics_test1208.html",
-        "bytes": 13127,
-        "mimeType": "text/html"
-      },
-      "cover": null,
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "lessons:002",
-      "slug": "giai-bai-tap-mo-dau-12-08-24",
-      "title": "Giải bài tập mở đầu — 12/08/24",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "lessons",
-      "collectionTitle": "Nội dung ngày học",
-      "kind": "lesson",
-      "level": "all",
-      "language": "vi",
-      "format": "pdf",
-      "legacy": false,
-      "status": "published",
-      "file": {
-        "path": "lessons/solution1208.pdf",
-        "bytes": 233466,
-        "mimeType": "application/pdf"
-      },
-      "cover": "/assets/v2/covers/giai-bai-tap-mo-dau-12-08-24.webp",
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "lessons:003",
-      "slug": "phuong-phap-nang-luong-euler-lagrange-vtduy-15-08-24",
-      "title": "Phương pháp năng lượng & Euler-Lagrange - VTDuy — 15/08/24",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "lessons",
-      "collectionTitle": "Nội dung ngày học",
-      "kind": "lesson",
-      "level": "all",
-      "language": "vi",
-      "format": "pdf",
-      "legacy": false,
-      "status": "published",
-      "file": {
-        "path": "lessons/energy_lagrange.pdf",
-        "bytes": 382834,
-        "mimeType": "application/pdf"
-      },
-      "cover": "/assets/v2/covers/phuong-phap-nang-luong-euler-lagrange-vtduy-15-08-24.webp",
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "lessons:004",
-      "slug": "phuong-phap-cong-ao-vtduy-16-08-24",
-      "title": "Phương pháp công ảo - VTDuy — 16/08/24",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "lessons",
-      "collectionTitle": "Nội dung ngày học",
-      "kind": "lesson",
-      "level": "all",
-      "language": "vi",
-      "format": "pdf",
-      "legacy": false,
-      "status": "published",
-      "file": {
-        "path": "lessons/virtualwork_160824.pdf",
-        "bytes": 275618,
-        "mimeType": "application/pdf"
-      },
-      "cover": "/assets/v2/covers/phuong-phap-cong-ao-vtduy-16-08-24.webp",
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "lessons:005",
-      "slug": "phuong-an-thuc-hanh-vtduy-17-08-24",
-      "title": "Phương án thực hành - VTDuy — 17/08/24",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "lessons",
-      "collectionTitle": "Nội dung ngày học",
-      "kind": "lesson",
-      "level": "all",
-      "language": "vi",
-      "format": "pdf",
-      "legacy": false,
-      "status": "published",
-      "file": {
-        "path": "lessons/experiment_170824.pdf",
-        "bytes": 1115134,
-        "mimeType": "application/pdf"
-      },
-      "cover": "/assets/v2/covers/phuong-an-thuc-hanh-vtduy-17-08-24.webp",
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "lessons:006",
-      "slug": "luyen-tap-tinh-toan-22-08-24",
-      "title": "Luyện tập tính toán — 22/08/24",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "lessons",
-      "collectionTitle": "Nội dung ngày học",
-      "kind": "lesson",
-      "level": "all",
-      "language": "vi",
-      "format": "pdf",
-      "legacy": false,
-      "status": "published",
-      "file": {
-        "path": "lessons/train_calculation.pdf",
-        "bytes": 338077,
-        "mimeType": "application/pdf"
-      },
-      "cover": "/assets/v2/covers/luyen-tap-tinh-toan-22-08-24.webp",
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "lessons:007",
-      "slug": "luyen-tap-23-08-24",
-      "title": "Luyện tập — 23/08/24",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "lessons",
-      "collectionTitle": "Nội dung ngày học",
-      "kind": "lesson",
-      "level": "all",
-      "language": "vi",
-      "format": "pdf",
-      "legacy": false,
-      "status": "published",
-      "file": {
-        "path": "lessons/train_230824.pdf",
-        "bytes": 199818,
-        "mimeType": "application/pdf"
-      },
-      "cover": "/assets/v2/covers/luyen-tap-23-08-24.webp",
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "lessons:008",
-      "slug": "luyen-tap-29-08-24",
-      "title": "Luyện tập — 29/08/24",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "lessons",
-      "collectionTitle": "Nội dung ngày học",
-      "kind": "lesson",
-      "level": "all",
-      "language": "vi",
-      "format": "pdf",
-      "legacy": false,
-      "status": "published",
-      "file": {
-        "path": "lessons/train_290824.pdf",
-        "bytes": 226292,
-        "mimeType": "application/pdf"
-      },
-      "cover": "/assets/v2/covers/luyen-tap-29-08-24.webp",
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "lessons:009",
-      "slug": "luyen-tap-30-08-24",
-      "title": "Luyện tập — 30/08/24",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "lessons",
-      "collectionTitle": "Nội dung ngày học",
-      "kind": "lesson",
-      "level": "all",
-      "language": "vi",
-      "format": "pdf",
-      "legacy": false,
-      "status": "published",
-      "file": {
-        "path": "lessons/train_300824.pdf",
-        "bytes": 258319,
-        "mimeType": "application/pdf"
-      },
-      "cover": "/assets/v2/covers/luyen-tap-30-08-24.webp",
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "lessons:010",
-      "slug": "luyen-tap-05-09-24",
-      "title": "Luyện tập — 05/09/24",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "lessons",
-      "collectionTitle": "Nội dung ngày học",
-      "kind": "lesson",
-      "level": "all",
-      "language": "vi",
-      "format": "pdf",
-      "legacy": false,
-      "status": "published",
-      "file": {
-        "path": "lessons/train_050924.pdf",
-        "bytes": 263494,
-        "mimeType": "application/pdf"
-      },
-      "cover": "/assets/v2/covers/luyen-tap-05-09-24.webp",
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "lessons:011",
-      "slug": "luyen-tap-21-09-24",
-      "title": "Luyện tập — 21/09/24",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "lessons",
-      "collectionTitle": "Nội dung ngày học",
-      "kind": "lesson",
-      "level": "all",
-      "language": "vi",
-      "format": "pdf",
-      "legacy": false,
-      "status": "published",
-      "file": {
-        "path": "lessons/train_210924.pdf",
-        "bytes": 222359,
-        "mimeType": "application/pdf"
-      },
-      "cover": "/assets/v2/covers/luyen-tap-21-09-24.webp",
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "lessons:012",
-      "slug": "giai-bai-hat-mua",
-      "title": "Giải bài hạt mưa",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "lessons",
-      "collectionTitle": "Nội dung ngày học",
-      "kind": "lesson",
-      "level": "all",
-      "language": "vi",
-      "format": "pdf",
-      "legacy": false,
-      "status": "published",
-      "file": {
-        "path": "lessons/exercise_raindrop.pdf",
-        "bytes": 129360,
-        "mimeType": "application/pdf"
-      },
-      "cover": "/assets/v2/covers/giai-bai-hat-mua.webp",
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "lessons:013",
-      "slug": "giai-bai-cang-day-vong-2-tp",
-      "title": "Giải bài căng dây - vòng 2 TP",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "lessons",
-      "collectionTitle": "Nội dung ngày học",
-      "kind": "lesson",
-      "level": "all",
-      "language": "vi",
-      "format": "pdf",
-      "legacy": false,
-      "status": "published",
-      "file": {
-        "path": "lessons/exercise_tensionstring.pdf",
-        "bytes": 199252,
-        "mimeType": "application/pdf"
-      },
-      "cover": "/assets/v2/covers/giai-bai-cang-day-vong-2-tp.webp",
       "delivery": {
         "provider": "hostinger"
       }

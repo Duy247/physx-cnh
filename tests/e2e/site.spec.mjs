@@ -105,6 +105,17 @@ test('orbit link scopes books and removes redundant kind control', async ({ page
   await expect(page.locator('[data-kind]')).toHaveCount(0);
 });
 
+test('lesson documents are absent and old lesson filters recover to the full library', async ({ page }) => {
+  await page.goto('/library?kind=lesson&orbit=1');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Thư viện Vật lý');
+  await expect(page.locator('[data-result-count]')).toContainText('312');
+  await expect(page.locator('[data-kind] option')).toHaveCount(5);
+  await expect(page.locator('[data-kind]')).not.toContainText('Bài học');
+  await expect(page).not.toHaveURL(/kind=lesson|orbit=1/);
+  const kinds = await page.locator('#library-data').evaluate((node) => [...new Set(JSON.parse(node.textContent).map((document) => document.kind))]);
+  expect(kinds.sort()).toEqual(['book', 'magazine', 'material', 'paper']);
+});
+
 test('library never fetches PDFs to render cards and preserves Back state', async ({ page }) => {
   const pdfRequests = [];
   page.on('request', request => {
@@ -132,6 +143,8 @@ test('relay expands with Vietnamese copy and a stable session source', async ({ 
   await relay.locator('summary').click();
   await expect(relay).toHaveAttribute('open', '');
   await expect(relay).toContainText('Tài liệu mới vào quỹ đạo');
+  await expect(relay.locator('.transmission li')).toHaveCount(4);
+  await expect(relay).not.toContainText('Bài học');
   await page.reload();
   await expect(relay.locator('[data-relay-source]')).toHaveText(source.trim());
 });

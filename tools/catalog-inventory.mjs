@@ -12,7 +12,6 @@ const collections = [
   { id: "materials-pho", kind: "material", level: "pho", title: "Tài liệu và handout" },
   { id: "paper-sol-pho", kind: "paper", level: "pho", title: "Đề thi và đáp án" },
   { id: "magazines", kind: "magazine", level: "all", title: "Tạp chí" },
-  { id: "lessons", kind: "lesson", level: "all", title: "Nội dung ngày học" },
 ];
 
 function slugify(value) { return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/gi, "d").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 72) || "tai-lieu"; }
@@ -46,7 +45,7 @@ for (const collection of collections) {
       title: item.title.replace(/\r?\n/g, " — "), authors: item.author ? [item.author] : [],
       description: item.description || "", source: item.source || "", collectionId: collection.id,
       collectionTitle: collection.title, kind: collection.kind, level: collection.level,
-      language: collection.id === "books-vpho-en" ? "en" : "vi", format: extension === ".pdf" ? "pdf" : "lesson",
+      language: collection.id === "books-vpho-en" ? "en" : "vi", format: extension === ".pdf" ? "pdf" : "html",
       legacy: item.legacy === true, status: "published",
       file: { path: item.file, bytes, mimeType: extension === ".pdf" ? "application/pdf" : "text/html" },
       cover: extension === ".pdf" ? `/assets/v2/covers/${slug}.webp` : null,
@@ -61,7 +60,7 @@ const drafts = allPdfs.filter(([file]) => !publishedFiles.has(file.toLowerCase()
   file: { path: file, bytes, mimeType: "application/pdf" }, status: "draft", reason: "uncataloged",
 }));
 const inventory = { version: 1, generatedAt: new Date().toISOString(), counts: { totalPdf: allPdfs.length, publishedPdf: documents.filter((item) => item.format === "pdf").length, draftPdf: drafts.length }, drafts };
-const snapshot = { version: 2, generatedAt: new Date().toISOString(), source: "Duy247/physx-cnh", counts: { published: documents.length, pdf: documents.filter((item) => item.format === "pdf").length, lesson: documents.filter((item) => item.format === "lesson").length }, collections, documents };
+const snapshot = { version: 2, generatedAt: new Date().toISOString(), source: "Duy247/physx-cnh", counts: { published: documents.length, pdf: documents.filter((item) => item.format === "pdf").length }, collections, documents };
 await mkdir(path.join(physicsRoot, "catalog"), { recursive: true });
 async function writeAtomic(filename, value) {
   const destination = path.join(physicsRoot, "catalog", filename);

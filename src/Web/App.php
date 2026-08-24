@@ -33,7 +33,11 @@ final class App
             ]);
         }
         if ($path === '/physics') {
-            $documents = $this->catalog->documents();
+            $supportedKinds = ['book', 'paper', 'material', 'magazine'];
+            $documents = array_values(array_filter(
+                $this->catalog->documents(),
+                static fn (array $document): bool => in_array($document['kind'] ?? '', $supportedKinds, true),
+            ));
             $this->page('physics', 'Vật lý — Thư viện chuyên', 'physics', true, [
                 'inbound' => array_reverse(array_slice($documents, -4)),
             ]);
@@ -56,7 +60,7 @@ final class App
             $this->library();
         }
         if ($path === '/nav/physics' || $path === '/nav/physics_mobile') {
-            $legacyKinds = ['book' => 'book', 'paper-sol' => 'paper', 'material' => 'material', 'magazines' => 'magazine', 'lessons' => 'lesson'];
+            $legacyKinds = ['book' => 'book', 'paper-sol' => 'paper', 'material' => 'material', 'magazines' => 'magazine'];
             $kind = $legacyKinds[(string) ($_GET['type'] ?? '')] ?? '';
             $query = $kind === '' ? '' : '?kind=' . rawurlencode($kind);
             header('Location: /library' . $query, true, 301);
@@ -120,9 +124,9 @@ final class App
             $documents = array_values(array_filter($documents, static fn (array $document): bool => ($document['collectionId'] ?? '') === $collectionId));
         }
 
-        $kind = isset($_GET['kind']) && in_array($_GET['kind'], ['book', 'paper', 'material', 'magazine', 'lesson'], true) ? (string) $_GET['kind'] : 'all';
+        $kind = isset($_GET['kind']) && in_array($_GET['kind'], ['book', 'paper', 'material', 'magazine'], true) ? (string) $_GET['kind'] : 'all';
         $orbit = ($_GET['orbit'] ?? '') === '1' && $kind !== 'all';
-        $titles = ['book' => 'Sách', 'paper' => 'Đề thi & đáp án', 'material' => 'Tài liệu và handout', 'magazine' => 'Tạp chí Vật lý', 'lesson' => 'Bài học'];
+        $titles = ['book' => 'Sách', 'paper' => 'Đề thi & đáp án', 'material' => 'Tài liệu và handout', 'magazine' => 'Tạp chí Vật lý'];
         $scoped = $kind === 'all' ? $documents : array_values(array_filter($documents, static fn (array $document): bool => ($document['kind'] ?? '') === $kind));
         $heading = $collection['title'] ?? ($titles[$kind] ?? 'Thư viện Vật lý');
 
