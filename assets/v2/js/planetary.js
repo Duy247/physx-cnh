@@ -149,7 +149,7 @@ if (host) {
       const globe = new THREE.Mesh(new THREE.SphereGeometry(1.62,64,64), new THREE.MeshPhysicalMaterial({ map:earthTexture,color:0xffffff,emissive:0x174b56,emissiveIntensity:.08,roughness:.62,clearcoat:.28 })); earthSurface.add(globe);
       const grid = new THREE.Mesh(new THREE.SphereGeometry(1.635,24,16), new THREE.MeshBasicMaterial({ color:0xf7f3e8,wireframe:true,transparent:true,opacity:.11 })); earthSurface.add(grid);
       const atmosphere = new THREE.Mesh(new THREE.SphereGeometry(1.82,40,40), new THREE.MeshBasicMaterial({ color:0x63cad0,transparent:true,opacity:.075,side:THREE.BackSide })); planet.add(atmosphere);
-      [[16,108.2,'VIỆT NAM',false],[16.5,112,'HOÀNG SA · PARACEL ISLANDS',true],[10,114,'TRƯỜNG SA · SPRATLY ISLANDS',true]].forEach(([lat,lon,text,wide],index)=>{
+      [[16,108.2,'VIỆT NAM',false],[16.5,112,'HOÀNG SA',false],[10,114,'TRƯỜNG SA',false]].forEach(([lat,lon,text,wide],index)=>{
         const marker=new THREE.Mesh(new THREE.SphereGeometry(index?0.028:0.04,16,16),new THREE.MeshBasicMaterial({color:index?0xf0c44e:0xe83d2f})); marker.position.copy(surfacePoint(lat,lon,1.65)); earthSurface.add(marker);
         const label=makeMapLabel(text,wide); label.position.copy(surfacePoint(lat,lon,1.82+(index*.035)));
         label.position.add(index===0?new THREE.Vector3(-.2,.16,.03):index===1?new THREE.Vector3(-.42,.36,.04):new THREE.Vector3(-.42,-.2,.04));

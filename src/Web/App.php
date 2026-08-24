@@ -38,6 +38,11 @@ final class App
                 'inbound' => array_reverse(array_slice($documents, -4)),
             ]);
         }
+        if ($path === '/about') {
+            $this->page('about', 'Về Duy và PhysX-CNH', 'hub', false, [
+                'count' => (int) $this->catalog->all()['counts']['published'],
+            ]);
+        }
         $fieldSpaces = [
             '/math' => ['Toán học', 'MATHEMATICS / 02'],
             '/it' => ['Tin học', 'COMPUTING / 03'],
@@ -155,7 +160,7 @@ final class App
     private function sitemap(): never
     {
         header('Content-Type: application/xml; charset=utf-8');
-        $urls = ['/', '/physics', '/math', '/it', '/chemistry', '/library', '/guides/roadmap', '/guides/research', '/donate', '/donators', '/legal'];
+        $urls = ['/', '/about', '/physics', '/math', '/it', '/chemistry', '/library', '/guides/roadmap', '/guides/research', '/donate', '/donators', '/legal'];
         foreach ($this->catalog->documents() as $document) {
             $urls[] = '/document/' . rawurlencode((string) $document['slug']);
         }

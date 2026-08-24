@@ -35,7 +35,7 @@ if (($pageCss ?? '') === 'physics') {
   <link rel="icon" href="/image/favicon.ico">
   <link rel="preload" href="/assets/v2/fonts/be-vietnam-pro-300-latin.woff2" as="font" type="font/woff2" crossorigin>
 <?php foreach (array_unique($cssFiles) as $css): ?>
-  <link rel="stylesheet" href="/assets/v2/css/<?= e($css) ?>.css?v=14">
+  <link rel="stylesheet" href="/assets/v2/css/<?= e($css) ?>.css?v=15">
 <?php endforeach; ?>
 </head>
 <body class="<?= e(implode(' ', $bodyClasses)) ?>">
@@ -63,12 +63,12 @@ if (($pageCss ?? '') === 'physics') {
   <?= $content ?>
   <footer class="site-footer">
     <div><p class="site-footer__brand">PHYSX-CNH</p><p>Kho học liệu mở cho cộng đồng học sinh chuyên.</p></div>
-    <nav aria-label="Liên kết cuối trang"><a href="/donate">Ủng hộ</a><a href="/donators">Người đóng góp</a><a href="/legal">Pháp lý</a><a href="https://astronomy.physx-cnh.com">AstroGallery ↗</a></nav>
+    <nav aria-label="Liên kết cuối trang"><a href="/about">Về chúng tôi</a><a href="/donate">Ủng hộ</a><a href="/donators">Người đóng góp</a><a href="/legal">Pháp lý</a><a href="https://astronomy.physx-cnh.com">AstroGallery ↗</a></nav>
     <p class="site-footer__end">PHYSX-CNH · <?= date('Y') ?></p>
   </footer>
 </div>
 <script src="/assets/v2/js/app.js?v=7" defer></script>
-<?php if (in_array($pageCss ?? '', ['hub', 'physics'], true)): ?><script type="module" src="/assets/v2/js/planetary.js?v=6"></script><?php endif; ?>
+<?php if (in_array($pageCss ?? '', ['hub', 'physics'], true)): ?><script type="module" src="/assets/v2/js/planetary.js?v=7"></script><?php endif; ?>
 <?php if (($pageCss ?? '') === 'library'): ?><script src="/assets/v2/js/library.js?v=4" defer></script><?php endif; ?>
 <?php if (($pageCss ?? '') === 'graph'): ?><script src="/assets/v2/vendor/go.js?v=4.0.3" defer></script><script src="/assets/v2/js/graphs.js?v=4" defer></script><?php endif; ?>
 </body>

@@ -16,7 +16,7 @@
   ]; ?>
   <section class="aboutSection" aria-labelledby="about-title">
     <div class="legacyShowcase" data-showcase>
-      <h2 id="about-title">Về chúng tôi</h2>
+      <a class="aboutLink" href="/about" aria-labelledby="about-title about-prompt"><h2 id="about-title">Về chúng tôi</h2><span id="about-prompt">Gặp người đứng sau PhysX-CNH <?= icon('arrow', 20) ?></span></a>
       <div class="showcaseViewport">
         <div class="showcaseTrack">
           <?php for ($copy = 0; $copy < 2; $copy++): ?>

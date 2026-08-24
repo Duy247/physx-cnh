@@ -63,6 +63,15 @@ test('legacy activity reel moves automatically without controls', async ({ page 
   expect(await track.evaluate((node) => getComputedStyle(node).transform)).not.toBe(firstTransform);
 });
 
+test('activity reel leads to the personal introduction', async ({ page }) => {
+  await page.goto('/');
+  await page.locator('.aboutLink').click();
+  await expect(page).toHaveURL('/about');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Chào, mình là Duy.');
+  await expect(page.getByText('DUY / DUY247', { exact: true })).toBeVisible();
+  await expect(page.getByRole('link', { name: /GitHub \/ Duy247/i })).toHaveAttribute('href', 'https://github.com/Duy247/physx-cnh');
+});
+
 test('field cards orbit a left-side pivot as the page scrolls', async ({ page }) => {
   await page.goto('/');
   const orbit = page.locator('[data-field-orbit]');
