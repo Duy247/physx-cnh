@@ -9,6 +9,22 @@ test('planetary scenes animate instead of freezing', async ({ page }) => {
   await expect(page.locator('canvas')).toBeVisible();
 });
 
+test('physics label anchor dots remain tied to projected satellites', async ({ page }) => {
+  await page.goto('/physics');
+  const labels = page.locator('[data-satellite]');
+  await expect(labels).toHaveCount(4);
+  await expect(labels.first()).toHaveAttribute('data-anchor-x', /\d/);
+  const offsets = await labels.evaluateAll((nodes) => nodes.map((label) => {
+    const host = label.closest('[data-planetary]').getBoundingClientRect();
+    const marker = label.querySelector('i').getBoundingClientRect();
+    return {
+      x: Math.abs(marker.left + marker.width / 2 - host.left - Number(label.dataset.anchorX)),
+      y: Math.abs(marker.top + marker.height / 2 - host.top - Number(label.dataset.anchorY)),
+    };
+  }));
+  offsets.forEach(({ x, y }) => { expect(x).toBeLessThan(1.5); expect(y).toBeLessThan(1.5); });
+});
+
 test('hub planets expose four labeled spaces', async ({ page }) => {
   await page.goto('/');
   const planets = page.locator('[data-hub-planet]');

@@ -7,7 +7,6 @@ if (host) {
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const labels = [...host.querySelectorAll('[data-satellite]')];
   const hubLabels = [...host.querySelectorAll('[data-hub-planet]')];
-  const relayBoard = document.querySelector('[data-relay]');
   let renderer;
   try {
     const scene = new THREE.Scene();
@@ -98,22 +97,16 @@ if (host) {
         projectors.push(() => {
           const label=labels[index]; if (!label) return;
           satellite.getWorldPosition(projected).project(camera);
-          const width=host.clientWidth,height=host.clientHeight,edge=width<600?74:105,bottom=width<600?190:115;
-          let x=Math.max(edge,Math.min(width-edge,(projected.x*.5+.5)*width));
-          let y=Math.max(width<600?62:36,Math.min(height-bottom,(-projected.y*.5+.5)*height));
-          // The relay occupies the upper-left telemetry bay. Keep projected labels
-          // attached to their orbit while nudging them below the board when paths cross.
-          if (relayBoard && width >= 760) {
-            const hostRect=host.getBoundingClientRect(),relayRect=relayBoard.getBoundingClientRect();
-            const halfWidth=Math.max(label.offsetWidth/2,72),halfHeight=Math.max(label.offsetHeight/2,15);
-            const relayLeft=relayRect.left-hostRect.left,relayRight=relayRect.right-hostRect.left;
-            const relayTop=relayRect.top-hostRect.top,relayBottom=relayRect.bottom-hostRect.top;
-            if (x+halfWidth>relayLeft-10&&x-halfWidth<relayRight+10&&y+halfHeight>relayTop-10&&y-halfHeight<relayBottom+10) {
-              y=Math.min(height-bottom,relayBottom+halfHeight+14);
-            }
-          }
-          label.style.transform=`translate3d(${x}px,${y}px,0) translate(-50%,-50%)`;
-          const show=projected.z<1&&scrollY<height*.72; label.style.opacity=show?'1':'0'; label.style.pointerEvents=show?'auto':'none';
+          const width=host.clientWidth,height=host.clientHeight;
+          const x=(projected.x*.5+.5)*width,y=(-projected.y*.5+.5)*height;
+          const marker=label.querySelector('i'),markerHalf=(marker?.offsetWidth||9)/2;
+          const extendLeft=x+label.offsetWidth+12>width;
+          const offsetX=extendLeft?-label.offsetWidth+markerHalf:-markerHalf;
+          label.classList.toggle('isLeft',extendLeft);
+          label.style.transform=`translate3d(${x}px,${y}px,0) translate(${offsetX}px,-50%)`;
+          label.dataset.anchorX=x.toFixed(2); label.dataset.anchorY=y.toFixed(2);
+          const onScreen=x>-20&&x<width+20&&y>-20&&y<height+20;
+          const show=projected.z<1&&onScreen&&scrollY<height*.72; label.style.opacity=show?'1':'0'; label.style.pointerEvents=show?'auto':'none';
         });
         return { satellite,radius,phase,speed };
       });

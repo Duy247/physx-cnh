@@ -6,7 +6,9 @@
 .vignette { position: absolute; z-index: 2; inset: 0; pointer-events: none; background: linear-gradient(90deg, #f7f3e84d, transparent 28%, transparent 72%, #d4e1dd38), radial-gradient(circle, transparent 52%, #819a941a 100%); }
 .satelliteLayer { position:absolute; z-index:4; inset:0; overflow:hidden; pointer-events:none; }
 .satelliteLabel { position:absolute; top:0; left:0; display:flex; align-items:center; gap:8px; width:max-content; max-width:190px; color:#153f45; pointer-events:auto; will-change:transform; transition:opacity .2s ease; }
-.satelliteLabel i { width:9px; height:9px; flex:0 0 auto; background:#176b77; border:2px solid #f8f4e9; border-radius:50%; box-shadow:0 0 0 1px #39777a,0 0 14px #176b7755; }
+.satelliteLabel i { position:relative; width:9px; height:9px; flex:0 0 auto; background:#176b77; border:2px solid #f8f4e9; border-radius:50%; box-shadow:0 0 0 1px #39777a,0 0 14px #176b7755; }
+.satelliteLabel i::after { position:absolute; inset:-6px; content:""; border:1px solid #176b773d; border-radius:50%; }
+.satelliteLabel.isLeft { flex-direction:row-reverse; }
 .satelliteLabel span { padding:7px 11px; background:#faf7eddb; border:1px solid #6d918c70; border-radius:999px; box-shadow:0 7px 20px #315b5e1c; font:500 .78rem/1.25 var(--font-physics); backdrop-filter:blur(10px); }
 .satelliteLabel:hover span,.satelliteLabel:focus-visible span { color:#f8f4e9; background:#176b77; }
 .hud { position: absolute; z-index: 3; inset: 19px 20px auto; display: grid; grid-template-columns: 1fr auto; gap: 7px; color: #d5ddfa; pointer-events: none; font: 650 .57rem/1 var(--font-geist-mono); letter-spacing: .13em; }
