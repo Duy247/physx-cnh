@@ -5,6 +5,9 @@
         <a class="planetLabel<?= $active ? ' isActive' : ' isStone' ?>" href="<?= $href ?>" data-hub-planet="<?= $planetIndex ?>"><i></i><span><?= e($field) ?></span></a>
       <?php endforeach; ?>
     </nav>
+    <a class="deepSpaceGateway" href="https://astronomy.physx-cnh.com" aria-label="Đi xa hơn đến không gian Thiên văn học">
+      <span>Đi xa hơn</span><span class="deepSpaceArrow" aria-hidden="true">↗</span>
+    </a>
   </div></div>
   <div class="noise" aria-hidden="true"></div>
   <section class="hero" aria-label="CNH Study Hub"></section>
