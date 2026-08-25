@@ -13,17 +13,22 @@
 .satelliteLabel b { font:650 .68rem/1 var(--font-geist-mono); letter-spacing:.08em; text-transform:uppercase; }
 .satelliteLabel small { font:500 .72rem/1.15 var(--font-physics); white-space:nowrap; }
 .satelliteLabel:hover span,.satelliteLabel:focus-visible span { color:#f8f4e9; background:#176b77; }
-.geoLabelLayer { position:absolute; z-index:3; inset:0; overflow:hidden; pointer-events:none; }
+.geoLabelLayer { position:absolute; z-index:5; inset:0; overflow:hidden; pointer-events:none; }
 .geoLabel { position:absolute; top:0; left:0; width:7px; height:7px; color:#713f1f; will-change:transform; transition:opacity .2s ease; }
 .geoLabel::before { background:linear-gradient(90deg,#c28b35e0,#9e7539a6); }
 .geoLabel::after { position:absolute; z-index:2; inset:0; border:1px solid #fff9; border-radius:50%; content:""; background:#e9b43f; box-shadow:0 0 0 1px #a66f24; }
 .geoLabel:first-child::after { background:#e83d2f; box-shadow:0 0 0 1px #ae392e; }
 .geoLabel b { position:absolute; z-index:2; top:50%; left:50%; width:max-content; padding:6px 11px; border:1px solid #b78436a8; border-radius:999px; color:#713f1f; background:#faf7ede8; box-shadow:0 6px 18px #574a3120; font:650 .62rem/1 var(--font-geist-mono); letter-spacing:.055em; text-transform:uppercase; transform:translate(-50%,-50%) translate(var(--label-offset-x),var(--label-offset-y)); backdrop-filter:blur(8px); }
+.iphoGeoLabel { width:8px; height:8px; color:#124f59; }
+.iphoGeoLabel::before { background:linear-gradient(90deg,#3c9ca8db,#71969aa0); }
+.iphoGeoLabel::after { background:#2f9da9; border-color:#e8ffff; box-shadow:0 0 0 2px #2f9da944,0 0 13px #2f9da98c; }
+.iphoGeoLabel b { display:grid; gap:3px; padding:7px 10px; color:#124f59; background:#f5faf5eb; border-color:#3b899186; border-radius:10px; line-height:1; text-transform:none; }
+.iphoGeoLabel small { color:#537477; font:600 .52rem/1 var(--font-geist-mono); letter-spacing:.06em; white-space:nowrap; }
 .hud { position: absolute; z-index: 3; inset: 19px 20px auto; display: grid; grid-template-columns: 1fr auto; gap: 7px; color: #d5ddfa; pointer-events: none; font: 650 .57rem/1 var(--font-geist-mono); letter-spacing: .13em; }
 .hud b { grid-column: 1 / -1; justify-self: end; color: #efc961; font-size: .5rem; font-weight: 650; }
 .physics .hud { color: #b9edf0; }
 .isFallback::before, .isFallback::after { position: absolute; top: 50%; left: 50%; width: 68%; aspect-ratio: 1; border: 1px solid #66888a77; border-radius: 50%; content: ""; transform: translate(-50%, -50%) rotate(22deg); }
 .isFallback::after { width: 42%; border-color: #efc96177; transform: translate(-50%, -50%) rotate(-38deg); }
 @media (max-width: 780px) { .hud { inset: 15px 16px auto; }.vignette { background: radial-gradient(circle, transparent 48%, #718b851c 100%); } }
-@media (max-width:780px) { .satelliteLabel { width:8px; height:8px; }.satelliteLabel span { max-width:152px; padding:6px 8px; }.satelliteLabel b{font-size:.57rem}.satelliteLabel small{font-size:.62rem;white-space:normal}.geoLabel b{padding:5px 8px;font-size:.51rem} }
+@media (max-width:780px) { .satelliteLabel { width:8px; height:8px; }.satelliteLabel span { max-width:152px; padding:6px 8px; }.satelliteLabel b{font-size:.57rem}.satelliteLabel small{font-size:.62rem;white-space:normal}.geoLabel b{padding:5px 8px;font-size:.51rem}.iphoGeoLabel b{gap:2px;padding:6px 7px;font-size:.5rem}.iphoGeoLabel small{font-size:.44rem} }
 @media (prefers-reduced-motion: reduce) { .hud b { display: none; } }

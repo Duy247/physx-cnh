@@ -172,25 +172,48 @@ if (host) {
       const globe = new THREE.Mesh(new THREE.SphereGeometry(1.62,64,64), new THREE.MeshPhysicalMaterial({ map:earthTexture,color:0xffffff,emissive:0x174b56,emissiveIntensity:.08,roughness:.62,clearcoat:.28 })); earthSurface.add(globe);
       const grid = new THREE.Mesh(new THREE.SphereGeometry(1.635,24,16), new THREE.MeshBasicMaterial({ color:0xf7f3e8,wireframe:true,transparent:true,opacity:.11 })); earthSurface.add(grid);
       const atmosphere = new THREE.Mesh(new THREE.SphereGeometry(1.82,40,40), new THREE.MeshBasicMaterial({ color:0x63cad0,transparent:true,opacity:.075,side:THREE.BackSide })); planet.add(atmosphere);
+      const mapLocations=[
+        {lat:16,lon:108.2},{lat:16.5,lon:112},{lat:10,lon:114},
+        {lat:48.8566,lon:2.3522,ipho:true},{lat:32.6546,lon:51.668,ipho:true},
+        {lat:35.6762,lon:139.6503,ipho:true},{lat:54.6872,lon:25.2797,ipho:true},
+        {lat:32.0853,lon:34.7818,ipho:true},
+      ];
+      host.dataset.iphoCityCount='5';
       const mapMarkers=[];
-      [[16,108.2],[16.5,112],[10,114]].forEach(([lat,lon],index)=>{
-        const marker=new THREE.Mesh(new THREE.SphereGeometry(index?0.028:0.04,16,16),new THREE.MeshBasicMaterial({color:index?0xf0c44e:0xe83d2f})); marker.position.copy(surfacePoint(lat,lon,1.65)); earthSurface.add(marker);
-        mapMarkers.push(marker);
+      mapLocations.forEach(({lat,lon,ipho},index)=>{
+        const marker=new THREE.Group();
+        const point=surfacePoint(lat,lon,1.65); marker.position.copy(point);
+        const dotRadius=ipho ? .035 : (index ? .028 : .04);
+        const dotColor=ipho ? 0x45b9c4 : (index ? 0xf0c44e : 0xe83d2f);
+        const dot=new THREE.Mesh(new THREE.SphereGeometry(dotRadius,16,16),new THREE.MeshBasicMaterial({color:dotColor})); marker.add(dot);
+        if(ipho){
+          const ring=new THREE.Mesh(new THREE.TorusGeometry(.072,.008,8,36),new THREE.MeshBasicMaterial({color:0xbdebe8,transparent:true,opacity:.82})); marker.add(ring);
+          marker.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),point.clone().normalize());
+        }
+        earthSurface.add(marker); mapMarkers.push(marker);
       });
       const mapProjected=new THREE.Vector3(),mapWorld=new THREE.Vector3(),earthWorld=new THREE.Vector3(),toCamera=new THREE.Vector3(),surfaceNormal=new THREE.Vector3();
       projectors.push(()=>{
         const width=host.clientWidth,height=host.clientHeight,compact=width<600;
-        const offsets=compact?[[-64,26],[72,-52],[74,48]]:[[-92,30],[108,-66],[112,62]];
+        const offsets=compact
+          ?[[-64,26],[72,-52],[74,48],[74,55],[78,-54],[72,38],[-74,-55],[-78,54]]
+          :[[-92,30],[108,-66],[112,62],[-106,35],[112,-66],[108,42],[-110,-58],[-116,68]];
         earthSurface.getWorldPosition(earthWorld);
         mapMarkers.forEach((marker,index)=>{
           const label=geoLabels[index]; if(!label)return;
           marker.getWorldPosition(mapWorld); mapProjected.copy(mapWorld).project(camera);
           const x=(mapProjected.x*.5+.5)*width,y=(-mapProjected.y*.5+.5)*height;
-          const [offsetX,offsetY]=offsets[index];
+          let [offsetX,offsetY]=offsets[index];
+          const text=label.querySelector('b');
+          const halfWidth=Math.max(text?.offsetWidth||64,64)/2,halfHeight=Math.max(text?.offsetHeight||24,24)/2;
+          const edge=compact?7:12;
+          const labelX=Math.min(width-halfWidth-edge,Math.max(halfWidth+edge,x+offsetX));
+          const labelY=Math.min(height-halfHeight-edge,Math.max(halfHeight+edge,y+offsetY));
+          offsetX=labelX-x; offsetY=labelY-y;
           setLeader(label,offsetX,offsetY);
           label.style.transform=`translate3d(${x}px,${y}px,0) translate(-50%,-50%)`;
           label.dataset.anchorX=x.toFixed(2); label.dataset.anchorY=y.toFixed(2);
-          label.dataset.labelX=(x+offsetX).toFixed(2); label.dataset.labelY=(y+offsetY).toFixed(2);
+          label.dataset.labelX=labelX.toFixed(2); label.dataset.labelY=labelY.toFixed(2);
           surfaceNormal.copy(mapWorld).sub(earthWorld).normalize(); toCamera.copy(camera.position).sub(earthWorld).normalize();
           const facing=surfaceNormal.dot(toCamera)>.05;
           const onScreen=x>-20&&x<width+20&&y>-20&&y<height+20;

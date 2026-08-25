@@ -21,8 +21,22 @@ test('physics label anchor dots remain tied to projected satellites', async ({ p
   await expect(labels.first()).toHaveAttribute('style', /--leader-length/);
   expect(await labels.evaluateAll(nodes => nodes.some(node => node.classList.contains('isLeft')))).toBe(false);
   const mapLabels = page.locator('[data-map-label]');
-  await expect(mapLabels).toHaveCount(3);
-  expect(await mapLabels.allTextContents()).toEqual(['Việt Nam', 'Hoàng Sa', 'Trường Sa']);
+  await expect(mapLabels).toHaveCount(8);
+  expect((await mapLabels.allTextContents()).slice(0,3)).toEqual(['Việt Nam', 'Hoàng Sa', 'Trường Sa']);
+  const iphoLabels = page.locator('[data-ipho-year]');
+  await expect(iphoLabels).toHaveCount(5);
+  expect(await iphoLabels.evaluateAll(nodes => nodes.map(node => ({
+    label: node.textContent.trim(),
+    year: node.dataset.iphoYear,
+    hasBreak: Boolean(node.querySelector('br')),
+  })))).toEqual([
+    { label:'ParisIPhO 2025', year:'2025', hasBreak:true },
+    { label:'IsfahanIPhO 2024', year:'2024', hasBreak:true },
+    { label:'TokyoIPhO 2023', year:'2023', hasBreak:true },
+    { label:'VilniusIPhO 2021', year:'2021', hasBreak:true },
+    { label:'Tel AvivIPhO 2019', year:'2019', hasBreak:true },
+  ]);
+  await expect(page.locator('[data-planetary="physics"]')).toHaveAttribute('data-ipho-city-count', '5');
   await expect(mapLabels.first()).toHaveAttribute('style', /--leader-length/);
   const clearanceRatios = await labels.evaluateAll(nodes => nodes.map(node => (
     Math.hypot(Number(node.dataset.labelX) - Number(node.dataset.anchorX), Number(node.dataset.labelY) - Number(node.dataset.anchorY))

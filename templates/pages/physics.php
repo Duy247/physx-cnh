@@ -12,6 +12,11 @@
         <span class="geoLabel" data-map-label="vietnam"><b>Việt Nam</b></span>
         <span class="geoLabel" data-map-label="hoang-sa"><b>Hoàng Sa</b></span>
         <span class="geoLabel" data-map-label="truong-sa"><b>Trường Sa</b></span>
+        <span class="geoLabel iphoGeoLabel" data-map-label="ipho-paris" data-ipho-year="2025"><b>Paris<br><small>IPhO 2025</small></b></span>
+        <span class="geoLabel iphoGeoLabel" data-map-label="ipho-isfahan" data-ipho-year="2024"><b>Isfahan<br><small>IPhO 2024</small></b></span>
+        <span class="geoLabel iphoGeoLabel" data-map-label="ipho-tokyo" data-ipho-year="2023"><b>Tokyo<br><small>IPhO 2023</small></b></span>
+        <span class="geoLabel iphoGeoLabel" data-map-label="ipho-vilnius" data-ipho-year="2021"><b>Vilnius<br><small>IPhO 2021</small></b></span>
+        <span class="geoLabel iphoGeoLabel" data-map-label="ipho-tel-aviv" data-ipho-year="2019"><b>Tel Aviv<br><small>IPhO 2019</small></b></span>
       </div>
     </div>
   </div>
