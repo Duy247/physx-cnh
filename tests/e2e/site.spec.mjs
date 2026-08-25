@@ -37,6 +37,19 @@ test('physics label anchor dots remain tied to projected satellites', async ({ p
     { label:'Tel AvivIPhO 2019', year:'2019', hasBreak:true },
   ]);
   await expect(page.locator('[data-planetary="physics"]')).toHaveAttribute('data-ipho-city-count', '5');
+  const visibleCityLayout = await iphoLabels.evaluateAll(nodes => nodes.filter(node => getComputedStyle(node).opacity !== '0').map(node => ({
+    anchorX:Number(node.dataset.anchorX), anchorY:Number(node.dataset.anchorY),
+    labelX:Number(node.dataset.labelX), labelY:Number(node.dataset.labelY),
+    leaderLength:parseFloat(node.style.getPropertyValue('--leader-length')),
+  })).sort((a,b) => a.anchorX-b.anchorX));
+  expect(visibleCityLayout.length).toBeGreaterThan(2);
+  for(let index=1;index<visibleCityLayout.length;index+=1){
+    expect(visibleCityLayout[index].labelX).toBeGreaterThan(visibleCityLayout[index-1].labelX);
+    expect(Math.abs(visibleCityLayout[index].labelY-visibleCityLayout[0].labelY)).toBeLessThan(1.5);
+  }
+  visibleCityLayout.forEach(city => {
+    expect(city.leaderLength).toBeLessThan(Math.hypot(city.labelX-city.anchorX,city.labelY-city.anchorY));
+  });
   await expect(mapLabels.first()).toHaveAttribute('style', /--leader-length/);
   const clearanceRatios = await labels.evaluateAll(nodes => nodes.map(node => (
     Math.hypot(Number(node.dataset.labelX) - Number(node.dataset.anchorX), Number(node.dataset.labelY) - Number(node.dataset.anchorY))

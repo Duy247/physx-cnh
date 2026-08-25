@@ -31,10 +31,10 @@ if (host) {
     const fill = new THREE.DirectionalLight(0x8fcbd0, 3.2); fill.position.set(-5, 4, 6); scene.add(fill);
     const updates = [];
     const projectors = [];
-    const setLeader = (label, offsetX, offsetY) => {
+    const setLeader = (label, offsetX, offsetY, endInset=0) => {
       label.style.setProperty('--label-offset-x', `${offsetX}px`);
       label.style.setProperty('--label-offset-y', `${offsetY}px`);
-      label.style.setProperty('--leader-length', `${Math.hypot(offsetX, offsetY)}px`);
+      label.style.setProperty('--leader-length', `${Math.max(0,Math.hypot(offsetX,offsetY)-endInset)}px`);
       label.style.setProperty('--leader-angle', `${Math.atan2(offsetY, offsetX)}rad`);
     };
     const pointer = { x: 0, y: 0 };
@@ -192,25 +192,53 @@ if (host) {
         }
         earthSurface.add(marker); mapMarkers.push(marker);
       });
-      const mapProjected=new THREE.Vector3(),mapWorld=new THREE.Vector3(),earthWorld=new THREE.Vector3(),toCamera=new THREE.Vector3(),surfaceNormal=new THREE.Vector3();
+      const mapProjected=new THREE.Vector3(),mapWorld=new THREE.Vector3(),earthWorld=new THREE.Vector3(),earthProjected=new THREE.Vector3(),northWorld=new THREE.Vector3(),northProjected=new THREE.Vector3(),toCamera=new THREE.Vector3(),surfaceNormal=new THREE.Vector3();
       projectors.push(()=>{
         const width=host.clientWidth,height=host.clientHeight,compact=width<600;
         const offsets=compact
-          ?[[-64,26],[72,-52],[74,48],[74,55],[78,-54],[72,38],[-74,-55],[-78,54]]
-          :[[-92,30],[108,-66],[112,62],[-106,35],[112,-66],[108,42],[-110,-58],[-116,68]];
+          ?[[-64,26],[72,-52],[74,48]]
+          :[[-92,30],[108,-66],[112,62]];
         earthSurface.getWorldPosition(earthWorld);
+        earthProjected.copy(earthWorld).project(camera);
+        const centerX=(earthProjected.x*.5+.5)*width,centerY=(-earthProjected.y*.5+.5)*height;
+        const cityTargets=new Map(),visibleCities=[];
+        mapMarkers.slice(3).forEach((marker,cityIndex)=>{
+          marker.getWorldPosition(mapWorld); mapProjected.copy(mapWorld).project(camera);
+          const x=(mapProjected.x*.5+.5)*width,y=(-mapProjected.y*.5+.5)*height;
+          surfaceNormal.copy(mapWorld).sub(earthWorld).normalize(); toCamera.copy(camera.position).sub(earthWorld).normalize();
+          const visible=surfaceNormal.dot(toCamera)>.05&&mapProjected.z<1&&x>-20&&x<width+20&&y>-20&&y<height+20;
+          if(visible)visibleCities.push({index:cityIndex+3,x});
+        });
+        visibleCities.sort((a,b)=>a.x-b.x);
+        northWorld.set(0,1.72,0); earthSurface.localToWorld(northWorld); northProjected.copy(northWorld).project(camera);
+        const northY=(-northProjected.y*.5+.5)*height;
+        const railHalf=Math.min(compact?width*.42:width*.32,compact?164:420);
+        const railLeft=Math.max(compact?38:330,centerX-railHalf),railRight=Math.min(width-38,centerX+railHalf);
+        const railY=Math.max(compact?172:185,northY-(compact?30:38));
+        visibleCities.forEach((city,slot)=>{
+          const ratio=visibleCities.length===1?.5:slot/(visibleCities.length-1);
+          cityTargets.set(city.index,{x:railLeft+(railRight-railLeft)*ratio,y:railY});
+        });
         mapMarkers.forEach((marker,index)=>{
           const label=geoLabels[index]; if(!label)return;
           marker.getWorldPosition(mapWorld); mapProjected.copy(mapWorld).project(camera);
           const x=(mapProjected.x*.5+.5)*width,y=(-mapProjected.y*.5+.5)*height;
-          let [offsetX,offsetY]=offsets[index];
+          let offsetX,offsetY;
+          if(index<3){
+            [offsetX,offsetY]=offsets[index];
+          }else{
+            const target=cityTargets.get(index);
+            offsetX=(target?.x??x)-x; offsetY=(target?.y??y)-y;
+          }
           const text=label.querySelector('b');
           const halfWidth=Math.max(text?.offsetWidth||64,64)/2,halfHeight=Math.max(text?.offsetHeight||24,24)/2;
           const edge=compact?7:12;
           const labelX=Math.min(width-halfWidth-edge,Math.max(halfWidth+edge,x+offsetX));
           const labelY=Math.min(height-halfHeight-edge,Math.max(halfHeight+edge,y+offsetY));
           offsetX=labelX-x; offsetY=labelY-y;
-          setLeader(label,offsetX,offsetY);
+          const leaderDistance=Math.hypot(offsetX,offsetY)||1;
+          const labelInset=halfWidth*Math.abs(offsetX/leaderDistance)+halfHeight*Math.abs(offsetY/leaderDistance);
+          setLeader(label,offsetX,offsetY,Math.max(0,labelInset-1));
           label.style.transform=`translate3d(${x}px,${y}px,0) translate(-50%,-50%)`;
           label.dataset.anchorX=x.toFixed(2); label.dataset.anchorY=y.toFixed(2);
           label.dataset.labelX=labelX.toFixed(2); label.dataset.labelY=labelY.toFixed(2);
