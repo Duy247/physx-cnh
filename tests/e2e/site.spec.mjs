@@ -21,10 +21,10 @@ test('physics label anchor dots remain tied to projected satellites', async ({ p
   await expect(labels.first()).toHaveAttribute('style', /--leader-length/);
   expect(await labels.evaluateAll(nodes => nodes.some(node => node.classList.contains('isLeft')))).toBe(false);
   const mapLabels = page.locator('[data-map-label]');
-  await expect(mapLabels).toHaveCount(8);
+  await expect(mapLabels).toHaveCount(13);
   expect((await mapLabels.allTextContents()).slice(0,3)).toEqual(['Việt Nam', 'Hoàng Sa', 'Trường Sa']);
   const iphoLabels = page.locator('[data-ipho-year]');
-  await expect(iphoLabels).toHaveCount(5);
+  await expect(iphoLabels).toHaveCount(10);
   expect(await iphoLabels.evaluateAll(nodes => nodes.map(node => ({
     label: node.textContent.trim(),
     year: node.dataset.iphoYear,
@@ -35,21 +35,25 @@ test('physics label anchor dots remain tied to projected satellites', async ({ p
     { label:'TokyoIPhO 2023', year:'2023', hasBreak:true },
     { label:'VilniusIPhO 2021', year:'2021', hasBreak:true },
     { label:'Tel AvivIPhO 2019', year:'2019', hasBreak:true },
+    { label:'LisbonIPhO 2018', year:'2018', hasBreak:true },
+    { label:'YogyakartaIPhO 2017', year:'2017', hasBreak:true },
+    { label:'ZurichIPhO 2016', year:'2016', hasBreak:true },
+    { label:'MumbaiIPhO 2015', year:'2015', hasBreak:true },
+    { label:'AstanaIPhO 2014', year:'2014', hasBreak:true },
   ]);
-  await expect(page.locator('[data-planetary="physics"]')).toHaveAttribute('data-ipho-city-count', '5');
-  const visibleCityLayout = await iphoLabels.evaluateAll(nodes => nodes.filter(node => getComputedStyle(node).opacity !== '0').map(node => ({
-    anchorX:Number(node.dataset.anchorX), anchorY:Number(node.dataset.anchorY),
-    labelX:Number(node.dataset.labelX), labelY:Number(node.dataset.labelY),
+  const scene = page.locator('[data-planetary="physics"]');
+  await expect(scene).toHaveAttribute('data-ipho-city-count', '10');
+  await expect.poll(async()=>iphoLabels.evaluateAll(nodes=>nodes.filter(node=>Number(getComputedStyle(node).opacity)>.2).length)).toBe(1);
+  const firstTourYear=await scene.getAttribute('data-active-ipho-year');
+  const activeCityLayout=await iphoLabels.evaluateAll(nodes=>nodes.filter(node=>Number(getComputedStyle(node).opacity)>.2).map(node=>({
+    anchorX:Number(node.dataset.anchorX),anchorY:Number(node.dataset.anchorY),
+    labelX:Number(node.dataset.labelX),labelY:Number(node.dataset.labelY),
     leaderLength:parseFloat(node.style.getPropertyValue('--leader-length')),
-  })).sort((a,b) => a.anchorX-b.anchorX));
-  expect(visibleCityLayout.length).toBeGreaterThan(2);
-  for(let index=1;index<visibleCityLayout.length;index+=1){
-    expect(visibleCityLayout[index].labelX).toBeGreaterThan(visibleCityLayout[index-1].labelX);
-    expect(Math.abs(visibleCityLayout[index].labelY-visibleCityLayout[0].labelY)).toBeLessThan(1.5);
-  }
-  visibleCityLayout.forEach(city => {
-    expect(city.leaderLength).toBeLessThan(Math.hypot(city.labelX-city.anchorX,city.labelY-city.anchorY));
-  });
+  })));
+  expect(activeCityLayout).toHaveLength(1);
+  expect(Math.abs(activeCityLayout[0].labelX-activeCityLayout[0].anchorX)).toBeLessThan(1.5);
+  expect(activeCityLayout[0].leaderLength).toBeLessThan(Math.hypot(activeCityLayout[0].labelX-activeCityLayout[0].anchorX,activeCityLayout[0].labelY-activeCityLayout[0].anchorY));
+  await expect.poll(async()=>scene.getAttribute('data-active-ipho-year'),{timeout:7000}).not.toBe(firstTourYear);
   await expect(mapLabels.first()).toHaveAttribute('style', /--leader-length/);
   const clearanceRatios = await labels.evaluateAll(nodes => nodes.map(node => (
     Math.hypot(Number(node.dataset.labelX) - Number(node.dataset.anchorX), Number(node.dataset.labelY) - Number(node.dataset.anchorY))

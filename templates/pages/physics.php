@@ -17,6 +17,11 @@
         <span class="geoLabel iphoGeoLabel" data-map-label="ipho-tokyo" data-ipho-year="2023"><b>Tokyo<br><small>IPhO 2023</small></b></span>
         <span class="geoLabel iphoGeoLabel" data-map-label="ipho-vilnius" data-ipho-year="2021"><b>Vilnius<br><small>IPhO 2021</small></b></span>
         <span class="geoLabel iphoGeoLabel" data-map-label="ipho-tel-aviv" data-ipho-year="2019"><b>Tel Aviv<br><small>IPhO 2019</small></b></span>
+        <span class="geoLabel iphoGeoLabel" data-map-label="ipho-lisbon" data-ipho-year="2018"><b>Lisbon<br><small>IPhO 2018</small></b></span>
+        <span class="geoLabel iphoGeoLabel" data-map-label="ipho-yogyakarta" data-ipho-year="2017"><b>Yogyakarta<br><small>IPhO 2017</small></b></span>
+        <span class="geoLabel iphoGeoLabel" data-map-label="ipho-zurich" data-ipho-year="2016"><b>Zurich<br><small>IPhO 2016</small></b></span>
+        <span class="geoLabel iphoGeoLabel" data-map-label="ipho-mumbai" data-ipho-year="2015"><b>Mumbai<br><small>IPhO 2015</small></b></span>
+        <span class="geoLabel iphoGeoLabel" data-map-label="ipho-astana" data-ipho-year="2014"><b>Astana<br><small>IPhO 2014</small></b></span>
       </div>
     </div>
   </div>

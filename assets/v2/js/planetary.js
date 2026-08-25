@@ -177,48 +177,39 @@ if (host) {
         {lat:48.8566,lon:2.3522,ipho:true},{lat:32.6546,lon:51.668,ipho:true},
         {lat:35.6762,lon:139.6503,ipho:true},{lat:54.6872,lon:25.2797,ipho:true},
         {lat:32.0853,lon:34.7818,ipho:true},
+        {lat:38.7223,lon:-9.1393,ipho:true},{lat:-7.7956,lon:110.3695,ipho:true},
+        {lat:47.3769,lon:8.5417,ipho:true},{lat:19.076,lon:72.8777,ipho:true},
+        {lat:51.1694,lon:71.4491,ipho:true},
       ];
-      host.dataset.iphoCityCount='5';
+      const iphoLocations=mapLocations.slice(3);
+      host.dataset.iphoCityCount=String(iphoLocations.length);
       const mapMarkers=[];
       mapLocations.forEach(({lat,lon,ipho},index)=>{
         const marker=new THREE.Group();
         const point=surfacePoint(lat,lon,1.65); marker.position.copy(point);
         const dotRadius=ipho ? .035 : (index ? .028 : .04);
         const dotColor=ipho ? 0x45b9c4 : (index ? 0xf0c44e : 0xe83d2f);
-        const dot=new THREE.Mesh(new THREE.SphereGeometry(dotRadius,16,16),new THREE.MeshBasicMaterial({color:dotColor})); marker.add(dot);
+        const dot=new THREE.Mesh(new THREE.SphereGeometry(dotRadius,16,16),new THREE.MeshBasicMaterial({color:dotColor,transparent:Boolean(ipho),opacity:ipho?0:1})); marker.add(dot);
         if(ipho){
-          const ring=new THREE.Mesh(new THREE.TorusGeometry(.072,.008,8,36),new THREE.MeshBasicMaterial({color:0xbdebe8,transparent:true,opacity:.82})); marker.add(ring);
+          dot.material.userData.baseOpacity=1;
+          const ring=new THREE.Mesh(new THREE.TorusGeometry(.072,.008,8,36),new THREE.MeshBasicMaterial({color:0xbdebe8,transparent:true,opacity:0})); ring.material.userData.baseOpacity=.82; marker.add(ring);
           marker.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),point.clone().normalize());
+          marker.visible=false;
         }
         earthSurface.add(marker); mapMarkers.push(marker);
       });
-      const mapProjected=new THREE.Vector3(),mapWorld=new THREE.Vector3(),earthWorld=new THREE.Vector3(),earthProjected=new THREE.Vector3(),northWorld=new THREE.Vector3(),northProjected=new THREE.Vector3(),toCamera=new THREE.Vector3(),surfaceNormal=new THREE.Vector3();
+      let activeIphoIndex=0,iphoVisibility=0,earthRotation=Math.PI,tourFromRotation=Math.PI,tourToRotation=Math.PI,lastTourIndex=-1;
+      const iphoTourDuration=4.8;
+      const mapProjected=new THREE.Vector3(),mapWorld=new THREE.Vector3(),earthWorld=new THREE.Vector3(),northWorld=new THREE.Vector3(),northProjected=new THREE.Vector3(),toCamera=new THREE.Vector3(),surfaceNormal=new THREE.Vector3();
       projectors.push(()=>{
         const width=host.clientWidth,height=host.clientHeight,compact=width<600;
         const offsets=compact
           ?[[-64,26],[72,-52],[74,48]]
           :[[-92,30],[108,-66],[112,62]];
         earthSurface.getWorldPosition(earthWorld);
-        earthProjected.copy(earthWorld).project(camera);
-        const centerX=(earthProjected.x*.5+.5)*width,centerY=(-earthProjected.y*.5+.5)*height;
-        const cityTargets=new Map(),visibleCities=[];
-        mapMarkers.slice(3).forEach((marker,cityIndex)=>{
-          marker.getWorldPosition(mapWorld); mapProjected.copy(mapWorld).project(camera);
-          const x=(mapProjected.x*.5+.5)*width,y=(-mapProjected.y*.5+.5)*height;
-          surfaceNormal.copy(mapWorld).sub(earthWorld).normalize(); toCamera.copy(camera.position).sub(earthWorld).normalize();
-          const visible=surfaceNormal.dot(toCamera)>.05&&mapProjected.z<1&&x>-20&&x<width+20&&y>-20&&y<height+20;
-          if(visible)visibleCities.push({index:cityIndex+3,x});
-        });
-        visibleCities.sort((a,b)=>a.x-b.x);
         northWorld.set(0,1.72,0); earthSurface.localToWorld(northWorld); northProjected.copy(northWorld).project(camera);
         const northY=(-northProjected.y*.5+.5)*height;
-        const railHalf=Math.min(compact?width*.42:width*.32,compact?164:420);
-        const railLeft=Math.max(compact?38:330,centerX-railHalf),railRight=Math.min(width-38,centerX+railHalf);
         const railY=Math.max(compact?192:205,northY-(compact?10:18));
-        visibleCities.forEach((city,slot)=>{
-          const ratio=visibleCities.length===1?.5:slot/(visibleCities.length-1);
-          cityTargets.set(city.index,{x:railLeft+(railRight-railLeft)*ratio,y:railY});
-        });
         mapMarkers.forEach((marker,index)=>{
           const label=geoLabels[index]; if(!label)return;
           marker.getWorldPosition(mapWorld); mapProjected.copy(mapWorld).project(camera);
@@ -227,8 +218,7 @@ if (host) {
           if(index<3){
             [offsetX,offsetY]=offsets[index];
           }else{
-            const target=cityTargets.get(index);
-            offsetX=(target?.x??x)-x; offsetY=(target?.y??y)-y;
+            offsetX=0; offsetY=railY-y;
           }
           const text=label.querySelector('b');
           const halfWidth=Math.max(text?.offsetWidth||64,64)/2,halfHeight=Math.max(text?.offsetHeight||24,24)/2;
@@ -245,7 +235,13 @@ if (host) {
           surfaceNormal.copy(mapWorld).sub(earthWorld).normalize(); toCamera.copy(camera.position).sub(earthWorld).normalize();
           const facing=surfaceNormal.dot(toCamera)>.05;
           const onScreen=x>-20&&x<width+20&&y>-20&&y<height+20;
-          label.style.opacity=facing&&mapProjected.z<1&&onScreen?'1':'0';
+          if(index<3){
+            label.style.opacity=facing&&mapProjected.z<1&&onScreen?'1':'0';
+          }else{
+            const active=index===activeIphoIndex+3;
+            label.classList.toggle('isTourActive',active);
+            label.style.opacity=String(active&&facing&&mapProjected.z<1&&onScreen?iphoVisibility:0);
+          }
         });
       });
       const settings = [
@@ -290,7 +286,27 @@ if (host) {
         return { satellite,radius,phase,speed };
       });
       updates.push((time) => {
-        earthSurface.rotation.y=Math.PI+time*.026; atmosphere.scale.setScalar(1+Math.sin(time*1.2)*.012);
+        const tourTime=reduced?time/.18:time;
+        const tourIndex=Math.floor(tourTime/iphoTourDuration)%iphoLocations.length;
+        const tourPhase=(tourTime%iphoTourDuration)/iphoTourDuration;
+        if(tourIndex!==lastTourIndex){
+          activeIphoIndex=tourIndex; tourFromRotation=earthRotation;
+          const targetRotation=Math.PI*1.5-THREE.MathUtils.degToRad(iphoLocations[tourIndex].lon);
+          tourToRotation=tourFromRotation+Math.atan2(Math.sin(targetRotation-tourFromRotation),Math.cos(targetRotation-tourFromRotation));
+          lastTourIndex=tourIndex; host.dataset.activeIphoYear=geoLabels[tourIndex+3]?.dataset.iphoYear||'';
+        }
+        const turnProgress=reduced?1:Math.min(1,tourPhase/.28);
+        const easedTurn=turnProgress*turnProgress*(3-2*turnProgress);
+        earthRotation=tourFromRotation+(tourToRotation-tourFromRotation)*easedTurn;
+        earthSurface.rotation.y=earthRotation;
+        const fadeIn=Math.min(1,Math.max(0,(tourPhase-.2)/.12));
+        const fadeOut=Math.min(1,Math.max(0,(.94-tourPhase)/.12));
+        iphoVisibility=reduced?1:Math.min(fadeIn,fadeOut);
+        mapMarkers.slice(3).forEach((marker,index)=>{
+          marker.visible=index===activeIphoIndex&&iphoVisibility>.01;
+          marker.traverse(child=>{if(child.material?.userData.baseOpacity)child.material.opacity=child.material.userData.baseOpacity*iphoVisibility;});
+        });
+        atmosphere.scale.setScalar(1+Math.sin(time*1.2)*.012);
         satellites.forEach(({satellite,radius,phase,speed}) => { const angle=phase+time*speed; satellite.position.set(Math.cos(angle)*radius,Math.sin(angle)*radius,0); satellite.rotation.y=time*.55; satellite.rotation.z=time*.18; });
       });
     }
