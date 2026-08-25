@@ -6,7 +6,8 @@
       <?php endforeach; ?>
     </nav>
     <a class="deepSpaceGateway" href="https://astronomy.physx-cnh.com" aria-label="Đi xa hơn đến không gian Thiên văn học">
-      <span>Đi xa hơn</span><span class="deepSpaceArrow" aria-hidden="true">↗</span>
+      <span class="deepSpaceCore" aria-hidden="true"></span>
+      <span class="deepSpaceText">Đi xa hơn</span><span class="deepSpaceArrow" aria-hidden="true">↗</span>
     </a>
   </div></div>
   <div class="noise" aria-hidden="true"></div>

@@ -76,6 +76,16 @@ test('physics label anchor dots remain tied to projected satellites', async ({ p
 
 test('hub renders eight planets with Earth as the Physics space', async ({ page }) => {
   await page.goto('/');
+  const gateway = page.getByRole('link', { name: 'Đi xa hơn đến không gian Thiên văn học' });
+  await expect(gateway).toHaveAttribute('href', 'https://astronomy.physx-cnh.com');
+  await expect(gateway.locator('.deepSpaceCore')).toHaveCount(1);
+  await expect(gateway).toBeVisible();
+  const gatewayMotion = await gateway.evaluate(node => ({
+    animationName: getComputedStyle(node).animationName,
+    width: node.getBoundingClientRect().width,
+  }));
+  expect(gatewayMotion.animationName).toContain('gateway-orbit');
+  expect(gatewayMotion.width).toBeLessThanOrEqual(132);
   const planets = page.locator('[data-hub-planet]');
   await expect(planets).toHaveCount(4);
   await expect(page.locator('[data-planetary="hub"]')).toHaveAttribute('data-planet-count', '8');
