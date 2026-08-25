@@ -214,7 +214,7 @@ if (host) {
         const northY=(-northProjected.y*.5+.5)*height;
         const railHalf=Math.min(compact?width*.42:width*.32,compact?164:420);
         const railLeft=Math.max(compact?38:330,centerX-railHalf),railRight=Math.min(width-38,centerX+railHalf);
-        const railY=Math.max(compact?172:185,northY-(compact?30:38));
+        const railY=Math.max(compact?192:205,northY-(compact?10:18));
         visibleCities.forEach((city,slot)=>{
           const ratio=visibleCities.length===1?.5:slot/(visibleCities.length-1);
           cityTargets.set(city.index,{x:railLeft+(railRight-railLeft)*ratio,y:railY});
