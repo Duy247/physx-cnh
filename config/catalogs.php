@@ -54,6 +54,16 @@ return [
         'manifest' => $root . '/physics/catalog/paper-sol-pho.json',
         'welcome' => '/nav/welcome/paper-sol-pho.html',
     ],
+    'paper:olympiads' => [
+        'id' => 'olympiads',
+        'type' => 'paper',
+        'level' => 'olympiads',
+        'title' => 'Kho đề Olympic Vật lý',
+        'heading' => 'KHO ĐỀ OLYMPIC',
+        'subheading' => 'Quốc gia đến quốc tế',
+        'manifest' => $root . '/physics/catalog/olympiads.json',
+        'welcome' => '/library?kind=paper',
+    ],
     'magazines:all' => [
         'id' => 'magazines',
         'type' => 'magazines',

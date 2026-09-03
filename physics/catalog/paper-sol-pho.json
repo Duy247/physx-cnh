@@ -1,173 +1,245 @@
 {
-    "version": 1,
-    "items": [
-        {
-            "title": "Đề & Đáp án một số năm Olympic 30-4",
-            "author": "",
-            "file": "materials/30-4.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "Đề & Đáp án một số năm Olympic DH&ĐB Bắc Bộ",
-            "author": "",
-            "file": "materials/DH.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "Đề & Đáp án một số năm Olympic Chuyên KHTN",
-            "author": "",
-            "file": "materials/HSGSO.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "Đề & Đáp án một số năm Olympic Sinh viên Toàn quốc",
-            "author": "",
-            "file": "materials/SPhO.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "Thi thử HSG QG 2015",
-            "author": "Nguyễn Ngọc Tuấn\naka tuanphysics",
-            "file": "materials/thi_thu_hsg_qg_2015.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "VPhO và đáp án\n2010,2011,2012,2013",
-            "author": "",
-            "file": "materials/VPhO2010-2013.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "VPhO và đáp án\n2014,2015,2016,2017",
-            "author": "",
-            "file": "materials/VPhO2014-2017.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "VPhO và đáp án (Sách)\n2001-2016",
-            "author": "Vũ Thanh Khiết",
-            "file": "materials/VPhO2001-2016.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "VPhO và đáp án\n2018,2019,2020",
-            "author": "",
-            "file": "materials/VPhO2018-2020.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "VPhO và đáp án\n2021,2022,2023",
-            "author": "",
-            "file": "materials/VPhO2021-2023.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "VPhO,TST và đáp án\n2011-2016",
-            "author": "",
-            "file": "materials/VPhO_TST-2011-2016.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "Lời giải VPhO\n2018,19,20,22,23,24",
-            "author": "CLB Vật lí xPhO",
-            "file": "materials/VPhO-xPhO.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "RuPhO 2005-2017",
-            "author": "Moscow Institute of Physics and Technology",
-            "file": "books/rupho-15-17.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "Đáp án InPhO\n2006-09,17,19,20,23,24",
-            "author": "",
-            "file": "materials/InPhO.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "OPhO và Đáp án\n2020,21,22,23",
-            "author": "",
-            "file": "materials/OPhO-20-23.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "PPDRPhO và Đáp án\n2005-2017",
-            "author": "",
-            "file": "materials/PPRDPhO-05-17.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "PPDRPhO và Đáp án\n2018-2024",
-            "author": "",
-            "file": "materials/PPRDPhO-18-24.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "IZhO Vật lý và Đáp án\n2010-2023",
-            "author": "",
-            "file": "materials/IZhO-10-23.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "HKPhO và Đáp án\n2004-2016",
-            "author": "",
-            "file": "materials/HKPhO-04-16.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "USAPhO và Đáp án\n2014-2024",
-            "author": "",
-            "file": "materials/USAPhO-14-24.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "F=ma và Đáp án\n2011-2019",
-            "author": "",
-            "file": "materials/F=ma.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "F=ma và Đáp án\n2020-2024",
-            "author": "",
-            "file": "materials/F=ma-20-23.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "Fyziklani\n2018-2023",
-            "author": "",
-            "file": "materials/fyziklani-18-23.pdf",
-            "description": "",
-            "source": ""
-        },
-        {
-            "title": "Physics Brawl Online\n2012-2023",
-            "author": "",
-            "file": "materials/physicsbrawl-12-23.pdf",
-            "description": "",
-            "source": ""
-        }
-    ]
+  "version": 1,
+  "items": [
+    {
+      "title": "Đề & Đáp án một số năm Olympic 30-4",
+      "author": "",
+      "file": "materials/30-4.pdf",
+      "description": "",
+      "source": "",
+      "competition": "olympic-30-4",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "Đề & Đáp án một số năm Olympic DH&ĐB Bắc Bộ",
+      "author": "",
+      "file": "materials/DH.pdf",
+      "description": "",
+      "source": "",
+      "competition": "olympic-north",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "Đề & Đáp án một số năm Olympic Chuyên KHTN",
+      "author": "",
+      "file": "materials/HSGSO.pdf",
+      "description": "",
+      "source": "",
+      "competition": "hsgso",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "Đề & Đáp án một số năm Olympic Sinh viên Toàn quốc",
+      "author": "",
+      "file": "materials/SPhO.pdf",
+      "description": "",
+      "source": "",
+      "competition": "vietnam-student-olympiad",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "Thi thử HSG QG 2015",
+      "author": "Nguyễn Ngọc Tuấn\naka tuanphysics",
+      "file": "materials/thi_thu_hsg_qg_2015.pdf",
+      "description": "",
+      "source": "",
+      "competition": "vietnam-national",
+      "year": 2015,
+      "role": "document"
+    },
+    {
+      "title": "VPhO và đáp án\n2010,2011,2012,2013",
+      "author": "",
+      "file": "materials/VPhO2010-2013.pdf",
+      "description": "",
+      "source": "",
+      "competition": "vpho",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "VPhO và đáp án\n2014,2015,2016,2017",
+      "author": "",
+      "file": "materials/VPhO2014-2017.pdf",
+      "description": "",
+      "source": "",
+      "competition": "vpho",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "VPhO và đáp án (Sách)\n2001-2016",
+      "author": "Vũ Thanh Khiết",
+      "file": "materials/VPhO2001-2016.pdf",
+      "description": "",
+      "source": "",
+      "competition": "vpho",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "VPhO và đáp án\n2018,2019,2020",
+      "author": "",
+      "file": "materials/VPhO2018-2020.pdf",
+      "description": "",
+      "source": "",
+      "competition": "vpho",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "VPhO và đáp án\n2021,2022,2023",
+      "author": "",
+      "file": "materials/VPhO2021-2023.pdf",
+      "description": "",
+      "source": "",
+      "competition": "vpho",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "VPhO,TST và đáp án\n2011-2016",
+      "author": "",
+      "file": "materials/VPhO_TST-2011-2016.pdf",
+      "description": "",
+      "source": "",
+      "competition": "vpho",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "Lời giải VPhO\n2018,19,20,22,23,24",
+      "author": "CLB Vật lí xPhO",
+      "file": "materials/VPhO-xPhO.pdf",
+      "description": "",
+      "source": "",
+      "competition": "vpho",
+      "year": 2018,
+      "role": "solution"
+    },
+    {
+      "title": "RuPhO 2005-2017",
+      "author": "Moscow Institute of Physics and Technology",
+      "file": "books/rupho-15-17.pdf",
+      "description": "",
+      "source": "",
+      "competition": "rupho",
+      "year": "Collection",
+      "role": "document"
+    },
+    {
+      "title": "Đáp án InPhO\n2006-09,17,19,20,23,24",
+      "author": "",
+      "file": "materials/InPhO.pdf",
+      "description": "",
+      "source": "",
+      "competition": "inpho",
+      "year": 2006,
+      "role": "solution"
+    },
+    {
+      "title": "OPhO và Đáp án\n2020,21,22,23",
+      "author": "",
+      "file": "materials/OPhO-20-23.pdf",
+      "description": "",
+      "source": "",
+      "competition": "opho",
+      "year": 2020,
+      "role": "solution"
+    },
+    {
+      "title": "PPDRPhO và Đáp án\n2005-2017",
+      "author": "",
+      "file": "materials/PPRDPhO-05-17.pdf",
+      "description": "",
+      "source": "",
+      "competition": "ppdrpho",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "PPDRPhO và Đáp án\n2018-2024",
+      "author": "",
+      "file": "materials/PPRDPhO-18-24.pdf",
+      "description": "",
+      "source": "",
+      "competition": "ppdrpho",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "IZhO Vật lý và Đáp án\n2010-2023",
+      "author": "",
+      "file": "materials/IZhO-10-23.pdf",
+      "description": "",
+      "source": "",
+      "competition": "paper-collection",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "HKPhO và Đáp án\n2004-2016",
+      "author": "",
+      "file": "materials/HKPhO-04-16.pdf",
+      "description": "",
+      "source": "",
+      "competition": "paper-collection",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "USAPhO và Đáp án\n2014-2024",
+      "author": "",
+      "file": "materials/USAPhO-14-24.pdf",
+      "description": "",
+      "source": "",
+      "competition": "paper-collection",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "F=ma và Đáp án\n2011-2019",
+      "author": "",
+      "file": "materials/F=ma.pdf",
+      "description": "",
+      "source": "",
+      "competition": "paper-collection",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "F=ma và Đáp án\n2020-2024",
+      "author": "",
+      "file": "materials/F=ma-20-23.pdf",
+      "description": "",
+      "source": "",
+      "competition": "paper-collection",
+      "year": "Collection",
+      "role": "solution"
+    },
+    {
+      "title": "Fyziklani\n2018-2023",
+      "author": "",
+      "file": "materials/fyziklani-18-23.pdf",
+      "description": "",
+      "source": "",
+      "competition": "paper-collection",
+      "year": "Collection",
+      "role": "document"
+    },
+    {
+      "title": "Physics Brawl Online\n2012-2023",
+      "author": "",
+      "file": "materials/physicsbrawl-12-23.pdf",
+      "description": "",
+      "source": "",
+      "competition": "paper-collection",
+      "year": "Collection",
+      "role": "document"
+    }
+  ]
 }

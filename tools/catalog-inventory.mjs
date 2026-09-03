@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { mkdir, readFile, rename, stat, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, rename, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -15,8 +15,10 @@ const collections = [
   { id: "books-vpho-en", kind: "book", level: "vpho-en", title: "Sách VPhO và Vòng chọn (EN)" },
   { id: "materials-pho", kind: "material", level: "pho", title: "Tài liệu và handout" },
   { id: "paper-sol-pho", kind: "paper", level: "pho", title: "Đề thi và đáp án" },
+  { id: "olympiads", kind: "paper", level: "olympiads", title: "Kho đề Olympic Vật lý" },
   { id: "magazines", kind: "magazine", level: "all", title: "Tạp chí" },
 ];
+const competitionLabels = { ipho: 'International Physics Olympiad (IPhO)', apho: 'Asian Physics Olympiad (APhO)', eupho: 'European Physics Olympiad (EuPhO)', nbpho: 'Nordic-Baltic Physics Olympiad (NbPhO)', rmph: 'Romanian Master of Physics (RMPh)' };
 
 function slugify(value) { return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/gi, "d").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 72) || "tai-lieu"; }
 function trackedFiles() {
@@ -30,6 +32,17 @@ function trackedFiles() {
 }
 
 const tree = trackedFiles();
+async function worktreePdfs(directory, prefix = "") {
+  const files = [];
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const relative = `${prefix}${entry.name}`;
+    const absolute = path.join(directory, entry.name);
+    if (entry.isDirectory()) files.push(...await worktreePdfs(absolute, `${relative}/`));
+    else if (entry.isFile() && entry.name.toLowerCase().endsWith('.pdf')) files.push([relative, (await stat(absolute)).size]);
+  }
+  return files;
+}
+for (const [file, bytes] of await worktreePdfs(physicsRoot)) tree.set(file, bytes);
 const usedSlugs = new Set();
 const publishedFiles = new Set();
 const documents = [];
@@ -56,6 +69,11 @@ for (const collection of collections) {
       file: { path: item.file, bytes, mimeType: extension === ".pdf" ? "application/pdf" : "text/html" },
       cover: extension === ".pdf" ? `/assets/v2/covers/${slug}.webp` : null,
       delivery: { provider: "hostinger" },
+      competition: item.competition || null,
+      competitionLabel: item.competition ? (competitionLabels[item.competition] || item.competition.toUpperCase()) : null,
+      year: item.year ?? null,
+      role: item.role || null,
+      problemNumber: item.problemNumber ?? null,
     });
   }
 }

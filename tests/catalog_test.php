@@ -14,6 +14,7 @@ $expectedCounts = [
     'books-vpho-en' => 36,
     'materials-pho' => 59,
     'paper-sol-pho' => 24,
+    'olympiads' => 2738,
     'magazines' => 135,
     'lessons' => 13,
 ];
@@ -39,7 +40,7 @@ foreach ($catalogs as $route => $catalog) {
     }
 }
 
-check($total === 320, 'Expected 320 migrated resources.');
+check($total === 3058, 'Expected 3058 catalog resources.');
 check($irodovFound, 'The repaired Irodov record is missing.');
 check(
     CatalogRepository::resourceUrl('books/Tài liệu 1.pdf') === '/physics/books/T%C3%A0i%20li%E1%BB%87u%201.pdf',
@@ -73,7 +74,7 @@ try {
     @rmdir($temporaryDirectory);
 }
 
-fwrite(STDOUT, 'Catalog tests passed: 7 catalogs, 320 resources.' . PHP_EOL);
+fwrite(STDOUT, 'Catalog tests passed: 8 catalogs, 3058 resources.' . PHP_EOL);
 
 function check(bool $condition, string $message): void
 {

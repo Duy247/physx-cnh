@@ -180,12 +180,21 @@ test('orbit link scopes books and removes redundant kind control', async ({ page
 test('lesson documents are absent and old lesson filters recover to the full library', async ({ page }) => {
   await page.goto('/library?kind=lesson&orbit=1');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Thư viện Vật lý');
-  await expect(page.locator('[data-result-count]')).toContainText('307');
+  await expect(page.locator('[data-result-count]')).toContainText('3045');
   await expect(page.locator('[data-kind] option')).toHaveCount(5);
   await expect(page.locator('[data-kind]')).not.toContainText('Bài học');
   await expect(page).not.toHaveURL(/kind=lesson|orbit=1/);
   const kinds = await page.locator('#library-data').evaluate((node) => [...new Set(JSON.parse(node.textContent).map((document) => document.kind))]);
   expect(kinds.sort()).toEqual(['book', 'magazine', 'material', 'paper']);
+});
+
+test('paper archive filters by competition and year', async ({ page }) => {
+  await page.goto('/library?kind=paper&competition=ipho&year=2024');
+  await expect(page.locator('[data-paper-filters]')).toBeVisible();
+  await expect(page.locator('[data-competition]')).toHaveValue('ipho');
+  await expect(page.locator('[data-year]')).toHaveValue('2024');
+  await expect(page.locator('.paperGroup > h2')).toContainText('IPhO');
+  await expect(page.locator('[data-result-count]')).not.toHaveText('0');
 });
 
 test('library never fetches PDFs to render cards and preserves Back state', async ({ page }) => {

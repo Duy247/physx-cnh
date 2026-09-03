@@ -6,6 +6,8 @@ foreach ($documents as $document) {
         'slug' => $document['slug'], 'title' => $document['title'], 'authors' => $document['authors'],
         'description' => $document['description'], 'kind' => $document['kind'], 'language' => $document['language'],
         'pages' => $document['pages'], 'addedAt' => $document['addedAt'], 'cover' => $catalogService->coverUrl($document),
+        'competition' => $document['competition'] ?? null, 'competitionLabel' => $document['competitionLabel'] ?? null,
+        'year' => $document['year'] ?? null, 'role' => $document['role'] ?? null, 'problemNumber' => $document['problemNumber'] ?? null,
     ];
 }
 $initialCount = count($initialDocuments);
@@ -18,6 +20,7 @@ $initialCount = count($initialDocuments);
       <label class="search"><?= icon('search',22) ?><input data-search type="search" value="<?= e($_GET['q'] ?? '') ?>" placeholder="Tìm tên sách, tác giả, kỳ thi…" aria-label="Tìm tài liệu"><kbd>⌘ K</kbd></label>
       <div class="filters">
         <?php if (!$orbit): ?><label>Loại<select data-kind><option value="all">Tất cả</option><?php foreach ($kindLabels as $value => $label): ?><option value="<?= $value ?>" <?= $kind === $value ? 'selected' : '' ?>><?= e($label) ?></option><?php endforeach; ?></select></label><?php endif; ?>
+        <span data-paper-filters hidden><label>Kỳ thi<select data-competition><option value="all">Tất cả</option></select></label><label>Năm<select data-year><option value="all">Tất cả</option></select></label></span>
         <label>Ngôn ngữ<select data-language><option value="all">Tất cả</option><option value="vi">Tiếng Việt</option><option value="en">English</option></select></label>
         <label>Sắp xếp<select data-sort><option value="title">Tên tài liệu</option><option value="author">Tác giả</option></select></label>
       </div>

@@ -13,7 +13,7 @@ Trang web được tạo ra nhằm mục đích hỗ trợ các học sinh khố
 
 ## Kỹ thuật
 
-Manifest JSON trong `physics/catalog/` là nguồn chuẩn. `public-snapshot.json` chứa đúng 307 tài liệu đã biên mục; `inventory.json` theo dõi 1.366 PDF nhưng không đưa 1.059 tệp nháp lên thư viện. PHP 8.1+ đọc snapshot tại chỗ và Hostinger là origin duy nhất.
+Manifest JSON trong `physics/catalog/` là nguồn chuẩn. `public-snapshot.json` chứa đúng 3.045 tài liệu đã biên mục; `inventory.json` theo dõi 3.609 PDF nhưng không đưa 564 tệp nháp lên thư viện. PHP 8.1+ đọc snapshot tại chỗ và Hostinger là origin duy nhất.
 
 ```bash
 npm install

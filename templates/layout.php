@@ -35,7 +35,7 @@ if (($pageCss ?? '') === 'physics') {
   <link rel="icon" href="/image/favicon.ico">
   <link rel="preload" href="/assets/v2/fonts/be-vietnam-pro-300-latin.woff2" as="font" type="font/woff2" crossorigin>
 <?php foreach (array_unique($cssFiles) as $css): ?>
-  <link rel="stylesheet" href="/assets/v2/css/<?= e($css) ?>.css?v=31">
+  <link rel="stylesheet" href="/assets/v2/css/<?= e($css) ?>.css?v=32">
 <?php endforeach; ?>
 </head>
 <body class="<?= e(implode(' ', $bodyClasses)) ?>">
@@ -69,7 +69,7 @@ if (($pageCss ?? '') === 'physics') {
 </div>
 <script src="/assets/v2/js/app.js?v=7" defer></script>
 <?php if (in_array($pageCss ?? '', ['hub', 'physics'], true)): ?><script type="module" src="/assets/v2/js/planetary.js?v=23"></script><?php endif; ?>
-<?php if (($pageCss ?? '') === 'library'): ?><script src="/assets/v2/js/library.js?v=6" defer></script><?php endif; ?>
+<?php if (($pageCss ?? '') === 'library'): ?><script src="/assets/v2/js/library.js?v=7" defer></script><?php endif; ?>
 <?php if (($pageCss ?? '') === 'graph'): ?><script src="/assets/v2/vendor/go.js?v=4.0.3" defer></script><script src="/assets/v2/js/graphs.js?v=4" defer></script><?php endif; ?>
 </body>
 </html>

@@ -22,7 +22,11 @@
           "description": {"type": "string", "maxLength": 2000, "pattern": "^[^<>]*$"},
           "source": {"type": "string", "maxLength": 1000, "pattern": "^[^<>]*$"},
           "legacy": {"type": "boolean"},
-          "delivery": {"enum": ["hostinger", "vercel-blob"]}
+          "delivery": {"enum": ["hostinger", "vercel-blob"]},
+          "competition": {"type": "string", "maxLength": 80, "pattern": "^[a-z0-9-]*$"},
+          "year": {"oneOf": [{"type": "integer", "minimum": 1900, "maximum": 2100}, {"const": "Collection"}]},
+          "role": {"enum": ["problem", "solution", "marking", "answer", "report", "reference", "document"]},
+          "problemNumber": {"type": "integer", "minimum": 1, "maximum": 99}
         }
       }
     }
