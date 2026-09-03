@@ -20,6 +20,7 @@
   const reset = root.querySelector('[data-reset]');
   const lockedKind = root.dataset.orbit === '1' ? root.dataset.initialKind : '';
   const labels = { book: 'Sách', material: 'Chuyên đề', paper: 'Đề thi', magazine: 'Tạp chí' };
+  const roleLabels = { problem: 'Đề', solution: 'Đáp án' };
   let visible = 30;
 
   const params = new URLSearchParams(location.search);
@@ -66,7 +67,7 @@
       : `<span class="cardVisual">${fileIcon}</span>`;
     const authors = (document.authors || []).join(', ');
     const paperType = document.paperType ? (document.paperType === 'theoretical' ? 'Lý thuyết' : document.paperType === 'experimental' ? 'Thực nghiệm' : document.paperType) : '';
-    const facts = [paperType, document.role || '', String(document.language).toUpperCase(), document.pages ? `${document.pages} trang` : '', document.addedAt ? `thêm ${addedDate(document.addedAt)}` : ''].filter(Boolean).join(' · ');
+    const facts = [paperType, roleLabels[document.role] || document.role || '', String(document.language).toUpperCase(), document.pages ? `${document.pages} trang` : '', document.addedAt ? `thêm ${addedDate(document.addedAt)}` : ''].filter(Boolean).join(' · ');
     return `<article class="card">${visual}<div><p class="meta"><span>${escape(labels[document.kind] || 'Tài liệu')}</span> ${escape(facts)}</p><h2><a href="/document/${encodeURIComponent(document.slug)}">${escape(document.title)}</a></h2>${authors ? `<p class="author">${escape(authors)}</p>` : ''}${document.description ? `<p class="description">${escape(document.description)}</p>` : ''}</div>${arrow}</article>`;
   };
   const render = () => {
