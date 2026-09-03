@@ -18,6 +18,7 @@ const collections = [
   { id: "olympiads", kind: "paper", level: "olympiads", title: "Kho đề Olympic Vật lý" },
   { id: "magazines", kind: "magazine", level: "all", title: "Tạp chí" },
 ];
+const mixedLanguageCollections = new Set(["materials-pho", "magazines"]);
 const competitionLabels = {
   ipho: 'Olympic Vật lý Quốc tế (IPhO)', apho: 'Olympic Vật lý Châu Á (APhO)', eupho: 'Olympic Vật lý Châu Âu (EuPhO)',
   nbpho: 'Olympic Vật lý Bắc Âu–Baltic (NbPhO)', rmph: 'Kỳ thi Vật lý Bậc thầy Romania (RMPh)',
@@ -67,6 +68,9 @@ const documents = [];
 for (const collection of collections) {
   const manifest = JSON.parse(await readFile(path.join(physicsRoot, "catalog", `${collection.id}.json`), "utf8"));
   for (const [index, item] of manifest.items.entries()) {
+    if (mixedLanguageCollections.has(collection.id) && !["en", "vi"].includes(item.language)) {
+      throw new Error(`${collection.id} needs an explicit en or vi language: ${item.file}`);
+    }
     let slug = slugify(item.title.replace(/\s+/g, " "));
     if (usedSlugs.has(slug)) slug = `${slug}-${collection.id}`;
     if (usedSlugs.has(slug)) slug = `${slug}-${index + 1}`;
