@@ -21,7 +21,7 @@ const collections = [
 const competitionLabels = {
   ipho: 'Olympic Vật lý Quốc tế (IPhO)', apho: 'Olympic Vật lý Châu Á (APhO)', eupho: 'Olympic Vật lý Châu Âu (EuPhO)',
   nbpho: 'Olympic Vật lý Bắc Âu–Baltic (NbPhO)', rmph: 'Kỳ thi Vật lý Bậc thầy Romania (RMPh)',
-  vpho: 'Olympic Vật lý Việt Nam (VPhO)', inpho: 'Olympic Vật lý Ấn Độ (InPhO)', izho: 'Bộ sưu tập IZhO',
+  vpho: 'Olympic Vật lý Việt Nam (VPhO)', inpho: 'Olympic Vật lý Ấn Độ (InPhO)', izho: 'Olympic Vật lý Quốc tế Zhautykov (IZhO)',
   hkpho: 'Olympic Vật lý Hồng Kông (HKPhO)', usapho: 'Olympic Vật lý Hoa Kỳ (USAPhO)', fma: 'Olympic Vật lý F=ma (Hoa Kỳ)',
   fyziklani: 'Cuộc thi Fyziklani', brawl: 'Physics Brawl Online', rupho: 'Olympic Vật lý Nga (RuPhO)',
   opho: 'Olympic Vật lý Mở (OPhO)', ppdrpho: 'Olympic Vật lý PPDRPhO',

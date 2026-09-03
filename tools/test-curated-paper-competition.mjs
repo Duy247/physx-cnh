@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const snapshot = JSON.parse(await readFile(path.join(root, 'physics', 'catalog', 'public-snapshot.json'), 'utf8'));
 const expected = {
-  'IZhO Vật lý và Đáp án — 2010-2023': ['izho', 'Bộ sưu tập IZhO'],
+  'IZhO Vật lý và Đáp án — 2010-2023': ['izho', 'Olympic Vật lý Quốc tế Zhautykov (IZhO)'],
   'HKPhO và Đáp án — 2004-2016': ['hkpho', 'Olympic Vật lý Hồng Kông (HKPhO)'],
   'USAPhO và Đáp án — 2014-2024': ['usapho', 'Olympic Vật lý Hoa Kỳ (USAPhO)'],
   'F=ma và Đáp án — 2011-2019': ['fma', 'Olympic Vật lý F=ma (Hoa Kỳ)'],
