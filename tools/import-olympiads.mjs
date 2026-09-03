@@ -104,7 +104,7 @@ function toItem(candidate) {
   const meta = documentMeta(relative);
   return {
     title: `${competitionLabel(competition)} ${year} — ${displaySuffix(meta)}`,
-    author: '', file, description: provider === 'olimpicos' ? 'Alternate source' : '', source: provider === 'olimpicos' ? `Olimpicos archive: ${relative}` : `PhOxiv archive: ${relative}`,
+    author: '', file, description: provider === 'olimpicos' ? 'Nguồn tham khảo khác' : '', source: provider === 'olimpicos' ? `Olimpicos archive: ${relative}` : `PhOxiv archive: ${relative}`,
     language: 'en', competition, year, role: meta.role,
     ...(meta.paperType ? { paperType: meta.paperType } : {}),
     ...(meta.scope ? { scope: meta.scope } : {}),
