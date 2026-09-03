@@ -208,15 +208,17 @@ if (host) {
         northWorld.set(0,1.72,0); earthSurface.localToWorld(northWorld); northProjected.copy(northWorld).project(camera);
         const northY=(-northProjected.y*.5+.5)*height;
         const railY=Math.max(compact?192:205,northY-(compact?10:18));
+        const nationalRailY=railY+(compact?48:56);
         mapMarkers.forEach((marker,index)=>{
           const label=geoLabels[index]; if(!label)return;
           marker.getWorldPosition(mapWorld); mapProjected.copy(mapWorld).project(camera);
           const x=(mapProjected.x*.5+.5)*width,y=(-mapProjected.y*.5+.5)*height;
           let offsetX,offsetY;
           // The three national labels share the IPhO tour's top rail. Give them
-          // small fixed lanes so the nearby markers retain separate callouts.
+          // own lower rail and small fixed lanes so the nearby markers retain
+          // separate callouts without competing with the active IPhO label.
           offsetX=index<3?nationalRailSlots[index]:0;
-          offsetY=railY-y;
+          offsetY=(index<3?nationalRailY:railY)-y;
           const text=label.querySelector('b');
           const halfWidth=Math.max(text?.offsetWidth||64,64)/2,halfHeight=Math.max(text?.offsetHeight||24,24)/2;
           const edge=compact?7:12;

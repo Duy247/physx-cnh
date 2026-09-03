@@ -68,6 +68,7 @@ test('physics label anchor dots remain tied to projected satellites', async ({ p
     expect(leaderLength).toBeLessThan(leaderDistance);
   });
   expect(Math.max(...nationalLabelLayout.map(({ labelY }) => labelY)) - Math.min(...nationalLabelLayout.map(({ labelY }) => labelY))).toBeLessThan(1.5);
+  expect(Math.min(...nationalLabelLayout.map(({ labelY }) => labelY))).toBeGreaterThan(activeCityLayout[0].labelY);
   const clearanceRatios = await labels.evaluateAll(nodes => nodes.map(node => (
     Math.hypot(Number(node.dataset.labelX) - Number(node.dataset.anchorX), Number(node.dataset.labelY) - Number(node.dataset.anchorY))
     / Number(node.dataset.baseDistance)
