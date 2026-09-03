@@ -33,7 +33,8 @@
   const paperDocuments = documents.filter((document) => document.kind === 'paper' && document.competition && document.year);
   const addOptions = (select, values) => values.forEach(([value, text]) => select?.insertAdjacentHTML('beforeend', `<option value="${escape(value)}">${escape(text)}</option>`));
   addOptions(competitionSelect, [...new Map(paperDocuments.map((document) => [document.competition, document.competitionLabel || document.competition])).entries()].sort((left, right) => left[1].localeCompare(right[1], 'vi')));
-  addOptions(yearSelect, [...new Set(paperDocuments.map((document) => String(document.year)))].sort((left, right) => (right === 'Collection') - (left === 'Collection') || Number(right) - Number(left)).map((year) => [year, year]));
+  const yearLabel = (year) => year === 'Collection' ? 'Tuyển tập' : year;
+  addOptions(yearSelect, [...new Set(paperDocuments.map((document) => String(document.year)))].sort((left, right) => (right === 'Collection') - (left === 'Collection') || Number(right) - Number(left)).map((year) => [year, yearLabel(year)]));
   if (competitionSelect && params.get('competition')) competitionSelect.value = params.get('competition');
   if (yearSelect && params.get('year')) yearSelect.value = params.get('year');
   const addedDate = (value) => value ? new Intl.DateTimeFormat('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value}T00:00:00Z`)) : '';
@@ -76,7 +77,7 @@
     const page = results.slice(0, visible);
     if (current.kind === 'paper') {
       const groups = new Map();
-      page.forEach((document) => { const label = `${document.competitionLabel || 'Khác'} · ${document.year || 'Collection'}`; groups.set(label, [...(groups.get(label) || []), document]); });
+      page.forEach((document) => { const label = `${document.competitionLabel || 'Khác'} · ${yearLabel(document.year || 'Collection')}`; groups.set(label, [...(groups.get(label) || []), document]); });
       grid.innerHTML = [...groups].map(([label, groupedDocuments]) => `<section class="paperGroup"><h2>${escape(label)}</h2>${groupedDocuments.map(card).join('')}</section>`).join('');
     } else grid.innerHTML = page.map(card).join('');
     count.textContent = String(results.length);

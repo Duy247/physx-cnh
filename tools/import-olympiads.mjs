@@ -21,11 +21,13 @@ const labels = {
   sjpo: 'Singapore Junior Physics Olympiad (SJPO)', spho: 'Singapore Physics Olympiad (SPhO)', spot: 'Singapore Physics Olympiad Training',
   upho: 'Ukraine Physics Olympiad (UPhO)', usapho: 'USA Physics Olympiad (USAPhO)', usatst: 'USA Physics Team Selection Test',
   wopho: 'World Open Physics Olympiad (WOPhO)', twpho: 'Taiwan Physics Olympiad', twtst: 'Taiwan Team Selection Test',
+  rupho: 'Russian Physics Olympiad (RuPhO)',
 };
 
 const roleLabels = { problem: 'Problem', paper: 'Paper', solution: 'Solution', marking: 'Marking scheme', answer: 'Answer sheet', results: 'Results', reference: 'Reference', guidance: 'Guide', document: 'Document' };
 const paperTypeLabels = { theoretical: 'Theoretical', experimental: 'Experimental' };
 const competitionLabel = (id) => labels[id] || id.toUpperCase();
+const normalizeCompetition = (id) => ({ 'rupho-w': 'rupho', 'rupho-x': 'rupho', 'rupho-y': 'rupho' }[id] || id);
 
 async function walk(directory) {
   const files = [];
@@ -127,14 +129,14 @@ async function main() {
   const candidates = [];
   for (const absolute of await walk(importedRoot)) {
     const relative = path.relative(importedRoot, absolute).split(path.sep).join('/');
-    candidates.push({ absolute, relative, file: `materials/cdn.phoxiv.org/olympiads/${relative}`, competition: relative.split('/')[0], provider: 'phoxiv' });
+    candidates.push({ absolute, relative, file: `materials/cdn.phoxiv.org/olympiads/${relative}`, competition: normalizeCompetition(relative.split('/')[0]), provider: 'phoxiv' });
   }
   const olympicosDirectories = (await readdir(path.join(physicsRoot, 'materials'), { withFileTypes: true })).filter((entry) => entry.isDirectory() && entry.name.endsWith('.olimpicos.net'));
   for (const directory of olympicosDirectories) {
     const absoluteRoot = path.join(physicsRoot, 'materials', directory.name);
     for (const absolute of await walk(absoluteRoot)) {
       const relative = path.relative(absoluteRoot, absolute).split(path.sep).join('/');
-      candidates.push({ absolute, relative, file: `materials/${directory.name}/${relative}`, competition: directory.name.split('.')[0], provider: 'olimpicos' });
+      candidates.push({ absolute, relative, file: `materials/${directory.name}/${relative}`, competition: normalizeCompetition(directory.name.split('.')[0]), provider: 'olimpicos' });
     }
   }
   const suppressedFiles = await duplicateAudit();

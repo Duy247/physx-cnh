@@ -33,7 +33,6 @@ const competitionLabels = {
   upho: 'Olympic Vật lý Toàn Ukraina (UPhO)', sjpo: 'Olympic Vật lý Trẻ Singapore (SJPO)',
   spho: 'Olympic Vật lý Singapore (SPhO)', spot: 'Kỳ thi tuyển chọn đội tuyển Olympic Vật lý Singapore (SPOT)',
   fyziklani: 'Cuộc thi Fyziklani', brawl: 'Cuộc thi Physics Brawl Online', rupho: 'Olympic Vật lý Nga (RuPhO)',
-  'rupho-w': 'Road to IPhO — Bảng W', 'rupho-x': 'Road to IPhO — Bảng X', 'rupho-y': 'Road to IPhO — Bảng Y',
   opho: 'Olympic Vật lý Trực tuyến (OPhO)', ortvay: 'Cuộc thi Vật lý Ortvay Rudolf', ppdrpho: 'Olympic Vật lý PPDRPhO',
   'olympic-30-4': 'Olympic 30–4', 'olympic-north': 'Olympic DH&ĐB Bắc Bộ', hsgso: 'Olympic Chuyên KHTN',
   'vietnam-student-olympiad': 'Olympic Vật lý Sinh viên Toàn quốc', 'vietnam-national': 'Kỳ thi HSG Quốc gia',
