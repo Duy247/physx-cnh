@@ -55,6 +55,19 @@ test('physics label anchor dots remain tied to projected satellites', async ({ p
   expect(activeCityLayout[0].leaderLength).toBeLessThan(Math.hypot(activeCityLayout[0].labelX-activeCityLayout[0].anchorX,activeCityLayout[0].labelY-activeCityLayout[0].anchorY));
   await expect.poll(async()=>scene.getAttribute('data-active-ipho-year'),{timeout:7000}).not.toBe(firstTourYear);
   await expect(mapLabels.first()).toHaveAttribute('style', /--leader-length/);
+  const nationalLabelLayout = await mapLabels.evaluateAll(nodes => nodes.slice(0, 3).map(node => ({
+    anchorX: Number(node.dataset.anchorX),
+    anchorY: Number(node.dataset.anchorY),
+    labelX: Number(node.dataset.labelX),
+    labelY: Number(node.dataset.labelY),
+    leaderLength: parseFloat(node.style.getPropertyValue('--leader-length')),
+  })));
+  nationalLabelLayout.forEach(({ anchorX, anchorY, labelX, labelY, leaderLength }) => {
+    const leaderDistance = Math.hypot(labelX - anchorX, labelY - anchorY);
+    expect(labelY).toBeLessThan(anchorY);
+    expect(leaderLength).toBeLessThan(leaderDistance);
+  });
+  expect(Math.max(...nationalLabelLayout.map(({ labelY }) => labelY)) - Math.min(...nationalLabelLayout.map(({ labelY }) => labelY))).toBeLessThan(1.5);
   const clearanceRatios = await labels.evaluateAll(nodes => nodes.map(node => (
     Math.hypot(Number(node.dataset.labelX) - Number(node.dataset.anchorX), Number(node.dataset.labelY) - Number(node.dataset.anchorY))
     / Number(node.dataset.baseDistance)

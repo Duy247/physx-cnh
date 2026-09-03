@@ -203,9 +203,7 @@ if (host) {
       const mapProjected=new THREE.Vector3(),mapWorld=new THREE.Vector3(),earthWorld=new THREE.Vector3(),northWorld=new THREE.Vector3(),northProjected=new THREE.Vector3(),toCamera=new THREE.Vector3(),surfaceNormal=new THREE.Vector3();
       projectors.push(()=>{
         const width=host.clientWidth,height=host.clientHeight,compact=width<600;
-        const offsets=compact
-          ?[[-64,26],[72,-52],[74,48]]
-          :[[-92,30],[108,-66],[112,62]];
+        const nationalRailSlots=compact?[-54,0,54]:[-88,0,88];
         earthSurface.getWorldPosition(earthWorld);
         northWorld.set(0,1.72,0); earthSurface.localToWorld(northWorld); northProjected.copy(northWorld).project(camera);
         const northY=(-northProjected.y*.5+.5)*height;
@@ -215,11 +213,10 @@ if (host) {
           marker.getWorldPosition(mapWorld); mapProjected.copy(mapWorld).project(camera);
           const x=(mapProjected.x*.5+.5)*width,y=(-mapProjected.y*.5+.5)*height;
           let offsetX,offsetY;
-          if(index<3){
-            [offsetX,offsetY]=offsets[index];
-          }else{
-            offsetX=0; offsetY=railY-y;
-          }
+          // The three national labels share the IPhO tour's top rail. Give them
+          // small fixed lanes so the nearby markers retain separate callouts.
+          offsetX=index<3?nationalRailSlots[index]:0;
+          offsetY=railY-y;
           const text=label.querySelector('b');
           const halfWidth=Math.max(text?.offsetWidth||64,64)/2,halfHeight=Math.max(text?.offsetHeight||24,24)/2;
           const edge=compact?7:12;
