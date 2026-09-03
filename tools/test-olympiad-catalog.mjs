@@ -30,6 +30,8 @@ if (!audit.reviewCandidates.every((match) => match.similarity >= audit.policy.re
 
 const publicOlympiads = snapshot.documents.filter((document) => document.collectionId === 'olympiads');
 if (publicOlympiads.some((document) => document.language !== 'en')) fail('Olympiad language metadata must not default to Vietnamese.');
+if (publicOlympiads.some((document) => /\.pdf$/i.test(document.description || ''))) fail('Olympiad cards must not expose PDF filenames.');
+if (publicOlympiads.filter((document) => document.source.startsWith('Olimpicos archive:')).some((document) => document.description !== 'Alternate source')) fail('Olimpicos records must be marked as alternate sources.');
 for (const document of publicOlympiads) await access(path.join(root, 'assets', 'v2', 'covers', `${document.slug}.webp`));
 
 console.log(`Olympiad catalog checks passed: ${publicOlympiads.length} public documents, ${audit.matches.length} verified duplicate sets, ${audit.reviewCandidates.length} review candidates.`);
