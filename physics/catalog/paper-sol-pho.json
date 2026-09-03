@@ -177,7 +177,7 @@
       "file": "materials/IZhO-10-23.pdf",
       "description": "",
       "source": "",
-      "competition": "paper-collection",
+      "competition": "izho",
       "year": "Collection",
       "role": "solution"
     },
@@ -187,7 +187,7 @@
       "file": "materials/HKPhO-04-16.pdf",
       "description": "",
       "source": "",
-      "competition": "paper-collection",
+      "competition": "hkpho",
       "year": "Collection",
       "role": "solution"
     },
@@ -197,7 +197,7 @@
       "file": "materials/USAPhO-14-24.pdf",
       "description": "",
       "source": "",
-      "competition": "paper-collection",
+      "competition": "usapho",
       "year": "Collection",
       "role": "solution"
     },
@@ -207,7 +207,7 @@
       "file": "materials/F=ma.pdf",
       "description": "",
       "source": "",
-      "competition": "paper-collection",
+      "competition": "fma",
       "year": "Collection",
       "role": "solution"
     },
@@ -217,7 +217,7 @@
       "file": "materials/F=ma-20-23.pdf",
       "description": "",
       "source": "",
-      "competition": "paper-collection",
+      "competition": "fma",
       "year": "Collection",
       "role": "solution"
     },
@@ -227,7 +227,7 @@
       "file": "materials/fyziklani-18-23.pdf",
       "description": "",
       "source": "",
-      "competition": "paper-collection",
+      "competition": "fyziklani",
       "year": "Collection",
       "role": "document"
     },
@@ -237,7 +237,7 @@
       "file": "materials/physicsbrawl-12-23.pdf",
       "description": "",
       "source": "",
-      "competition": "paper-collection",
+      "competition": "brawl",
       "year": "Collection",
       "role": "document"
     }

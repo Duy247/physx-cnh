@@ -6,6 +6,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const manifestPath = path.join(root, 'physics', 'catalog', 'paper-sol-pho.json');
 const labels = [
   [/vpho/i, 'vpho'], [/rupho/i, 'rupho'], [/inpho/i, 'inpho'], [/opho/i, 'opho'], [/ppdr/i, 'ppdrpho'],
+  [/izho/i, 'izho'], [/hkpho/i, 'hkpho'], [/usapho/i, 'usapho'], [/f=ma/i, 'fma'], [/fyziklani/i, 'fyziklani'], [/physics brawl/i, 'brawl'],
   [/30-4/i, 'olympic-30-4'], [/dh&đb|bắc bộ/i, 'olympic-north'], [/khtn/i, 'hsgso'], [/sinh viên/i, 'vietnam-student-olympiad'], [/hsg qg/i, 'vietnam-national'],
 ];
 const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));

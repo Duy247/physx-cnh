@@ -18,7 +18,16 @@ const collections = [
   { id: "olympiads", kind: "paper", level: "olympiads", title: "Kho đề Olympic Vật lý" },
   { id: "magazines", kind: "magazine", level: "all", title: "Tạp chí" },
 ];
-const competitionLabels = { ipho: 'International Physics Olympiad (IPhO)', apho: 'Asian Physics Olympiad (APhO)', eupho: 'European Physics Olympiad (EuPhO)', nbpho: 'Nordic-Baltic Physics Olympiad (NbPhO)', rmph: 'Romanian Master of Physics (RMPh)' };
+const competitionLabels = {
+  ipho: 'Olympic Vật lý Quốc tế (IPhO)', apho: 'Olympic Vật lý Châu Á (APhO)', eupho: 'Olympic Vật lý Châu Âu (EuPhO)',
+  nbpho: 'Olympic Vật lý Bắc Âu–Baltic (NbPhO)', rmph: 'Kỳ thi Vật lý Bậc thầy Romania (RMPh)',
+  vpho: 'Olympic Vật lý Việt Nam (VPhO)', inpho: 'Olympic Vật lý Ấn Độ (InPhO)', izho: 'Bộ sưu tập IZhO',
+  hkpho: 'Olympic Vật lý Hồng Kông (HKPhO)', usapho: 'Olympic Vật lý Hoa Kỳ (USAPhO)', fma: 'Olympic Vật lý F=ma (Hoa Kỳ)',
+  fyziklani: 'Cuộc thi Fyziklani', brawl: 'Physics Brawl Online', rupho: 'Olympic Vật lý Nga (RuPhO)',
+  opho: 'Olympic Vật lý Mở (OPhO)', ppdrpho: 'Olympic Vật lý PPDRPhO',
+  'olympic-30-4': 'Olympic 30–4', 'olympic-north': 'Olympic DH&ĐB Bắc Bộ', hsgso: 'Olympic Chuyên KHTN',
+  'vietnam-student-olympiad': 'Olympic Vật lý Sinh viên Toàn quốc', 'vietnam-national': 'Kỳ thi HSG Quốc gia',
+};
 
 function slugify(value) { return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/gi, "d").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 72) || "tai-lieu"; }
 function trackedFiles() {
