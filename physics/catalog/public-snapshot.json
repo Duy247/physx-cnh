@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-03T03:29:41.693Z",
+  "generatedAt": "2026-09-03T06:32:25.288Z",
   "source": "Duy247/physx-cnh",
   "counts": {
-    "published": 3018,
-    "pdf": 3018
+    "published": 3017,
+    "pdf": 3017
   },
   "collections": [
     {
@@ -5667,43 +5667,6 @@
     },
     {
       "id": "paper-sol-pho:005",
-      "slug": "thi-thu-hsg-qg-2015",
-      "title": "Thi thử HSG QG 2015",
-      "authors": [
-        "Nguyễn Ngọc Tuấn\naka tuanphysics"
-      ],
-      "description": "",
-      "source": "",
-      "collectionId": "paper-sol-pho",
-      "collectionTitle": "Đề thi và đáp án",
-      "kind": "paper",
-      "level": "pho",
-      "language": "vi",
-      "format": "pdf",
-      "pages": 8,
-      "addedAt": "2024-09-01",
-      "legacy": false,
-      "status": "published",
-      "file": {
-        "path": "materials/thi_thu_hsg_qg_2015.pdf",
-        "bytes": 2112242,
-        "mimeType": "application/pdf"
-      },
-      "cover": "/assets/v2/covers/thi-thu-hsg-qg-2015.webp",
-      "delivery": {
-        "provider": "hostinger"
-      },
-      "competition": "vietnam-national",
-      "competitionLabel": "Kỳ thi HSG Quốc gia",
-      "year": 2015,
-      "role": "document",
-      "problemNumber": null,
-      "paperType": null,
-      "scope": null,
-      "coverVersion": "olympiad-metadata-v2"
-    },
-    {
-      "id": "paper-sol-pho:006",
       "slug": "vpho-va-dap-an-2010-2011-2012-2013",
       "title": "VPhO và đáp án — 2010,2011,2012,2013",
       "authors": [],
@@ -5738,7 +5701,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:007",
+      "id": "paper-sol-pho:006",
       "slug": "vpho-va-dap-an-2014-2015-2016-2017",
       "title": "VPhO và đáp án — 2014,2015,2016,2017",
       "authors": [],
@@ -5773,7 +5736,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:008",
+      "id": "paper-sol-pho:007",
       "slug": "vpho-va-dap-an-sach-2001-2016",
       "title": "VPhO và đáp án (Sách) — 2001-2016",
       "authors": [
@@ -5810,7 +5773,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:009",
+      "id": "paper-sol-pho:008",
       "slug": "vpho-va-dap-an-2018-2019-2020",
       "title": "VPhO và đáp án — 2018,2019,2020",
       "authors": [],
@@ -5845,7 +5808,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:010",
+      "id": "paper-sol-pho:009",
       "slug": "vpho-va-dap-an-2021-2022-2023",
       "title": "VPhO và đáp án — 2021,2022,2023",
       "authors": [],
@@ -5880,7 +5843,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:011",
+      "id": "paper-sol-pho:010",
       "slug": "vpho-tst-va-dap-an-2011-2016",
       "title": "VPhO,TST và đáp án — 2011-2016",
       "authors": [],
@@ -5915,7 +5878,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:012",
+      "id": "paper-sol-pho:011",
       "slug": "loi-giai-vpho-2018-19-20-22-23-24",
       "title": "Lời giải VPhO — 2018,19,20,22,23,24",
       "authors": [
@@ -5952,7 +5915,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:013",
+      "id": "paper-sol-pho:012",
       "slug": "rupho-2005-2017",
       "title": "RuPhO 2005-2017",
       "authors": [
@@ -5989,7 +5952,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:014",
+      "id": "paper-sol-pho:013",
       "slug": "dap-an-inpho-2006-09-17-19-20-23-24",
       "title": "Đáp án InPhO — 2006-09,17,19,20,23,24",
       "authors": [],
@@ -6024,7 +5987,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:015",
+      "id": "paper-sol-pho:014",
       "slug": "opho-va-dap-an-2020-21-22-23",
       "title": "OPhO và Đáp án — 2020,21,22,23",
       "authors": [],
@@ -6059,7 +6022,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:016",
+      "id": "paper-sol-pho:015",
       "slug": "ppdrpho-va-dap-an-2005-2017",
       "title": "PPDRPhO và Đáp án — 2005-2017",
       "authors": [],
@@ -6094,7 +6057,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:017",
+      "id": "paper-sol-pho:016",
       "slug": "ppdrpho-va-dap-an-2018-2024",
       "title": "PPDRPhO và Đáp án — 2018-2024",
       "authors": [],
@@ -6129,7 +6092,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:018",
+      "id": "paper-sol-pho:017",
       "slug": "izho-vat-ly-va-dap-an-2010-2023",
       "title": "IZhO Vật lý và Đáp án — 2010-2023",
       "authors": [],
@@ -6164,7 +6127,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:019",
+      "id": "paper-sol-pho:018",
       "slug": "hkpho-va-dap-an-2004-2016",
       "title": "HKPhO và Đáp án — 2004-2016",
       "authors": [],
@@ -6199,7 +6162,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:020",
+      "id": "paper-sol-pho:019",
       "slug": "usapho-va-dap-an-2014-2024",
       "title": "USAPhO và Đáp án — 2014-2024",
       "authors": [],
@@ -6234,7 +6197,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:021",
+      "id": "paper-sol-pho:020",
       "slug": "f-ma-va-dap-an-2011-2019",
       "title": "F=ma và Đáp án — 2011-2019",
       "authors": [],
@@ -6269,7 +6232,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:022",
+      "id": "paper-sol-pho:021",
       "slug": "f-ma-va-dap-an-2020-2024",
       "title": "F=ma và Đáp án — 2020-2024",
       "authors": [],
@@ -6304,7 +6267,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:023",
+      "id": "paper-sol-pho:022",
       "slug": "fyziklani-2018-2023",
       "title": "Fyziklani — 2018-2023",
       "authors": [],
@@ -6339,7 +6302,7 @@
       "coverVersion": "olympiad-metadata-v2"
     },
     {
-      "id": "paper-sol-pho:024",
+      "id": "paper-sol-pho:023",
       "slug": "physics-brawl-online-2012-2023",
       "title": "Physics Brawl Online — 2012-2023",
       "authors": [],

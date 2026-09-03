@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-03T03:29:41.692Z",
+  "generatedAt": "2026-09-03T06:32:25.287Z",
   "counts": {
     "totalPdf": 3609,
-    "publishedPdf": 3018,
-    "draftPdf": 591
+    "publishedPdf": 3017,
+    "draftPdf": 592
   },
   "drafts": [
     {
@@ -6503,6 +6503,17 @@
       "file": {
         "path": "materials/rmph.olimpicos.net/pdf/RMPh_2021_S4.pdf",
         "bytes": 597481,
+        "mimeType": "application/pdf"
+      },
+      "status": "draft",
+      "reason": "uncataloged"
+    },
+    {
+      "id": "draft:materials-thi-thu-hsg-qg-2015",
+      "title": "thi thu hsg qg 2015",
+      "file": {
+        "path": "materials/thi_thu_hsg_qg_2015.pdf",
+        "bytes": 2112242,
         "mimeType": "application/pdf"
       },
       "status": "draft",
