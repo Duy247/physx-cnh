@@ -63,7 +63,7 @@ for (const collection of collections) {
       title: item.title.replace(/\r?\n/g, " — "), authors: item.author ? [item.author] : [],
       description: item.description || "", source: item.source || "", collectionId: collection.id,
       collectionTitle: collection.title, kind: collection.kind, level: collection.level,
-      language: collection.id === "books-vpho-en" ? "en" : "vi", format: extension === ".pdf" ? "pdf" : "html",
+      language: item.language || (collection.id === "books-vpho-en" || collection.id === "olympiads" ? "en" : "vi"), format: extension === ".pdf" ? "pdf" : "html",
       pages: Number.isInteger(prepared.pages) ? prepared.pages : null, addedAt: prepared.addedAt || null,
       legacy: item.legacy === true, status: "published",
       file: { path: item.file, bytes, mimeType: extension === ".pdf" ? "application/pdf" : "text/html" },
@@ -74,6 +74,9 @@ for (const collection of collections) {
       year: item.year ?? null,
       role: item.role || null,
       problemNumber: item.problemNumber ?? null,
+      paperType: item.paperType || null,
+      scope: item.scope || null,
+      coverVersion: item.competition ? "olympiad-metadata-v2" : null,
     });
   }
 }

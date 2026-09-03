@@ -103,6 +103,10 @@ final class CatalogSnapshot
             return null;
         }
         $relative = '/assets/v2/covers/' . $slug . '.webp';
-        return is_file($this->projectRoot . $relative) ? $relative : null;
+        if (!is_file($this->projectRoot . $relative)) {
+            return null;
+        }
+        $version = (string) ($document['coverVersion'] ?? '');
+        return $version !== '' && preg_match('/^[a-z0-9-]+$/', $version) ? $relative . '?v=' . $version : $relative;
     }
 }

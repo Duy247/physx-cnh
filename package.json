@@ -7,6 +7,7 @@
     "catalog:metadata": "python tools/generate-document-metadata.py && node tools/catalog-inventory.mjs",
     "catalog:refresh": "node tools/catalog-inventory.mjs && python tools/generate-document-metadata.py && node tools/catalog-inventory.mjs",
     "olympiads:import": "node tools/import-olympiads.mjs && node tools/catalog-inventory.mjs",
+    "test:olympiads": "node tools/test-olympiad-catalog.mjs",
     "catalog:papers": "node tools/backfill-paper-competition.mjs && node tools/catalog-inventory.mjs",
     "graphs:generate": "node tools/generate-graph-data.mjs",
     "covers:generate": "python tools/generate-pdf-covers.py",

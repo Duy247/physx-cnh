@@ -7,7 +7,8 @@ foreach ($documents as $document) {
         'description' => $document['description'], 'kind' => $document['kind'], 'language' => $document['language'],
         'pages' => $document['pages'], 'addedAt' => $document['addedAt'], 'cover' => $catalogService->coverUrl($document),
         'competition' => $document['competition'] ?? null, 'competitionLabel' => $document['competitionLabel'] ?? null,
-        'year' => $document['year'] ?? null, 'role' => $document['role'] ?? null, 'problemNumber' => $document['problemNumber'] ?? null,
+        'year' => $document['year'] ?? null, 'role' => $document['role'] ?? null, 'paperType' => $document['paperType'] ?? null,
+        'scope' => $document['scope'] ?? null, 'problemNumber' => $document['problemNumber'] ?? null,
     ];
 }
 $initialCount = count($initialDocuments);
