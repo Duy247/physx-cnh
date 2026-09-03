@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "generatedAt": "2026-08-24T17:43:27.869Z",
+  "generatedAt": "2026-09-03T01:16:47.210Z",
   "source": "Duy247/physx-cnh",
   "counts": {
-    "published": 312,
+    "published": 307,
     "pdf": 307
   },
   "collections": [
@@ -4723,141 +4723,6 @@
     },
     {
       "id": "paper-sol-pho:015",
-      "slug": "ipho-va-dap-an-source-olimpicos",
-      "title": "IPhO và Đáp án — Source : olimpicos",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "paper-sol-pho",
-      "collectionTitle": "Đề thi và đáp án",
-      "kind": "paper",
-      "level": "pho",
-      "language": "vi",
-      "format": "html",
-      "pages": null,
-      "addedAt": "2024-09-01",
-      "legacy": true,
-      "status": "published",
-      "file": {
-        "path": "materials/ipho.olimpicos.net/index.htm",
-        "bytes": 188480,
-        "mimeType": "text/html"
-      },
-      "cover": null,
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "paper-sol-pho:016",
-      "slug": "apho-va-dap-an-source-olimpicos",
-      "title": "APhO và Đáp án — Source : olimpicos",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "paper-sol-pho",
-      "collectionTitle": "Đề thi và đáp án",
-      "kind": "paper",
-      "level": "pho",
-      "language": "vi",
-      "format": "html",
-      "pages": null,
-      "addedAt": "2024-09-01",
-      "legacy": true,
-      "status": "published",
-      "file": {
-        "path": "materials/apho.olimpicos.net/index.htm",
-        "bytes": 53986,
-        "mimeType": "text/html"
-      },
-      "cover": null,
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "paper-sol-pho:017",
-      "slug": "eupho-va-dap-an-source-olimpicos",
-      "title": "EuPhO và Đáp án — Source : olimpicos",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "paper-sol-pho",
-      "collectionTitle": "Đề thi và đáp án",
-      "kind": "paper",
-      "level": "pho",
-      "language": "vi",
-      "format": "html",
-      "pages": null,
-      "addedAt": "2024-09-01",
-      "legacy": true,
-      "status": "published",
-      "file": {
-        "path": "materials/eupho.olimpicos.net/index.htm",
-        "bytes": 14193,
-        "mimeType": "text/html"
-      },
-      "cover": null,
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "paper-sol-pho:018",
-      "slug": "nbpho-va-dap-an-source-olimpicos",
-      "title": "NbPhO và Đáp án — Source : olimpicos",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "paper-sol-pho",
-      "collectionTitle": "Đề thi và đáp án",
-      "kind": "paper",
-      "level": "pho",
-      "language": "vi",
-      "format": "html",
-      "pages": null,
-      "addedAt": "2024-09-01",
-      "legacy": true,
-      "status": "published",
-      "file": {
-        "path": "materials/nbpho.olimpicos.net/index.htm",
-        "bytes": 114464,
-        "mimeType": "text/html"
-      },
-      "cover": null,
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "paper-sol-pho:019",
-      "slug": "rmph-va-dap-an-source-olimpicos",
-      "title": "RMPh và Đáp án — Source : olimpicos",
-      "authors": [],
-      "description": "",
-      "source": "",
-      "collectionId": "paper-sol-pho",
-      "collectionTitle": "Đề thi và đáp án",
-      "kind": "paper",
-      "level": "pho",
-      "language": "vi",
-      "format": "html",
-      "pages": null,
-      "addedAt": "2024-09-01",
-      "legacy": true,
-      "status": "published",
-      "file": {
-        "path": "materials/rmph.olimpicos.net/index.htm",
-        "bytes": 24925,
-        "mimeType": "text/html"
-      },
-      "cover": null,
-      "delivery": {
-        "provider": "hostinger"
-      }
-    },
-    {
-      "id": "paper-sol-pho:020",
       "slug": "opho-va-dap-an-2020-21-22-23",
       "title": "OPhO và Đáp án — 2020,21,22,23",
       "authors": [],
@@ -4884,7 +4749,7 @@
       }
     },
     {
-      "id": "paper-sol-pho:021",
+      "id": "paper-sol-pho:016",
       "slug": "ppdrpho-va-dap-an-2005-2017",
       "title": "PPDRPhO và Đáp án — 2005-2017",
       "authors": [],
@@ -4911,7 +4776,7 @@
       }
     },
     {
-      "id": "paper-sol-pho:022",
+      "id": "paper-sol-pho:017",
       "slug": "ppdrpho-va-dap-an-2018-2024",
       "title": "PPDRPhO và Đáp án — 2018-2024",
       "authors": [],
@@ -4938,7 +4803,7 @@
       }
     },
     {
-      "id": "paper-sol-pho:023",
+      "id": "paper-sol-pho:018",
       "slug": "izho-vat-ly-va-dap-an-2010-2023",
       "title": "IZhO Vật lý và Đáp án — 2010-2023",
       "authors": [],
@@ -4965,7 +4830,7 @@
       }
     },
     {
-      "id": "paper-sol-pho:024",
+      "id": "paper-sol-pho:019",
       "slug": "hkpho-va-dap-an-2004-2016",
       "title": "HKPhO và Đáp án — 2004-2016",
       "authors": [],
@@ -4992,7 +4857,7 @@
       }
     },
     {
-      "id": "paper-sol-pho:025",
+      "id": "paper-sol-pho:020",
       "slug": "usapho-va-dap-an-2014-2024",
       "title": "USAPhO và Đáp án — 2014-2024",
       "authors": [],
@@ -5019,7 +4884,7 @@
       }
     },
     {
-      "id": "paper-sol-pho:026",
+      "id": "paper-sol-pho:021",
       "slug": "f-ma-va-dap-an-2011-2019",
       "title": "F=ma và Đáp án — 2011-2019",
       "authors": [],
@@ -5046,7 +4911,7 @@
       }
     },
     {
-      "id": "paper-sol-pho:027",
+      "id": "paper-sol-pho:022",
       "slug": "f-ma-va-dap-an-2020-2024",
       "title": "F=ma và Đáp án — 2020-2024",
       "authors": [],
@@ -5073,7 +4938,7 @@
       }
     },
     {
-      "id": "paper-sol-pho:028",
+      "id": "paper-sol-pho:023",
       "slug": "fyziklani-2018-2023",
       "title": "Fyziklani — 2018-2023",
       "authors": [],
@@ -5100,7 +4965,7 @@
       }
     },
     {
-      "id": "paper-sol-pho:029",
+      "id": "paper-sol-pho:024",
       "slug": "physics-brawl-online-2012-2023",
       "title": "Physics Brawl Online — 2012-2023",
       "authors": [],

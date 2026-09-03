@@ -180,7 +180,7 @@ test('orbit link scopes books and removes redundant kind control', async ({ page
 test('lesson documents are absent and old lesson filters recover to the full library', async ({ page }) => {
   await page.goto('/library?kind=lesson&orbit=1');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Thư viện Vật lý');
-  await expect(page.locator('[data-result-count]')).toContainText('312');
+  await expect(page.locator('[data-result-count]')).toContainText('307');
   await expect(page.locator('[data-kind] option')).toHaveCount(5);
   await expect(page.locator('[data-kind]')).not.toContainText('Bài học');
   await expect(page).not.toHaveURL(/kind=lesson|orbit=1/);

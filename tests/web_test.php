@@ -6,10 +6,10 @@ require_once $root . '/src/Web/CatalogSnapshot.php';
 
 $catalog = new CatalogSnapshot($root . '/physics/catalog/public-snapshot.json', $root);
 $snapshot = $catalog->all();
-check(($snapshot['counts']['published'] ?? 0) === 312, 'Expected 312 public records.');
+check(($snapshot['counts']['published'] ?? 0) === 307, 'Expected 307 public records.');
 check(($snapshot['counts']['pdf'] ?? 0) === 307, 'Expected 307 published PDFs.');
 check(!isset($snapshot['counts']['lesson']), 'Lesson count must not be published.');
-check(count($catalog->documents()) === 312, 'Document array count does not match snapshot.');
+check(count($catalog->documents()) === 307, 'Document array count does not match snapshot.');
 check(count(array_filter($catalog->documents(), static fn (array $document): bool => ($document['kind'] ?? '') === 'lesson')) === 0, 'Lesson documents must not be public.');
 check(count(array_filter($catalog->documents(), static fn (array $document): bool => !preg_match('/^\d{4}-\d{2}-\d{2}$/', (string) ($document['addedAt'] ?? '')))) === 0, 'Every public document needs a prepared addition date.');
 
@@ -32,7 +32,7 @@ check(count(array_filter($pdfs, static fn (array $document): bool => !is_int($do
 $missingCovers = array_filter($pdfs, static fn (array $document): bool => $catalog->coverUrl($document) === null);
 check(count($missingCovers) === 0, 'Every current published PDF should have a cover.');
 
-fwrite(STDOUT, "Web tests passed: 312 records, 307 covers, Hostinger-only delivery.\n");
+fwrite(STDOUT, "Web tests passed: 307 records, 307 covers, Hostinger-only delivery.\n");
 
 function check(bool $condition, string $message): void
 {
