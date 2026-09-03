@@ -16,7 +16,7 @@ const labels = {
   ipho: 'International Physics Olympiad (IPhO)', apho: 'Asian Physics Olympiad (APhO)', eupho: 'European Physics Olympiad (EuPhO)',
   nbpho: 'Nordic-Baltic Physics Olympiad (NbPhO)', rmph: 'Romanian Master of Physics (RMPh)',
   aupho: 'Australian Physics Olympiad (AuPhO)', 'bpho-r1': 'British Physics Olympiad — Round 1', 'bpho-r2': 'British Physics Olympiad — Round 2',
-  'cpho-f': 'Chinese Physics Olympiad — Final', eotvos: 'Eötvös Competition', fma: 'F=ma Contest', gpho: 'German Physics Olympiad (GPhO)',
+  'cpho-f': 'Chinese Physics Olympiad — Final', eotvos: 'Eötvös Competition', fma: 'F=ma Contest', gpho: 'Gulf Physics Olympiad (GPhO)',
   inpho: 'Indian Physics Olympiad (InPhO)', izho: 'Izho Physics Olympiad', kphc: 'Korea Physics High School Competition',
   sjpo: 'Singapore Junior Physics Olympiad (SJPO)', spho: 'Singapore Physics Olympiad (SPhO)', spot: 'Singapore Physics Olympiad Training',
   upho: 'Ukraine Physics Olympiad (UPhO)', usapho: 'USA Physics Olympiad (USAPhO)', usatst: 'USA Physics Team Selection Test',

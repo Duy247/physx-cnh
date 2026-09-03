@@ -8,10 +8,10 @@ const expected = {
   'IZhO Vật lý và Đáp án — 2010-2023': ['izho', 'Olympic Vật lý Quốc tế Zhautykov (IZhO)'],
   'HKPhO và Đáp án — 2004-2016': ['hkpho', 'Olympic Vật lý Hồng Kông (HKPhO)'],
   'USAPhO và Đáp án — 2014-2024': ['usapho', 'Olympic Vật lý Hoa Kỳ (USAPhO)'],
-  'F=ma và Đáp án — 2011-2019': ['fma', 'Olympic Vật lý F=ma (Hoa Kỳ)'],
-  'F=ma và Đáp án — 2020-2024': ['fma', 'Olympic Vật lý F=ma (Hoa Kỳ)'],
+  'F=ma và Đáp án — 2011-2019': ['fma', 'Olympic Vật lý F=ma Hoa Kỳ'],
+  'F=ma và Đáp án — 2020-2024': ['fma', 'Olympic Vật lý F=ma Hoa Kỳ'],
   'Fyziklani — 2018-2023': ['fyziklani', 'Cuộc thi Fyziklani'],
-  'Physics Brawl Online — 2012-2023': ['brawl', 'Physics Brawl Online'],
+  'Physics Brawl Online — 2012-2023': ['brawl', 'Cuộc thi Physics Brawl Online'],
 };
 for (const [title, [competition, label]] of Object.entries(expected)) {
   const document = snapshot.documents.find((item) => item.collectionId === 'paper-sol-pho' && item.title === title);
