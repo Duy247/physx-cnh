@@ -175,6 +175,13 @@
             "file": "books/thinking-practically.pdf",
             "description": "",
             "source": ""
+        },
+                {
+            "title": "Giáo trình điện từ học",
+            "author": "Lưu Thế Vinh",
+            "file": "books/giao_trinh_dien_tu_hoc.pdf",
+            "description": "",
+            "source": ""
         }
     ]
 }
