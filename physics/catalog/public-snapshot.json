@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-03T07:05:12.287Z",
+  "generatedAt": "2026-09-21T14:27:03.137Z",
   "source": "Duy247/physx-cnh",
   "counts": {
-    "published": 3017,
-    "pdf": 3017
+    "published": 3018,
+    "pdf": 3018
   },
   "collections": [
     {
@@ -964,6 +964,43 @@
         "mimeType": "application/pdf"
       },
       "cover": "/assets/v2/covers/thinking-physics.webp",
+      "delivery": {
+        "provider": "hostinger"
+      },
+      "competition": null,
+      "competitionLabel": null,
+      "year": null,
+      "role": null,
+      "problemNumber": null,
+      "paperType": null,
+      "scope": null,
+      "coverVersion": null
+    },
+    {
+      "id": "books-pre-vpho:026",
+      "slug": "giao-trinh-dien-tu-hoc",
+      "title": "Giáo trình điện từ học",
+      "authors": [
+        "Lưu Thế Vinh"
+      ],
+      "description": "",
+      "source": "",
+      "collectionId": "books-pre-vpho",
+      "collectionTitle": "Sách trước Vòng chọn VPhO",
+      "kind": "book",
+      "level": "pre-vpho",
+      "language": "vi",
+      "format": "pdf",
+      "pages": 190,
+      "addedAt": "2026-09-15",
+      "legacy": false,
+      "status": "published",
+      "file": {
+        "path": "library/books-pre-vpho/giao-trinh-dien-tu-hoc.pdf",
+        "bytes": 3569464,
+        "mimeType": "application/pdf"
+      },
+      "cover": "/assets/v2/covers/giao-trinh-dien-tu-hoc.webp",
       "delivery": {
         "provider": "hostinger"
       },

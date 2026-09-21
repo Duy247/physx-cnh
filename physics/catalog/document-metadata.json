@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-03T01:56:00.179932Z",
+  "generatedAt": "2026-09-21T14:27:02.319562Z",
   "documents": {
     "books/cohoc1.pdf": {
       "blob": "36063316ffa4bd744bb6c129b965a00ee809daf0",
@@ -126,6 +126,11 @@
       "blob": "d3a9f2342d356bfd4c8384203112d5ecb2d5f110",
       "pages": 585,
       "addedAt": "2024-09-01"
+    },
+    "library/books-pre-vpho/giao-trinh-dien-tu-hoc.pdf": {
+      "blob": "bca29529b98e532327074866adbe6bfe50bb057e",
+      "pages": 190,
+      "addedAt": "2026-09-15"
     },
     "books/PFIEV/PFIEV-mechanic-1.pdf": {
       "blob": "c636ad4c0d3bcb53ca7fb9163c2ad0286f678787",
