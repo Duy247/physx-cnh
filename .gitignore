@@ -1,0 +1,8 @@
+node_modules/
+.asset-staging/
+test-results/
+playwright-report/
+__pycache__/
+*.pyc
+.env
+.env.*

@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "policy": {
+    "automaticSimilarityThreshold": 0.85,
+    "reviewSimilarityThreshold": 0.75
+  },
+  "matches": [
+    {
+      "competition": "apho",
+      "year": 2000,
+      "category": "problem",
+      "canonicalFile": "materials/cdn.phoxiv.org/olympiads/apho/2000_T.pdf",
+      "suppressedFiles": [
+        "materials/apho.olimpicos.net/pdf/APhO_2000_Q1.pdf",
+        "materials/apho.olimpicos.net/pdf/APhO_2000_Q2.pdf",
+        "materials/apho.olimpicos.net/pdf/APhO_2000_Q3.pdf"
+      ],
+      "similarity": 0.9168,
+      "method": "normalized-pdf-text-sequence-similarity"
+    },
+    {
+      "competition": "apho",
+      "year": 2000,
+      "category": "solution",
+      "canonicalFile": "materials/cdn.phoxiv.org/olympiads/apho/2000_T_S.pdf",
+      "suppressedFiles": [
+        "materials/apho.olimpicos.net/pdf/APhO_2000_S1.pdf",
+        "materials/apho.olimpicos.net/pdf/APhO_2000_S2.pdf",
+        "materials/apho.olimpicos.net/pdf/APhO_2000_S3.pdf"
+      ],
+      "similarity": 0.8872,
+      "method": "normalized-pdf-text-sequence-similarity"
+    },
+    {
+      "competition": "apho",
+      "year": 2005,
+      "category": "problem",
+      "canonicalFile": "materials/cdn.phoxiv.org/olympiads/apho/2005_T.pdf",
+      "suppressedFiles": [
+        "materials/apho.olimpicos.net/pdf/APhO_2005_Q1.pdf",
+        "materials/apho.olimpicos.net/pdf/APhO_2005_Q2.pdf",
+        "materials/apho.olimpicos.net/pdf/APhO_2005_Q3.pdf"
+      ],
+      "similarity": 0.9093,
+      "method": "normalized-pdf-text-sequence-similarity"
+    },
+    {
+      "competition": "apho",
+      "year": 2005,
+      "category": "solution",
+      "canonicalFile": "materials/cdn.phoxiv.org/olympiads/apho/2005_T_S.pdf",
+      "suppressedFiles": [
+        "materials/apho.olimpicos.net/pdf/APhO_2005_S1.pdf",
+        "materials/apho.olimpicos.net/pdf/APhO_2005_S2.pdf",
+        "materials/apho.olimpicos.net/pdf/APhO_2005_S3.pdf"
+      ],
+      "similarity": 1,
+      "method": "normalized-pdf-text-sequence-similarity"
+    },
+    {
+      "competition": "apho",
+      "year": 2009,
+      "category": "problem",
+      "canonicalFile": "materials/cdn.phoxiv.org/olympiads/apho/2009_T.pdf",
+      "suppressedFiles": [
+        "materials/apho.olimpicos.net/pdf/APhO_2009_Q1.pdf",
+        "materials/apho.olimpicos.net/pdf/APhO_2009_Q2.pdf",
+        "materials/apho.olimpicos.net/pdf/APhO_2009_Q3.pdf"
+      ],
+      "similarity": 0.9807,
+      "method": "normalized-pdf-text-sequence-similarity"
+    },
+    {
+      "competition": "eupho",
+      "year": 2017,
+      "category": "problem",
+      "canonicalFile": "materials/cdn.phoxiv.org/olympiads/eupho/2017_T.pdf",
+      "suppressedFiles": [
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2017_Q1.pdf",
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2017_Q2.pdf",
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2017_Q3.pdf"
+      ],
+      "similarity": 0.8824,
+      "method": "normalized-pdf-text-sequence-similarity"
+    },
+    {
+      "competition": "eupho",
+      "year": 2018,
+      "category": "problem",
+      "canonicalFile": "materials/cdn.phoxiv.org/olympiads/eupho/2018_T.pdf",
+      "suppressedFiles": [
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2018_Q1.pdf",
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2018_Q2.pdf",
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2018_Q3.pdf"
+      ],
+      "similarity": 0.9351,
+      "method": "normalized-pdf-text-sequence-similarity"
+    },
+    {
+      "competition": "eupho",
+      "year": 2019,
+      "category": "problem",
+      "canonicalFile": "materials/cdn.phoxiv.org/olympiads/eupho/2019_T.pdf",
+      "suppressedFiles": [
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2019_Q1.pdf",
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2019_Q2.pdf",
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2019_Q3.pdf"
+      ],
+      "similarity": 0.9241,
+      "method": "normalized-pdf-text-sequence-similarity"
+    },
+    {
+      "competition": "eupho",
+      "year": 2021,
+      "category": "problem",
+      "canonicalFile": "materials/cdn.phoxiv.org/olympiads/eupho/2021_T.pdf",
+      "suppressedFiles": [
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2021_Q1.pdf",
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2021_Q2.pdf",
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2021_Q3.pdf"
+      ],
+      "similarity": 0.9287,
+      "method": "normalized-pdf-text-sequence-similarity"
+    }
+  ],
+  "reviewCandidates": [
+    {
+      "competition": "apho",
+      "year": 2002,
+      "category": "problem",
+      "canonicalFile": "materials/cdn.phoxiv.org/olympiads/apho/2002_T.pdf",
+      "suppressedFiles": [
+        "materials/apho.olimpicos.net/pdf/APhO_2002_Q1.pdf",
+        "materials/apho.olimpicos.net/pdf/APhO_2002_Q2.pdf",
+        "materials/apho.olimpicos.net/pdf/APhO_2002_Q3.pdf"
+      ],
+      "similarity": 0.8288,
+      "method": "normalized-pdf-text-sequence-similarity"
+    },
+    {
+      "competition": "apho",
+      "year": 2002,
+      "category": "solution",
+      "canonicalFile": "materials/cdn.phoxiv.org/olympiads/apho/2002_T_S.pdf",
+      "suppressedFiles": [
+        "materials/apho.olimpicos.net/pdf/APhO_2002_S1.pdf",
+        "materials/apho.olimpicos.net/pdf/APhO_2002_S2.pdf",
+        "materials/apho.olimpicos.net/pdf/APhO_2002_S3.pdf"
+      ],
+      "similarity": 0.8389,
+      "method": "normalized-pdf-text-sequence-similarity"
+    },
+    {
+      "competition": "eupho",
+      "year": 2017,
+      "category": "solution",
+      "canonicalFile": "materials/cdn.phoxiv.org/olympiads/eupho/2017_T_S.pdf",
+      "suppressedFiles": [
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2017_S1.pdf",
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2017_S2.pdf",
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2017_S3.pdf"
+      ],
+      "similarity": 0.7707,
+      "method": "normalized-pdf-text-sequence-similarity"
+    },
+    {
+      "competition": "eupho",
+      "year": 2018,
+      "category": "solution",
+      "canonicalFile": "materials/cdn.phoxiv.org/olympiads/eupho/2018_T_S.pdf",
+      "suppressedFiles": [
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2018_S1.pdf",
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2018_S2.pdf",
+        "materials/eupho.olimpicos.net/pdf/EuPhO_2018_S3.pdf"
+      ],
+      "similarity": 0.8386,
+      "method": "normalized-pdf-text-sequence-similarity"
+    },
+    {
+      "competition": "ipho",
+      "year": 2012,
+      "category": "solution",
+      "canonicalFile": "materials/cdn.phoxiv.org/olympiads/ipho/2012_T_S.pdf",
+      "suppressedFiles": [
+        "materials/ipho.olimpicos.net/pdf/IPhO_2012_S1.pdf",
+        "materials/ipho.olimpicos.net/pdf/IPhO_2012_S2.pdf",
+        "materials/ipho.olimpicos.net/pdf/IPhO_2012_S3.pdf",
+        "materials/ipho.olimpicos.net/pdf/IPhO_2012_S4.pdf",
+        "materials/ipho.olimpicos.net/pdf/IPhO_2012_S5.pdf"
+      ],
+      "similarity": 0.7892,
+      "method": "normalized-pdf-text-sequence-similarity"
+    }
+  ]
+}

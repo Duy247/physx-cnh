@@ -263,6 +263,10 @@ function addDocument(CatalogRepository $repository, array $catalogs, string $roo
     $author = optionString($options, 'author') ?? '';
     $description = optionString($options, 'description') ?? '';
     $source = optionString($options, 'source') ?? '';
+    $delivery = optionString($options, 'delivery') ?? 'hostinger';
+    if (!in_array($delivery, ['hostinger', 'vercel-blob'], true)) {
+        throw new RuntimeException('--delivery must be hostinger or vercel-blob.');
+    }
 
     $catalog = null;
     foreach ($catalogs as $candidate) {
@@ -314,6 +318,7 @@ function addDocument(CatalogRepository $repository, array $catalogs, string $roo
         'file' => $relativePath,
         'description' => $description,
         'source' => $source,
+        'delivery' => $delivery,
     ];
     $updatedJson = json_encode($manifest, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR) . PHP_EOL;
 
@@ -382,7 +387,7 @@ function gitFileAtRef(string $root, string $ref, string $path): string
 function decodeManifest(string $json, string $label): array
 {
     $manifest = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
-    if (!is_array($manifest) || ($manifest['version'] ?? null) !== 1 || !isset($manifest['items']) || !is_array($manifest['items'])) {
+    if (!is_array($manifest) || !in_array($manifest['version'] ?? null, [1, 2], true) || !isset($manifest['items']) || !is_array($manifest['items'])) {
         throw new RuntimeException('Invalid catalog manifest: ' . $label);
     }
     return $manifest;
@@ -479,7 +484,7 @@ PhysX-CNH catalog maintenance
 Commands:
   php tools/catalog.php catalogs
   php tools/catalog.php validate [--git-tree HEAD] [--changed-from origin/master]
-  php tools/catalog.php add --catalog ID --pdf FILE --title TITLE [--author NAME] [--description TEXT] [--source TEXT]
+  php tools/catalog.php add --catalog ID --pdf FILE --title TITLE [--author NAME] [--description TEXT] [--source TEXT] [--delivery hostinger|vercel-blob]
 
 TEXT);
 }

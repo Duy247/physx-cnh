@@ -9,6 +9,7 @@ Không sửa PHP, CSS, JavaScript, cấu hình hosting hoặc các PDF đã có 
 - Git.
 - Một tài khoản GitHub và một fork của `Duy247/physx-cnh`.
 - PHP 8.1 trở lên nếu muốn dùng công cụ đăng ký tự động. Nếu không có PHP, có thể sửa JSON thủ công.
+- Node.js 22 trở lên nếu muốn tạo inventory và snapshot công khai.
 - PDF phải nhỏ hơn hoặc bằng 95 MiB, mở được, không đặt mật khẩu và có nguồn/phân phối phù hợp.
 
 ## 2. Clone nhẹ, không tải toàn bộ kho PDF cũ
@@ -86,6 +87,8 @@ Nếu không có PHP, hãy:
 
 Metadata chỉ dùng văn bản thuần, không chèn HTML. Đường dẫn `file` tương đối so với thư mục `physics/` và phân biệt chữ hoa/chữ thường.
 
+Tất cả tài liệu được Hostinger phục vụ trực tiếp; không khai báo nhà cung cấp lưu trữ khác trong manifest.
+
 ## 5. Kiểm tra
 
 Với sparse checkout:
@@ -98,6 +101,14 @@ Với clone đầy đủ:
 
 ```bash
 php tools/catalog.php validate
+```
+
+Maintainer tạo lại snapshot và ảnh bìa còn thiếu bằng:
+
+```bash
+npm install
+npm run catalog:inventory
+python tools/generate-pdf-covers.py
 ```
 
 GitHub sẽ chạy lại toàn bộ kiểm tra khi PR được mở. PR chỉ được merge khi kiểm tra thành công và chủ repository chấp thuận.

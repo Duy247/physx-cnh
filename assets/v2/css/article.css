@@ -1,0 +1,24 @@
+.article { width: min(820px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 80px; }
+.article header { margin-bottom: 38px; padding: clamp(26px, 6vw, 56px); color: var(--paper); background: var(--ink); border-top: 10px solid var(--blue); border-right: 10px solid var(--red); border-bottom: 10px solid var(--yellow); }
+.article header h1 { font-size: clamp(2.5rem, 6vw, 4.8rem); line-height: .96; letter-spacing: -.065em; }
+.article header p:last-child { margin-top: 18px; color: #d3d0c8; line-height: 1.6; }
+.article h2 { margin: 46px 0 15px; padding-bottom: 8px; border-bottom: 3px solid var(--ink); font-size: 1.65rem; letter-spacing: -.035em; }
+.article h3 { margin: 28px 0 10px; font-size: 1.15rem; }
+.article p, .article li { color: #3f3d38; line-height: 1.75; }
+.article p { margin: 12px 0; }
+.article ul, .article ol { margin: 12px 0 18px 24px; }
+.article li { margin: 7px 0; padding-left: 5px; }
+.article a:not(.button) { color: var(--blue); font-weight: 750; text-decoration: underline; text-underline-offset: 3px; }
+.callout { margin: 28px 0; padding: 20px 22px; background: var(--yellow); border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); }
+.callout strong { display: block; margin-bottom: 6px; }
+.steps { display: grid; gap: 13px; margin-top: 22px; counter-reset: step; }
+.step { display: grid; grid-template-columns: 48px 1fr; gap: 15px; padding: 18px; border: 2px solid var(--ink); border-left: 8px solid var(--blue); }
+.step::before { counter-increment: step; content: counter(step, decimal-leading-zero); font: 900 1.1rem/1 var(--font-geist-mono); }
+.step h3 { margin: 0 0 6px; }
+.topicGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 13px; margin-top: 20px; }
+.topicGrid section { padding: 18px; border: 2px solid var(--ink); }
+.topicGrid section:nth-child(3n + 2) { border-top: 8px solid var(--red); }
+.topicGrid section:nth-child(3n) { border-top: 8px solid var(--yellow); }
+.topicGrid section:nth-child(3n + 1) { border-top: 8px solid var(--blue); }
+.topicGrid h3 { margin-top: 0; }
+@media (max-width: 620px) { .topicGrid { grid-template-columns: 1fr; } }

@@ -19,7 +19,7 @@ final class CatalogRepository
     }
 
     /**
-     * @return array<int, array{title: string, author: string, file: string, description: string, source: string, legacy: bool}>
+     * @return array<int, array{title: string, author: string, file: string, description: string, source: string, legacy: bool, delivery: string}>
      */
     public function load(string $manifestPath, bool $requireFiles = true): array
     {
@@ -37,11 +37,11 @@ final class CatalogRepository
         if (
             !is_array($manifest)
             || array_diff(array_keys($manifest), ['version', 'items']) !== []
-            || ($manifest['version'] ?? null) !== 1
+            || !in_array($manifest['version'] ?? null, [1, 2], true)
             || !isset($manifest['items'])
             || !is_array($manifest['items'])
         ) {
-            throw new CatalogException('Manifest must contain version 1 and an items array: ' . $manifestPath);
+            throw new CatalogException('Manifest must contain version 1 or 2 and an items array: ' . $manifestPath);
         }
 
         $items = [];
@@ -50,12 +50,36 @@ final class CatalogRepository
             if (!is_array($rawItem)) {
                 throw new CatalogException($this->itemError($manifestPath, $index, 'must be an object'));
             }
-            $unknownFields = array_diff(array_keys($rawItem), ['title', 'author', 'file', 'description', 'source', 'legacy']);
+            $unknownFields = array_diff(array_keys($rawItem), ['title', 'author', 'file', 'description', 'source', 'language', 'legacy', 'delivery', 'competition', 'year', 'role', 'paperType', 'scope', 'problemNumber']);
             if ($unknownFields !== []) {
                 throw new CatalogException($this->itemError($manifestPath, $index, 'contains unknown field(s): ' . implode(', ', $unknownFields)));
             }
             if (isset($rawItem['legacy']) && !is_bool($rawItem['legacy'])) {
                 throw new CatalogException($this->itemError($manifestPath, $index, 'legacy must be a boolean'));
+            }
+            if (isset($rawItem['delivery']) && !in_array($rawItem['delivery'], ['hostinger', 'vercel-blob'], true)) {
+                throw new CatalogException($this->itemError($manifestPath, $index, 'delivery must be hostinger or vercel-blob'));
+            }
+            if (isset($rawItem['language']) && !in_array($rawItem['language'], ['en', 'vi'], true)) {
+                throw new CatalogException($this->itemError($manifestPath, $index, 'language must be en or vi'));
+            }
+            if (isset($rawItem['competition']) && (!is_string($rawItem['competition']) || preg_match('/^[a-z0-9-]*$/', $rawItem['competition']) !== 1)) {
+                throw new CatalogException($this->itemError($manifestPath, $index, 'competition must be a lowercase identifier'));
+            }
+            if (isset($rawItem['year']) && (!is_int($rawItem['year']) || $rawItem['year'] < 1900 || $rawItem['year'] > 2100) && $rawItem['year'] !== 'Collection') {
+                throw new CatalogException($this->itemError($manifestPath, $index, 'year must be 1900-2100 or Collection'));
+            }
+            if (isset($rawItem['role']) && !in_array($rawItem['role'], ['problem', 'solution', 'marking', 'answer', 'report', 'reference', 'document', 'paper', 'results', 'guidance'], true)) {
+                throw new CatalogException($this->itemError($manifestPath, $index, 'role is invalid'));
+            }
+            if (isset($rawItem['paperType']) && !in_array($rawItem['paperType'], ['theoretical', 'experimental'], true)) {
+                throw new CatalogException($this->itemError($manifestPath, $index, 'paperType is invalid'));
+            }
+            if (isset($rawItem['scope']) && !in_array($rawItem['scope'], ['problem', 'all-problems'], true)) {
+                throw new CatalogException($this->itemError($manifestPath, $index, 'scope is invalid'));
+            }
+            if (isset($rawItem['problemNumber']) && (!is_int($rawItem['problemNumber']) || $rawItem['problemNumber'] < 1 || $rawItem['problemNumber'] > 99)) {
+                throw new CatalogException($this->itemError($manifestPath, $index, 'problemNumber must be 1-99'));
             }
 
             $item = [
@@ -65,6 +89,11 @@ final class CatalogRepository
                 'description' => $this->textField($rawItem, 'description', false, self::MAX_DESCRIPTION_LENGTH, $manifestPath, $index),
                 'source' => $this->textField($rawItem, 'source', false, self::MAX_SOURCE_LENGTH, $manifestPath, $index),
                 'legacy' => ($rawItem['legacy'] ?? false) === true,
+                'delivery' => (string) ($rawItem['delivery'] ?? 'hostinger'),
+                'competition' => (string) ($rawItem['competition'] ?? ''),
+                'year' => $rawItem['year'] ?? null,
+                'role' => (string) ($rawItem['role'] ?? ''),
+                'problemNumber' => $rawItem['problemNumber'] ?? null,
             ];
 
             $extension = strtolower(pathinfo($item['file'], PATHINFO_EXTENSION));
