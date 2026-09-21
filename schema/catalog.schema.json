@@ -7,7 +7,7 @@
   "required": ["version", "items"],
   "properties": {
     "version": {
-      "const": 1
+      "enum": [1, 2]
     },
     "items": {
       "type": "array",
@@ -21,11 +21,14 @@
           "file": {"type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(?:/|$))(?!.*\\\\)[^\\u0000-\\u001F\\u007F]+$"},
           "description": {"type": "string", "maxLength": 2000, "pattern": "^[^<>]*$"},
           "source": {"type": "string", "maxLength": 1000, "pattern": "^[^<>]*$"},
+          "language": {"enum": ["en", "vi"]},
           "legacy": {"type": "boolean"},
           "delivery": {"enum": ["hostinger", "vercel-blob"]},
           "competition": {"type": "string", "maxLength": 80, "pattern": "^[a-z0-9-]*$"},
           "year": {"oneOf": [{"type": "integer", "minimum": 1900, "maximum": 2100}, {"const": "Collection"}]},
-          "role": {"enum": ["problem", "solution", "marking", "answer", "report", "reference", "document"]},
+          "role": {"enum": ["problem", "solution", "marking", "answer", "report", "reference", "document", "paper", "results", "guidance"]},
+          "paperType": {"enum": ["theoretical", "experimental"]},
+          "scope": {"enum": ["problem", "all-problems"]},
           "problemNumber": {"type": "integer", "minimum": 1, "maximum": 99}
         }
       }

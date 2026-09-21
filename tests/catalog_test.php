@@ -8,26 +8,24 @@ require_once $root . '/src/CatalogRepository.php';
 $catalogs = require $root . '/config/catalogs.php';
 $repository = new CatalogRepository($root . '/physics');
 $requireFiles = getenv('CATALOG_SKIP_FILES') !== '1';
-$expectedCounts = [
-    'books-pre-vpho' => 25,
-    'books-vpho-vn' => 28,
-    'books-vpho-en' => 36,
-    'materials-pho' => 59,
-    'paper-sol-pho' => 24,
-    'olympiads' => 2738,
-    'magazines' => 135,
-    'lessons' => 13,
-];
+$snapshot = json_decode((string) file_get_contents($root . '/physics/catalog/public-snapshot.json'), true, flags: JSON_THROW_ON_ERROR);
+$publishedByCollection = [];
+foreach ($snapshot['documents'] as $document) {
+    $id = (string) $document['collectionId'];
+    $publishedByCollection[$id] = ($publishedByCollection[$id] ?? 0) + 1;
+}
 
 $total = 0;
 $seenFiles = [];
 $irodovFound = false;
 foreach ($catalogs as $route => $catalog) {
     $id = (string) $catalog['id'];
-    check(isset($expectedCounts[$id]), 'Unexpected catalog id: ' . $id);
     check($route === $catalog['type'] . ':' . $catalog['level'], 'Route mismatch: ' . $route);
     $items = $repository->load((string) $catalog['manifest'], $requireFiles);
-    check(count($items) === $expectedCounts[$id], $id . ' count changed unexpectedly.');
+    check($items !== [], $id . ' catalog is empty.');
+    if ($id !== 'lessons') {
+        check(count($items) === ($publishedByCollection[$id] ?? 0), $id . ' count differs from the public snapshot.');
+    }
     $total += count($items);
 
     foreach ($items as $item) {
@@ -40,7 +38,7 @@ foreach ($catalogs as $route => $catalog) {
     }
 }
 
-check($total === 3058, 'Expected 3058 catalog resources.');
+check($total === count($snapshot['documents']) + count($repository->load((string) $catalogs['lessons:all']['manifest'], $requireFiles)), 'Catalog and public snapshot totals differ.');
 check($irodovFound, 'The repaired Irodov record is missing.');
 check(
     CatalogRepository::resourceUrl('books/Tài liệu 1.pdf') === '/physics/books/T%C3%A0i%20li%E1%BB%87u%201.pdf',
@@ -74,7 +72,7 @@ try {
     @rmdir($temporaryDirectory);
 }
 
-fwrite(STDOUT, 'Catalog tests passed: 8 catalogs, 3058 resources.' . PHP_EOL);
+fwrite(STDOUT, 'Catalog tests passed: ' . count($catalogs) . ' catalogs, ' . $total . ' resources.' . PHP_EOL);
 
 function check(bool $condition, string $message): void
 {

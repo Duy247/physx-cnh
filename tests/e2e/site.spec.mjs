@@ -43,14 +43,16 @@ test('physics label anchor dots remain tied to projected satellites', async ({ p
   ]);
   const scene = page.locator('[data-planetary="physics"]');
   await expect(scene).toHaveAttribute('data-ipho-city-count', '10');
-  await expect.poll(async()=>iphoLabels.evaluateAll(nodes=>nodes.filter(node=>Number(getComputedStyle(node).opacity)>.2).length)).toBe(1);
   const firstTourYear=await scene.getAttribute('data-active-ipho-year');
-  const activeCityLayout=await iphoLabels.evaluateAll(nodes=>nodes.filter(node=>Number(getComputedStyle(node).opacity)>.2).map(node=>({
-    anchorX:Number(node.dataset.anchorX),anchorY:Number(node.dataset.anchorY),
-    labelX:Number(node.dataset.labelX),labelY:Number(node.dataset.labelY),
-    leaderLength:parseFloat(node.style.getPropertyValue('--leader-length')),
-  })));
-  expect(activeCityLayout).toHaveLength(1);
+  let activeCityLayout;
+  await expect.poll(async()=>{
+    activeCityLayout=await iphoLabels.evaluateAll(nodes=>nodes.filter(node=>Number(getComputedStyle(node).opacity)>.2).map(node=>({
+      anchorX:Number(node.dataset.anchorX),anchorY:Number(node.dataset.anchorY),
+      labelX:Number(node.dataset.labelX),labelY:Number(node.dataset.labelY),
+      leaderLength:parseFloat(node.style.getPropertyValue('--leader-length')),
+    })));
+    return activeCityLayout.length;
+  }).toBe(1);
   expect(Math.abs(activeCityLayout[0].labelX-activeCityLayout[0].anchorX)).toBeLessThan(1.5);
   expect(activeCityLayout[0].leaderLength).toBeLessThan(Math.hypot(activeCityLayout[0].labelX-activeCityLayout[0].anchorX,activeCityLayout[0].labelY-activeCityLayout[0].anchorY));
   await expect.poll(async()=>scene.getAttribute('data-active-ipho-year'),{timeout:7000}).not.toBe(firstTourYear);
@@ -180,7 +182,8 @@ test('orbit link scopes books and removes redundant kind control', async ({ page
 test('lesson documents are absent and old lesson filters recover to the full library', async ({ page }) => {
   await page.goto('/library?kind=lesson&orbit=1');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Thư viện Vật lý');
-  await expect(page.locator('[data-result-count]')).toContainText('3045');
+  const documents = await page.locator('#library-data').evaluate((node) => JSON.parse(node.textContent));
+  await expect(page.locator('[data-result-count]')).toHaveText(String(documents.length));
   await expect(page.locator('[data-kind] option')).toHaveCount(5);
   await expect(page.locator('[data-kind]')).not.toContainText('Bài học');
   await expect(page).not.toHaveURL(/kind=lesson|orbit=1/);

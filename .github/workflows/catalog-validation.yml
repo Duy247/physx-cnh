@@ -19,7 +19,7 @@ jobs:
         php: ['8.1', '8.3']
     steps:
       - name: Check out catalog code without historical PDF blobs
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           filter: blob:none
@@ -63,6 +63,19 @@ jobs:
 
       - name: Run planetary web tests
         run: php tests/web_test.php
+
+      - name: Set up Node
+        if: matrix.php == '8.3'
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Run catalog metadata tests
+        if: matrix.php == '8.3'
+        run: |
+          npm run test:olympiads
+          npm run test:collection-languages
+          npm run test:curated-papers
 
       - name: Fetch pull-request base
         if: github.event_name == 'pull_request'
@@ -116,7 +129,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the planetary interface without historical PDF blobs
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 1
           filter: blob:none
@@ -143,7 +156,7 @@ jobs:
           coverage: none
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '22'
           cache: npm

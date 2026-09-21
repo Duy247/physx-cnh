@@ -387,7 +387,7 @@ function gitFileAtRef(string $root, string $ref, string $path): string
 function decodeManifest(string $json, string $label): array
 {
     $manifest = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
-    if (!is_array($manifest) || ($manifest['version'] ?? null) !== 1 || !isset($manifest['items']) || !is_array($manifest['items'])) {
+    if (!is_array($manifest) || !in_array($manifest['version'] ?? null, [1, 2], true) || !isset($manifest['items']) || !is_array($manifest['items'])) {
         throw new RuntimeException('Invalid catalog manifest: ' . $label);
     }
     return $manifest;

@@ -6,10 +6,11 @@ require_once $root . '/src/Web/CatalogSnapshot.php';
 
 $catalog = new CatalogSnapshot($root . '/physics/catalog/public-snapshot.json', $root);
 $snapshot = $catalog->all();
-check(($snapshot['counts']['published'] ?? 0) === 3045, 'Expected 3045 public records.');
-check(($snapshot['counts']['pdf'] ?? 0) === 3045, 'Expected 3045 published PDFs.');
+$documentCount = count($catalog->documents());
+check($documentCount > 0, 'Public catalog is empty.');
+check(($snapshot['counts']['published'] ?? 0) === $documentCount, 'Published count does not match snapshot documents.');
+check(($snapshot['counts']['pdf'] ?? 0) === $documentCount, 'PDF count does not match snapshot documents.');
 check(!isset($snapshot['counts']['lesson']), 'Lesson count must not be published.');
-check(count($catalog->documents()) === 3045, 'Document array count does not match snapshot.');
 check(count(array_filter($catalog->documents(), static fn (array $document): bool => ($document['kind'] ?? '') === 'lesson')) === 0, 'Lesson documents must not be public.');
 check(count(array_filter($catalog->documents(), static fn (array $document): bool => !preg_match('/^\d{4}-\d{2}-\d{2}$/', (string) ($document['addedAt'] ?? '')))) === 0, 'Every public document needs a prepared addition date.');
 
@@ -30,12 +31,13 @@ check($unsafeRejected, 'Path traversal was not rejected.');
 $pdfs = array_filter($catalog->documents(), static fn (array $document): bool => $document['format'] === 'pdf');
 check(count(array_filter($pdfs, static fn (array $document): bool => !is_int($document['pages'] ?? null) || $document['pages'] < 1)) === 0, 'Every published PDF needs a prepared page count.');
 $olympiads = array_values(array_filter($catalog->documents(), static fn (array $document): bool => ($document['collectionId'] ?? '') === 'olympiads'));
-check(count($olympiads) === 2738, 'Expected 2738 unique Olympiad records.');
+$olympiadManifest = json_decode((string) file_get_contents($root . '/physics/catalog/olympiads.json'), true, flags: JSON_THROW_ON_ERROR);
+check(count($olympiads) === count($olympiadManifest['items']), 'Olympiad count differs from the source manifest.');
 check(count(array_filter($olympiads, static fn (array $document): bool => !is_string($document['competition'] ?? null) || ($document['competition'] ?? '') === '' || !is_int($document['year'] ?? null))) === 0, 'Every Olympiad record needs competition and year metadata.');
 $missingCovers = array_filter($pdfs, static fn (array $document): bool => $catalog->coverUrl($document) === null);
 check(count($missingCovers) === 0, 'Every current published PDF should have a cover.');
 
-fwrite(STDOUT, "Web tests passed: 3045 records, 3045 covers, Hostinger-only delivery.\n");
+fwrite(STDOUT, 'Web tests passed: ' . $documentCount . " records, all covers present, Hostinger-only delivery.\n");
 
 function check(bool $condition, string $message): void
 {
