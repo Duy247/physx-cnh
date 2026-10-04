@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-21T14:27:03.137Z",
+  "generatedAt": "2026-10-04T02:06:11.246Z",
   "source": "Duy247/physx-cnh",
   "counts": {
-    "published": 3018,
-    "pdf": 3018
+    "published": 3019,
+    "pdf": 3019
   },
   "collections": [
     {
@@ -2037,6 +2037,43 @@
         "mimeType": "application/pdf"
       },
       "cover": "/assets/v2/covers/olympic-co-hoc-toan-quoc-2014-2018.webp",
+      "delivery": {
+        "provider": "hostinger"
+      },
+      "competition": null,
+      "competitionLabel": null,
+      "year": null,
+      "role": null,
+      "problemNumber": null,
+      "paperType": null,
+      "scope": null,
+      "coverVersion": null
+    },
+    {
+      "id": "books-vpho-vn:029",
+      "slug": "tuyen-tap-cac-bai-tap-dien-tu-physiad",
+      "title": "Tuyển tập các bài tập điện từ Physiad",
+      "authors": [
+        "Physiad"
+      ],
+      "description": "",
+      "source": "https://drive.google.com/file/d/1zfLsKMFD7Bzdg0VzQeIDHHg4wYdEIppy/view",
+      "collectionId": "books-vpho-vn",
+      "collectionTitle": "Sách VPhO và Vòng chọn (VN)",
+      "kind": "book",
+      "level": "vpho-vn",
+      "language": "vi",
+      "format": "pdf",
+      "pages": 453,
+      "addedAt": "2026-10-03",
+      "legacy": false,
+      "status": "published",
+      "file": {
+        "path": "library/books-vpho-vn/tuyen-tap-cac-bai-tap-dien-tu-physiad.pdf",
+        "bytes": 13261609,
+        "mimeType": "application/pdf"
+      },
+      "cover": "/assets/v2/covers/tuyen-tap-cac-bai-tap-dien-tu-physiad.webp",
       "delivery": {
         "provider": "hostinger"
       },

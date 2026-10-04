@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T14:27:02.319562Z",
+  "generatedAt": "2026-10-04T02:06:10.889157Z",
   "documents": {
     "books/cohoc1.pdf": {
       "blob": "36063316ffa4bd744bb6c129b965a00ee809daf0",
@@ -271,6 +271,11 @@
       "blob": "79b205efaa265d03c0be4d0043bd282abb6fef12",
       "pages": 204,
       "addedAt": "2024-09-01"
+    },
+    "library/books-vpho-vn/tuyen-tap-cac-bai-tap-dien-tu-physiad.pdf": {
+      "blob": "55582c5da87a83d59cf73073bfdef398005643bb",
+      "pages": 453,
+      "addedAt": "2026-10-03"
     },
     "books/1000-solved.pdf": {
       "blob": "96eee7740c1293e542c99e30d04d30d1de4212bc",
