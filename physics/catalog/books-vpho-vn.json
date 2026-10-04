@@ -196,6 +196,13 @@
             "file": "books/olympic_co_hoc.pdf",
             "description": "NXB ĐHBKHN",
             "source": ""
+        },
+        {
+            "title": "Tuyển tập các bài tập điện từ Physiad",
+            "author": "Physiad",
+            "file": "library/books-vpho-vn/tuyen-tap-cac-bai-tap-dien-tu-physiad.pdf",
+            "description": "",
+            "source": "https://drive.google.com/file/d/1zfLsKMFD7Bzdg0VzQeIDHHg4wYdEIppy/view"
         }
     ]
 }
