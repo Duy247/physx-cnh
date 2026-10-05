@@ -208,6 +208,13 @@
             "file": "materials/physicsbrawl-12-23.pdf",
             "description": "",
             "source": ""
+        },
+        {
+            "title": "TJPhO\n2021-2026",
+            "author": "",
+            "file": "library/paper-sol-pho/tjpho-21-26.pdf",
+            "description": "",
+            "source": "https://github.com/tjphysicsteam/tjpho/tree/main/old/papers"
         }
     ]
 }
