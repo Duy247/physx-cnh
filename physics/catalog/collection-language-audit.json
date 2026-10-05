@@ -1,0 +1,1378 @@
+{
+  "version": 1,
+  "scope": [
+    "materials-pho",
+    "magazines"
+  ],
+  "pageLimit": 6,
+  "documents": [
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/y-tuong-giai-toan-chuyen-dong.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 24
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/xG.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/Orbital_Mech._Probs.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/dao_dong.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/Motion_in_central_field.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/motion_g.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/Ly_thuyet_Kepler.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/Euler_s_disk.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/Billiard_Physics.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/tuong_doi.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/chuyen-de-co-hoc.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/thermodynamic_notes.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/Kinetic_theory_of_gases.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/dong-co.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/ly-thuyet-mach.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/AC_by_complex_numbers.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/cam-ung-dien-tu-2020.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/anhdien.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/van_dung_anh_dien.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/chuyen_de_anh_dien.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/phuong-phap-dien-dong-hoc.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/Dipole_1.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/khucxa.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/Quang_trinh.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/nguyen-li-fermat.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/chiet_suat_bien_doi.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/he-quang-hoc-dong-truc.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/Nhieu-xa.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/ggthvl.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/curvelinear.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/integral-table.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 14
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/ung_dung_dao_ham_tich_phan.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/PTVP_tuyen_tinh_bac_2.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/ky-thuat-giai-toan-tich-phan.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/bai_toan_vat_ly.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/formulas.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/IPhO_syllabus.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/mechanics-kevinzhou.pdf",
+      "language": "en",
+      "method": "known-English-author",
+      "confidence": 100
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/thermodynamics-kevinzhou.pdf",
+      "language": "en",
+      "method": "known-English-author",
+      "confidence": 100
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/electromagnetism-kevinzhou.pdf",
+      "language": "en",
+      "method": "known-English-author",
+      "confidence": 100
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/waves-kevinzhou.pdf",
+      "language": "en",
+      "method": "known-English-author",
+      "confidence": 100
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/modern-kevinzhou.pdf",
+      "language": "en",
+      "method": "known-English-author",
+      "confidence": 100
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/relativity-kevinzhou.pdf",
+      "language": "en",
+      "method": "known-English-author",
+      "confidence": 100
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/problems-kevinzhou.pdf",
+      "language": "en",
+      "method": "known-English-author",
+      "confidence": 100
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/problems-2-kevinzhou.pdf",
+      "language": "en",
+      "method": "known-English-author",
+      "confidence": 100
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/meh_ENG.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/meh_ENG2.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/kin_ENG.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/thermodyn.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/electricity-circuits.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/waveopt.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/quant_ENG.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/KaldaMech-122.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/KaldaKin-200.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/KaldaThermo-121.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/KaldaWaves-131.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/KaldaCM_ENG.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/handouts/ainsaar_relativity.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "materials-pho",
+      "file": "materials/Havard_weekly_david_morin.pdf",
+      "language": "en",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/1.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/2.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/3.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/4.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/5.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/6.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/7.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/8.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/9.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/10.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/11.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/12.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/13.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/14.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/15.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/16.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/17.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/18.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/19.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/20.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/25.pdf",
+      "language": "vi",
+      "method": "pdf-text",
+      "confidence": 99
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/84.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/85.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/86.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/87.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/88.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/90.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/91.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/92.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/93.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/94.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/95.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/96.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/97.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/98.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/99.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/100.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/101.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/102.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/103.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/104.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/105.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/106.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/107.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/108.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/109.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/110.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/111.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/112.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/113.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/114.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/115.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/116.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/117.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/118.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/119.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/120.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/128.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/132.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/142.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/143.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/144.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/151.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/155.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/156.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/171.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/173.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/178.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/vltt/180.pdf",
+      "language": "vi",
+      "method": "catalog-fallback",
+      "confidence": 11
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumP1.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumP2.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV1N1.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV1N2.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV1N3.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV1N4.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV2N1.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV2N2.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV2N3.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV2N4.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV2N5.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV2N6.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV3N1.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV3N2.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV3N3.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV3N4.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV3N5.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV3N6.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV4N1.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV4N2.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV4N3.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV4N4.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV4N5.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV4N6.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV5N1.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV5N2.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV5N3.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV5N4.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV5N5.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV5N6.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV6N1.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV6N2.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV6N3.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV6N4.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV6N5.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV6N6.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV7N1.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV7N2.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV7N3.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV7N4.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV7N5.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV7N6.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV8N1.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV8N2.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV8N3.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV8N4.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV8N5.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV8N6.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV9N1.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV9N2.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV9N3.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV9N4.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV9N5.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV9N6.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV10N1.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV10N2.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV10N3.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV10N4.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV10N5.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV10N6.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV11N1.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV11N2.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV11N3.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV11N4.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV11N5.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    },
+    {
+      "collection": "magazines",
+      "file": "materials/quantum/QuantumV11N6.pdf",
+      "language": "en",
+      "method": "known-English-series",
+      "confidence": 100
+    }
+  ],
+  "counts": {
+    "materials-pho": {
+      "en": 25,
+      "vi": 34
+    },
+    "magazines": {
+      "en": 66,
+      "vi": 69
+    }
+  }
+}
