@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__ . '/rar.php';
+
 const MAX_DOWNLOAD_BYTES = 5368709120; // 5 GiB
 const MAX_REDIRECTS = 5;
 
@@ -606,22 +608,28 @@ function downloadRemoteFile(string $initialUrl, string $directory): array
             return ['success' => false, 'message' => 'The remote server returned an empty file.', 'file' => '', 'bytes' => 0];
         }
 
+        $archivePath = $temporaryPath . '.rar';
         try {
             $fileName = fileNameFromResponse($currentUrl, $contentDisposition);
-            $destination = uniqueDestination($directory, $fileName);
+            $archiveName = pathinfo($fileName, PATHINFO_FILENAME) . '.rar';
+            $destination = uniqueDestination($directory, $archiveName);
+            set_time_limit(0);
+            $bytes = createRarArchive($temporaryPath, $archivePath, $fileName);
         } catch (Throwable $error) {
             @unlink($temporaryPath);
+            @unlink($archivePath);
             return ['success' => false, 'message' => $error->getMessage(), 'file' => '', 'bytes' => 0];
         }
 
-        if (!rename($temporaryPath, $destination)) {
-            @unlink($temporaryPath);
-            return ['success' => false, 'message' => 'The completed file could not be moved into the downloads folder.', 'file' => '', 'bytes' => 0];
+        @unlink($temporaryPath);
+        if (!rename($archivePath, $destination)) {
+            @unlink($archivePath);
+            return ['success' => false, 'message' => 'The completed RAR archive could not be moved into the downloads folder.', 'file' => '', 'bytes' => 0];
         }
 
         return [
             'success' => true,
-            'message' => 'Download completed.',
+            'message' => 'Download completed and wrapped in a RAR archive.',
             'file' => basename($destination),
             'bytes' => (int) $bytes,
         ];
@@ -1104,7 +1112,7 @@ usort($files, static fn (array $left, array $right): int => $right['modified'] <
 
     <section class="panel" aria-labelledby="download-title">
         <h2 id="download-title">URL downloader</h2>
-        <p class="panel-description">Fetch a public HTTP or HTTPS URL into this Hub’s downloads folder.</p>
+        <p class="panel-description">Fetch a public HTTP or HTTPS URL and save it in a RAR archive, with the original filename preserved inside.</p>
         <form method="post">
             <label for="file_url">Remote file URL</label>
             <input type="hidden" name="csrf_token" value="<?= escapeHtml($_SESSION['hub_csrf']) ?>">
