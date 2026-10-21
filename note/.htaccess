@@ -1,0 +1,12 @@
+# LiteSpeed shared hosting can apply these even when .user.ini is not enabled.
+<IfModule LiteSpeed>
+    php_value post_max_size 32M
+    php_value memory_limit 256M
+</IfModule>
+<IfModule mod_php.c>
+    php_value post_max_size 32M
+    php_value memory_limit 256M
+</IfModule>
+<Files ".user.ini">
+    Require all denied
+</Files>
