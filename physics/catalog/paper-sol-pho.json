@@ -230,6 +230,16 @@
       "competition": "brawl",
       "year": "Collection",
       "role": "document"
+    },
+    {
+      "title": "TJPhO\n2021-2026",
+      "author": "",
+      "file": "library/paper-sol-pho/tjpho-21-26.pdf",
+      "description": "",
+      "source": "https://github.com/tjphysicsteam/tjpho/tree/main/old/papers",
+      "competition": "tjpho",
+      "year": "Collection",
+      "role": "solution"
     }
   ]
 }
