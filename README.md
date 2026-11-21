@@ -32,3 +32,10 @@ Website cung cấp hệ hành tinh Three.js, tìm kiếm và lọc metadata, ả
 Đóng góp tài liệu được thực hiện qua fork và Pull Request vào branch `master`. Cộng tác viên chỉ cần thêm PDF, đăng ký tài liệu, push branch lên fork; chủ repository sẽ review và merge.
 
 Xem quy trình đầy đủ tại [CONTRIBUTING.md](CONTRIBUTING.md), hoặc bắt đầu bằng cách [fork repository](https://github.com/Duy247/physx-cnh/fork).
+
+## Glasses update relay
+
+The optional relay at `/api/glasses/v1/updates.php` accepts updates from agents,
+CI jobs, or scripts. The companion can read them over HTTPS using a separate
+read-only token. It requires PHP 8.1+, PDO SQLite, and local filesystem storage.
+See [the relay contract and deployment setup](api/glasses/README.md).
